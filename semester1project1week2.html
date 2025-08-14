@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Orthographic Drawing + Design Refinement - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 2: Orthographic Drawing + Design Refinement</h1>
+                    <p>Create front and side views of your robot designs using Grease Pencil, ensuring consistency between views and understanding volume in 3D space.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project1week1.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 1</span>
+                </a>
+                <a href="semester1project1week3.html" class="week-nav-button next">
+                    <span>Week 3</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 2 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week focuses on translating your 2D silhouettes into detailed orthographic drawings. You'll learn to create front and side views of your robot designs, ensuring consistency between views and developing a deeper understanding of volume in 3D space. This critical step bridges the gap between 2D concept art and 3D modeling.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Create accurate orthographic drawings (front and side views)</li>
+                    <li>Maintain consistency between multiple views of the same object</li>
+                    <li>Understand and apply volume concepts in 3D space</li>
+                    <li>Use Grease Pencil layers effectively for organized drawing</li>
+                    <li>Refine designs based on technical drawing requirements</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>Orthographic drawings are the blueprint for 3D modeling. They provide the technical information needed to build accurate 3D models by showing exactly how an object appears from different angles. This skill is essential in professional 3D pipelines, where concept artists must provide clear, technical drawings for modelers to follow. Mastering orthographic projection will make your transition to 3D modeling significantly smoother.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 2 Exercise: Orthographic Drawing + Design Refinement</h3>
+                <p>Choose 2 robot silhouettes from Week 1 and create front and side views using separate layers for clarity. Keep lines clean and shapes consistent between views. Use references from professional model sheets and align features using guidelines.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Set Up Your Workspace</strong>
+                        <p>Open Blender and switch to the 2D Animation workspace. Split your 3D viewport to show two views side by side - one for the front view and one for the side view. Create a new Grease Pencil object and organize your layers with clear names (e.g., "Front View Construction," "Front View Final," "Side View Construction," "Side View Final").</p>
+                    </li>
+                    <li>
+                        <strong>Select Your Best Silhouettes</strong>
+                        <p>Review your Week 1 silhouettes and select the two strongest designs to develop further. Consider which designs have the most potential for development and which best communicate their intended function through shape and form.</p>
+                    </li>
+                    <li>
+                        <strong>Create Construction Lines</strong>
+                        <p>On your construction layers, draw light guidelines to establish the height and width of your robot in both front and side views. Use horizontal and vertical guides to align key features between views. These construction lines will ensure consistency between your front and side views.</p>
+                    </li>
+                    <li>
+                        <strong>Draw the Front View</strong>
+                        <p>On your front view final layer, draw the detailed front view of your robot. Focus on clean lines and clear shapes. Use varying line weights to distinguish between major forms and smaller details. Refer to your Week 1 silhouette to maintain the overall shape and character.</p>
+                    </li>
+                    <li>
+                        <strong>Draw the Side View</strong>
+                        <p>On your side view final layer, draw the side view of your robot, ensuring that all features align properly with the front view. Use your construction lines to maintain consistent proportions and alignment. The side view should accurately represent the same robot as seen from a different angle.</p>
+                    </li>
+                    <li>
+                        <strong>Check for Consistency</strong>
+                        <p>Review both views to ensure they represent the same robot. Check that heights, widths, and key features align properly between views. Make any necessary adjustments to ensure consistency. This step is crucial for creating accurate orthographic drawings.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Use light construction lines that can be easily adjusted or hidden</li>
+                    <li>Establish key reference points (e.g., top of head, bottom of feet) and align them between views</li>
+                    <li>Consider using different colors for different types of lines (construction, final, hidden)</li>
+                    <li>Keep your drawings clean and organized with clear layer naming</li>
+                    <li>Refer to professional model sheets for inspiration and technical guidance</li>
+                    <li>Take breaks and review your work with fresh eyes to catch inconsistencies</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Artistic Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Artistic Techniques</h2>
+            <div class="techniques-section">
+                <h3>Technical Drawing Principles for Robot Design</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-ruler-combined"></i>
+                            Orthographic Projection
+                        </h4>
+                        <p class="concept-description">
+                            Orthographic projection represents 3D objects in 2D using multiple views without perspective distortion. Unlike perspective drawing, where objects appear smaller as they recede, orthographic projection maintains true proportions and measurements. This technique is essential for technical drawings as it provides accurate information about an object's dimensions and shape from multiple angles.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Orthographic Projection Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for orthographic projection techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-sync-alt"></i>
+                            Multi-View Consistency
+                        </h4>
+                        <p class="concept-description">
+                            Multi-view consistency ensures that all views of an object (front, side, top) accurately represent the same 3D form. Features visible in one view must align properly with corresponding features in other views. This requires understanding how lines and shapes project between views and maintaining consistent proportions and relationships across all drawings.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Multi-View Consistency</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for multi-view consistency techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-layer-group"></i>
+                            Construction Lines & Guidelines
+                        </h4>
+                        <p class="concept-description">
+                            Construction lines and guidelines are the foundation of accurate technical drawings. These light, temporary lines help establish proportions, alignments, and relationships between different parts of the drawing. They ensure that features align correctly between views and maintain proper proportions. Professional artists use construction lines extensively before committing to final lines.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Construction Lines & Guidelines</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for construction lines techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blender Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Week 2</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-layer-group"></i>
+                            Grease Pencil Layers
+                        </h4>
+                        <p class="blender-description">
+                            Grease Pencil layers allow you to organize different elements of your drawing, similar to layers in 2D software. For orthographic drawings, you can use separate layers for front and side views, construction lines, and final lines. Each layer can have its own opacity, blending mode, and visibility settings, making it easier to manage complex drawings.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Layer Management Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Y:</strong> Change active layer - quickly switch between different drawing layers</li>
+                            <li><strong>H:</strong> Hide active layer - temporarily hide the currently selected layer</li>
+                            <li><strong>Shift + H:</strong> Hide inactive layers - show only the active layer</li>
+                            <li><strong>Alt + H:</strong> Show all layers - unhide all hidden layers at once</li>
+                            <li><strong>Shift + A:</strong> Add new layer - create additional drawing layers</li>
+                            <li><strong>Ctrl + Up/Down:</strong> Move layer up/down - change layer order in the stack</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Grease Pencil Layers Management</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for Grease Pencil layers management</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-pencil-alt"></i>
+                            Drawing Tools & Settings
+                        </h4>
+                        <p class="blender-description">
+                            Beyond the basic Draw tool, Grease Pencil offers specialized tools for technical drawing. The Line, Rectangle, and Circle tools help create precise geometric shapes, while the Pen tool allows for more complex curves. Adjusting stroke thickness, opacity, and material properties helps create visual hierarchy in your drawings.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Drawing Mode Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>D:</strong> Enter Draw Mode - the primary mode for creating strokes</li>
+                            <li><strong>E:</strong> Enter Erase Mode - remove parts of your drawing</li>
+                            <li><strong>Tab:</strong> Switch between Draw/Edit/Sculpt modes</li>
+                            <li><strong>Hold Shift:</strong> Straight line assist while drawing</li>
+                            <li><strong>F:</strong> Brush radius adjustment - change brush size on the fly</li>
+                            <li><strong>Shift + F:</strong> Brush falloff adjustment - control brush softness</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Grease Pencil Drawing Tools</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for Grease Pencil drawing tools</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-edit"></i>
+                            Editing & Transforming Strokes
+                        </h4>
+                        <p class="blender-description">
+                            In Edit Mode (Tab), you can select and manipulate individual points or entire strokes. This allows you to refine your drawings, adjust proportions, and ensure alignment between views. Transform tools like move, rotate, and scale help you adjust elements while maintaining precision and consistency.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Edit Mode Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>G:</strong> Grab/Move - reposition selected strokes or points</li>
+                            <li><strong>R:</strong> Rotate - rotate selected strokes or points</li>
+                            <li><strong>S:</strong> Scale - resize selected strokes or points</li>
+                            <li><strong>Ctrl + D:</strong> Duplicate - create copies of selected elements</li>
+                            <li><strong>X:</strong> Delete - remove selected strokes or points</li>
+                            <li><strong>C:</strong> Circle Select - select multiple points in a circular area</li>
+                            <li><strong>B:</strong> Box Select - select multiple points in a rectangular area</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Editing & Transforming Strokes</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for editing and transforming strokes</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-th"></i>
+                            Working with Multiple Views
+                        </h4>
+                        <p class="blender-description">
+                            Blender allows you to split your workspace to show multiple views simultaneously. You can set up your workspace to show both front and side views at the same time, making it easier to ensure consistency between them. This multi-view workspace mimics professional technical drawing environments.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Viewport Navigation</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Middle Mouse:</strong> Orbit view - rotate around the scene</li>
+                            <li><strong>Shift + Middle Mouse:</strong> Pan view - move the viewport</li>
+                            <li><strong>Scroll Wheel:</strong> Zoom in/out - adjust view scale</li>
+                            <li><strong>Numpad 1/3/7:</strong> Front/Right/Top views - switch to orthographic views</li>
+                            <li><strong>Numpad 5:</strong> Toggle perspective/orthographic - switch projection modes</li>
+                            <li><strong>Numpad 0:</strong> Camera view - see through active camera</li>
+                            <li><strong>Home:</strong> Frame All - zoom to show all elements</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Multiple Views Setup</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for multiple views setup</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=lXg5ucthFYE" class="resource-link" target="_blank">
+                                        <span>Grease Pencil Tool Basics</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=MAoP4NIwVzY" class="resource-link" target="_blank">
+                                        <span>Grease Pencil: Easy Animation for Beginners</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=15RMfgRUcq8" class="resource-link" target="_blank">
+                                        <span>2D Animations in Blender 4.4 - Grease Pencil</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/grease_pencil/properties/layers.html" class="resource-link" target="_blank">
+                                        <span>Blender Grease Pencil Layers Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/grease_pencil/modes/draw/introduction.html" class="resource-link" target="_blank">
+                                        <span>Blender Grease Pencil Drawing Tools</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.drawniversity.com/orthographic-drawing/" class="resource-link" target="_blank">
+                                        <span>Orthographic Drawing Principles</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=character%20model%20sheets" class="resource-link" target="_blank">
+                                        <span>Character Model Sheets on ArtStation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/search/pins/?q=orthographic%20drawing" class="resource-link" target="_blank">
+                                        <span>Orthographic Drawing References</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.characterdesignreferences.com/robot-design-references/" class="resource-link" target="_blank">
+                                        <span>Robot Design References</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 2: Orthographic Drawing + Design Refinement - Building technical drawing skills for accurate 3D modeling preparation.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

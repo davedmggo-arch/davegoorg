@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3: 3D Clay Pencil Stylization + Materials - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 3: 3D Clay Pencil Stylization + Materials</h1>
+                    <p>Transform your 2D orthographic drawings into 3D stylized forms using Clay Pencil geometry nodes and apply basic materials to distinguish robot components.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project1week2.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 2</span>
+                </a>
+                <a href="semester1project2.html" class="week-nav-button next">
+                    <span>Project 2</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 3 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week marks your transition from 2D to 3D as you transform your orthographic drawings into stylized 3D forms using Blender's Clay Pencil geometry nodes. You'll learn to translate 2D concepts into 3D volume, apply basic materials to distinguish robot components, and develop an understanding of how form and material work together to create visually appealing designs.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Use Clay Pencil geometry nodes to create 3D forms from 2D drawings</li>
+                    <li>Translate 2D orthographic views into coherent 3D models</li>
+                    <li>Apply basic materials to distinguish robot components</li>
+                    <li>Understand viewport shading options for evaluating your work</li>
+                    <li>Develop stylized form that maintains the character of your 2D designs</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>The transition from 2D to 3D is a critical step in the 3D design process. This week introduces you to fundamental 3D concepts in a simplified, stylized context, making the learning curve more manageable. Clay Pencil provides a unique bridge between 2D drawing and 3D modeling, allowing you to create three-dimensional forms with the intuitive feel of drawing. This approach builds confidence and understanding before moving to more complex 3D modeling techniques.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 3 Exercise: 3D Clay Pencil Stylization + Material Basics</h3>
+                <p>Import your Grease Pencil orthographic sketch into a 3D scene. Using Clay Pencil nodes, block out the form with stylized volume. Apply basic color materials for visual clarity to distinguish arms, body, face, and key function parts.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Set Up Your 3D Workspace</strong>
+                        <p>Open Blender and switch to the Modeling workspace. Import your Week 2 Grease Pencil orthographic drawings by using File > Append and navigating to your .blend file. Arrange your front and side view drawings on reference planes to guide your 3D modeling work.</p>
+                    </li>
+                    <li>
+                        <strong>Enable Clay Pencil</strong>
+                        <p>If not already enabled, activate the Clay Pencil addon in Edit > Preferences > Add-ons. Search for "Clay Pencil" and enable the addon. This will add the necessary nodes and tools to convert your 2D drawings into 3D forms.</p>
+                    </li>
+                    <li>
+                        <strong>Create Basic Geometry</strong>
+                        <p>Using your orthographic drawings as reference, begin blocking out the basic forms of your robot. Start with simple primitive shapes (cubes, spheres, cylinders) that match the major volumes identified in your 2D drawings. Don't worry about details at this stage; focus on getting the overall proportions and volumes correct.</p>
+                    </li>
+                    <li>
+                        <strong>Apply Clay Pencil Effect</strong>
+                        <p>Select your primitive shapes and apply the Clay Pencil geometry nodes to give them a stylized, hand-drawn appearance. Adjust the node settings to achieve the desired level of stylization while maintaining the character of your original 2D design. This is where your robot transitions from a standard 3D model to a stylized form.</p>
+                    </li>
+                    <li>
+                        <strong>Refine the Form</strong>
+                        <p>Switch to Edit Mode to refine the shape of your robot, ensuring that it maintains the character of your 2D design while working effectively as a 3D form. Rotate the model frequently to check how it appears from different angles and make adjustments as needed to ensure multi-angle readability.</p>
+                    </li>
+                    <li>
+                        <strong>Create and Apply Materials</strong>
+                        <p>Create simple materials with distinct colors to differentiate between parts of your robot (e.g., one material for the body, another for limbs, and a third for details). Apply these materials to the appropriate parts of your model, establishing visual hierarchy and improving readability. Consider how your material choices reinforce the robot's function and character.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Keep your forms simple and focus on the essential shapes that define your robot</li>
+                    <li>Use reference planes with your orthographic drawings to maintain accuracy</li>
+                    <li>Rotate your model frequently to check how it appears from different angles</li>
+                    <li>Use contrasting colors for different functional parts to enhance readability</li>
+                    <li>Consider how lighting affects the perception of form and adjust accordingly</li>
+                    <li>Save multiple versions of your work as you progress to allow for easy iteration</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Artistic Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Artistic Techniques</h2>
+            <div class="techniques-section">
+                <h3>Stylization & Material Application</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-magic"></i>
+                            Stylization Principles
+                        </h4>
+                        <p class="concept-description">
+                            Stylization involves simplifying and exaggerating forms to create a distinctive visual style. When translating from 2D to 3D, focus on preserving the essential character of your design while adapting it to three dimensions. This means emphasizing key shapes, maintaining clear silhouettes from multiple angles, and ensuring that the 3D form captures the personality and function established in your 2D designs.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Stylization Principles</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for stylization principles</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Example in Media: Fortnite (2017)</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fortnite stylization example">
+                            </div>
+                            <p class="example-description">
+                                Fortnite demonstrates exceptional stylization principles, with character designs that maintain clarity and personality despite being simplified. The game's characters feature exaggerated proportions, bold shapes, and distinctive silhouettes that make them instantly recognizable. This approach to stylization ensures that characters read clearly even at small sizes and from various angles.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-palette"></i>
+                            Color Blocking
+                        </h4>
+                        <p class="concept-description">
+                            Color blocking uses large areas of distinct colors to define different parts of a design. This technique helps viewers quickly understand the structure and function of your robot by visually separating components. When applying materials, consider using contrasting colors for different functional parts (e.g., one color for the body, another for limbs, and a third for details) to enhance readability and visual interest.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Color Blocking Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for color blocking techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Example in Media: The Incredibles (2004)</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="The Incredibles color blocking example">
+                            </div>
+                            <p class="example-description">
+                                The character designs in The Incredibles showcase excellent color blocking, with each superhero having a distinct color scheme that defines their costume. The use of large, solid color areas makes the characters visually striking and easy to identify, even in complex action scenes. This approach to color blocking helps viewers quickly understand character relationships and individual identities.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-adjust"></i>
+                            Value & Contrast
+                        </h4>
+                        <p class="concept-description">
+                            Value refers to the lightness or darkness of a color, while contrast is the difference between values. Effective use of value and contrast helps create visual hierarchy and depth in your designs. When applying materials, consider how different values will help distinguish important elements and guide the viewer's eye. Higher contrast areas draw attention, while lower contrast areas recede.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Value & Contrast Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for value and contrast techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Example in Media: Spider-Man: Into the Spider-Verse (2018)</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Spider-Man Into the Spider-Verse value example">
+                            </div>
+                            <p class="example-description">
+                                Spider-Man: Into the Spider-Verse uses value and contrast masterfully to create visual hierarchy and depth. The film's distinctive visual style features bold contrast between light and dark areas, helping to focus attention on important elements and create a sense of depth despite the stylized 2D appearance. This approach to value and contrast makes the film visually dynamic and engaging.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blender Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Week 3</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-bezier-curve"></i>
+                            Clay Pencil Geometry Nodes
+                        </h4>
+                        <p class="blender-description">
+                            Clay Pencil is a Blender addon that combines Grease Pencil with geometry nodes to create 3D forms from 2D drawings. It allows you to extrude your 2D strokes into 3D volumes while maintaining the hand-drawn aesthetic. Understanding the basic node setup for Clay Pencil is essential for this week's exercise, as it forms the bridge between your 2D drawings and 3D models.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Clay Pencil Setup</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Enable Add-on:</strong> Edit > Preferences > Add-ons > Search "Clay Pencil" > Enable</li>
+                            <li><strong>Create Geometry Nodes:</strong> Select Grease Pencil object > Geometry Nodes tab > New</li>
+                            <li><strong>Apply Clay Pencil:</strong> Add Clay Pencil node group to your node tree</li>
+                            <li><strong>Adjust Parameters:</strong> Control thickness, bevel, and material settings</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Clay Pencil Geometry Nodes Setup</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for Clay Pencil geometry nodes setup</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-cube"></i>
+                            Working in 3D Space
+                        </h4>
+                        <p class="blender-description">
+                            Working in 3D space requires understanding the X, Y, and Z axes and how objects relate to each other in three dimensions. This week, you'll navigate 3D space more extensively, using viewport rotation, panning, and zooming to examine your model from all angles. Mastering 3D navigation is fundamental to all 3D work in Blender.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">3D Navigation Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Middle Mouse:</strong> Orbit view - rotate around the scene center</li>
+                            <li><strong>Shift + Middle Mouse:</strong> Pan view - move the viewport horizontally/vertically</li>
+                            <li><strong>Scroll Wheel:</strong> Zoom in/out - adjust view scale</li>
+                            <li><strong>Numpad 1/3/7:</strong> Front/Right/Top views - switch to orthographic views</li>
+                            <li><strong>Numpad 5:</strong> Toggle perspective/orthographic - switch projection modes</li>
+                            <li><strong>Numpad 0:</strong> Camera view - see through active camera</li>
+                            <li><strong>Home:</strong> Frame All - zoom to show all elements in the scene</li>
+                            <li><strong>Period (.):</strong> Frame Selected - zoom to selected elements</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">3D Navigation Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for 3D navigation techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-eye"></i>
+                            Viewport Shading
+                        </h4>
+                        <p class="blender-description">
+                            Viewport shading determines how your 3D model is displayed in the Blender viewport. Options include Wireframe, Solid, Material Preview, and Rendered modes. Each mode serves different purposes: Wireframe shows the underlying structure, Solid displays basic colors and lighting, Material Preview shows how materials will look, and Rendered provides the most accurate preview of the final result.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Viewport Shading Options</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Z Key:</strong> Toggle Wireframe mode - see through surfaces</li>
+                            <li><strong>Alt + Z:</strong> Toggle X-Ray mode - see through objects while keeping shading</li>
+                            <li><strong>Shift + Z:</strong> Toggle Rendered mode - see final render quality</li>
+                            <li><strong>Viewport Shading Menu:</strong> Click sphere icon in top-right of viewport</li>
+                            <li><strong>MatCap:</strong> Material Capture mode for stylized lighting</li>
+                            <li><strong>Look Dev:</strong> Development mode with studio lighting</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Viewport Shading Options</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for viewport shading options</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-palette"></i>
+                            Material Assignment
+                        </h4>
+                        <p class="blender-description">
+                            Materials define the visual properties of your model's surfaces, including color, shininess, and texture. In Blender, you can create and assign materials through the Materials tab in the Properties panel. For this exercise, you'll create simple materials with distinct colors to differentiate between parts of your robot, establishing visual hierarchy and improving readability.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Material Management Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Assign Material:</strong> Select object > Materials tab > New material</li>
+                            <li><strong>Material Preview:</strong> Click sphere icon to preview material</li>
+                            <li><strong>Copy Material:</strong> Select object with material > Ctrl+C > Select target > Ctrl+V > Material</li>
+                            <li><strong>Material Slots:</strong> Add multiple materials to single object</li>
+                            <li><strong>U:</strong> Active material drop-down - quickly switch materials</li>
+                            <li><strong>Material Properties:</strong> Adjust color, roughness, metallic values</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Material Assignment Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for material assignment techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-object-group"></i>
+                            Object Management
+                        </h4>
+                        <p class="blender-description">
+                            As your scene becomes more complex, managing objects becomes increasingly important. This includes organizing objects in collections, naming them descriptively, and using the Outliner to navigate your scene hierarchy. Good object management practices will save you time and frustration as your projects grow in complexity.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Object Management Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>M:</strong> Move to collection - move selected objects to specific collection</li>
+                            <li><strong>Ctrl + G:</strong> Group to collection - create new collection with selected objects</li>
+                            <li><strong>F2:</strong> Rename object - quickly rename selected object</li>
+                            <li><strong>Shift + Click:</strong> Select hierarchy - select parent and all children</li>
+                            <li><strong>Alt + H:</strong> Unhide all - show all hidden objects</li>
+                            <li><strong>H:</strong> Hide selected - temporarily hide selected objects</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Object Management Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for object management techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-lightbulb"></i>
+                            Basic Lighting
+                        </h4>
+                        <p class="blender-description">
+                            Lighting is essential for showcasing your 3D models effectively. Blender offers various light types, including Point, Sun, Spot, and Area lights. For this exercise, you'll use basic lighting setups to highlight your robot's form and materials. Understanding how light interacts with your model will help you make better design decisions and create more appealing presentations.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Lighting Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A:</strong> Add Light - choose light type from menu</li>
+                            <li><strong>G:</strong> Move light - reposition light source</li>
+                            <li><strong>R:</strong> Rotate light - change light direction</li>
+                            <li><strong>S:</strong> Scale light - adjust light influence area</li>
+                            <li><strong>Light Properties:</strong> Adjust color, power, and shadow settings</li>
+                            <li><strong>Three-Point Lighting:</strong> Key, Fill, and Rim lights setup</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Basic Lighting Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for basic lighting techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=tx_dYeNxhQ0" class="resource-link" target="_blank">
+                                        <span>Clay Pencil Geometry Nodes Tutorial</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=jrmUN4wkXoY" class="resource-link" target="_blank">
+                                        <span>Blender 4.4 Grease Pencil - What's New</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=lLqep5Q4MiI" class="resource-link" target="_blank">
+                                        <span>Blender 4 for Absolute Beginners</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/index.html" class="resource-link" target="_blank">
+                                        <span>Geometry Nodes Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/render/materials/index.html" class="resource-link" target="_blank">
+                                        <span>Materials Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/introduction.html" class="resource-link" target="_blank">
+                                        <span>Mesh Editing Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Tools & Assets</h3>
+                                <p class="resource-description">Helpful tools and downloadable assets</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="/resources/assets/clay-pencil-node-setup.blend" class="resource-link">
+                                        <span>Clay Pencil Node Setup</span>
+                                        <i class="fas fa-file-archive download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/resources/assets/robot-material-library.blend" class="resource-link">
+                                        <span>Robot Material Library</span>
+                                        <i class="fas fa-file-archive download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/resources/assets/orthographic-reference-planes.blend" class="resource-link">
+                                        <span>Orthographic Reference Planes</span>
+                                        <i class="fas fa-file-archive download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 3: 3D Clay Pencil Stylization + Materials - Bridging 2D concepts to 3D forms using stylized modeling techniques.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10: Environment Creation - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 10: Environment Creation</h1>
+                    <p>Design and create a compelling environment for your robot using Blender 4.4's enhanced environment tools. Learn environment modeling, layout, and composition principles to create a world that showcases your character.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project3.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Project 3</span>
+                </a>
+                <a href="semester1project3week11.html" class="week-nav-button next">
+                    <span>Week 11</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 10 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week focuses on creating a compelling environment that will serve as the stage for your robot's cinematic presentation. You'll learn environment design principles, modeling techniques, and layout strategies that create depth, scale, and narrative context. Blender 4.4's enhanced environment tools and improved viewport performance make this process more efficient and intuitive than ever.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Understand environment design principles and how they support character presentation</li>
+                    <li>Master environment modeling techniques using Blender 4.4's enhanced tools</li>
+                    <li>Learn composition and layout strategies for effective scene staging</li>
+                    <li>Create environments that complement your robot's design and function</li>
+                    <li>Utilize asset libraries and modular design for efficient environment creation</li>
+                    <li>Apply scale and perspective to create believable environments</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>Environments are more than just backgrounds - they're essential storytelling tools that provide context, mood, and narrative depth for your characters. A well-designed environment can enhance your robot's presentation, communicate its function, and create emotional impact. Understanding environment creation is crucial for any 3D artist, as these skills are used across gaming, animation, VFX, and architectural visualization.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 10 Exercise: Environment Creation</h3>
+                <p>Design and create a compelling environment for your robot using Blender 4.4's enhanced environment tools and professional workflow techniques.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Concept & Reference Gathering</strong>
+                        <p>Research and gather reference images for environments that complement your robot's design and function. Consider the story you want to tell and how the environment supports your robot's character. Create mood boards and concept sketches to establish the visual direction for your environment.</p>
+                    </li>
+                    <li>
+                        <strong>Block Out Basic Layout</strong>
+                        <p>Create a basic blockout of your environment using simple primitive shapes. Focus on establishing scale, composition, and flow. Use this stage to test camera angles and ensure that your robot will be showcased effectively within the space. Take advantage of Blender 4.4's improved viewport performance for real-time manipulation.</p>
+                    </li>
+                    <li>
+                        <strong>Design Modular Assets</strong>
+                        <p>Identify key architectural elements and design them as modular pieces. Create base meshes for walls, floors, ceilings, and other structural elements that can be combined in various configurations. Focus on clean topology and proper connection points for seamless assembly.</p>
+                    </li>
+                    <li>
+                        <strong>Create Materials & Textures</strong>
+                        <p>Develop materials and textures for your modular assets using Blender 4.4's enhanced material system. Create PBR materials with appropriate roughness, metallic, and normal maps. Use the improved texture management system to handle large texture sets efficiently.</p>
+                    </li>
+                    <li>
+                        <strong>Build Environment with Modular Pieces</strong>
+                        <p>Assemble your environment using the modular assets you've created. Focus on creating visual interest through variation, avoiding obvious repetition, and establishing clear focal points. Use Blender 4.4's improved collection management to organize your scene effectively.</p>
+                    </li>
+                    <li>
+                        <strong>Add Environmental Details & Storytelling</strong>
+                        <p>Add props, details, and environmental storytelling elements that bring your environment to life. Use these elements to suggest history, function, and narrative without explicit explanation. Consider how each detail contributes to the overall story and showcases your robot effectively.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Use Blender 4.4's enhanced viewport performance to work efficiently with complex scenes</li>
+                    <li>Take advantage of the improved Asset Browser for managing modular pieces</li>
+                    <li>Focus on creating environments that complement and enhance your robot's design</li>
+                    <li>Use scale references to establish believable proportions between robot and environment</li>
+                    <li>Consider camera angles and composition when designing your environment layout</li>
+                    <li>Use environmental storytelling to add depth and narrative to your scene</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Important Artistic Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Artistic Techniques</h2>
+            <div class="techniques-section">
+                <h3>Environment Design Principles</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-pencil-ruler"></i>
+                            Environment Design Principles
+                        </h4>
+                        <p class="concept-description">
+                            Environment design begins with understanding how spaces support narrative and character. Learn to create environments that tell stories through architecture, lighting, and composition. Consider how your robot's function influences the environment - a medical robot might be in a hospital, while a construction robot would be on a building site. The environment should enhance and complement your character's design and purpose.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Environment Design Principles</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for environment design principles</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-cube"></i>
+                            Modular Environment Design
+                        </h4>
+                        <p class="concept-description">
+                            Modular design involves creating reusable environment pieces that can be combined in various ways to build complex scenes efficiently. This technique is essential for professional environment creation, allowing you to create large, detailed environments without modeling every element individually. Learn to design modular pieces that fit together seamlessly and can be combined in multiple configurations.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Modular Design Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for modular design techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-vector-square"></i>
+                            Composition & Layout
+                        </h4>
+                        <p class="concept-description">
+                            Strong composition guides the viewer's eye and creates visual interest in your environment. Learn to use principles like rule of thirds, leading lines, and framing to create compelling scenes. Consider camera angles and sightlines when designing your environment, ensuring that there are interesting views from multiple perspectives. Good composition makes your environment more engaging and professional-looking.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Composition Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for composition techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Blender 4.4 Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Environment Creation</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Enhanced Viewport Performance
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4 introduces significant viewport performance improvements with the Vulkan backend, providing up to 5x faster performance for complex environments. The enhanced rendering system allows for real-time manipulation of large scenes with thousands of objects, significantly improving workflow efficiency for environment creation.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Fundamental Concepts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Vulkan Backend:</strong> The new rendering backend provides substantial performance improvements, especially for complex scenes with many objects and materials.</li>
+                            <li><strong>Level of Detail (LOD):</strong> Automatic optimization of mesh detail based on camera distance, improving viewport performance for large environments.</li>
+                            <li><strong>Viewport Display Options:</strong> Enhanced shading and display modes for better visualization of environment assets.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + Z:</strong> Toggle rendered viewport mode</li>
+                            <li><strong>Z:</strong> Open viewport shading menu</li>
+                            <li><strong>~:</strong> Viewport pie menu (quick view switching)</li>
+                            <li><strong>Ctrl + Alt + Q:</strong> Toggle quad view</li>
+                            <li><strong>Home:</strong> Frame all objects in viewport</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Viewport Performance in Blender 4.4</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for viewport performance features</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-folder-open"></i>
+                            Improved Asset Browser
+                        </h4>
+                        <p class="blender-description">
+                            The enhanced Asset Browser in Blender 4.4 makes it easier to manage and organize environment assets. Better preview generation, improved categorization, and more efficient asset loading streamline the process of building complex environments from reusable components.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Tools & Techniques</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Asset Creation:</strong> Convert any object, material, or collection into a reusable asset with custom metadata and previews.</li>
+                            <li><strong>Asset Libraries:</strong> Organize assets into multiple libraries for different projects or asset types.</li>
+                            <li><strong>Drag & Drop Workflow:</strong> Intuitive asset placement directly from the browser into your scene.</li>
+                            <li><strong>Asset Tagging:</strong> Categorize and search assets using custom tags for efficient organization.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A:</strong> Add menu (access assets from here)</li>
+                            <li><strong>Ctrl + Alt + U:</strong> Open user preferences for asset management</li>
+                            <li><strong>F:</strong> Search in asset browser</li>
+                            <li><strong>Right Click:</strong> Asset context menu for marking/unmarking assets</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Asset Browser Workflow</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for asset browser workflow</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-mountain"></i>
+                            Improved Geometry Nodes
+                        </h4>
+                        <p class="blender-description">
+                            The enhanced Geometry Nodes system in Blender 4.4 provides more powerful tools for procedural environment generation. Better performance, more nodes, and improved simulation capabilities make it easier to create complex environmental elements like landscapes, vegetation, and architectural details procedurally.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Tools & Techniques</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Procedural Generation:</strong> Create complex environments using node-based workflows that can be easily modified and reused.</li>
+                            <li><strong>Instance Management:</strong> Efficient handling of thousands of instanced objects for vegetation, debris, and environmental details.</li>
+                            <li><strong>Simulation Nodes:</strong> Advanced physics simulations for natural phenomena like water, wind effects, and particle systems.</li>
+                            <li><strong>Material Integration:</strong> Seamless integration between geometry nodes and material systems for complex environmental effects.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A:</strong> Add new geometry node</li>
+                            <li><strong>Ctrl + G:</strong> Group selected nodes</li>
+                            <li><strong>Ctrl + Shift + G:</strong> Ungroup nodes</li>
+                            <li><strong>Tab:</strong> Switch between node editor and 3D view</li>
+                            <li><strong>Ctrl + C / Ctrl + V:</strong> Copy/paste nodes</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Geometry Nodes for Environments</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for geometry nodes workflow</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=0cm8PzJg1bs" class="resource-link" target="_blank">
+                                        <span>How to Create a Realistic Scene in Blender 4.4 with Eevee</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=bRluQr0i5LU" class="resource-link" target="_blank">
+                                        <span>Realistic Lighting in Blender with Cycles and Eevee</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=kIW648Cfo18" class="resource-link" target="_blank">
+                                        <span>10 Easy Ways to Render Faster in Blender</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/render/lights/world.html" class="resource-link" target="_blank">
+                                        <span>World Environment Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/index.html" class="resource-link" target="_blank">
+                                        <span>Modeling Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/geometry_nodes/index.html" class="resource-link" target="_blank">
+                                        <span>Geometry Nodes Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=environment%20design" class="resource-link" target="_blank">
+                                        <span>ArtStation Environment Designs</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/search/pins/?q=environment%20concept%20art" class="resource-link" target="_blank">
+                                        <span>Environment Concept Art References</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.environment-art.org/" class="resource-link" target="_blank">
+                                        <span>Environment Art Resources</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 10: Environment Creation - Building compelling worlds that showcase your robot's design and function.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

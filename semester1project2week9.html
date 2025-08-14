@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9: Posing & Keyframe Animation - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 9: Posing & Keyframe Animation</h1>
+                    <p>Learn to bring your robot to life through expressive posing and keyframe animation using Blender 4.4's enhanced animation tools and the improved Pose Library system.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project2week8.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 8</span>
+                </a>
+                <a href="semester1project3.html" class="week-nav-button next">
+                    <span>Project 3</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 9 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week focuses on bringing your robot to life through the art of posing and keyframe animation. You'll learn to create expressive poses that communicate character and function, then sequence these poses using keyframes to create smooth, believable animation. Blender 4.4's enhanced animation tools, including the improved Pose Library and better keyframe management, make this process more intuitive and powerful than ever.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Master the principles of strong posing for mechanical characters</li>
+                    <li>Learn Blender 4.4's enhanced Pose Library system</li>
+                    <li>Understand keyframe animation workflows and timing</li>
+                    <li>Apply animation principles to mechanical movement</li>
+                    <li>Create expressive poses that communicate character and function</li>
+                    <li>Develop smooth transitions between poses using interpolation</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>Animation is where your robot truly comes to life, transforming from a static model into a character with personality and purpose. Strong posing skills are essential for creating clear communication in animation, while keyframe techniques provide the foundation for all animated movement. Blender 4.4's improvements to animation tools make it easier to create professional-quality animation that effectively brings mechanical characters to life.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 9 Exercise: Posing & Keyframe Animation</h3>
+                <p>Create expressive poses and keyframe animations for your robot, learning to bring your mechanical character to life through movement and timing.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Create Three Expressive Key Poses</strong>
+                        <p>Using your completed rig, create three distinct poses that showcase your robot's character and functionality: an idle/neutral pose, an active/functional pose, and an emotional/expressive pose. Focus on clear silhouettes, strong lines of action, and readable body language. Use Blender 4.4's enhanced Pose Library to save these poses for easy access.</p>
+                    </li>
+                    <li>
+                        <strong>Set Up Keyframe Timing</strong>
+                        <p>Place keyframes for your three poses on the timeline, establishing clear timing between them. Consider the personality and function of your robot when determining timing - a heavy construction robot might move more slowly than a nimble scout robot. Use Blender 4.4's improved keyframe visualization to see the timing relationships clearly.</p>
+                    </li>
+                    <li>
+                        <strong>Add Breakdown Poses</strong>
+                        <p>Create breakdown poses between your main key poses to define the path of action and add more detail to the movement. Focus on creating smooth arcs and believable transitions. Use Blender 4.4's enhanced Graph Editor to fine-tune the spacing and ensure smooth, mechanical-looking movement.</p>
+                    </li>
+                    <li>
+                        <strong>Apply Animation Principles</strong>
+                        <p>Enhance your animation with secondary actions, follow-through, and mechanical details. Add small movements to components like lights, gauges, or mechanical parts that react to the main action. Use anticipation and follow-through to create weight and mechanical realism in your robot's movements.</p>
+                    </li>
+                    <li>
+                        <strong>Create a 10-Frame Gesture Loop</strong>
+                        <p>Animate a short, 10-frame loop that demonstrates a specific mechanical gesture or function. This could be a wave, a salute, a scanning motion, or any other characteristic movement. Focus on clear timing, strong poses, and smooth motion that showcases your robot's personality and function.</p>
+                    </li>
+                    <li>
+                        <strong>Polish & Refine</strong>
+                        <p>Review your animation and make final adjustments to timing, spacing, and appeal. Use Blender 4.4's enhanced playback performance to preview your work in real-time, and take advantage of the improved motion paths to visualize and refine your arcs and paths of action.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Use Blender 4.4's enhanced Pose Library to save and reuse poses efficiently</li>
+                    <li>Focus on clear silhouettes and readable poses that communicate character</li>
+                    <li>Use the Graph Editor to fine-tune timing and spacing for mechanical realism</li>
+                    <li>Take advantage of motion paths to visualize and refine arcs of action</li>
+                    <li>Add secondary animation to bring life to smaller mechanical components</li>
+                    <li>Test your animation at different speeds to ensure clarity and impact</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Artistic Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Artistic Techniques</h2>
+            <div class="techniques-section">
+                <h3>Professional Animation Workflows</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-user"></i>
+                            Pose Staging & Silhouette
+                        </h4>
+                        <p class="concept-description">
+                            Strong poses begin with clear staging and readable silhouettes. Learn to position your robot so that its pose is immediately readable from any angle. A good silhouette should communicate the character's action, emotion, and intention without any internal details. This is especially important for mechanical characters where clear lines and shapes define their functionality.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Pose Staging & Silhouette</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for pose staging and silhouette</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-clock"></i>
+                            Timing & Spacing
+                        </h4>
+                        <p class="concept-description">
+                            Timing and spacing are the foundation of all animation. Timing refers to how long an action takes, while spacing refers to the placement of keyframes within that time. Learn to use timing to establish weight and character, and spacing to create different types of movement. Mechanical characters often benefit from precise timing that reflects their weight and construction.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Timing & Spacing Principles</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for timing and spacing</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-weight-hanging"></i>
+                            Weight & Balance
+                        </h4>
+                        <p class="concept-description">
+                            Weight and balance are crucial for creating believable mechanical animation. Your robot's movements should reflect its mass and construction. Heavy components should move more deliberately, while lighter parts can move more quickly. Learn to use timing, spacing, and overshoot to create the illusion of weight and mechanical resistance in your robot's movements.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Weight & Balance in Animation</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for weight and balance</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blender Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Week 9</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-images"></i>
+                            Enhanced Pose Library
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4 introduces significant improvements to the Pose Library system with better organization, faster pose application, and improved blending capabilities. The new asset browser integration makes it easier to manage and apply poses across different characters, while enhanced pose blending creates smoother transitions between poses.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Pose Library Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Ctrl + Shift + C:</strong> Add pose to library - save current pose for reuse</li>
+                            <li><strong>Alt + P:</strong> Apply pose - apply selected pose to character</li>
+                            <li><strong>Shift + P:</strong> Pose blend - blend between poses smoothly</li>
+                            <li><strong>Ctrl + Alt + P:</strong> Pose preview - preview poses before applying</li>
+                            <li><strong>Ctrl + Shift + Alt + P:</strong> Pose with keyframes - apply pose with keyframe creation</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Pose Management</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Pose Assets:</strong> Save poses as assets for use across projects</li>
+                            <li><strong>Pose Categories:</strong> Organize poses into logical groups</li>
+                            <li><strong>Pose Thumbnails:</strong> Create visual previews for easy identification</li>
+                            <li><strong>Pose Variations:</strong> Create multiple versions of similar poses</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Enhanced Pose Library in Blender 4.4</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for pose library demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-key"></i>
+                            Keyframe Animation Shortcuts
+                        </h4>
+                        <p class="blender-description">
+                            The keyframe system in Blender 4.4 has been enhanced with better visualization, more efficient editing tools, and improved performance. The new keyframe visualization options make it easier to see timing and spacing relationships, while enhanced selection and editing tools streamline the animation workflow.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Keyframe Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>I:</strong> Insert keyframe - add keyframe for selected properties</li>
+                            <li><strong>Alt + I:</strong> Delete keyframe - remove keyframes from selected properties</li>
+                            <li><strong>Shift + I:</strong> Clear keyframe - clear all keyframes from selected objects</li>
+                            <li><strong>Ctrl + I:</strong> Add keyframe menu - choose specific properties to keyframe</li>
+                            <li><strong>Alt + A:</strong> Toggle auto keyframing - enable/disable automatic keyframe creation</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Timeline Navigation</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Left/Right Arrows:</strong> Frame by frame navigation - move one frame at a time</li>
+                            <li><strong>Shift + Left/Right:</strong> Jump to keyframes - navigate between keyframes</li>
+                            <li><strong>Up/Down Arrows:</strong> Jump to previous/next marker - navigate timeline markers</li>
+                            <li><strong>Home:</strong> Go to start - jump to beginning of timeline</li>
+                            <li><strong>End:</strong> Go to end - jump to end of timeline</li>
+                            <li><strong>Alt + A:</strong> Play animation - start/stop playback</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Keyframe Animation Shortcuts</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for keyframe shortcuts</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-bezier-curve"></i>
+                            Graph Editor & Animation Tools
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4's Graph Editor features improved curve manipulation tools, better visualization options, and enhanced performance for complex animations. The new curve modifiers and interpolation options provide more control over animation timing and spacing, making it easier to create polished, professional-quality animation.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Graph Editor Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>A:</strong> Select all - select all keyframes in the Graph Editor</li>
+                            <li><strong>B:</strong> Border select - select keyframes within a rectangular area</li>
+                            <li><strong>C:</strong> Circle select - select keyframes within a circular area</li>
+                            <li><strong>G:</strong> Grab/move - move selected keyframes</li>
+                            <li><strong>S:</strong> Scale - scale selected keyframes in time or value</li>
+                            <li><strong>R:</strong> Rotate - rotate selected keyframes around pivot point</li>
+                            <li><strong>O:</strong> Set handle type - change keyframe interpolation</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Interpolation Types</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Linear:</strong> Constant speed between keyframes - perfect for mechanical movement</li>
+                            <li><strong>Bezier:</strong> Smooth curves with adjustable handles - natural, organic motion</li>
+                            <li><strong>Ease In/Out:</strong> Gradual acceleration/deceleration - realistic movement</li>
+                            <li><strong>Elastic:</strong> Bouncy, spring-like motion - good for mechanical components</li>
+                            <li><strong>Bounce:</strong> Physics-based bouncing - impacts and collisions</li>
+                            <li><strong>Constant:</strong> Instantaneous changes - digital or mechanical switches</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Graph Editor & Animation Tools</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for graph editor tools</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=b9Un_JpIs4A" class="resource-link" target="_blank">
+                                        <span>How I Made Animation SO Much Faster With This Trick! Pose Library</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=95rcqlpsMO4" class="resource-link" target="_blank">
+                                        <span>Blender Pose Library Tutorial</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=Y4nVQTZSWao" class="resource-link" target="_blank">
+                                        <span>The NEW Blender Animation Feature Nobody is talking about!?</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/animation/armatures/posing/editing/pose_library.html" class="resource-link" target="_blank">
+                                        <span>Pose Library Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/animation/keyframes/index.html" class="resource-link" target="_blank">
+                                        <span>Keyframe Animation Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://developer.blender.org/docs/release_notes/4.4/" class="resource-link" target="_blank">
+                                        <span>Blender 4.4 Animation Improvements</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=robot%20animation" class="resource-link" target="_blank">
+                                        <span>Robot Animation on ArtStation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z" class="resource-link" target="_blank">
+                                        <span>12 Principles of Animation Playlist</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.behance.net/search/projects?search=robot%20posing" class="resource-link" target="_blank">
+                                        <span>Robot Posing Reference on Behance</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 9: Posing & Keyframe Animation - Mastering expressive posing and keyframe animation techniques in Blender 4.4.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

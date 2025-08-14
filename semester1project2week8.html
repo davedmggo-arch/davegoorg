@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8: Rigging & Mechanical Functionality - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 8: Rigging & Mechanical Functionality</h1>
+                    <p>Learn to create mechanical rigs for your robot using Blender 4.4's enhanced armature system, constraints, and rigging tools to bring your mechanical creation to life.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project2week7.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 7</span>
+                </a>
+                <a href="semester1project2week9.html" class="week-nav-button next">
+                    <span>Week 9</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 8 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week focuses on creating a mechanical rig for your robot using Blender 4.4's advanced rigging tools. Unlike organic character rigging, mechanical rigging emphasizes rigid movements, precise constraints, and functional articulation. You'll learn to use armatures, bones, constraints, and control objects to create a rig that allows your robot to move in mechanically believable ways.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Understand mechanical rigging principles and how they differ from organic rigging</li>
+                    <li>Master Blender 4.4's enhanced armature and bone system</li>
+                    <li>Learn essential constraints for mechanical movement (Copy Rotation, Limit Rotation, Track To)</li>
+                    <li>Create control systems using empties and custom bone shapes</li>
+                    <li>Implement Inverse Kinematics (IK) for natural limb movement</li>
+                    <li>Build a clean, animation-ready rig with proper hierarchy and naming</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>Mechanical rigging is fundamentally different from organic rigging because it focuses on rigid movements and functional articulation rather than deformation. Understanding these principles is crucial for creating believable mechanical characters and objects. Blender 4.4's enhanced rigging tools make it easier than ever to create complex mechanical rigs that are both powerful and intuitive to animate.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 8 Exercise: Rigging & Mechanical Functionality</h3>
+                <p>Create a mechanical rig for your robot using Blender 4.4's enhanced rigging tools, focusing on realistic mechanical movement and functional articulation.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Analyze Your Robot's Mechanics</strong>
+                        <p>Study your robot model and identify all moving parts. Determine which parts need to rotate, translate, or remain fixed. Plan the hierarchy and control structure. Consider real-world mechanical principles like joint limits, mechanical advantage, and balance. Document your rigging plan before starting implementation.</p>
+                    </li>
+                    <li>
+                        <strong>Create the Main Armature Structure</strong>
+                        <p>Build the primary armature with bones placed at key joint locations. Use Blender 4.4's enhanced bone placement tools for precise positioning. Establish clear hierarchy relationships (e.g., spine → shoulder → upper arm → forearm → hand). Name bones systematically and use bone layers to organize different body parts.</p>
+                    </li>
+                    <li>
+                        <strong>Apply Mechanical Constraints</strong>
+                        <p>Add appropriate constraints to create realistic mechanical movement. Use Limit Rotation constraints to define joint ranges, Copy Rotation for synchronized parts, and Track To for aiming systems. Take advantage of Blender 4.4's improved constraint visualization to see relationships clearly and debug issues.</p>
+                    </li>
+                    <li>
+                        <strong>Set Up IK Chains for Limbs</strong>
+                        <p>Create IK chains for arms, legs, and other multi-joint systems. Add pole targets for directional control and set up IK handles that animators can easily manipulate. Use Blender 4.4's enhanced IK solvers for better stability and more predictable behavior in complex mechanical assemblies.</p>
+                    </li>
+                    <li>
+                        <strong>Create Intuitive Control Objects</strong>
+                        <p>Design and implement control objects using custom bone shapes or empties. Create a clean, intuitive interface that makes animation straightforward. Use Blender 4.4's improved custom shape system to create visual controls that clearly indicate their function (e.g., spheres for rotation, arrows for translation).</p>
+                    </li>
+                    <li>
+                        <strong>Implement Advanced Mechanical Features</strong>
+                        <p>Add sophisticated mechanical features like synchronized gear systems, hydraulic pistons, or complex joint mechanisms using drivers and expressions. Use Blender 4.4's enhanced driver system to create relationships between different parts of the rig, simulating real mechanical advantage and timing.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Use Blender 4.4's improved bone visualization to create clear, understandable rigs</li>
+                    <li>Test constraints frequently to ensure they work as expected</li>
+                    <li>Keep the rig hierarchy clean and logical for easier animation</li>
+                    <li>Use appropriate joint limits based on real mechanical principles</li>
+                    <li>Create custom bone shapes that clearly indicate each control's function</li>
+                    <li>Document your rig setup for future reference and learning</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Artistic Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Artistic Techniques</h2>
+            <div class="techniques-section">
+                <h3>Professional Rigging Workflows</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-bone"></i>
+                            Mechanical vs. Organic Rigging
+                        </h4>
+                        <p class="concept-description">
+                            Mechanical rigging differs fundamentally from organic rigging in that it focuses on rigid movements rather than deformation. While organic rigs use skinning and weight painting to create smooth deformations, mechanical rigs use rigid body relationships and precise constraints. Understanding this distinction is crucial for creating believable mechanical movement that feels functional and engineered rather than organic.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Mechanical vs Organic Rigging</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for mechanical vs organic rigging comparison</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Industry Example: Transformers</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Transformers mechanical rigging example">
+                            </div>
+                            <p class="example-description">
+                                The Transformers films showcase sophisticated mechanical rigging where each component moves as a rigid piece, creating complex transformations from vehicle to robot forms. The rigs must handle thousands of individual parts moving in precise coordination, demonstrating the complexity and precision required in mechanical rigging.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-project-diagram"></i>
+                            Hierarchy & Parenting
+                        </h4>
+                        <p class="concept-description">
+                            Proper hierarchy and parenting are the foundation of mechanical rigging. Learn to create logical parent-child relationships that mirror real mechanical assemblies. For example, a robot's finger bones should be parented to hand bones, which connect to arm bones, and so on. Blender 4.4's improved parenting tools make it easier to establish and modify these relationships.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Hierarchy and Parenting Setup</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for hierarchy and parenting setup</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-cogs"></i>
+                            Constraints for Mechanical Movement
+                        </h4>
+                        <p class="concept-description">
+                            Constraints are the heart of mechanical rigging, allowing you to define precise relationships between parts. Learn to use Copy Rotation for synchronized movement, Limit Rotation for realistic joint restrictions, Track To for aiming mechanisms, and Child Of for complex relationships. Blender 4.4's enhanced constraint system provides better control and visualization of these relationships.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Mechanical Constraints in Action</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for mechanical constraints demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blender Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Week 8</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-bone"></i>
+                            Armature & Bone System
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4 introduces significant improvements to the armature system with better bone visualization, improved weight painting tools, and more efficient bone management. The new bone shapes and custom display options make it easier to create visually clear rigs, while enhanced performance improvements make complex rigs more responsive in the viewport.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Armature Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A:</strong> Add new bone - create bones in Edit Mode</li>
+                            <li><strong>E:</strong> Extrude bone - extend bones from selected joints</li>
+                            <li><strong>Ctrl + R:</strong> Subdivide bone - split bones into multiple segments</li>
+                            <li><strong>W:</strong> Specials menu - access bone-specific operations</li>
+                            <li><strong>Ctrl + P:</strong> Parent bone - create hierarchical relationships</li>
+                            <li><strong>Alt + P:</strong> Clear parent - remove bone relationships</li>
+                            <li><strong>Shift + S:</strong> Snap bone - precise bone positioning</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Bone Properties</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Deform:</strong> Enable/disable bone deformation for mesh vertices</li>
+                            <li><strong>Inherit Scale:</strong> Control how bones inherit scale from parents</li>
+                            <li><strong>Local Location:</strong> Use bone-local coordinate system</li>
+                            <li><strong>BBone Segments:</strong> Create smooth, bendy bones for organic elements</li>
+                            <li><strong>Custom Shape:</strong> Use custom objects as bone visualization</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Armature System in Blender 4.4</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for armature system demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-keyboard"></i>
+                            Constraint System Shortcuts
+                        </h4>
+                        <p class="blender-description">
+                            The constraint system in Blender 4.4 has been enhanced with better visual feedback, more intuitive controls, and improved stability. Constraints now show their relationships more clearly in the viewport, and the new constraint stack management makes it easier to organize and modify complex constraint setups. This is particularly valuable for mechanical rigging with multiple interdependent constraints.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Constraint Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Ctrl + Shift + C:</strong> Add constraint - quickly add new constraints</li>
+                            <li><strong>Ctrl + Alt + C:</strong> Copy constraints - duplicate constraint setups</li>
+                            <li><strong>Alt + C:</strong> Clear constraints - remove all constraints from object</li>
+                            <li><strong>Ctrl + A:</strong> Apply constraint - bake constraint transformations</li>
+                            <li><strong>Shift + D:</strong> Duplicate with constraints - copy objects with constraints</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Mechanical Constraints</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Copy Rotation:</strong> Synchronize rotation between objects</li>
+                            <li><strong>Limit Rotation:</strong> Restrict rotation to specific ranges</li>
+                            <li><strong>Track To:</strong> Make objects point toward targets</li>
+                            <li><strong>Child Of:</strong> Create dynamic parent-child relationships</li>
+                            <li><strong>Locked Track:</strong> Track while locking specific axes</li>
+                            <li><strong>Shrinkwrap:</strong> Constrain objects to follow surfaces</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Constraint System Shortcuts</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for constraint system shortcuts</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-arrows-alt"></i>
+                            IK & Control Systems
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4 features improved IK solvers with better stability and more control options. The new IK system handles complex mechanical assemblies more reliably, with better handling of joint limits and constraints. Enhanced pole target controls and improved IK chain visualization make it easier to set up and debug complex IK systems for mechanical characters.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">IK Setup Tools</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>IK Solver:</strong> Choose between standard and iTaSC solvers</li>
+                            <li><strong>Chain Length:</strong> Control how many bones are affected by IK</li>
+                            <li><strong>Pole Target:</strong> Control the orientation of IK chains</li>
+                            <li><strong>Stretch:</strong> Allow bones to stretch to reach targets</li>
+                            <li><strong>Root Bone:</strong> Define the base of the IK chain</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Control Object Creation</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Empty Objects:</strong> Use empties as control handles for intuitive animation</li>
+                            <li><strong>Custom Bone Shapes:</strong> Create visual controls that match function</li>
+                            <li><strong>Driver System:</strong> Create relationships between controls and movements</li>
+                            <li><strong> bone Collections:</strong> Organize bones into logical groups for easier selection</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">IK & Control Systems</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for IK and control systems</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=NT8zvwGra_A" class="resource-link" target="_blank">
+                                        <span>Mechanical Rigging And Animation | Blender 4.4 Tutorial</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=J1He21vDIfQ" class="resource-link" target="_blank">
+                                        <span>Mechanical Rigging for Beginners (Blender Tutorial)</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=C3sXyAhI60g" class="resource-link" target="_blank">
+                                        <span>How to Rig a Double Scissor Lift Mechanism | Blender 4.4</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/animation/armatures/index.html" class="resource-link" target="_blank">
+                                        <span>Armature Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/animation/constraints/index.html" class="resource-link" target="_blank">
+                                        <span>Constraints Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://developer.blender.org/docs/release_notes/4.4/animation_rigging/" class="resource-link" target="_blank">
+                                        <span>Blender 4.4 Animation & Rigging Release Notes</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=robot%20rigging" class="resource-link" target="_blank">
+                                        <span>Robot Rigging on ArtStation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z" class="resource-link" target="_blank">
+                                        <span>Mechanical Rigging Playlist</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.behance.net/search/projects?search=mechanical%20rigging" class="resource-link" target="_blank">
+                                        <span>Mechanical Rigging References</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 8: Rigging & Mechanical Functionality - Mastering mechanical rigging principles and Blender 4.4's enhanced rigging tools.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

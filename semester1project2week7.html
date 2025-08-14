@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7: Completing Textures & Integrating into Blender - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 7: Completing Textures & Integrating into Blender</h1>
+                    <p>Enhance your robot with advanced texturing features and learn to integrate Substance Painter textures into Blender 4.4 using the latest PBR workflows and shader nodes.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project2week6.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 6</span>
+                </a>
+                <a href="semester1project2week8.html" class="week-nav-button next">
+                    <span>Week 8</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 7 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week focuses on completing your robot's texturing in Substance Painter and seamlessly integrating those textures into Blender 4.4. You'll learn advanced texturing techniques, PBR (Physically Based Rendering) workflows, and how to use Blender's enhanced shader system to create realistic materials. The latest Blender 4.4 features offer improved texture handling and shader capabilities that make this integration smoother than ever.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Master advanced texturing techniques in Substance Painter</li>
+                    <li>Understand PBR texture maps and their applications</li>
+                    <li>Learn Blender 4.4's enhanced Principled BSDF shader</li>
+                    <li>Implement proper texture export/import workflows</li>
+                    <li>Create realistic material setups using shader nodes</li>
+                    <li>Utilize Blender 4.4's improved texture management features</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>The integration of high-quality textures from Substance Painter into Blender is a critical skill in the modern animation pipeline. Understanding PBR workflows and how to properly set up materials in Blender ensures your robot looks realistic and consistent across different rendering engines. Blender 4.4's improvements to texture handling and shader systems make this process more intuitive and powerful, allowing for greater creative control and efficiency.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 7 Exercise: Completing Textures & Integrating into Blender</h3>
+                <p>Enhance your robot with advanced texturing features and learn to integrate Substance Painter textures into Blender 4.4 using the latest PBR workflows.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Finalize Substance Painter Textures</strong>
+                        <p>Complete your robot's texturing in Substance Painter by adding advanced materials, grunge maps, and emissive elements. Use generators and masks to create realistic wear patterns, edge wear, and surface variations. Export your textures using the Blender (Principled BSDF) preset with proper settings for both Cycles and Eevee render engines.</p>
+                    </li>
+                    <li>
+                        <strong>Import Textures into Blender</strong>
+                        <p>In Blender 4.4, create a new material for each part of your robot. Import the exported texture maps and organize them in the shader editor. Use Blender 4.4's improved texture management system to handle large texture sets efficiently and ensure proper color space settings for each map type.</p>
+                    </li>
+                    <li>
+                        <strong>Set Up PBR Materials</strong>
+                        <p>Build PBR material networks using the enhanced Principled BSDF shader in Blender 4.4. Connect all texture maps to their respective inputs: Base Color, Normal, Roughness, Metallic, and Ambient Occlusion. Use Blender 4.4's improved node system to create clean, organized material networks.</p>
+                    </li>
+                    <li>
+                        <strong>Implement Emissive Materials</strong>
+                        <p>Create glowing elements for your robot using Blender 4.4's improved emission system. Mix Emission shaders with Principled BSDF shaders using Mix Shader nodes controlled by emissive texture maps. Adjust emission strength and color to achieve the desired glow effect for lights, displays, or energy components.</p>
+                    </li>
+                    <li>
+                        <strong>Optimize Materials for Performance</strong>
+                        <p>Optimize your materials for better performance by using appropriate texture resolutions, enabling mipmapping, and organizing UV layouts efficiently. Use Blender 4.4's enhanced texture compression and caching features to improve viewport performance and render times.</p>
+                    </li>
+                    <li>
+                        <strong>Test & Refine in Different Lighting</strong>
+                        <p>Test your materials under various lighting conditions using both Eevee and Cycles render engines. Use Blender 4.4's improved viewport shading to get real-time feedback on how your materials appear. Adjust material parameters and texture settings to ensure consistency across different lighting scenarios.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Use Blender 4.4's enhanced texture management system for better organization</li>
+                    <li>Take advantage of the improved Principled BSDF for more physically accurate materials</li>
+                    <li>Test materials in both Eevee and Cycles to ensure consistency</li>
+                    <li>Use the new Glare node for better emissive effects</li>
+                    <li>Organize complex materials using node groups and frame nodes</li>
+                    <li>Document your material setups for future reference and learning</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Artistic Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Artistic Techniques</h2>
+            <div class="techniques-section">
+                <h3>Advanced Texturing Workflows</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-paint-brush"></i>
+                            Smart Materials & Layering
+                        </h4>
+                        <p class="concept-description">
+                            Smart Materials in Substance Painter are pre-built material setups that automatically generate complex effects based on your model's geometry. Learn to layer these materials effectively, using masks and generators to create realistic wear and tear. Understanding how to combine base materials with effects like rust, dirt, and scratches will bring your robot to life with believable surface details.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Smart Materials Demonstration</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for Smart Materials demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-map"></i>
+                            Texture Map Types & PBR Workflow
+                        </h4>
+                        <p class="concept-description">
+                            Master the complete PBR texture map set: Albedo (Base Color), Normal, Roughness, Metallic, Ambient Occlusion, and Emissive. Each map serves a specific purpose in creating realistic materials. Learn how these maps work together in Blender 4.4's enhanced shader system to create physically accurate materials that respond naturally to lighting.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">PBR Texture Maps Explained</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for PBR texture maps explanation</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-magic"></i>
+                            Generators & Masks
+                        </h4>
+                        <p class="concept-description">
+                            Generators and masks are powerful tools in Substance Painter that create procedural effects based on your model's geometry. Learn to use curvature, ambient occlusion, and normal-based generators to create edge wear, dirt accumulation, and weathering effects that follow natural patterns. These tools help create consistent, realistic texturing across complex mechanical surfaces.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Generators and Masks Workflow</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for generators and masks workflow</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blender Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Week 7</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-cube"></i>
+                            Principled BSDF Shader
+                        </h4>
+                        <p class="blender-description">
+                            The Principled BSDF is Blender's primary physically-based shader, designed to create realistic materials based on real-world physics. In Blender 4.4, this shader has been enhanced with better energy conservation and improved subsurface scattering. Learn to master its parameters: Base Color, Metallic, Roughness, Specular, and Transmission to create any material from metals to plastics.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Key Parameters</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Base Color:</strong> The fundamental color of the material, representing albedo in PBR workflows</li>
+                            <li><strong>Metallic:</strong> Controls whether the material behaves like a metal (0 = dielectric, 1 = metal)</li>
+                            <li><strong>Roughness:</strong> Determines surface smoothness (0 = perfect mirror, 1 = completely diffuse)</li>
+                            <li><strong>Specular:</strong> Controls fresnel reflectance for dielectric materials</li>
+                            <li><strong>Transmission:</strong> Allows light to pass through the material for transparent/translucent effects</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Principled BSDF in Blender 4.4</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for Principled BSDF demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-keyboard"></i>
+                            Shader Node Shortcuts
+                        </h4>
+                        <p class="blender-description">
+                            Mastering these essential shader node shortcuts will significantly speed up your material creation workflow in Blender 4.4:
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Node Editor Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A:</strong> Add new node - the primary method for adding nodes to your material setup</li>
+                            <li><strong>Ctrl + Shift + A:</strong> Add reroute node - useful for cleaning up complex node trees</li>
+                            <li><strong>G:</strong> Grab/Move nodes - reposition nodes in the node editor</li>
+                            <li><strong>R:</strong> Rotate nodes - rotate selected nodes for better organization</li>
+                            <li><strong>S:</strong> Scale nodes - resize selected nodes</li>
+                            <li><strong>Ctrl + G:</strong> Group nodes - create node groups for reusable material components</li>
+                            <li><strong>Ctrl + Alt + G:</strong> Ungroup nodes - ungroup selected node groups</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Texture Management</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + V:</strong> Open texture node in image editor - quickly view and edit textures</li>
+                            <li><strong>Alt + O:</strong> Open image in external editor - edit textures in external software</li>
+                            <li><strong>Ctrl + U:</strong> Pack image into .blend file - embed textures directly</li>
+                            <li><strong>Ctrl + Shift + D:</strong> Duplicate material with linked textures - create variations</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Shader Node Shortcuts in Action</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for shader node shortcuts</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-paint-brush"></i>
+                            Texture Management & Tools
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4 introduces enhanced texture management with better GPU memory optimization, faster texture loading, and more efficient caching. The new texture system handles large texture sets more efficiently, making it ideal for complex robot models with multiple material zones.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Texture Management Tools</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Texture Coordinate Node:</strong> Controls how textures are mapped to your model's surface</li>
+                            <li><strong>Mapping Node:</strong> Allows transformation of texture coordinates (position, rotation, scale)</li>
+                            <li><strong>Image Texture Node:</strong> Loads and applies image textures to your materials</li>
+                            <li><strong>Normal Map Node:</strong> Converts normal map textures into surface detail</li>
+                            <li><strong>Bump Node:</strong> Creates surface detail from grayscale height maps</li>
+                            <li><strong>Displacement Node:</strong> Actually modifies geometry based on texture data</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Advanced Techniques</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Texture Atlas:</strong> Combine multiple textures into a single texture sheet for efficiency</li>
+                            <li><strong>UDIM Workflow:</strong> Use UDIM tiles for high-resolution texture work</li>
+                            <li><strong>Packed Textures:</strong> Embed textures directly in your .blend file</li>
+                            <li><strong>Texture Nodes:</strong> Create procedural textures using math and noise nodes</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Texture Management in Blender 4.4</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for texture management tools</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=wA8WsnorlpM" class="resource-link" target="_blank">
+                                        <span>Blender 4.4 PBR Texturing For Beginners</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=qxxoDYGrvtw" class="resource-link" target="_blank">
+                                        <span>Easy PBR Textures in Blender 4.4</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=Pp_KO3Pu3Eo" class="resource-link" target="_blank">
+                                        <span>Glowing Emissive Materials in Blender 4.4</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/principled.html" class="resource-link" target="_blank">
+                                        <span>Principled BSDF Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/sculpt_paint/texture_paint/index.html" class="resource-link" target="_blank">
+                                        <span>Texture Paint Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://developer.blender.org/docs/release_notes/4.4/" class="resource-link" target="_blank">
+                                        <span>Blender 4.4 Release Notes</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=robot%20texturing" class="resource-link" target="_blank">
+                                        <span>Robot Texturing on ArtStation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/search/pins/?q=pbr%20texturing%20workflow" class="resource-link" target="_blank">
+                                        <span>PBR Texturing Workflows</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.behance.net/search/projects?search=substance%20painter%20robot" class="resource-link" target="_blank">
+                                        <span>Substance Painter Robot Projects</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 7: Completing Textures & Integrating into Blender - Mastering PBR workflows and advanced material creation in Blender 4.4.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

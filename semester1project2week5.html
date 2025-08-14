@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5: Basic Robot Modeling (Continued) - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 5: Basic Robot Modeling (Continued)</h1>
+                    <p>Refine your robot's primary forms, integrate secondary shapes, and establish proper edge flow for future detailing and animation.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project2week4.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 4</span>
+                </a>
+                <a href="semester1project2week6.html" class="week-nav-button next">
+                    <span>Week 6</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 5 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week continues your journey into 3D modeling by refining the basic forms you established last week. You'll focus on integrating secondary shapes, improving edge flow, and preparing your model for more detailed work in the coming weeks. This refinement process is crucial for creating models that not only look good but also function well in the animation pipeline.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Refine primary forms to better match your concept art</li>
+                    <li>Integrate secondary shapes and details</li>
+                    <li>Establish proper edge flow for future animation</li>
+                    <li>Learn to use more advanced mesh editing tools</li>
+                    <li>Apply subdivision surface modeling for smoother forms</li>
+                    <li>Prepare your model for the detailing phase</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>The refinement phase is where good models become great models. This week focuses on the transition between basic blocking and detailed modeling, a critical stage in the 3D pipeline. By establishing proper edge flow and topology now, you'll save significant time later when adding details and preparing for animation. This approach mirrors professional workflows where artists spend considerable time refining forms before adding details.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 5 Exercise: Basic Robot Modeling (Continued)</h3>
+                <p>Refine your robot's primary forms, integrate secondary shapes, and establish proper edge flow for future detailing and animation.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Review and Refine Primary Forms</strong>
+                        <p>Examine your basic model from Week 4 and compare it to your reference images. Adjust the proportions and shapes of the primary forms to better match your concept art. Focus on getting the overall silhouette and proportions correct before moving on to secondary details.</p>
+                    </li>
+                    <li>
+                        <strong>Add Strategic Edge Loops</strong>
+                        <p>Use the Loop Cut & Slide tool (Ctrl+R) to add edge loops around areas that will need more detail or will bend during animation. Pay particular attention to joints, mechanical connections, and prominent features. These edge loops will define the structure of your model and support future detailing.</p>
+                    </li>
+                    <li>
+                        <strong>Apply Subdivision Surface Modifier</strong>
+                        <p>Add a Subdivision Surface Modifier to your model to smooth out the forms. Adjust the subdivision levels to find a balance between smoothness and control. Use edge creasing (Shift+E) on edges that need to remain sharp, particularly on mechanical components.</p>
+                    </li>
+                    <li>
+                        <strong>Integrate Secondary Forms</strong>
+                        <p>Add secondary shapes and details to your model, such as facial features, mechanical components, or surface details. Ensure these secondary forms integrate seamlessly with the primary structure, maintaining good edge flow and topology. Use the Knife Tool (K) for custom cuts when needed.</p>
+                    </li>
+                    <li>
+                        <strong>Refine Edge Flow</strong>
+                        <p>Examine the edge flow of your model and make adjustments as needed. Ensure that edges follow the natural contours of your robot and that edge loops are properly placed around areas of deformation. Good edge flow now will make future detailing and animation much easier.</p>
+                    </li>
+                    <li>
+                        <strong>Check Multi-Angle Consistency</strong>
+                        <p>Rotate your model frequently to check how it appears from different angles. Compare it to your original 2D silhouette to ensure you're maintaining the character and essence of your design. Make adjustments as needed to improve proportions and silhouette strength from all viewing angles.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Work non-destructively using modifiers whenever possible</li>
+                    <li>Use reference images consistently to maintain accuracy</li>
+                    <li>Check your model from multiple angles frequently</li>
+                    <li>Focus on edge flow and topology for future animation</li>
+                    <li>Use edge creasing to maintain sharp edges on mechanical parts</li>
+                    <li>Save multiple versions of your work as you progress</li>
+                    <li>Compare your model to your original 2D silhouette regularly</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Modeling Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Modeling Techniques</h2>
+            <div class="techniques-section">
+                <h3>Intermediate Modeling Approaches</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-border-all"></i>
+                            Edge Flow
+                        </h4>
+                        <p class="concept-description">
+                            Edge flow refers to how edges move across the surface of your model. Good edge flow creates clean, predictable deformations during animation and makes the model easier to edit and refine. This week, you'll focus on establishing proper edge loops that follow the natural contours of your robot, particularly around joints and areas that will bend or deform.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Edge Flow Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for edge flow techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-bezier-curve"></i>
+                            Subdivision Surface Modeling
+                        </h4>
+                        <p class="concept-description">
+                            Subdivision surface modeling uses a low-polygon control cage that is subdivided to create smooth, organic forms. This technique allows you to create complex curved surfaces with relatively simple geometry. You'll learn to use the Subdivision Surface modifier in Blender to smooth out your robot's forms while maintaining control over the overall shape.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Subdivision Surface Modeling</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for subdivision surface modeling</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-draw-polygon"></i>
+                            Secondary Form Development
+                        </h4>
+                        <p class="concept-description">
+                            Secondary forms are the medium-sized shapes that add character and detail to your model without overwhelming the primary forms. These include features like facial details, muscle groups, or mechanical components that give your robot personality and function. This week, you'll add these secondary forms while ensuring they integrate seamlessly with the primary structure.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Secondary Form Development</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for secondary form development</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blender Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Week 5</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-border-all"></i>
+                            Loop Cut & Slide
+                        </h4>
+                        <p class="blender-description">
+                            The Loop Cut & Slide tool (Ctrl+R) allows you to add new edge loops that follow the surface of your model. This is essential for adding detail and controlling edge flow. You can adjust the position of the new loop with the mouse wheel or by typing a percentage value. Mastering this tool is crucial for refining your model's topology.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Loop Cut & Slide Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Ctrl + R:</strong> Activate Loop Cut & Slide tool</li>
+                            <li><strong>Mouse Wheel:</strong> Adjust number of cuts</li>
+                            <li><strong>Left Click:</strong> Place cut at current position</li>
+                            <li><strong>Right Click:</strong> Cancel operation</li>
+                            <li><strong>Scroll Wheel:</strong> Slide cut along surface</li>
+                            <li><strong>Enter:</strong> Confirm cut placement</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Loop Cut & Slide Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for loop cut & slide techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-bezier-curve"></i>
+                            Subdivision Surface Modifier
+                        </h4>
+                        <p class="blender-description">
+                            The Subdivision Surface Modifier smooths your model by subdividing polygons and averaging their positions. This allows you to work with a low-polygon control cage while previewing a smooth result. You can adjust the number of subdivision levels and control edge sharpness with edge weights or creases.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Subdivision Surface Workflow</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Properties > Modifiers > Add Modifier:</strong> Access modifier stack</li>
+                            <li><strong>Generate > Subdivision Surface:</strong> Add SubSurf modifier</li>
+                            <li><strong>Levels Viewport:</strong> Control preview smoothness</li>
+                            <li><strong>Levels Render:</strong> Control final render smoothness</li>
+                            <li><strong>Optimal Display:</strong> Show cage in viewport</li>
+                            <li><strong>Ctrl + A > Apply:</strong> Make modifier permanent</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Subdivision Surface Modifier</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for subdivision surface modifier</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-vector-square"></i>
+                            Edge Creasing
+                        </h4>
+                        <p class="blender-description">
+                            Edge creasing allows you to control how sharply edges are rendered when using the Subdivision Surface Modifier. By selecting edges and pressing Shift+E, you can set a crease value from 0 (smooth) to 1 (sharp). This is essential for maintaining hard edges in mechanical parts while keeping other areas smooth.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Edge Creasing Techniques</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + E:</strong> Activate edge crease tool</li>
+                            <li><strong>Mouse Movement:</strong> Adjust crease value (0-1)</li>
+                            <li><strong>Left Click:</strong> Confirm crease value</li>
+                            <li><strong>Right Click:</strong> Cancel operation</li>
+                            <li><strong>Alt + E:</strong> Clear crease values</li>
+                            <li><strong>Properties > Object Data > Crease:</strong> Adjust in panel</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Edge Creasing Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for edge creasing techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-draw-polygon"></i>
+                            Knife Tool
+                        </h4>
+                        <p class="blender-description">
+                            The Knife Tool (K) allows you to make custom cuts across your model's surface, creating new edges and vertices. This is useful for adding detail in specific areas or creating complex shapes that can't be achieved with other tools. The tool offers several modes, including Knife, Bisect, and Midpoint.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Knife Tool Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>K:</strong> Activate Knife tool</li>
+                            <li><strong>Left Click:</strong> Place cut point</li>
+                            <li><strong>Enter:</strong> Confirm cuts</li>
+                            <li><strong>Esc:</strong> Cancel operation</li>
+                            <li><strong>C:</strong> Cut through - cut all the way through</li>
+                            <li><strong>E:</strong> Angle constraint - snap to angles</li>
+                            <li><strong>Shift + K:</strong> Knife tool with midpoint snapping</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Knife Tool Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for knife tool techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-compress"></i>
+                            Proportional Editing
+                        </h4>
+                        <p class="blender-description">
+                            Proportional Editing (O) affects nearby vertices when you transform a selection, allowing for smooth, organic adjustments to your model. You can adjust the falloff type and size to control how the influence decreases with distance. This tool is essential for creating smooth, natural-looking forms.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Proportional Editing Controls</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>O:</strong> Toggle Proportional Editing on/off</li>
+                            <li><strong>Mouse Wheel:</strong> Adjust influence radius</li>
+                            <li><strong>Shift + O:</strong> Cycle through falloff types</li>
+                            <li><strong>W:</strong> Show Proportional Editing settings</li>
+                            <li><strong>Alt + O:</strong> Toggle Connected only mode</li>
+                            <li><strong>Falloff Types:</strong> Smooth, Sphere, Root, Sharp, Linear</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Proportional Editing Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for proportional editing techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-object-group"></i>
+                            Modifier Stack
+                        </h4>
+                        <p class="blender-description">
+                            The modifier stack in Blender allows you to apply non-destructive effects to your model. Modifiers are applied in order from top to bottom, and you can enable/disable them or adjust their settings at any time. Understanding how to use the modifier stack effectively is essential for efficient, non-destructive modeling workflows.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Modifier Stack Management</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Properties > Modifiers:</strong> Access modifier stack</li>
+                            <li><strong>Eye Icon:</strong> Toggle modifier visibility in viewport</li>
+                            <li><strong>Screen Icon:</strong> Toggle modifier in render</li>
+                            <li><strong>Up/Down Arrows:</strong> Reorder modifiers in stack</li>
+                            <li><strong>X:</strong> Remove modifier</li>
+                            <li><strong>Ctrl + A > Apply:</strong> Apply modifier permanently</li>
+                            <li><strong>Ctrl + A > Apply as Shape Key:</strong> Apply as shape key</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Modifier Stack Management</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for modifier stack management</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=nIo1OSeCtgo" class="resource-link" target="_blank">
+                                        <span>Blender Edge Flow Fundamentals</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=3G2g_5l2M0s" class="resource-link" target="_blank">
+                                        <span>Subdivision Surface Modeling in Blender</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=7c2U-7I-2e4" class="resource-link" target="_blank">
+                                        <span>Blender Topology for Animation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/loop.html" class="resource-link" target="_blank">
+                                        <span>Loop Cut & Slide Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html" class="resource-link" target="_blank">
+                                        <span>Subdivision Surface Modifier Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/knife.html" class="resource-link" target="_blank">
+                                        <span>Knife Tool Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=robot%20modeling" class="resource-link" target="_blank">
+                                        <span>Robot Modeling on ArtStation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/search/pins/?q=robot%20modeling%20reference" class="resource-link" target="_blank">
+                                        <span>Robot Modeling References</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.behance.net/search/projects?search=robot%20modeling" class="resource-link" target="_blank">
+                                        <span>Robot Modeling Projects</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 5: Basic Robot Modeling (Continued) - Refining forms and establishing proper edge flow for future detailing and animation.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

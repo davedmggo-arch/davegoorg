@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6: Detailed Robot Modeling - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 6: Detailed Robot Modeling</h1>
+                    <p>Begin adding mechanical details and secondary forms to your robot, learning hard surface modeling techniques and boolean operations for complex shapes.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project2week5.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 5</span>
+                </a>
+                <a href="semester1project2week7.html" class="week-nav-button next">
+                    <span>Week 7</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 6 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week marks the beginning of the detailed modeling phase, where you'll add mechanical components and secondary forms to your robot. You'll learn hard surface modeling techniques, boolean operations for creating complex shapes, and methods for integrating detail while maintaining clean topology. This phase transforms your basic model into a detailed, functional-looking robot.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Apply hard surface modeling techniques for mechanical components</li>
+                    <li>Use boolean operations to create complex shapes</li>
+                    <li>Add mechanical details while maintaining clean topology</li>
+                    <li>Learn edge beveling techniques for realistic edges</li>
+                    <li>Create and integrate secondary mechanical forms</li>
+                    <li>Balance detail with performance considerations</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>The transition from basic forms to detailed models is where your robot truly comes to life. Hard surface modeling techniques are essential for creating believable mechanical components, while boolean operations allow for complex shapes that would be difficult to create manually. These skills are fundamental to creating detailed, functional-looking robots and are widely used in industries from game development to film VFX.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 6 Exercise: Detailed Robot Modeling</h3>
+                <p>Begin adding mechanical details and secondary forms to your robot, learning hard surface modeling techniques and boolean operations for complex shapes.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Plan Your Details</strong>
+                        <p>Review your basic robot model and plan where to add mechanical details. Consider the function of each part of your robot and what details would enhance its appearance and suggest how it works. Focus on areas like joints, mechanical connections, and functional components that would benefit from additional detail.</p>
+                    </li>
+                    <li>
+                        <strong>Create Secondary Components</strong>
+                        <p>Model secondary mechanical components like vents, panels, or mechanical connections as separate objects. Use primitive shapes as starting points and refine them to match your design. These components will later be integrated with the main body of your robot.</p>
+                    </li>
+                    <li>
+                        <strong>Apply Boolean Operations</strong>
+                        <p>Use the Boolean Modifier to create complex shapes and cutouts in your robot's body. This might include holes for vents, recesses for components, or intricate mechanical connections. Remember to apply the modifier (Ctrl+A) when you're satisfied with the result to create clean geometry.</p>
+                    </li>
+                    <li>
+                        <strong>Add Surface Details</strong>
+                        <p>Use the Inset Faces (I) and Grid Fill (Ctrl+F) tools to add surface details like panels, grilles, and mechanical patterns. These details suggest how your robot was constructed and add visual interest to otherwise flat surfaces.</p>
+                    </li>
+                    <li>
+                        <strong>Apply Bevels to Edges</strong>
+                        <p>Add bevels to sharp edges using the Bevel Modifier or manual beveling (Ctrl+B). This makes your robot look more realistic and less "digital." Pay particular attention to edges that would naturally be rounded or chamfered in a real mechanical object.</p>
+                    </li>
+                    <li>
+                        <strong>Integrate Components</strong>
+                        <p>Integrate the secondary components you created earlier with the main body of your robot. Ensure smooth transitions between components and maintain good edge flow around connections. Use supporting loops where components connect to the main body to maintain form during animation.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Work non-destructively using modifiers whenever possible</li>
+                    <li>Use reference images of real mechanical objects for inspiration</li>
+                    <li>Check for non-manifold geometry and other topology issues</li>
+                    <li>Balance detail with performance considerations</li>
+                    <li>Use supporting loops around areas that will deform during animation</li>
+                    <li>Save multiple versions of your work as you progress</li>
+                    <li>Test boolean operations on copies of your geometry before applying them</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Modeling Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Modeling Techniques</h2>
+            <div class="techniques-section">
+                <h3>Hard Surface Modeling Techniques</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-cogs"></i>
+                            Hard Surface Modeling
+                        </h4>
+                        <p class="concept-description">
+                            Hard surface modeling focuses on creating man-made objects with precise edges and mechanical details. Unlike organic modeling, which emphasizes smooth, flowing forms, hard surface modeling requires clean edges, precise angles, and technical accuracy. This technique is essential for creating robots, vehicles, and other mechanical objects.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Hard Surface Modeling Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for hard surface modeling techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-object-group"></i>
+                            Boolean Operations
+                        </h4>
+                        <p class="concept-description">
+                            Boolean operations allow you to combine shapes in various ways: union (combining two shapes), difference (subtracting one shape from another), and intersection (keeping only the overlapping area). These operations are powerful for creating complex mechanical shapes that would be difficult to model manually, such as holes, cutouts, and intricate connections.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Boolean Operations Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for boolean operations techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-border-style"></i>
+                            Edge Beveling
+                        </h4>
+                        <p class="concept-description">
+                            Edge beveling adds a chamfer or rounded edge to sharp corners, making models look more realistic and less "digital." In the real world, few objects have perfectly sharp edges, and beveling simulates the slight rounding that occurs in manufactured objects. Proper beveling is essential for creating believable mechanical components.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Edge Beveling Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for edge beveling techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blender Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Week 6</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-object-group"></i>
+                            Boolean Modifier
+                        </h4>
+                        <p class="blender-description">
+                            The Boolean Modifier allows you to perform boolean operations (union, difference, intersection) on your mesh objects. This is powerful for creating complex mechanical shapes, holes, and cutouts that would be difficult to model manually. The modifier works non-destructively, allowing you to adjust the operation at any time.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Boolean Modifier Workflow</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Properties > Modifiers > Add Modifier:</strong> Access modifier stack</li>
+                            <li><strong>Generate > Boolean:</strong> Add Boolean modifier</li>
+                            <li><strong>Operation Type:</strong> Union, Difference, or Intersection</li>
+                            <li><strong>Object Selection:</strong> Choose target object for operation</li>
+                            <li><strong>Solver:</strong> Choose Fast or Exact (more accurate)</li>
+                            <li><strong>Self Intersection:</strong> Enable for complex operations</li>
+                            <li><strong>Ctrl + A > Apply:</strong> Apply modifier to make permanent</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Boolean Modifier Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for boolean modifier techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-border-style"></i>
+                            Bevel Modifier
+                        </h4>
+                        <p class="blender-description">
+                            The Bevel Modifier adds chamfers or rounded edges to your model, creating more realistic and less "digital" looking objects. You can control the width, segments, and profile of the bevel, and limit it to specific edges using vertex groups. This modifier is essential for creating believable mechanical components.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Bevel Modifier Controls</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Properties > Modifiers > Add Modifier:</strong> Access modifier stack</li>
+                            <li><strong>Generate > Bevel:</strong> Add Bevel modifier</li>
+                            <li><strong>Width:</strong> Control bevel size</li>
+                            <li><strong>Segments:</strong> Control bevel smoothness</li>
+                            <li><strong>Profile:</strong> Control bevel shape (0-1)</li>
+                            <li><strong>Limit Method:</strong> Angle, Weight, or Vertex Group</li>
+                            <li><strong>Harden Normals:</strong> Create sharp edges between bevels</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Bevel Modifier Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for bevel modifier techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-th"></i>
+                            Grid Fill
+                        </h4>
+                        <p class="blender-description">
+                            The Grid Fill tool (Ctrl+F) fills selected edges with a grid of quads, creating clean, organized geometry. This is particularly useful for creating mechanical panels, grilles, and other regular patterns on your robot. You can adjust the number of segments and span of the fill to control the density of the grid.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Grid Fill Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Select Edges:</strong> Select boundary edges first</li>
+                            <li><strong>Ctrl + F:</strong> Access Face menu</li>
+                            <li><strong>Grid Fill:</strong> Activate Grid Fill tool</li>
+                            <li><strong>Mouse Wheel:</strong> Adjust number of segments</li>
+                            <li><strong>Left Click:</strong> Confirm grid fill</li>
+                            <li><strong>Right Click:</strong> Cancel operation</li>
+                            <li><strong>Span:</strong> Control grid span direction</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Grid Fill Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for grid fill techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-vector-square"></i>
+                            Inset Faces
+                        </h4>
+                        <p class="blender-description">
+                            The Inset Faces tool (I) creates a smaller copy of selected faces inset from the original edges. This is useful for creating panels, recesses, and other mechanical details. You can control the inset amount and thickness, and choose whether to create new faces or just inset the existing ones.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Inset Faces Controls</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Select Faces:</strong> Select faces to inset</li>
+                            <li><strong>I:</strong> Activate Inset Faces tool</li>
+                            <li><strong>Mouse Movement:</strong> Adjust inset depth</li>
+                            <li><strong>Left Click:</strong> Confirm inset</li>
+                            <li><strong>Right Click:</strong> Cancel operation</li>
+                            <li><strong>Thickness:</strong> Control inset wall thickness</li>
+                            <li><strong>Outset:</strong> Create outward inset instead</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Inset Faces Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for inset faces techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            Extrude Individual
+                        </h4>
+                        <p class="blender-description">
+                            The Extrude Individual tool (E > Individual) extrudes each selected face separately, rather than as a group. This is useful for creating mechanical details like buttons, vents, and other components that should move independently from the main surface. You can control the extrusion direction and distance for precise results.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Extrude Individual Workflow</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Select Faces:</strong> Select faces to extrude individually</li>
+                            <li><strong>E:</strong> Activate Extrude tool</li>
+                            <li><strong>Individual:</strong> Choose Individual option</li>
+                            <li><strong>Mouse Movement:</strong> Control extrusion distance</li>
+                            <li><strong>X/Y/Z:</strong> Constrain to axis</li>
+                            <li><strong>Left Click:</strong> Confirm extrusion</li>
+                            <li><strong>Right Click:</strong> Cancel operation</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Extrude Individual Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for extrude individual techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-search"></i>
+                            Mesh Analysis
+                        </h4>
+                        <p class="blender-description">
+                            Blender's Mesh Analysis tools help you identify and fix issues with your model's topology. The 3D Print Toolbox and Mesh Analysis addons can highlight non-manifold geometry, overlapping faces, and other common problems. These tools are essential for ensuring your model is clean and functional.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Mesh Analysis Tools</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Edit > Mesh Analysis > Select:</strong> Access analysis tools</li>
+                            <li><strong>Select Non-Manifold:</strong> Find problematic geometry</li>
+                            <li><strong>Select Loose Geometry:</strong> Find disconnected elements</li>
+                            <li><strong>3D Print Toolbox:</strong> Enable addon for advanced analysis</li>
+                            <li><strong>Mesh > Clean Up:</strong> Access cleanup tools</li>
+                            <li><strong>Display > Normals:</strong> Check face orientation</li>
+                            <li><strong>Viewport Overlays > Geometry:</strong> Show mesh statistics</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Mesh Analysis Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for mesh analysis techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=nIo1OSeCtgo" class="resource-link" target="_blank">
+                                        <span>Hard Surface Modeling Techniques</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=7c2U-7I-2e4" class="resource-link" target="_blank">
+                                        <span>Boolean Operations in Blender</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=TRtZ8xHCtOs" class="resource-link" target="_blank">
+                                        <span>Blender Hard Surface Modeling Workflow</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/boolean.html" class="resource-link" target="_blank">
+                                        <span>Boolean Modifier Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/bevel.html" class="resource-link" target="_blank">
+                                        <span>Bevel Modifier Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/inset.html" class="resource-link" target="_blank">
+                                        <span>Inset Faces Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=hard%20surface%20modeling" class="resource-link" target="_blank">
+                                        <span>Hard Surface Modeling on ArtStation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/search/pins/?q=mechanical%20design%20reference" class="resource-link" target="_blank">
+                                        <span>Mechanical Design References</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.behance.net/search/projects?search=robot%20modeling" class="resource-link" target="_blank">
+                                        <span>Robot Modeling Projects</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 6: Detailed Robot Modeling - Adding mechanical details and mastering hard surface modeling techniques for complex shapes.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

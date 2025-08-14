@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 13: Final Presentation - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 13: Final Presentation</h1>
+                    <p>Compile and refine your robot environment project into a professional presentation. Learn rendering techniques, post-processing, and portfolio preparation using Blender 4.4's advanced output tools.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project3week12.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 12</span>
+                </a>
+                <a href="semester1project3.html" class="week-nav-button next">
+                    <span>Project Complete</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 13 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week marks the culmination of your robot environment project, where you'll bring together all the elements you've created into a polished, professional presentation. You'll learn advanced rendering techniques, post-processing workflows, and portfolio preparation strategies using Blender 4.4's enhanced output tools. This final week focuses on transforming your technical work into a compelling visual narrative that showcases your skills and creativity.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Master advanced rendering techniques in both Cycles and Eevee</li>
+                    <li>Learn post-processing workflows for enhancing final renders</li>
+                    <li>Understand output settings and format optimization</li>
+                    <li>Create professional presentation materials and documentation</li>
+                    <li>Develop portfolio-ready assets and project documentation</li>
+                    <li>Apply critique and refinement processes to final work</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>The final presentation is where your technical skills meet professional standards. Understanding how to render, process, and present your work effectively is crucial for career success in the 3D industry. Professional studios expect artists to deliver polished, portfolio-ready work that demonstrates both technical proficiency and artistic vision. This week's exercises will prepare you for real-world project delivery and portfolio development.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 13 Exercise: Final Presentation</h3>
+                <p>Compile and refine your robot environment project into a professional presentation using Blender 4.4's advanced rendering and output tools.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Final Scene Optimization</strong>
+                        <p>Optimize your scene for final rendering by cleaning up unused objects, organizing collections, and ensuring all materials and textures are properly set up. Use Blender 4.4's enhanced viewport performance to review your scene and make any final adjustments to composition, lighting, and camera work.</p>
+                    </li>
+                    <li>
+                        <strong>Configure Render Settings</strong>
+                        <p>Set up render settings for both Cycles and Eevee engines. Configure sampling, denoising, and output formats appropriate for your final presentation. Use Blender 4.4's improved render settings to balance quality with performance and ensure professional results.</p>
+                    </li>
+                    <li>
+                        <strong>Set Up Render Passes</strong>
+                        <p>Configure render passes for compositing and post-processing work. Set up passes for diffuse, specular, reflection, and other elements that will give you maximum control in post-processing. Use Blender 4.4's enhanced render layer system for efficient pass management.</p>
+                    </li>
+                    <li>
+                        <strong>Create Compositing Setup</strong>
+                        <p>Build a compositing node tree to enhance your renders with color grading, effects, and final adjustments. Use Blender 4.4's enhanced compositor to create professional-grade post-processing effects that elevate your work to industry standards.</p>
+                    </li>
+                    <li>
+                        <strong>Render Final Images</strong>
+                        <p>Execute final renders at appropriate resolutions for your presentation needs. Render multiple angles and variations to showcase different aspects of your robot environment project. Use Blender 4.4's improved rendering performance to efficiently produce high-quality results.</p>
+                    </li>
+                    <li>
+                        <strong>Prepare Portfolio Materials</strong>
+                        <p>Create portfolio-ready materials including final renders, process documentation, and presentation assets. Organize your work into a professional format that demonstrates your skills and creative process. Use Blender 4.4's enhanced export options to prepare files for various delivery platforms.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Use Blender 4.4's enhanced rendering performance to produce high-quality results efficiently</li>
+                    <li>Take advantage of the improved compositor for professional post-processing</li>
+                    <li>Organize your work clearly for portfolio presentation</li>
+                    <li>Document your process to showcase your workflow and problem-solving skills</li>
+                    <li>Test different render settings to find the optimal balance of quality and performance</li>
+                    <li>Prepare multiple formats and resolutions for different presentation needs</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Important Artistic Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Artistic Techniques</h2>
+            <div class="techniques-section">
+                <h3>Professional Presentation Techniques</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-image"></i>
+                            Rendering Excellence
+                        </h4>
+                        <p class="concept-description">
+                            Master the art of creating high-quality renders that showcase your work in the best possible light. Learn to balance render quality with efficiency, optimize settings for different output formats, and create renders that highlight the strengths of your robot environment project. Understand when to use Cycles for photorealistic results versus Eevee for real-time performance.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Rendering Excellence</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for rendering excellence techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Industry Example: Industrial Light & Magic</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="ILM rendering example">
+                            </div>
+                            <p class="example-description">
+                                ILM's work on films like Transformers demonstrates exceptional rendering quality, balancing photorealistic detail with artistic direction. Their rendering pipeline combines multiple passes and advanced techniques to achieve the stunning visual quality that has become their trademark.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-magic"></i>
+                            Post-Processing Workflows
+                        </h4>
+                        <p class="concept-description">
+                            Learn professional post-processing techniques to enhance your renders and create a cohesive visual style. Master color grading, compositing, and effects that can elevate your work from good to exceptional. Understand how to use Blender's compositor and external tools to create final images that match your artistic vision.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Post-Processing Workflows</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for post-processing workflows</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Industry Example: Weta Digital</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Weta Digital post-processing example">
+                            </div>
+                            <p class="example-description">
+                                Weta Digital's post-processing workflows for films like Avatar and The Lord of the Rings showcase the power of compositing and color grading. Their ability to seamlessly integrate CG elements with live footage and create cohesive visual styles has set industry standards for years.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-briefcase"></i>
+                            Portfolio Development
+                        </h4>
+                        <p class="concept-description">
+                            Transform your project work into portfolio-ready assets that demonstrate your skills to potential employers or clients. Learn how to present your work effectively, document your process, and create materials that showcase both your technical abilities and artistic vision. Understand what makes a portfolio piece stand out in the competitive 3D industry.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Portfolio Development</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for portfolio development strategies</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Industry Example: Blur Studio</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Blur Studio portfolio example">
+                            </div>
+                            <p class="example-description">
+                                Blur Studio's portfolio showcases exceptional presentation of their work, with clear breakdowns, process documentation, and final renders that demonstrate both technical skill and artistic direction. Their approach to portfolio development has made them one of the most respected studios in the industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Blender 4.4 Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Final Presentation</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-cog"></i>
+                            Advanced Rendering Settings
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4 introduces enhanced rendering capabilities with improved performance, better sampling algorithms, and more advanced output options. The new rendering system provides better control over quality vs. performance trade-offs, making it easier to achieve professional results efficiently.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Fundamental Concepts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Cycles Rendering:</strong> Path tracing engine for photorealistic results with improved sampling and denoising.</li>
+                            <li><strong>Eevee Rendering:</strong> Real-time rendering engine with enhanced ray tracing and screen space reflections.</li>
+                            <li><strong>Render Passes:</strong> Separate render layers for compositing and post-processing control.</li>
+                            <li><strong>Render Optimization:</strong> Advanced settings for balancing quality and render time.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>F12:</strong> Start render</li>
+                            <li><strong>Ctrl + F12:</strong> Render animation</li>
+                            <li><strong>F11:</strong> View last render</li>
+                            <li><strong>Alt + A:</strong> Play animation</li>
+                            <li><strong>Ctrl + S:</strong> Save image</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Advanced Rendering in Blender 4.4</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for advanced rendering features</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-layer-group"></i>
+                            Enhanced Compositor
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4's compositor has been enhanced with improved performance, better node organization, and more advanced compositing tools. The updated system makes it easier to create complex post-processing effects and achieve professional-grade results directly within Blender.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Tools & Techniques</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Node Groups:</strong> Organize complex node trees into reusable groups for better workflow.</li>
+                            <li><strong>Color Management:</strong> Advanced color grading and correction tools.</li>
+                            <li><strong>Glare Effects:</strong> Enhanced glare node for realistic light effects and bloom.</li>
+                            <li><strong>Render Layers:</strong> Efficient management of multiple render passes for compositing.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A:</strong> Add node</li>
+                            <li><strong>Ctrl + G:</strong> Group selected nodes</li>
+                            <li><strong>Ctrl + Shift + G:</strong> Ungroup nodes</li>
+                            <li><strong>G:</strong> Move node</li>
+                            <li><strong>S:</strong> Scale node</li>
+                            <li><strong>Ctrl + C / Ctrl + V:</strong> Copy/paste nodes</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Compositor Workflow</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for compositor workflow</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-file-export"></i>
+                            Output & Export Options
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4 provides enhanced output and export options with better format support, improved compression, and more advanced output settings. The updated system makes it easier to prepare your work for various delivery platforms and portfolio requirements.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Tools & Techniques</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Output Formats:</strong> Support for various image and video formats including EXR, PNG, JPEG, and MP4.</li>
+                            <li><strong>Color Depth:</strong> Options for 8-bit, 16-bit, and 32-bit color depth for different quality requirements.</li>
+                            <li><strong>Compression Settings:</strong> Advanced compression options for optimal file size vs. quality balance.</li>
+                            <li><strong>Metadata:</strong> Embed project information and metadata in output files.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Ctrl + Alt + S:</strong> Save as</li>
+                            <li><strong>Ctrl + Shift + S:</strong> Save copy</li>
+                            <li><strong>F2:</strong> Rename file</li>
+                            <li><strong>Ctrl + E:</strong> Export menu</li>
+                            <li><strong>Ctrl + Shift + E:</strong> Export as</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Output and Export Settings</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for output settings demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=0cm8PzJg1bs" class="resource-link" target="_blank">
+                                        <span>How to Create a Realistic Scene in Blender 4.4 with Eevee</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=bRluQr0i5LU" class="resource-link" target="_blank">
+                                        <span>Realistic Lighting in Blender with Cycles and Eevee</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=kIW648Cfo18" class="resource-link" target="_blank">
+                                        <span>10 Easy Ways to Render Faster in Blender</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/render/index.html" class="resource-link" target="_blank">
+                                        <span>Rendering Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/compositing/index.html" class="resource-link" target="_blank">
+                                        <span>Compositing Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/files/index.html" class="resource-link" target="_blank">
+                                        <span>Output & Export Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=3d%20portfolio" class="resource-link" target="_blank">
+                                        <span>ArtStation Portfolio Examples</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.behance.net/search/content?search=3d%20rendering" class="resource-link" target="_blank">
+                                        <span>Behance 3D Rendering Projects</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.cgchannel.com/" class="resource-link" target="_blank">
+                                        <span>CG Channel - Industry News & Inspiration</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 13: Final Presentation - Transforming technical work into professional portfolio-ready assets.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

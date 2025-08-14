@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3: Robot Environment & Cinematic Presentation - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-title">Project 3 Navigation</div>
+        <ul class="sidebar-nav">
+            <li><a href="#brief" class="active"><i class="fas fa-file-alt"></i> Project Brief</a></li>
+            <li><a href="#marking"><i class="fas fa-tasks"></i> Marking Criteria</a></li>
+            <li><a href="#topics"><i class="fas fa-book"></i> Topics Covered</a></li>
+            <li><a href="#shortcuts"><i class="fas fa-keyboard"></i> Blender Shortcuts</a></li>
+            <li><a href="#styles"><i class="fas fa-palette"></i> Art Styles</a></li>
+            <li><a href="#exercises"><i class="fas fa-pencil-ruler"></i> Exercises</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Project 3: Robot Environment & Cinematic Presentation</h1>
+                    <p>Weeks 10-13: Place your robot in a compelling environment with professional lighting, camera work, and rendering. Learn to create cinematic presentations that showcase your robot in its best light using Blender 4.4's latest environment and rendering tools.</p>
+                    <a href="#brief" class="cta-button">View Project Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project2week9.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 9</span>
+                </a>
+                <a href="semester1project3week10.html" class="week-nav-button next">
+                    <span>Week 10</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Project Brief Section -->
+        <section id="brief" class="container">
+            <h2 class="section-title">Project Brief</h2>
+            <div class="project-brief">
+                <h3>Overview</h3>
+                <p>In this final project, you'll learn to place your completed robot in a professionally designed environment and create a cinematic presentation that showcases your work. This project covers the essential skills of environment creation, lighting design, camera work, and rendering - crucial components of the 3D production pipeline that bring together all the techniques you've learned throughout the semester.</p>
+                
+                <h3>Project Goals</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Master environment creation using Blender 4.4's enhanced tools</li>
+                    <li>Learn professional lighting techniques with Blender 4.4's improved lighting system</li>
+                    <li>Develop camera skills and composition principles for cinematic presentation</li>
+                    <li>Understand rendering workflows using Blender 4.4's optimized Cycles and Eevee engines</li>
+                    <li>Apply compositing and post-processing techniques for final polish</li>
+                    <li>Create a professional cinematic presentation that tells a story</li>
+                </ul>
+                
+                <h3>Deliverables</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li><strong>Week 10:</strong> Environment concept and layout with basic geometry</li>
+                    <li><strong>Week 11:</strong> Completed environment with lighting setup and robot integration</li>
+                    <li><strong>Week 12:</strong> Camera setup with multiple shots and basic animation</li>
+                    <li><strong>Week 13:</strong> Final cinematic presentation with rendered shots and post-processing</li>
+                </ul>
+                
+                <h3>Learning Outcomes</h3>
+                <p>By the end of this project, you will have mastered the complete 3D production pipeline from concept to final presentation. You'll understand how to create compelling environments, set up professional lighting, compose cinematic shots, and produce polished renders. You'll be able to present your 3D work in a professional, industry-standard format that showcases both technical skill and artistic vision.</p>
+            </div>
+        </section>
+
+        <!-- Marking Criteria Section -->
+        <section id="marking" class="container">
+            <h2 class="section-title">Marking Criteria</h2>
+            <div class="marking-criteria">
+                <h3>Assessment Breakdown</h3>
+                <div class="criteria-grid">
+                    <div class="criteria-card">
+                        <div class="criteria-percentage">30%</div>
+                        <h4 class="criteria-title">Environment Design</h4>
+                        <p class="criteria-description">
+                            Evaluation of environment quality, composition, scale, and narrative context. Effective use of Blender 4.4's environment tools, asset integration, and creating a cohesive scene that complements the robot character.
+                        </p>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-percentage">25%</div>
+                        <h4 class="criteria-title">Lighting & Atmosphere</h4>
+                        <p class="criteria-description">
+                            Assessment of lighting quality, mood creation, and technical execution. Proficiency with Blender 4.4's enhanced lighting system, HDRI environments, and creating atmospheric effects that enhance the scene.
+                        </p>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-percentage">25%</div>
+                        <h4 class="criteria-title">Camera & Composition</h4>
+                        <p class="criteria-description">
+                            Evaluation of camera work, composition principles, shot variety, and cinematic storytelling. Effective use of Blender 4.4's camera tools, movement, and framing to create engaging visual narratives.
+                        </p>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-percentage">20%</div>
+                        <h4 class="criteria-title">Rendering & Presentation</h4>
+                        <p class="criteria-description">
+                            Assessment of render quality, post-processing, final presentation, and technical optimization. Proficiency with Blender 4.4's rendering engines, compositing tools, and creating a polished final presentation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Covered Section -->
+        <section id="topics" class="container">
+            <h2 class="section-title">Topics Covered</h2>
+            <div class="topics-section">
+                <h3>Weekly Breakdown</h3>
+                <div class="week-grid">
+                    <div class="week-card">
+                        <div class="week-number">Week 10</div>
+                        <h4 class="week-title">Environment Creation</h4>
+                        <div class="week-topics">
+                            <ul>
+                                <li>Environment Design Principles</li>
+                                <li>Blender 4.4 Environment Tools</li>
+                                <li>Asset Integration & Management</li>
+                                <li>Scale & Composition</li>
+                                <li>Narrative Context Development</li>
+                                <li>Scene Organization</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="semester1project3week10.html" class="cta-button">View Week 10 Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="week-card">
+                        <div class="week-number">Week 11</div>
+                        <h4 class="week-title">Lighting Integration</h4>
+                        <div class="week-topics">
+                            <ul>
+                                <li>Lighting Theory & Principles</li>
+                                <li>Blender 4.4 Lighting System</li>
+                                <li>HDRI Environment Setup</li>
+                                <li>Mood & Atmosphere Creation</li>
+                                <li>Light Linking & Optimization</li>
+                                <li>Robot Integration Techniques</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="semester1project3week11.html" class="cta-button">View Week 11 Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="week-card">
+                        <div class="week-number">Week 12</div>
+                        <h4 class="week-title">Camera Setup & Animation</h4>
+                        <div class="week-topics">
+                            <ul>
+                                <li>Cinematic Composition</li>
+                                <li>Blender 4.4 Camera Tools</li>
+                                <li>Camera Movement & Animation</li>
+                                <li>Shot Selection & Sequencing</li>
+                                <li>Visual Storytelling</li>
+                                <li>Camera Rig Setup</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="semester1project3week12.html" class="cta-button">View Week 12 Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="week-card">
+                        <div class="week-number">Week 13</div>
+                        <h4 class="week-title">Final Render & Presentation</h4>
+                        <div class="week-topics">
+                            <ul>
+                                <li>Rendering Workflows</li>
+                                <li>Blender 4.4 Render Optimization</li>
+                                <li>Compositing & Post-Processing</li>
+                                <li>Color Grading & Effects</li>
+                                <li>Final Output Preparation</li>
+                                <li>Presentation Techniques</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="semester1project3week13.html" class="cta-button">View Week 13 Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Resources Section -->
+        <section class="container">
+            <h2 class="section-title">Additional Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Blender 4.4 Tutorials</h3>
+                            <p class="resource-description">Essential video tutorials for this project</p>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <ul class="resource-list">
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=bRluQr0i5LU" class="resource-link" target="_blank">
+                                    <span>Realistic Lighting in Blender with Cycles and Eevee</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=0cm8PzJg1bs" class="resource-link" target="_blank">
+                                    <span>How to Create a Realistic Scene in Blender 4.4 with Eevee</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=yfyojIbz_LY" class="resource-link" target="_blank">
+                                    <span>Best Render Settings to Get Faster Renders in Blender</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=Inusrz2JsLY" class="resource-link" target="_blank">
+                                    <span>Blender Compositing for Cinematic Results</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Documentation & Guides</h3>
+                            <p class="resource-description">Official documentation and written guides</p>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <ul class="resource-list">
+                            <li>
+                                <a href="https://docs.blender.org/manual/en/latest/render/lights/world.html" class="resource-link" target="_blank">
+                                    <span>World Environment Documentation</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.blender.org/manual/en/latest/render/cameras.html" class="resource-link" target="_blank">
+                                    <span>Camera Documentation</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.blender.org/manual/en/latest/render/cycles/optimizations/index.html" class="resource-link" target="_blank">
+                                    <span>Render Optimization Documentation</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.blender.org/manual/en/latest/compositing/index.html" class="resource-link" target="_blank">
+                                    <span>Compositing Documentation</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Inspiration & References</h3>
+                            <p class="resource-description">Visual references and inspiration</p>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <ul class="resource-list">
+                            <li>
+                                <a href="https://www.artstation.com/search?q=environment%20design" class="resource-link" target="_blank">
+                                    <span>Environment Design on ArtStation</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/search/pins/?q=cinematic%20lighting" class="resource-link" target="_blank">
+                                    <span>Cinematic Lighting References</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.behance.net/search/projects?search=3d%20environment" class="resource-link" target="_blank">
+                                    <span>3D Environment Projects on Behance</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/resources/assets/environment-reference-pack.zip" class="resource-link">
+                                    <span>Environment Reference Pack</span>
+                                    <i class="fas fa-file-archive download-icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Project 3: Robot Environment & Cinematic Presentation - Master environment creation, lighting, camera work, and rendering to create professional cinematic presentations of your 3D robot.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sidebar toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        // Active sidebar link highlighting
+        const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

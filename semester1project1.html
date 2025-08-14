@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1: Designing and Prototyping a Robot - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Project 1: Designing and Prototyping a Robot</h1>
+                    <p>Weeks 1-3: Design and prototype a stylized robot character from scratch, learning the basics of 3D design, shape language, and Blender navigation.</p>
+                    <a href="#brief" class="cta-button">View Project Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Semester 1</span>
+                </a>
+                <a href="semester1project1week1.html" class="week-nav-button next">
+                    <span>Week 1</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Project Brief Section -->
+        <section id="brief" class="container">
+            <h2 class="section-title">Project Brief</h2>
+            <div class="project-brief">
+                <h3>Overview</h3>
+                <p>In this project, you will design and create a stylized robot character from scratch using Blender 4.4. This foundational project focuses on teaching you the essential skills of 3D design, shape language, and Blender navigation without requiring any prior 3D experience.</p>
+                
+                <h3>Project Goals</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Learn Blender 4.4 interface and navigation fundamentals</li>
+                    <li>Master Grease Pencil tools for 2D sketching and concept development</li>
+                    <li>Understand and apply visual design principles (silhouette, shape hierarchy, proportions)</li>
+                    <li>Create orthographic drawings for 3D production preparation</li>
+                    <li>Translate 2D concepts into 3D using Clay Pencil geometry nodes</li>
+                    <li>Apply basic materials and color blocking for visual clarity</li>
+                </ul>
+                
+                <h3>Deliverables</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li><strong>Week 1:</strong> 4 robot silhouette sketches in Grease Pencil</li>
+                    <li><strong>Week 2:</strong> 2 robot orthographic drawings (front + side views)</li>
+                    <li><strong>Week 3:</strong> 1 stylized 3D Clay Pencil model with base materials</li>
+                </ul>
+                
+                <h3>Learning Outcomes</h3>
+                <p>By the end of this project, you will have developed a strong foundation in 3D design principles, Blender workflow, and the ability to translate creative concepts from 2D to 3D. You'll understand how to create visually appealing robot designs that communicate function and personality through shape and form.</p>
+            </div>
+        </section>
+
+        <!-- Marking Criteria Section -->
+        <section id="marking" class="container">
+            <h2 class="section-title">Marking Criteria</h2>
+            <div class="marking-criteria">
+                <h3>Assessment Breakdown</h3>
+                <div class="criteria-grid">
+                    <div class="criteria-card">
+                        <div class="criteria-percentage">30%</div>
+                        <h4 class="criteria-title">Design Fundamentals</h4>
+                        <p class="criteria-description">
+                            Evaluation of silhouette strength, shape hierarchy, proportions, and function-based design principles. Clear visual communication through shape language and consistent design logic across all views.
+                        </p>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-percentage">25%</div>
+                        <h4 class="criteria-title">Technical Execution</h4>
+                        <p class="criteria-description">
+                            Proficiency in Blender 4.4 interface navigation, Grease Pencil tool usage, orthographic drawing accuracy, and Clay Pencil geometry node application. Clean layer organization and proper file management.
+                        </p>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-percentage">25%</div>
+                        <h4 class="criteria-title">Creative Problem Solving</h4>
+                        <p class="criteria-description">
+                            Innovation in robot design, effective translation of 2D concepts to 3D form, thoughtful material choices, and ability to iterate and refine designs based on feedback and design principles.
+                        </p>
+                    </div>
+                    
+                    <div class="criteria-card">
+                        <div class="criteria-percentage">20%</div>
+                        <h4 class="criteria-title">Process & Documentation</h4>
+                        <p class="criteria-description">
+                            Quality of sketch development, documentation of design decisions, proper file naming conventions, and adherence to project timeline and deliverable requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Covered Section -->
+        <section id="topics" class="container">
+            <h2 class="section-title">Topics Covered</h2>
+            <div class="topics-section">
+                <h3>Weekly Breakdown</h3>
+                <div class="week-grid">
+                    <div class="week-card">
+                        <div class="week-number">Week 1</div>
+                        <h4 class="week-title">Design Principles + Robot Concept Sketches</h4>
+                        <div class="week-topics">
+                            <ul>
+                                <li>Blender 4.4 Interface & Navigation</li>
+                                <li>Grease Pencil Introduction</li>
+                                <li>Visual Design Principles</li>
+                                <li>Silhouette Strength</li>
+                                <li>Shape Hierarchy</li>
+                                <li>Proportions & Function-Based Design</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="semester1project1week1.html" class="cta-button">View Week 1 Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="week-card">
+                        <div class="week-number">Week 2</div>
+                        <h4 class="week-title">Orthographic Drawing + Design Refinement</h4>
+                        <div class="week-topics">
+                            <ul>
+                                <li>Orthographic Drawing Importance</li>
+                                <li>Multi-View Consistency</li>
+                                <li>Layer Control in Grease Pencil</li>
+                                <li>Volume Understanding in Space</li>
+                                <li>Production Pipeline Preparation</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="semester1project1week2.html" class="cta-button">View Week 2 Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="week-card">
+                        <div class="week-number">Week 3</div>
+                        <h4 class="week-title">3D Clay Pencil Stylization + Materials</h4>
+                        <div class="week-topics">
+                            <ul>
+                                <li>Clay Pencil Geometry Nodes</li>
+                                <li>2D to 3D Translation</li>
+                                <li>Viewport Shading Basics</li>
+                                <li>Material Assignment</li>
+                                <li>Color Blocking Techniques</li>
+                                <li>Stylized Form Development</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="semester1project1week3.html" class="cta-button">View Week 3 Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Resources Section -->
+        <section class="container">
+            <h2 class="section-title">Additional Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Blender 4.4 Tutorials</h3>
+                            <p class="resource-description">Essential video tutorials for this project</p>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <ul class="resource-list">
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=fSqWEoHBeeI" class="resource-link" target="_blank">
+                                    <span>Grease Pencil for Absolute Beginners</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=lXg5ucthFYE" class="resource-link" target="_blank">
+                                    <span>Grease Pencil Tool Basics</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=tx_dYeNxhQ0" class="resource-link" target="_blank">
+                                    <span>Clay Pencil Geometry Nodes Tutorial</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=G0SCMW7B2SA" class="resource-link" target="_blank">
+                                    <span>Blender Interface Tutorial for Beginners</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Design Theory Resources</h3>
+                            <p class="resource-description">Fundamental design principles and theory</p>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <ul class="resource-list">
+                            <li>
+                                <a href="https://docs.blender.org/manual/en/latest/grease_pencil/index.html" class="resource-link" target="_blank">
+                                    <span>Blender Grease Pencil Documentation</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/index.html" class="resource-link" target="_blank">
+                                    <span>Geometry Nodes Documentation</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.characterdesignreferences.com/robot-design-references/" class="resource-link" target="_blank">
+                                    <span>Character Design References</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.drawniversity.com/silhouette-design/" class="resource-link" target="_blank">
+                                    <span>Silhouette Design Principles</span>
+                                    <i class="fas fa-external-link-alt download-icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Tools & Assets</h3>
+                            <p class="resource-description">Helpful tools and downloadable assets</p>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <ul class="resource-list">
+                            <li>
+                                <a href="/resources/assets/robot-function-prompts.pdf" class="resource-link">
+                                    <span>Robot Function Prompts Guide</span>
+                                    <i class="fas fa-file-pdf download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/resources/assets/grease-pencil-shortcuts.pdf" class="resource-link">
+                                    <span>Grease Pencil Shortcuts Cheat Sheet</span>
+                                    <i class="fas fa-file-pdf download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/resources/assets/orthographic-templates.blend" class="resource-link">
+                                    <span>Orthographic Drawing Template</span>
+                                    <i class="fas fa-file-archive download-icon"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/resources/assets/clay-pencil-node-setup.blend" class="resource-link">
+                                    <span>Clay Pencil Node Setup</span>
+                                    <i class="fas fa-file-archive download-icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Project 1: Designing and Prototyping a Robot - Building foundational skills for 3D character design and Blender workflow mastery.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sidebar toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        // Active sidebar link highlighting
+        const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

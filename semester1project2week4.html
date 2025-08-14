@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4: Basic Robot Modeling - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 4: Basic Robot Modeling</h1>
+                    <p>Translate your 2D concepts into 3D using primitive modeling techniques, establishing proportions and primary forms for your robot character.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project1week3.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Project 1 Complete</span>
+                </a>
+                <a href="semester1project2week5.html" class="week-nav-button next">
+                    <span>Week 5</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 4 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week marks your transition from 2D design to 3D modeling as you begin translating your robot concepts into three-dimensional forms. You'll learn to use Blender's primitive modeling tools to establish the basic structure of your robot, focusing on proportions, primary forms, and overall silhouette. This foundational work will set the stage for more detailed modeling in subsequent weeks.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Set up reference images in Blender for accurate modeling</li>
+                    <li>Create basic forms using primitive shapes (cubes, spheres, cylinders)</li>
+                    <li>Establish proper proportions for your robot design</li>
+                    <li>Use basic mesh editing tools to refine primitive shapes</li>
+                    <li>Apply mirror modifiers for symmetrical components</li>
+                    <li>Maintain the character and function of your 2D design in 3D</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>The transition from 2D to 3D is a critical step in the 3D design process. Starting with primitive shapes allows you to focus on proportions and overall form without getting bogged down in details. This approach, often called "blocking out" or "box modeling," is used throughout the industry as it provides a solid foundation for more detailed work. Mastering these fundamental techniques will make you more efficient and effective as you progress to more complex modeling challenges.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 4 Exercise: Basic Robot Modeling</h3>
+                <p>Using your orthographic drawings from Project 1, create a basic 3D model of your robot focusing on primary forms and proportions. Use primitive shapes as a starting point and refine them to match your design.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Set Up Reference Images</strong>
+                        <p>Import your front and side orthographic drawings from Project 1 into Blender. Set them up as reference images on planes or use the background images feature in orthographic views. Position them correctly in 3D space to ensure accurate modeling. Lock the reference objects to prevent accidental movement.</p>
+                    </li>
+                    <li>
+                        <strong>Start with the Main Body</strong>
+                        <p>Add a cube primitive (Shift+A > Mesh > Cube) that matches the approximate size of your robot's main body. Scale and position it to align with your reference images. This will serve as the foundation for your model and help establish the overall scale and proportions.</p>
+                    </li>
+                    <li>
+                        <strong>Add Mirror Modifier</strong>
+                        <p>With the body selected, add a Mirror Modifier from the Modifiers tab in the Properties panel. Set the mirror axis to X (or whichever axis is appropriate for your design). This allows you to model only one half of symmetrical parts, saving time and ensuring perfect symmetry.</p>
+                    </li>
+                    <li>
+                        <strong>Shape the Body</strong>
+                        <p>Switch to Edit Mode (Tab) and begin shaping the body to match your reference images. Use basic transform tools (G, R, S) to move, rotate, and scale vertices, edges, or faces. Focus on establishing the overall form rather than adding details at this stage.</p>
+                    </li>
+                    <li>
+                        <strong>Create the Head</strong>
+                        <p>Add another primitive shape (sphere or cube) for the head. Position it relative to the body according to your reference images. Apply a Mirror Modifier if the head is symmetrical. Begin shaping it to match your design, focusing on the overall silhouette.</p>
+                    </li>
+                    <li>
+                        <strong>Add Limbs and Appendages</strong>
+                        <p>Create cylinders or other appropriate primitives for the arms, legs, and other appendages. Position them according to your reference images and begin shaping them to match your design. Use Mirror Modifiers for symmetrical limbs. Focus on establishing the basic form and proportions.</p>
+                    </li>
+                    <li>
+                        <strong>Check Proportions and Silhouette</strong>
+                        <p>Rotate your model frequently to check how it appears from different angles. Compare it to your original 2D silhouette to ensure you're maintaining the character and essence of your design. Make adjustments as needed to improve proportions and silhouette strength.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Work with low-polygon primitives initially, focusing on form rather than detail</li>
+                    <li>Use reference images consistently to maintain accuracy and proportions</li>
+                    <li>Apply Mirror Modifiers early for symmetrical parts to save time</li>
+                    <li>Check your model from multiple angles frequently</li>
+                    <li>Compare your 3D model to your original 2D silhouette regularly</li>
+                    <li>Save multiple versions of your work as you progress</li>
+                    <li>Don't add details until you're satisfied with the overall form and proportions</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Modeling Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Modeling Techniques</h2>
+            <div class="techniques-section">
+                <h3>Foundational Modeling Approaches</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-cube"></i>
+                            Primitive Modeling
+                        </h4>
+                        <p class="concept-description">
+                            Primitive modeling involves starting with basic geometric shapes (cubes, spheres, cylinders, etc.) and modifying them to create more complex forms. This approach is ideal for beginners as it provides a solid foundation to build upon. By combining and deforming primitives, you can create surprisingly complex forms while maintaining control over the overall structure.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Primitive Modeling Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for primitive modeling techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-ruler-combined"></i>
+                            Proportional Modeling
+                        </h4>
+                        <p class="concept-description">
+                            Proportional modeling focuses on maintaining accurate relationships between different parts of your model. This involves constantly checking and adjusting proportions as you work, ensuring that all elements relate to each other correctly. Good proportions are essential for creating believable characters and objects that feel balanced and intentional.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Proportional Modeling Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for proportional modeling techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-arrows-alt-h"></i>
+                            Symmetrical Modeling
+                        </h4>
+                        <p class="concept-description">
+                            Symmetrical modeling involves creating one half of a model and using modifiers or tools to mirror it to the other side. This approach ensures perfect symmetry and significantly reduces modeling time. Most characters and many objects have symmetrical elements, making this technique essential for efficient workflow and consistent results.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Symmetrical Modeling Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for symmetrical modeling techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blender Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Week 4</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-cube"></i>
+                            Primitive Objects
+                        </h4>
+                        <p class="blender-description">
+                            Blender offers several primitive objects that serve as starting points for modeling, including Cube, Sphere, Cylinder, Cone, Torus, and more. These primitives can be added via the Add menu (Shift+A) and modified using various tools. Understanding how to use and combine primitives is fundamental to efficient modeling in Blender.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Primitive Object Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A:</strong> Add menu - access all primitive objects</li>
+                            <li><strong>Shift + A > Mesh > Cube:</strong> Add cube - basic building block</li>
+                            <li><strong>Shift + A > Mesh > UV Sphere:</strong> Add sphere - rounded forms</li>
+                            <li><strong>Shift + A > Mesh > Cylinder:</strong> Add cylinder - tubes and limbs</li>
+                            <li><strong>Shift + A > Mesh > Cone:</strong> Add cone - tapered shapes</li>
+                            <li><strong>Shift + A > Mesh > Torus:</strong> Add torus - ring shapes</li>
+                            <li><strong>Shift + A > Mesh > Plane:</strong> Add plane - flat surfaces</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Primitive Objects in Blender 4.4</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for primitive objects demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-edit"></i>
+                            Basic Mesh Editing
+                        </h4>
+                        <p class="blender-description">
+                            Mesh editing involves manipulating vertices, edges, and faces to shape your model. Key tools include Grab/Move (G), Rotate (R), Scale (S), and Extrude (E). You can switch between object and edit modes using Tab, and select different elements (vertices, edges, faces) using the 1, 2, and 3 keys respectively.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Mesh Editing Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Tab:</strong> Toggle Object/Edit mode - switch between modes</li>
+                            <li><strong>1:</strong> Vertex select mode - select individual vertices</li>
+                            <li><strong>2:</strong> Edge select mode - select edges</li>
+                            <li><strong>3:</strong> Face select mode - select faces</li>
+                            <li><strong>G:</strong> Grab/Move - reposition selected elements</li>
+                            <li><strong>R:</strong> Rotate - rotate selected elements</li>
+                            <li><strong>S:</strong> Scale - resize selected elements</li>
+                            <li><strong>E:</strong> Extrude - extend faces from selection</li>
+                            <li><strong>X/Y/Z:</strong> Constrain to axis - limit transform direction</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Basic Mesh Editing Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for mesh editing techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-images"></i>
+                            Reference Images
+                        </h4>
+                        <p class="blender-description">
+                            Reference images can be loaded into Blender to guide your modeling process. You can add reference images as empty objects with image data, or use the background images feature in orthographic views. Properly set up references help maintain accuracy and proportions as you translate your 2D designs into 3D models.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Reference Image Setup</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A > Empty > Image:</strong> Add image reference - load reference as object</li>
+                            <li><strong>Numpad 1/3/7:</strong> Switch to orthographic views - front, right, top</li>
+                            <li><strong>Properties > Background Images:</strong> Set background images for views</li>
+                            <li><strong>Alt + B:</strong> Border zoom - zoom to specific area</li>
+                            <li><strong>Shift + Space:</strong> Maximize area - focus on viewport</li>
+                            <li><strong>Lock to Object:</strong> Lock reference to prevent movement</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Setting Up Reference Images</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for reference image setup</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-columns"></i>
+                            Mirror Modifier
+                        </h4>
+                        <p class="blender-description">
+                            The Mirror Modifier creates a symmetrical copy of your mesh across an axis, allowing you to model only one half of symmetrical objects. This modifier is essential for character modeling and many mechanical designs. You can add modifiers in the Modifiers tab of the Properties panel and adjust their settings to control the mirroring behavior.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Mirror Modifier Workflow</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Properties > Modifiers > Add Modifier:</strong> Access modifier stack</li>
+                            <li><strong>Generate > Mirror:</strong> Add Mirror modifier</li>
+                            <li><strong>Axis Selection:</strong> Choose mirroring axis (X, Y, or Z)</li>
+                            <li><strong>Cutting:</strong> Enable to merge vertices at mirror axis</li>
+                            <li><strong>Clipping:</strong> Prevent vertices from crossing mirror plane</li>
+                            <li><strong>Ctrl + A > Apply:</strong> Apply modifier to make permanent</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Mirror Modifier Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for mirror modifier techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-vector-square"></i>
+                            Transform Tools
+                        </h4>
+                        <p class="blender-description">
+                            Transform tools in Blender allow you to move, rotate, and scale objects and components. The Transform Orientations panel lets you choose between Global, Local, and other coordinate systems. Proportional Editing (O) affects nearby vertices when you transform a selection, allowing for smooth, organic adjustments to your model.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Transform Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>G:</strong> Grab/Move - reposition selection</li>
+                            <li><strong>R:</strong> Rotate - rotate selection</li>
+                            <li><strong>S:</strong> Scale - resize selection</li>
+                            <li><strong>O:</strong> Toggle Proportional Editing - affect nearby geometry</li>
+                            <li><strong>Mouse Wheel:</strong> Adjust proportional editing size</li>
+                            <li><strong>Alt + R/G/S:</strong> Clear rotation/location/scale</li>
+                            <li><strong>Ctrl + Space:</strong> Toggle transform orientation</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Transform Tools & Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for transform tools demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-object-group"></i>
+                            Object Management
+                        </h4>
+                        <p class="blender-description">
+                            As your scene becomes more complex, managing objects becomes increasingly important. This includes parenting objects to create hierarchies, organizing objects in collections, and using the Outliner to navigate your scene hierarchy. Good object management practices will save you time and frustration as your projects grow in complexity.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Object Management Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Ctrl + P:</strong> Set parent - create object hierarchy</li>
+                            <li><strong>Alt + P:</strong> Clear parent - remove parent relationship</li>
+                            <li><strong>M:</strong> Move to collection - organize objects</li>
+                            <li><strong>Ctrl + G:</strong> Create new collection with selection</li>
+                            <li><strong>F2:</strong> Rename object - change object name</li>
+                            <li><strong>H:</strong> Hide selected - temporarily hide objects</li>
+                            <li><strong>Alt + H:</strong> Unhide all - show all hidden objects</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Object Management Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for object management techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=_uA40eLygQc" class="resource-link" target="_blank">
+                                        <span>Blender Modeling Fundamentals</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=uyWYTvGWEzo" class="resource-link" target="_blank">
+                                        <span>Blender for Beginners: Complete Tutorial</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=3G2g_5l2M0s" class="resource-link" target="_blank">
+                                        <span>Blender Reference Image Setup</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/meshes/index.html" class="resource-link" target="_blank">
+                                        <span>Blender Mesh Modeling Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/mirror.html" class="resource-link" target="_blank">
+                                        <span>Mirror Modifier Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/editors/3dviewport/object/properties/transform.html" class="resource-link" target="_blank">
+                                        <span>Object Transforms Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=robot%20modeling" class="resource-link" target="_blank">
+                                        <span>Robot Modeling on ArtStation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/search/pins/?q=robot%20modeling%20reference" class="resource-link" target="_blank">
+                                        <span>Robot Modeling References</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.behance.net/search/projects?search=robot%20modeling" class="resource-link" target="_blank">
+                                        <span>Robot Modeling Projects</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 4: Basic Robot Modeling - Building foundational 3D modeling skills by translating 2D concepts into three-dimensional forms.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

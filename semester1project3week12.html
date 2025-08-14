@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12: Camera Setup & Animation - 3D Tools Development Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Tools Development Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
+                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
+                            <a href="semester3.html">Semester 3: Specialization</a>
+                            <a href="semester4.html">Semester 4: Portfolio Development</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1.html">Project 1: Robot Design</a>
+                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
+                            <a href="semester1project3.html">Project 3: Robot Environment</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
+                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
+                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
+                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
+                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
+                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
+                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
+                            <a href="semester1project2week8.html">Week 8: Rigging</a>
+                            <a href="semester1project2week9.html">Week 9: Animation</a>
+                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
+                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
+                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
+                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="resources.html">Industry Resources</a>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
+                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
+                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 12: Camera Setup & Animation</h1>
+                    <p>Master cinematic camera techniques and create dynamic camera animations that showcase your robot effectively. Learn composition principles and camera movement using Blender 4.4's enhanced camera tools.</p>
+                    <a href="#intro" class="cta-button">View Week Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Navigation -->
+        <div class="container">
+            <div class="week-navigation">
+                <a href="semester1project3week11.html" class="week-nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Week 11</span>
+                </a>
+                <a href="semester1project3week13.html" class="week-nav-button next">
+                    <span>Week 13</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Week Introduction Section -->
+        <section id="intro" class="container">
+            <h2 class="section-title">Week 12 Introduction</h2>
+            <div class="week-intro">
+                <h3>Overview</h3>
+                <p>This week focuses on the art of cinematography in 3D, where you'll learn to set up and animate cameras to create compelling shots that showcase your robot effectively. Camera work is crucial for storytelling, composition, and creating emotional impact in your presentations. Blender 4.4's enhanced camera tools and improved animation system make it easier than ever to create professional-quality camera work.</p>
+                
+                <h3>Learning Objectives</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Master camera types and their applications for different shots</li>
+                    <li>Learn composition principles for effective visual storytelling</li>
+                    <li>Understand camera movement and animation techniques</li>
+                    <li>Create multiple camera setups for comprehensive robot showcase</li>
+                    <li>Apply cinematic timing and pacing to camera movements</li>
+                    <li>Utilize Blender 4.4's enhanced camera tools and animation system</li>
+                </ul>
+                
+                <h3>Why This Matters</h3>
+                <p>Camera work is the director's eye in 3D animation - it determines what the audience sees, how they see it, and when they see it. Professional camera techniques can transform a simple scene into something cinematic and emotionally resonant. Understanding cinematography is essential for any 3D artist, as these skills are used across all media - from films and games to architectural visualization and product presentations.</p>
+            </div>
+        </section>
+
+        <!-- Exercise Steps Section -->
+        <section id="exercise" class="container">
+            <h2 class="section-title">Exercise Steps</h2>
+            <div class="exercise-steps">
+                <h3>Week 12 Exercise: Camera Setup & Animation</h3>
+                <p>Master cinematic camera techniques and create dynamic camera animations that showcase your robot effectively using Blender 4.4's enhanced camera tools.</p>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Exercise Overview</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for exercise overview</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ol class="steps-list">
+                    <li>
+                        <strong>Storyboard & Shot Planning</strong>
+                        <p>Create a storyboard for your robot presentation, planning at least 5 different shots that showcase your robot from various angles and distances. Consider shot types (establishing, medium, close-up), camera angles, and movements that will highlight your robot's best features. Document your shot list with descriptions of each shot's purpose and composition.</p>
+                    </li>
+                    <li>
+                        <strong>Set Up Multiple Cameras</strong>
+                        <p>Create and position multiple cameras according to your storyboard. Set up an establishing shot to show your robot in its environment, medium shots for general viewing, close-ups for detail shots, and dynamic angles for dramatic impact. Use Blender 4.4's enhanced camera controls to set precise focal lengths and positions for each shot.</p>
+                    </li>
+                    <li>
+                        <strong>Configure Camera Parameters</strong>
+                        <p>Adjust camera settings for each shot, including focal length, sensor size, aperture, and depth of field. Use different focal lengths to create varied perspectives - wide angles for environment context, telephoto for compressed backgrounds, and normal lenses for natural perspective. Configure depth of field to focus attention on important robot features.</p>
+                    </li>
+                    <li>
+                        <strong>Animate Camera Movements</strong>
+                        <p>Create smooth, deliberate camera movements for each shot. Use keyframes to animate camera position, rotation, and focal length. Implement techniques like slow reveals, tracking shots, and dramatic push-ins. Use Blender 4.4's improved motion paths to visualize and refine camera movements for smooth, professional results.</p>
+                    </li>
+                    <li>
+                        <strong>Apply Composition Principles</strong>
+                        <p>Refine each shot using composition principles like rule of thirds, leading lines, framing, and balance. Adjust camera positions and angles to create visually appealing compositions that highlight your robot's design features. Use Blender 4.4's enhanced composition guides to ensure proper framing and visual balance.</p>
+                    </li>
+                    <li>
+                        <strong>Create Camera Switching Sequence</strong>
+                        <p>Set up a sequence that switches between your different cameras to create a dynamic presentation. Time the camera changes to create visual rhythm and maintain viewer interest. Use Blender 4.4's improved camera switching system to create smooth transitions between shots and maintain proper timing throughout your presentation.</p>
+                    </li>
+                </ol>
+                
+                <div class="video-placeholder" style="margin-top: 20px;">
+                    <h5 style="color: var(--primary-light); margin-bottom: 10px;">Step-by-Step Demonstration</h5>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                            <p style="color: var(--accent);">Video placeholder for step-by-step demonstration</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Tips for Success</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Use Blender 4.4's enhanced camera visualization tools to preview shots in real-time</li>
+                    <li>Vary shot types and angles to create visual interest and comprehensive coverage</li>
+                    <li>Keep camera movements smooth and purposeful - avoid unnecessary motion</li>
+                    <li>Use composition guides to ensure professional framing and balance</li>
+                    <li>Test camera animations from multiple perspectives to ensure they work effectively</li>
+                    <li>Consider how each shot contributes to the overall narrative and presentation goals</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Important Artistic Techniques Section -->
+        <section id="techniques" class="container">
+            <h2 class="section-title">Important Artistic Techniques</h2>
+            <div class="techniques-section">
+                <h3>Professional Camera Techniques</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-video"></i>
+                            Shot Types & Framing
+                        </h4>
+                        <p class="concept-description">
+                            Master essential shot types from extreme wide shots that establish environment to extreme close-ups that reveal detail. Learn to use shot size to control information flow and emotional impact. Understand how different shot types (establishing shot, medium shot, close-up, extreme close-up) serve different storytelling purposes and create different emotional responses from viewers.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Shot Types and Framing</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for shot types and framing</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Industry Example: Pacific Rim</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pacific Rim shot types example">
+                            </div>
+                            <p class="example-description">
+                                Pacific Rim demonstrates masterful use of shot types to establish scale and drama. Wide shots show the massive scale of Jaegers compared to cities, while close-ups reveal intricate mechanical details and character emotions. The careful progression between shot sizes creates a dynamic visual rhythm that enhances the storytelling.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-arrows-alt"></i>
+                            Camera Movement & Dynamics
+                        </h4>
+                        <p class="concept-description">
+                            Learn to create dynamic camera movements that add energy and interest to your shots. Master techniques like pans, tilts, dollies, zooms, and complex camera moves that follow action or reveal information. Understand how movement speed, acceleration, and path affect the emotional impact of your shots and help guide viewer attention.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Camera Movement Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for camera movement techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Industry Example: Children of Men</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Children of Men camera movement example">
+                            </div>
+                            <p class="example-description">
+                                Children of Men is renowned for its innovative camera work, particularly its long, complex tracking shots that create immersive, documentary-style sequences. The film's camera movements are carefully choreographed to follow action and maintain spatial continuity, creating a sense of immediacy and realism.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <h4 class="concept-title">
+                            <i class="fas fa-eye"></i>
+                            Camera Angles & Perspective
+                        </h4>
+                        <p class="concept-description">
+                            Understand how camera angles affect perception and emotional response. High angles make subjects appear small and vulnerable, while low angles make them appear powerful and imposing. Dutch angles create unease and tension, while eye-level shots create neutrality and connection. Learn to use angles strategically to enhance your robot's character and the scene's emotional impact.
+                        </p>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Camera Angles and Perspective</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for camera angles demonstration</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h5>Industry Example: Citizen Kane</h5>
+                            <div class="example-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Citizen Kane camera angles example">
+                            </div>
+                            <p class="example-description">
+                                Citizen Kane revolutionized cinematography with its innovative use of camera angles. The film's famous low-angle shots make Charles Foster Kane appear powerful and imposing, while high-angle shots show his vulnerability. The strategic use of angles throughout the film enhances the storytelling and character development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Blender 4.4 Concepts Section -->
+        <section id="blender" class="container">
+            <h2 class="section-title">Important Blender 4.4 Concepts</h2>
+            <div class="blender-concepts">
+                <h3>Essential Blender Knowledge for Camera Setup & Animation</h3>
+                <div class="blender-grid">
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-video"></i>
+                            Enhanced Camera System
+                        </h4>
+                        <p class="blender-description">
+                            Blender 4.4 features an enhanced camera system with improved controls, better visualization options, and more accurate camera matching. The new camera tools make it easier to set up precise shots, match real-world camera parameters, and visualize camera coverage directly in the viewport.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Fundamental Concepts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Camera Types:</strong> Choose between perspective and orthographic cameras for different visual effects.</li>
+                            <li><strong>Sensor Size & Focal Length:</strong> Match real-world camera characteristics for realistic results.</li>
+                            <li><strong>Depth of Field:</strong> Control focus distance and aperture for cinematic blur effects.</li>
+                            <li><strong>Camera Rigging:</strong> Create complex camera movements using parenting and constraints.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Shift + A > Camera:</strong> Add new camera</li>
+                            <li><strong>Ctrl + Alt + Numpad 0:</strong> Set active camera</li>
+                            <li><strong>Numpad 0:</strong> Switch to camera view</li>
+                            <li><strong>Ctrl + Alt + 0:</strong> Camera to view (match current view)</li>
+                            <li><strong>G:</strong> Move camera</li>
+                            <li><strong>R:</strong> Rotate camera</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Camera System in Blender 4.4</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for camera system features</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-route"></i>
+                            Improved Camera Rigging
+                        </h4>
+                        <p class="blender-description">
+                            The camera rigging system in Blender 4.4 has been enhanced with better constraint options, improved parenting controls, and more intuitive camera movement setup. This makes it easier to create complex camera movements and maintain precise control over camera animation.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Tools & Techniques</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Parenting:</strong> Create camera hierarchies for complex movements and follow shots.</li>
+                            <li><strong>Constraints:</strong> Use Track To, Follow Path, and Clamp To constraints for automated camera movements.</li>
+                            <li><strong>Empty Objects:</strong> Use empties as control points for camera targeting and movement.</li>
+                            <li><strong>Camera Rigs:</strong> Build custom camera rigs for specific shot types like cranes, dollies, and stabilizers.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Ctrl + P:</strong> Parent camera to object</li>
+                            <li><strong>Alt + P:</strong> Clear parent relationship</li>
+                            <li><strong>Ctrl + Shift + C:</strong> Add constraint</li>
+                            <li><strong>Ctrl + Alt + C:</strong> Clear constraint</li>
+                            <li><strong>Shift + D:</strong> Duplicate camera with rig</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Camera Rigging Techniques</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for camera rigging workflow</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blender-card">
+                        <h4 class="blender-title">
+                            <i class="fas fa-chart-line"></i>
+                            Better Camera Animation Tools
+                        </h4>
+                        <p class="blender-description">
+                            Camera animation tools in Blender 4.4 have been improved with better keyframe management, enhanced motion paths, and more intuitive curve editing. The new tools make it easier to create smooth, professional camera movements and maintain precise control over timing and pacing.
+                        </p>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Tools & Techniques</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>Keyframe Animation:</strong> Set keyframes for camera position, rotation, and focal properties.</li>
+                            <li><strong>Motion Paths:</strong> Visualize camera movement paths for better planning and refinement.</li>
+                            <li><strong>Graph Editor:</strong> Fine-tune camera movement curves for smooth, natural motion.</li>
+                            <li><strong>Dope Sheet:</strong> Manage timing and spacing of camera movements across multiple shots.</li>
+                        </ul>
+                        
+                        <h4 style="color: var(--primary-light); margin-top: 20px; margin-bottom: 10px;">Essential Shortcuts</h4>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--accent);">
+                            <li><strong>I:</strong> Insert keyframe</li>
+                            <li><strong>Alt + I:</strong> Delete keyframe</li>
+                            <li><strong>Shift + E:</strong> Ease keyframe (smooth animation)</li>
+                            <li><strong>Ctrl + Tab:</strong> Switch to Graph Editor</li>
+                            <li><strong>Shift + D:</strong> Duplicate keyframes</li>
+                            <li><strong>G:</strong> Move keyframes in time</li>
+                        </ul>
+                        
+                        <div class="video-placeholder" style="margin-top: 20px;">
+                            <h5 style="color: var(--primary-light); margin-bottom: 10px;">Camera Animation Workflow</h5>
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: rgba(10, 25, 47, 0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 20px;">
+                                    <i class="fas fa-video" style="font-size: 3rem; color: var(--primary-light); margin-bottom: 15px;"></i>
+                                    <p style="color: var(--accent);">Video placeholder for camera animation techniques</p>
+                                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">Replace with your own .mp4 file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="container">
+            <h2 class="section-title">Reference Material</h2>
+            <div class="references-section">
+                <h3>Additional Learning Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Video Tutorials</h3>
+                                <p class="resource-description">Essential video tutorials for this week</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=ui0JUHE12k8" class="resource-link" target="_blank">
+                                        <span>A Beginner's Guide to Camera Tracking in Blender 4.0</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=IvyfdxkABKU" class="resource-link" target="_blank">
+                                        <span>Camera Tracking in Blender for Beginners</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=T0qJiQTNl-8" class="resource-link" target="_blank">
+                                        <span>Learn The BASICS of Cameras in Blender!</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Documentation & Guides</h3>
+                                <p class="resource-description">Official documentation and written guides</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/render/cameras.html" class="resource-link" target="_blank">
+                                        <span>Camera Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/editors/3dview/navigate/camera_view.html" class="resource-link" target="_blank">
+                                        <span>Camera View Navigation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.blender.org/manual/en/latest/animation/index.html" class="resource-link" target="_blank">
+                                        <span>Animation Documentation</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <h3 class="resource-title">Inspiration & References</h3>
+                                <p class="resource-description">Visual references and inspiration</p>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.artstation.com/search?q=cinematography" class="resource-link" target="_blank">
+                                        <span>ArtStation Cinematography Examples</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.pinterest.com/search/pins/?q=camera%20angles" class="resource-link" target="_blank">
+                                        <span>Camera Angle References</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.filmschoolonline.com/sample_lessons/cinematography.htm" class="resource-link" target="_blank">
+                                        <span>Cinematography Techniques</span>
+                                        <i class="fas fa-external-link-alt download-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fun Facts Popup -->
+    <div class="fun-facts" id="funFacts">
+        <div class="fun-facts-header">
+            <div class="fun-facts-title">Did You Know?</div>
+            <button class="fun-facts-close" onclick="closeFunFacts()">×</button>
+        </div>
+        <div class="fun-facts-content" id="funFactsContent">
+            <!-- Fun fact content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i> 3D Tools Development Guide
+            </div>
+            <p class="footer-description">
+                Week 12: Camera Setup & Animation - Mastering the art of cinematography to create compelling visual narratives.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 3D Tools Development Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
