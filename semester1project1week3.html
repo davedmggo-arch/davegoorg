@@ -10,63 +10,65 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <i class="fas fa-cube"></i>
-                <span>3D Tools Development Guide</span>
-            </div>
-            <nav>
-                <ul>
-                    <li class="dropdown">
-                        <button class="dropbtn">Semester <i class="fas fa-chevron-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="semester1.html">Semester 1: 3D Robot Design</a>
-                            <a href="semester2.html">Semester 2: Advanced Techniques</a>
-                            <a href="semester3.html">Semester 3: Specialization</a>
-                            <a href="semester4.html">Semester 4: Portfolio Development</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button class="dropbtn">Project <i class="fas fa-chevron-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="semester1project1.html">Project 1: Robot Design</a>
-                            <a href="semester1project2.html">Project 2: Robot Modeling</a>
-                            <a href="semester1project3.html">Project 3: Robot Environment</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button class="dropbtn">Week <i class="fas fa-chevron-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a>
-                            <a href="semester1project1week2.html">Week 2: Orthographic Drawing</a>
-                            <a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a>
-                            <a href="semester1project2week4.html">Week 4: Basic Robot Modeling</a>
-                            <a href="semester1project2week5.html">Week 5: Basic Robot Modeling (Continued)</a>
-                            <a href="semester1project2week6.html">Week 6: Detailed Robot Modeling</a>
-                            <a href="semester1project2week7.html">Week 7: Completing Textures</a>
-                            <a href="semester1project2week8.html">Week 8: Rigging</a>
-                            <a href="semester1project2week9.html">Week 9: Animation</a>
-                            <a href="semester1project3week10.html">Week 10: Environment Creation</a>
-                            <a href="semester1project3week11.html">Week 11: Lighting Integration</a>
-                            <a href="semester1project3week12.html">Week 12: Camera Setup & Animation</a>
-                            <a href="semester1project3week13.html">Week 13: Final Presentation</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button class="dropbtn">Resources <i class="fas fa-chevron-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="resources.html">Industry Resources</a>
-                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a>
-                            <a href="https://www.artstation.com" target="_blank">ArtStation</a>
-                            <a href="https://www.cgchannel.com" target="_blank">CG Channel</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+<!-- Updated Header Structure -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-cube"></i>
+            <span>3D Tools Development Guide</span>
         </div>
-    </header>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- New Sidebar Navigation -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-title">Navigation</div>
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <nav class="sidebar-nav">
+        <div class="nav-section">
+            <h3>Semester</h3>
+            <ul>
+                <li><a href="semester1.html">Semester 1: 3D Robot Design</a></li>
+                <li><a href="semester2.html">Semester 2: Advanced Techniques</a></li>
+                <li><a href="semester3.html">Semester 3: Specialization</a></li>
+                <li><a href="semester4.html">Semester 4: Portfolio Development</a></li>
+            </ul>
+        </div>
+        <div class="nav-section">
+            <h3>Project</h3>
+            <ul>
+                <li><a href="semester1project1.html">Project 1: Robot Design</a></li>
+                <li><a href="semester1project2.html">Project 2: Robot Modeling</a></li>
+                <li><a href="semester1project3.html">Project 3: Robot Environment</a></li>
+            </ul>
+        </div>
+        <div class="nav-section">
+            <h3>Week</h3>
+            <ul>
+                <li><a href="semester1project1week1.html">Week 1: Robot Silhouette Sketches</a></li>
+                <li><a href="semester1project1week2.html">Week 2: Orthographic Drawing</a></li>
+                <li><a href="semester1project1week3.html">Week 3: 3D Clay Pencil Stylization</a></li>
+                <!-- Add more weeks as needed -->
+            </ul>
+        </div>
+        <div class="nav-section">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="resources.html">Industry Resources</a></li>
+                <li><a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender Documentation</a></li>
+                <li><a href="https://www.artstation.com" target="_blank">ArtStation</a></li>
+                <li><a href="https://www.cgchannel.com" target="_blank">CG Channel</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
     <!-- Main Content -->
     <div class="main-content">
@@ -632,4 +634,5 @@
         </div>
     </footer>
 </body>
+
 </html>
