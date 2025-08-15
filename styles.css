@@ -1010,4 +1010,118 @@ footer {
     .social-links a {
         font-size: 1rem;
     }
+    /* Responsive Images - Add these to your styles.css */
+
+/* Base image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
+
+/* Specific image container fixes */
+.timeline-image img,
+.showcase-image img,
+.example-image img,
+.resource-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Video containers */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe,
+.video-container video,
+.video-container .video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Timeline image container */
+.timeline-image {
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Example image container */
+.example-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Showcase image container */
+.showcase-image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Resource image container */
+.resource-image {
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Hero background image */
+.hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Responsive adjustments for images */
+@media (max-width: 768px) {
+    .timeline-image {
+        height: 120px;
+    }
+    
+    .example-image {
+        height: 120px;
+    }
+    
+    .showcase-image {
+        height: 150px;
+    }
+    
+    .resource-image {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-image {
+        height: 100px;
+    }
+    
+    .example-image {
+        height: 100px;
+    }
+    
+    .showcase-image {
+        height: 120px;
+    }
+    
+    .resource-image {
+        height: 100px;
+    }
+}
+}
+
