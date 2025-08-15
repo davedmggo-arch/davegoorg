@@ -1,3 +1,5 @@
+// script.js
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get DOM elements
     const menuToggle = document.getElementById('menuToggle');
@@ -13,12 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleSidebar() {
         sidebar.classList.toggle('active');
         overlay.classList.toggle('active');
+        document.body.classList.toggle('sidebar-open');
     }
     
     // Close sidebar function
     function closeSidebar() {
         sidebar.classList.remove('active');
         overlay.classList.remove('active');
+        document.body.classList.remove('sidebar-open');
     }
     
     // Event listeners
@@ -132,6 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const rect = this.getBoundingClientRect();
             tooltipElement.style.top = `${rect.bottom + 5}px`;
             tooltipElement.style.left = `${rect.left + rect.width / 2 - tooltipElement.offsetWidth / 2}px`;
+            
+            // Show tooltip with a slight delay
+            setTimeout(() => {
+                tooltipElement.classList.add('active');
+            }, 10);
         });
         
         tooltip.addEventListener('mouseleave', function() {
@@ -141,5 +150,127 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Add animations on scroll
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+    
+    function checkScroll() {
+        animatedElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+            
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                element.classList.add('active');
+            }
+        });
+    }
+    
+    // Check on load
+    checkScroll();
+    
+    // Check on scroll
+    window.addEventListener('scroll', checkScroll);
+    
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.concept-card, .blender-card, .resource-card, .criteria-card, .week-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.classList.add('hover-lift');
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.classList.remove('hover-lift');
+        });
+    });
+    
+    // Add hover effects to images
+    const images = document.querySelectorAll('.example-image img, .timeline-image img');
+    
+    images.forEach(img => {
+        img.addEventListener('mouseenter', function() {
+            this.classList.add('hover-scale');
+        });
+        
+        img.addEventListener('mouseleave', function() {
+            this.classList.remove('hover-scale');
+        });
+    });
+    
+    // Add interactive effect to CTA buttons
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.classList.add('hover-lift');
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.classList.remove('hover-lift');
+        });
+    });
+    
+    // Add ripple effect to buttons
+    const buttons = document.querySelectorAll('button');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+    
+    // Add parallax effect to hero section
+    const heroSection = document.querySelector('.hero');
+    const floatingShapes = document.querySelector('.floating-shapes');
+    
+    if (heroSection && floatingShapes) {
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.pageYOffset;
+            const speed = 0.5;
+            
+            floatingShapes.style.transform = `translateY(${scrollPosition * speed}px)`;
+        });
+    }
+    
+    // Add interactive effect to week navigation
+    const weekLinks = document.querySelectorAll('.week-link');
+    
+    weekLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Remove active class from all links
+            weekLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+        });
+    });
+    
+    // Add loading animation to images
+    const allImages = document.querySelectorAll('img');
+    
+    allImages.forEach(img => {
+        img.addEventListener('load', function() {
+            this.classList.add('loaded');
+        });
+        
+        // If image is already loaded (cached)
+        if (img.complete) {
+            img.classList.add('loaded');
+        }
+    });
 });
-
