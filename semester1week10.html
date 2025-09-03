@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10: Modular Design Principles, Snap-to-Grid & Tile Systems</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Navigation</div>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            
+                <div class="nav-section">
+                    <h3>Semester</h3>
+                    <ul>
+            
+                        <li><a href="semester1.html">Semester 1: 3D Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Project</h3>
+                    <ul>
+            
+                        <li><a href="semester1project0.html">Project 0: Grease Pencil Fundamentals</a></li>
+                    
+                        <li><a href="semester1project1.html">Project 1: 3D Fundamentals</a></li>
+                    
+                        <li><a href="semester1project2.html">Project 2: 3D Environment Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Week</h3>
+                    <ul>
+            
+                        <li><a href="semester1week1.html">Week 1: Digital Art Fundamentals & Grease Pencil Basics</a></li>
+                    
+                        <li><a href="semester1week2.html">Week 2: Grease Pencil Tools & Technical Drawing</a></li>
+                    
+                        <li><a href="semester1week3.html">Week 3: Animation Interface & Project Completion</a></li>
+                    
+                        <li><a href="semester1week4.html">Week 4: 3D Space Fundamentals & Table Composition</a></li>
+                    
+                        <li><a href="semester1week5.html">Week 5: Shape Language & Object Detailing</a></li>
+                    
+                        <li><a href="semester1week6.html">Week 6: Character Design & Basic Materials</a></li>
+                    
+                        <li><a href="semester1week7.html">Week 7: Environment Design & Project Completion</a></li>
+                    
+                        <li><a href="semester1week8.html">Week 8: Subdivision Surfaces, Edge Flow & Supporting Loops</a></li>
+                    
+                        <li><a href="semester1week9.html">Week 9: Material Fundamentals</a></li>
+                    
+                        <li><a href="semester1week10.html">Week 10: Modular Design Principles, Snap-to-Grid & Tile Systems</a></li>
+                    
+                        <li><a href="semester1week11.html">Week 11: Environment Assembly, Advanced Lighting & Multi-Camera Composition</a></li>
+                    
+                        <li><a href="semester1week12.html">Week 12: Technical Review, Artistic Refinement & Final Submission</a></li>
+                    
+                    </ul>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 10: Modular Design Principles, Snap-to-Grid & Tile Systems</h1>
+                    <p>Students learn modular design (benefits, principles, planning), then execute snap-to-grid workflows and build both a tile set and a starter modular wall kit. Emphasis is on standard sizes, connection points, seamless alignment, and iteration. These skills directly support Project 2’s deliverables and grading (Technical Proficiency 35%).</p>
+                </div>
+            </div>
+        </section>
+
+        
+                <div class="navigation-links">
+                    <div class="container">
+                        <div class="nav-links-container">
+                            
+                <div class="nav-link-item back-link">
+                    <a href="semester1week9.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Week 9
+                    </a>
+                </div>
+            
+                <div class="nav-link-item forward-link">
+                    <a href="semester1week11.html" class="nav-link">
+                        Week 11
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+        <div class="navigation-links-placeholder"></div>
+
+        <section id="weekly-progress" class="weekly-progress-section">
+            <div class="container">
+                <h2 class="section-title">Weekly Progress</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <div>
+                            <div class="progress-title">Course Progress</div>
+                            <div class="progress-subtitle">Track your weekly progress throughout the semester</div>
+                        </div>
+                        <div class="progress-percentage">0%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <div class="week-progress" id="week-progress">
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week1.html'">
+                        <div class="week-number">1</div>
+                        <div class="week-name">Week 1</div>
+                        <div class="week-date">Aug 31</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week2.html'">
+                        <div class="week-number">2</div>
+                        <div class="week-name">Week 2</div>
+                        <div class="week-date">Sep 7</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week3.html'">
+                        <div class="week-number">3</div>
+                        <div class="week-name">Week 3</div>
+                        <div class="week-date">Sep 14</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week4.html'">
+                        <div class="week-number">4</div>
+                        <div class="week-name">Week 4</div>
+                        <div class="week-date">Sep 21</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week5.html'">
+                        <div class="week-number">5</div>
+                        <div class="week-name">Week 5</div>
+                        <div class="week-date">Sep 28</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week6.html'">
+                        <div class="week-number">6</div>
+                        <div class="week-name">Week 6</div>
+                        <div class="week-date">Oct 5</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week7.html'">
+                        <div class="week-number">7</div>
+                        <div class="week-name">Week 7</div>
+                        <div class="week-date">Oct 12</div>
+                    </div>
+                </div>
+            
+                    <div class="week-item break-week">
+                        <div class="break-text">Break Week</div>
+                    </div>
+                
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week8.html'">
+                        <div class="week-number">8</div>
+                        <div class="week-name">Week 8</div>
+                        <div class="week-date">Oct 26</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week9.html'">
+                        <div class="week-number">9</div>
+                        <div class="week-name">Week 9</div>
+                        <div class="week-date">Nov 2</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week10.html'">
+                        <div class="week-number">10</div>
+                        <div class="week-name">Week 10</div>
+                        <div class="week-date">Nov 9</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week11.html'">
+                        <div class="week-number">11</div>
+                        <div class="week-name">Week 11</div>
+                        <div class="week-date">Nov 16</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week12.html'">
+                        <div class="week-number">12</div>
+                        <div class="week-name">Week 12</div>
+                        <div class="week-date">Nov 23</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">In-Class Topics</h2>
+                        <div class="section-content">
+                            <div><b>Modular design theory</b>: efficiency, consistency, flexibility, performance, collaboration; core principles (standardization, reusability, scalability, variety, seamlessness).</div><div><b>Snap-to-grid workflows</b>: grid setup, snapping types, absolute grid snap, precision modeling.</div><div><b>Tile systems</b>: tile types, connection systems, variation techniques, assembly.</div><div><b>Modular kit build</b>: plan → create base pieces → add variations → test connections → build a simple room.</div>
+                        </div>
+            
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Key Concepts & Tools</h2>
+                        <div class="section-content">
+                            <p>Section content goes here.</p>
+                        </div>
+            
+                        <div class="concepts-grid">
+                    
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Plan Your Modular System
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li><b>Define style &amp; scope</b>&nbsp;(theme, art direction).</li><li><b>List module types</b>&nbsp;(walls/floors/corners/doorways/props).</li><li><b>Choose standard sizes &amp; connection rules</b>; sketch a simple layout.</li><li>For walls, agree on a&nbsp;<b>working unit</b>&nbsp;(e.g., 2 m × 2 m × 0.2 m), so pieces interlock.</li></ul>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Set Up the Grid & Snapping
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li><b>Grid</b>: Properties ▸ View ▸ Floor Grid → Scale = 1 m, Subdivisions = 10 (10 cm precision). Show grid in Front/Right/Top.</li><li><b>Snapping</b>: enable magnet → Increment (grid) and Absolute Grid Snap; know the other modes (Vertex/Edge/Face/Volume) for later.</li></ul>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Snap-to-Grid Drill
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li>Create a&nbsp;<b>2 m cube</b>&nbsp;(numeric input) → place on a grid intersection.</li><li><b>Duplicate&nbsp;</b>(Shift+D) into a row → verify no gaps; edges align exactly.</li><li>Note: Set your grid to&nbsp;<b>match module sizes</b>&nbsp;and use snapping for all placements.</li></ul>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Build a Starter Wall Kit
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li><b>Base wall segment</b>: Plane 2 m × 2 m → Extrude thickness 0.2 m; Bevel edges; UV map.</li><li><b>Corner piece</b>: duplicate base; shape into L; ensure both edges align; keep dims/connection points.</li><li><b>Doorway piece</b>: duplicate base; cut opening; maintain outer alignment; add simple trim.</li><li><b>Floor &amp; ceiling</b>: flat pieces matching wall span; align to wall tops/bottoms; prep textures.</li><li><b>Variations</b>: duplicate types and add subtle details/damage while preserving connection points.</li><li><b>Test the kit</b>: assemble a small room; check for gaps/misalignments and fix.</li><li><b>Build a simple structure</b>&nbsp;with the kit (room or corridor) to validate the system.</li></ul>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        QA Checklist
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li>Do all pieces adhere to&nbsp;<b>standard size</b>&nbsp;and&nbsp;<b>connection points</b>?</li><li>Do tiles/modules&nbsp;<b>snap seamlessly</b>&nbsp;with&nbsp;<b>no gaps</b>?</li><li>Is there&nbsp;<b>enough variation</b>&nbsp;to avoid repetition?</li><li>Did you test connections&nbsp;<b>early and often</b>?</li></ul>
+                                </div>
+                        
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Homework</h2>
+                        <div class="section-content">
+                            <ul><li><b>Create 2–3 modules</b>&nbsp;with clean snap behavior;</li><li><b>Design a small tile set</b>&nbsp;with variations and connection tests;</li></ul>
+                        </div>
+            
+                    </div>
+                </section>
+            
+
+        <section class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Resources & References</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <div class="resource-title">Resource Title</div>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <div class="resource-description">
+                                Resource description goes here. You can add links and other information.
+                            </div>
+                            <div class="resource-links">
+                                <div class="resource-link">
+                                    <a href="#">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Resource Link
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <div class="footer-description">Your path to 3D Mastery</div>
+            
+            <div class="copyright">
+                &copy; 2025 Web Page Generator. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

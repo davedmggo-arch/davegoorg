@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6: Character Design & Basic Materials</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Navigation</div>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            
+                <div class="nav-section">
+                    <h3>Semester</h3>
+                    <ul>
+            
+                        <li><a href="semester1.html">Semester 1: 3D Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Project</h3>
+                    <ul>
+            
+                        <li><a href="semester1project0.html">Project 0: Grease Pencil Fundamentals</a></li>
+                    
+                        <li><a href="semester1project1.html">Project 1: 3D Fundamentals</a></li>
+                    
+                        <li><a href="semester1project2.html">Project 2: 3D Environment Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Week</h3>
+                    <ul>
+            
+                        <li><a href="semester1week1.html">Week 1: Digital Art Fundamentals & Grease Pencil Basics</a></li>
+                    
+                        <li><a href="semester1week2.html">Week 2: Grease Pencil Tools & Technical Drawing</a></li>
+                    
+                        <li><a href="semester1week3.html">Week 3: Animation Interface & Project Completion</a></li>
+                    
+                        <li><a href="semester1week4.html">Week 4: 3D Space Fundamentals & Table Composition</a></li>
+                    
+                        <li><a href="semester1week5.html">Week 5: Shape Language & Object Detailing</a></li>
+                    
+                        <li><a href="semester1week6.html">Week 6: Character Design & Basic Materials</a></li>
+                    
+                        <li><a href="semester1week7.html">Week 7: Environment Design & Project Completion</a></li>
+                    
+                        <li><a href="semester1week8.html">Week 8: Subdivision Surfaces, Edge Flow & Supporting Loops</a></li>
+                    
+                        <li><a href="semester1week9.html">Week 9: Material Fundamentals</a></li>
+                    
+                        <li><a href="semester1week10.html">Week 10: Modular Design Principles, Snap-to-Grid & Tile Systems</a></li>
+                    
+                        <li><a href="semester1week11.html">Week 11: Environment Assembly, Advanced Lighting & Multi-Camera Composition</a></li>
+                    
+                        <li><a href="semester1week12.html">Week 12: Technical Review, Artistic Refinement & Final Submission</a></li>
+                    
+                    </ul>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 6: Character Design & Basic Materials</h1>
+                    <p>Students block out a stylized character (4–6 heads tall) that meaningfully interacts with their table scene, then create a small, clean material library (proper names, sensible values) and apply it at the object and face level. The week emphasizes readable proportions, a clear line of action, and material harmony across character + props.</p>
+                </div>
+            </div>
+        </section>
+
+        
+                <div class="navigation-links">
+                    <div class="container">
+                        <div class="nav-links-container">
+                            
+                <div class="nav-link-item back-link">
+                    <a href="semester1week5.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Week 5
+                    </a>
+                </div>
+            
+                <div class="nav-link-item forward-link">
+                    <a href="semester1week7.html" class="nav-link">
+                        Week 7
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+        <div class="navigation-links-placeholder"></div>
+
+        <section id="weekly-progress" class="weekly-progress-section">
+            <div class="container">
+                <h2 class="section-title">Weekly Progress</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <div>
+                            <div class="progress-title">Course Progress</div>
+                            <div class="progress-subtitle">Track your weekly progress throughout the semester</div>
+                        </div>
+                        <div class="progress-percentage">0%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <div class="week-progress" id="week-progress">
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week1.html'">
+                        <div class="week-number">1</div>
+                        <div class="week-name">Week 1</div>
+                        <div class="week-date">Aug 31</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week2.html'">
+                        <div class="week-number">2</div>
+                        <div class="week-name">Week 2</div>
+                        <div class="week-date">Sep 7</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week3.html'">
+                        <div class="week-number">3</div>
+                        <div class="week-name">Week 3</div>
+                        <div class="week-date">Sep 14</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week4.html'">
+                        <div class="week-number">4</div>
+                        <div class="week-name">Week 4</div>
+                        <div class="week-date">Sep 21</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week5.html'">
+                        <div class="week-number">5</div>
+                        <div class="week-name">Week 5</div>
+                        <div class="week-date">Sep 28</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week6.html'">
+                        <div class="week-number">6</div>
+                        <div class="week-name">Week 6</div>
+                        <div class="week-date">Oct 5</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week7.html'">
+                        <div class="week-number">7</div>
+                        <div class="week-name">Week 7</div>
+                        <div class="week-date">Oct 12</div>
+                    </div>
+                </div>
+            
+                    <div class="week-item break-week">
+                        <div class="break-text">Break Week</div>
+                    </div>
+                
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week8.html'">
+                        <div class="week-number">8</div>
+                        <div class="week-name">Week 8</div>
+                        <div class="week-date">Oct 26</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week9.html'">
+                        <div class="week-number">9</div>
+                        <div class="week-name">Week 9</div>
+                        <div class="week-date">Nov 2</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week10.html'">
+                        <div class="week-number">10</div>
+                        <div class="week-name">Week 10</div>
+                        <div class="week-date">Nov 9</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week11.html'">
+                        <div class="week-number">11</div>
+                        <div class="week-name">Week 11</div>
+                        <div class="week-date">Nov 16</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week12.html'">
+                        <div class="week-number">12</div>
+                        <div class="week-name">Week 12</div>
+                        <div class="week-date">Nov 23</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">In-Class Topics</h2>
+                        <div class="section-content">
+                            <ul><li>Stylized vs. realistic proportions;&nbsp;<b>4–6 heads</b>&nbsp;target for this project.</li><li>Character blocking from&nbsp;<b>primitives</b>; posing to interact with the table; line of action.</li><li>Material naming conventions and key Principled BSDF properties (<b>Base Color, Metallic, Roughness</b>, Specular, Transmission).</li><li>Building a minimal scene library: wood, metal, ceramic, glass, porcelain; character skin/fabric/hair.</li><li>Material harmony &amp; scene-integration checklist.</li></ul>
+                        </div>
+            
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Key Concepts & Tools</h2>
+                        <div class="section-content">
+                            <p>Section content goes here.</p>
+                        </div>
+            
+                        <div class="concepts-grid">
+                    
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Character Block-Out
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div>Set the goal: stylized&nbsp;<b>4–6 heads</b>&nbsp;tall; gather 1–2 quick refs.</div><div><br></div><div><b>Place primitives:</b></div><div><ul><li><b>Head</b>: sphere.</li><li><b>Torso</b>: cylinder or box.</li><li><b>Arms/Legs</b>: cylinders.</li><li><b>Joints</b>: spheres (shoulders, elbows, hips, knees).</li></ul></div><div><br></div><div><b>Proportion pass</b>: check widths/heights from front/side; adjust before details.</div><div><b>Pose blocking</b>: rotate/place limbs so the character uses or reacts to the table (reach, lean, look). Keep a clear line of action.</div><div><b>Readability checks</b>: keep forms simple, test silhouettes often, and rely on reference to avoid drift.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Create a Clean Material Library
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Naming rules</b>: lowercase, no spaces, use underscores; descriptive types: wood_oak, metal_chrome, ceramic_white.</div><div><br></div><div><b>Principled BSDF quick refresher</b>: Base Color, Metallic (0=non-metal like wood/fabric; 1=metal), Roughness (0 mirror…1 matte), Specular (reflection intensity), Transmission (glass).</div><div><br></div><div><b>Make these scene materials with sensible defaults:</b></div><div><ul><li><i>wood_oak</i>: Base warm brown; Metallic&nbsp;<b>0</b>; Roughness&nbsp;<b>0.6</b>.</li><li><i>metal_chrome</i>: Base light gray; Metallic&nbsp;<b>1</b>; Roughness&nbsp;<b>0.1</b>.</li><li><i>ceramic_white</i>: Base white; Metallic&nbsp;<b>0</b>; Roughness<b>&nbsp;0.2</b>.</li><li><i>glass_clear</i>: Base very light; Metallic&nbsp;<b>0</b>; Roughness 0; Transmission&nbsp;<b>0.9</b>.</li><li><i>porcelain_white</i>&nbsp;(vase): Base white; Metallic&nbsp;<b>0</b>; Roughness&nbsp;<b>0.1</b>.</li></ul></div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Character Materials
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div>Create these and&nbsp;<b>apply by faces</b>&nbsp;where needed:</div><div><ul><li><i>skin_character</i>&nbsp;— Metallic&nbsp;<b>0</b>; Roughness&nbsp;<b>0.6</b>&nbsp;(head/arms/skin).</li><li><i>fabric_cotton</i>&nbsp;— Metallic&nbsp;<b>0</b>; Roughness&nbsp;<b>0.8</b>&nbsp;(torso/legs clothing).</li><li><i>hair_character</i>&nbsp;— Metallic&nbsp;<b>0</b>; Roughness&nbsp;<b>0.4</b>.</li><li><i>rubber_shoe</i>&nbsp;— Metallic&nbsp;<b>0</b>; Roughness&nbsp;<b>0.9</b>&nbsp;(feet).</li></ul></div><div><br></div><div><b>How to assign (object vs. face level):</b></div><div><ul><li><b>Object-level</b>: select mesh → add material →&nbsp;<b>Assign&nbsp;</b>(simple, single-material meshes).</li><li><b>Face-level</b>: Tab → select faces → pick/create material →&nbsp;<b>Assign&nbsp;</b>(multi-material meshes).</li><li><b>Material slots</b>: add + slots; select faces → choose slot →&nbsp;<b>Assign</b>.</li></ul></div><div><br></div><div>Tip: Don’t forget the practical Apply order: select faces → choose the correct slot →&nbsp;<b>Assign&nbsp;</b>(students often forget the last click).</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Scene Material Integration & Harmony
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div>Run this checklist (iterate until cohesive):</div><div><ul><li><b>Color relationships</b>: warm/cool balance; complementary hues.</li><li><b>Material contrast</b>: vary roughness; mix metal/non-metal; create focal points.</li><li><b>Environmental consistency</b>: materials fit the mood &amp; lighting.</li><li><b>Testing loop</b>: Material Preview (Z), different lighting, multiple angles. Fine-tune values; add subtle texture if needed.</li><li><b>Final pass</b>: verify wood isn’t plastic, metals not over-mirrored, glass reads transparent, skin looks natural.</li></ul></div>
+                                </div>
+                        
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Homework</h2>
+                        <div class="section-content">
+                            <ul><li><b>Complete Character Model:</b>&nbsp;Finalize blocking, add a few key details, ensure natural interaction with the table.</li><li><b>Scene Integration:</b>&nbsp;Apply across character + props; test in Rendered view; adjust for cohesion.</li></ul>
+                        </div>
+            
+                    </div>
+                </section>
+            
+
+        <section class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Resources & References</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <div class="resource-title">Resource Title</div>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <div class="resource-description">
+                                Resource description goes here. You can add links and other information.
+                            </div>
+                            <div class="resource-links">
+                                <div class="resource-link">
+                                    <a href="#">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Resource Link
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <div class="footer-description">Your path to 3D Mastery</div>
+            
+            <div class="copyright">
+                &copy; 2025 Web Page Generator. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

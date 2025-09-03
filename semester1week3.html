@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3: Animation Interface & Project Completion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Navigation</div>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            
+                <div class="nav-section">
+                    <h3>Semester</h3>
+                    <ul>
+            
+                        <li><a href="semester1.html">Semester 1: 3D Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Project</h3>
+                    <ul>
+            
+                        <li><a href="semester1project0.html">Project 0: Grease Pencil Fundamentals</a></li>
+                    
+                        <li><a href="semester1project1.html">Project 1: 3D Fundamentals</a></li>
+                    
+                        <li><a href="semester1project2.html">Project 2: 3D Environment Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Week</h3>
+                    <ul>
+            
+                        <li><a href="semester1week1.html">Week 1: Digital Art Fundamentals & Grease Pencil Basics</a></li>
+                    
+                        <li><a href="semester1week2.html">Week 2: Grease Pencil Tools & Technical Drawing</a></li>
+                    
+                        <li><a href="semester1week3.html">Week 3: Animation Interface & Project Completion</a></li>
+                    
+                        <li><a href="semester1week4.html">Week 4: 3D Space Fundamentals & Table Composition</a></li>
+                    
+                        <li><a href="semester1week5.html">Week 5: Shape Language & Object Detailing</a></li>
+                    
+                        <li><a href="semester1week6.html">Week 6: Character Design & Basic Materials</a></li>
+                    
+                        <li><a href="semester1week7.html">Week 7: Environment Design & Project Completion</a></li>
+                    
+                        <li><a href="semester1week8.html">Week 8: Subdivision Surfaces, Edge Flow & Supporting Loops</a></li>
+                    
+                        <li><a href="semester1week9.html">Week 9: Material Fundamentals</a></li>
+                    
+                        <li><a href="semester1week10.html">Week 10: Modular Design Principles, Snap-to-Grid & Tile Systems</a></li>
+                    
+                        <li><a href="semester1week11.html">Week 11: Environment Assembly, Advanced Lighting & Multi-Camera Composition</a></li>
+                    
+                        <li><a href="semester1week12.html">Week 12: Technical Review, Artistic Refinement & Final Submission</a></li>
+                    
+                    </ul>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 3: Animation Interface & Project Completion</h1>
+                    <p>This final week of Project 0 ties together Grease Pencil drawing fundamentals with the basics of animation in Blender. Students will learn how to use the Timeline, add and manipulate keyframes, and apply onion skinning to refine motion. They will complete their multi-view technical drawing set (front, side, top) of a chosen object, add a short animation (e.g., a bouncing ball or simple object movement), and prepare a polished submission with organized files and documentation.</p>
+                </div>
+            </div>
+        </section>
+
+        
+                <div class="navigation-links">
+                    <div class="container">
+                        <div class="nav-links-container">
+                            
+                <div class="nav-link-item back-link">
+                    <a href="semester1week2.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Week 2
+                    </a>
+                </div>
+            
+                <div class="nav-link-item forward-link">
+                    <a href="semester1project1.html" class="nav-link">
+                        Project 1
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+        <div class="navigation-links-placeholder"></div>
+
+        <section id="weekly-progress" class="weekly-progress-section">
+            <div class="container">
+                <h2 class="section-title">Weekly Progress</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <div>
+                            <div class="progress-title">Course Progress</div>
+                            <div class="progress-subtitle">Track your weekly progress throughout the semester</div>
+                        </div>
+                        <div class="progress-percentage">0%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <div class="week-progress" id="week-progress">
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week1.html'">
+                        <div class="week-number">1</div>
+                        <div class="week-name">Week 1</div>
+                        <div class="week-date">Aug 31</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week2.html'">
+                        <div class="week-number">2</div>
+                        <div class="week-name">Week 2</div>
+                        <div class="week-date">Sep 7</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week3.html'">
+                        <div class="week-number">3</div>
+                        <div class="week-name">Week 3</div>
+                        <div class="week-date">Sep 14</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week4.html'">
+                        <div class="week-number">4</div>
+                        <div class="week-name">Week 4</div>
+                        <div class="week-date">Sep 21</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week5.html'">
+                        <div class="week-number">5</div>
+                        <div class="week-name">Week 5</div>
+                        <div class="week-date">Sep 28</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week6.html'">
+                        <div class="week-number">6</div>
+                        <div class="week-name">Week 6</div>
+                        <div class="week-date">Oct 5</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week7.html'">
+                        <div class="week-number">7</div>
+                        <div class="week-name">Week 7</div>
+                        <div class="week-date">Oct 12</div>
+                    </div>
+                </div>
+            
+                    <div class="week-item break-week">
+                        <div class="break-text">Break Week</div>
+                    </div>
+                
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week8.html'">
+                        <div class="week-number">8</div>
+                        <div class="week-name">Week 8</div>
+                        <div class="week-date">Oct 26</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week9.html'">
+                        <div class="week-number">9</div>
+                        <div class="week-name">Week 9</div>
+                        <div class="week-date">Nov 2</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week10.html'">
+                        <div class="week-number">10</div>
+                        <div class="week-name">Week 10</div>
+                        <div class="week-date">Nov 9</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week11.html'">
+                        <div class="week-number">11</div>
+                        <div class="week-name">Week 11</div>
+                        <div class="week-date">Nov 16</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week12.html'">
+                        <div class="week-number">12</div>
+                        <div class="week-name">Week 12</div>
+                        <div class="week-date">Nov 23</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">In-Class Topics</h2>
+                        <div class="section-content">
+                            <ul><li>Blender animation interface: Timeline, keyframes, interpolation, Graph Editor.</li><li>Onion skinning for frame-to-frame drawing reference.</li><li>Creating a short Grease Pencil animation.</li><li>Project finalization: technical drawing consistency, detail pass, and presentation standards.</li><li>File organization and preparing a professional submission package.</li></ul>
+                        </div>
+            
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Key Concepts & Tools</h2>
+                        <div class="section-content">
+                            <p>Section content goes here.</p>
+                        </div>
+            
+                        <div class="concepts-grid">
+                    
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Animation Interface Basics
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Switch Workspace:</b>&nbsp;Go to&nbsp;<i>Animation&nbsp;</i>or split the viewport → set lower panel to&nbsp;<b>Timeline</b>.</div><div><br></div><div><b>Timeline Navigation</b>:</div><div><ul><li>Space = Play/Pause; Left/Right Arrows = Jump frame by frame; Ctrl + Left/Right = Jump to previous/next keyframe.</li></ul></div><div><br></div><div><b>Add a Grease Pencil Object</b>: Shift+A → Grease Pencil → Blank.</div><div><br></div><div><b>Onion Skinning</b>: In Viewport Overlays, enable Onion Skinning; set range = 1 previous/1 next frame.</div><div><br></div><div><b>Insert Keyframes:</b></div><div><ul><li>Frame 1: Draw circle (ball). Press I → Location.</li><li>Frame 20: Move ball down (bounce contact). Press I → Location.</li><li>Frame 40: Move ball up again. Press I → Location.</li></ul></div><div><br></div><div><b>Playback &amp; Interpolation</b>: Play animation. Open Graph Editor → select Y-Location curve → change handles to Bezier for smoother motion.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Multi-View Drawing Completion
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li><b>Choose Object</b>: Cup, chair, or lamp.</li><li><b>Set Layers</b>: 01_Construction, 02_Outlines, 03_Details, 04_Dimensions.</li><li><b>Front View</b>: Align bounding box; add outlines and key details.</li><li><b>Side View</b>: Project heights/widths from front using grid snap; refine outlines.</li><li><b>Top View</b>: Align width/depth from previous views; finalize proportions.</li></ul></div><div><b><br></b></div><div><b>Line Weight Hierarchy</b>:</div><div><ul><li>Thick = visible outlines.</li><li>Dashed medium = hidden lines.</li><li>Light thin = construction.</li><li>Medium = dimensions.</li></ul></div><div><br></div><div><b>Final Pass</b>: Hide construction layer; confirm proportions are consistent across all three views.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        File Organization & Submission Prep
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li>Folder Tree:&nbsp;<b>Semester1/Project0/Week03/</b>&nbsp;with&nbsp;<b>/BLEND/, /RENDERS/, /DOC/.</b></li><li>File Naming:&nbsp;<b>P0_Final_ObjectName_YourName_v01.blend</b>.</li></ul></div><div><br></div><div><b>Exports</b>:</div><div><ul><li>PNG render of front/side/top views.</li><li>PNG/JPG of animation frames (optional playblast MP4).</li></ul></div>
+                                </div>
+                        
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Homework</h2>
+                        <div class="section-content">
+                            <div><b>Final Technical Drawing Set</b>: Complete front, side, and top views of your chosen object; check for proportional consistency.</div><div><b>Final Submission Package:</b></div><div><ul><li>Organized Blender file(s).</li><li>PNG/JPG renders of drawings and animation.</li><li>Workflow documentation.</li><li>Submit by end of Week 3.</li></ul></div>
+                        </div>
+            
+                    </div>
+                </section>
+            
+
+        <section class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Resources & References</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <div class="resource-title">Resource Title</div>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <div class="resource-description">
+                                Resource description goes here. You can add links and other information.
+                            </div>
+                            <div class="resource-links">
+                                <div class="resource-link">
+                                    <a href="#">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Resource Link
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <div class="footer-description">Your path to 3D Mastery</div>
+            
+            <div class="copyright">
+                &copy; 2025 Web Page Generator. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9: Material Fundamentals (Shader Editor, Principled BSDF, UVs & Texturing)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Navigation</div>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            
+                <div class="nav-section">
+                    <h3>Semester</h3>
+                    <ul>
+            
+                        <li><a href="semester1.html">Semester 1: 3D Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Project</h3>
+                    <ul>
+            
+                        <li><a href="semester1project0.html">Project 0: Grease Pencil Fundamentals</a></li>
+                    
+                        <li><a href="semester1project1.html">Project 1: 3D Fundamentals</a></li>
+                    
+                        <li><a href="semester1project2.html">Project 2: 3D Environment Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Week</h3>
+                    <ul>
+            
+                        <li><a href="semester1week1.html">Week 1: Digital Art Fundamentals & Grease Pencil Basics</a></li>
+                    
+                        <li><a href="semester1week2.html">Week 2: Grease Pencil Tools & Technical Drawing</a></li>
+                    
+                        <li><a href="semester1week3.html">Week 3: Animation Interface & Project Completion</a></li>
+                    
+                        <li><a href="semester1week4.html">Week 4: 3D Space Fundamentals & Table Composition</a></li>
+                    
+                        <li><a href="semester1week5.html">Week 5: Shape Language & Object Detailing</a></li>
+                    
+                        <li><a href="semester1week6.html">Week 6: Character Design & Basic Materials</a></li>
+                    
+                        <li><a href="semester1week7.html">Week 7: Environment Design & Project Completion</a></li>
+                    
+                        <li><a href="semester1week8.html">Week 8: Subdivision Surfaces, Edge Flow & Supporting Loops</a></li>
+                    
+                        <li><a href="semester1week9.html">Week 9: Material Fundamentals</a></li>
+                    
+                        <li><a href="semester1week10.html">Week 10: Modular Design Principles, Snap-to-Grid & Tile Systems</a></li>
+                    
+                        <li><a href="semester1week11.html">Week 11: Environment Assembly, Advanced Lighting & Multi-Camera Composition</a></li>
+                    
+                        <li><a href="semester1week12.html">Week 12: Technical Review, Artistic Refinement & Final Submission</a></li>
+                    
+                    </ul>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 9: Material Fundamentals (Shader Editor, Principled BSDF, UVs & Texturing)</h1>
+                    <p>Students learn the Shader Editor (node-based materials), build a small material library with Principled BSDF, then UV unwrap and apply textures to subdivision models. By the end, they’ll create several clean materials, texture at least one prop, and document settings—skills required for the Project 2 final (materials contribute to the Technical Proficiency slice).</p>
+                </div>
+            </div>
+        </section>
+
+        
+                <div class="navigation-links">
+                    <div class="container">
+                        <div class="nav-links-container">
+                            
+                <div class="nav-link-item back-link">
+                    <a href="semester1week8.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Week 8
+                    </a>
+                </div>
+            
+                <div class="nav-link-item forward-link">
+                    <a href="semester1week10.html" class="nav-link">
+                        Week 10
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+        <div class="navigation-links-placeholder"></div>
+
+        <section id="weekly-progress" class="weekly-progress-section">
+            <div class="container">
+                <h2 class="section-title">Weekly Progress</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <div>
+                            <div class="progress-title">Course Progress</div>
+                            <div class="progress-subtitle">Track your weekly progress throughout the semester</div>
+                        </div>
+                        <div class="progress-percentage">0%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <div class="week-progress" id="week-progress">
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week1.html'">
+                        <div class="week-number">1</div>
+                        <div class="week-name">Week 1</div>
+                        <div class="week-date">Aug 31</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week2.html'">
+                        <div class="week-number">2</div>
+                        <div class="week-name">Week 2</div>
+                        <div class="week-date">Sep 7</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week3.html'">
+                        <div class="week-number">3</div>
+                        <div class="week-name">Week 3</div>
+                        <div class="week-date">Sep 14</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week4.html'">
+                        <div class="week-number">4</div>
+                        <div class="week-name">Week 4</div>
+                        <div class="week-date">Sep 21</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week5.html'">
+                        <div class="week-number">5</div>
+                        <div class="week-name">Week 5</div>
+                        <div class="week-date">Sep 28</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week6.html'">
+                        <div class="week-number">6</div>
+                        <div class="week-name">Week 6</div>
+                        <div class="week-date">Oct 5</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week7.html'">
+                        <div class="week-number">7</div>
+                        <div class="week-name">Week 7</div>
+                        <div class="week-date">Oct 12</div>
+                    </div>
+                </div>
+            
+                    <div class="week-item break-week">
+                        <div class="break-text">Break Week</div>
+                    </div>
+                
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week8.html'">
+                        <div class="week-number">8</div>
+                        <div class="week-name">Week 8</div>
+                        <div class="week-date">Oct 26</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week9.html'">
+                        <div class="week-number">9</div>
+                        <div class="week-name">Week 9</div>
+                        <div class="week-date">Nov 2</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week10.html'">
+                        <div class="week-number">10</div>
+                        <div class="week-name">Week 10</div>
+                        <div class="week-date">Nov 9</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week11.html'">
+                        <div class="week-number">11</div>
+                        <div class="week-name">Week 11</div>
+                        <div class="week-date">Nov 16</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week12.html'">
+                        <div class="week-number">12</div>
+                        <div class="week-name">Week 12</div>
+                        <div class="week-date">Nov 23</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">In-Class Topics</h2>
+                        <div class="section-content">
+                            <div><b>Shader Editor</b>: opening the editor, node layout, creating/assigning materials.</div><div><b>Principled BSDF properties</b>: Base Color, Roughness, Metallic, Specular, Transmission (+ IOR, Normal).</div><div><b>Texture mapping &amp; UVs</b>: unwrap methods, UV Editor, image textures, coordinate systems.</div><div><b>Material practice</b>: build common materials; apply to models; variations, mixing, and masks.</div>
+                        </div>
+            
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Key Concepts & Tools</h2>
+                        <div class="section-content">
+                            <p>Section content goes here.</p>
+                        </div>
+            
+                        <div class="concepts-grid">
+                    
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Open Shader Editor & Make Your First Material
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Open Shader Editor</b>: split the viewport → change new panel to Shader Editor.</div><div><br></div><div><b>Create a Material</b>: select object → Properties ▸ Materials → New → name it clearly. A<b>&nbsp;Principled BSDF</b>&nbsp;and&nbsp;<b>Material Output</b>&nbsp;appear.</div><div><br></div><div><b>Navigate nodes</b>: zoom/pan the node area; connect/disconnect noodles; tweak values live to see viewport updates.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Principled BSDF “Quick Wins”
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div>Use these starter values to understand perceptual ranges (adjust to taste):</div><div><ul><li><b>Plastic</b>: Base Color any; Metallic 0, Roughness ~0.2, Specular ~0.5.</li><li><b>Metal&nbsp;</b>(chrome-like): light gray; Metallic 1, Roughness ~0.1.</li><li><b>Glass</b>: Transmission 1, Roughness 0, IOR ~1.5.</li><li><b>Wood</b>: brown or texture; Metallic 0, Roughness ~0.4.</li></ul></div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        UV Unwrapping
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Enter Edit Mode</b>&nbsp;(Tab) → A (all). Press U → choose Unwrap (start simple).</div><div><br></div><div><b>Open UV Editor</b>&nbsp;(split panel) → confirm UV layout and inspect distortion.</div><div><br></div><div><b>Know your options</b>: Smart UV Project, Lightmap Pack, Follow Active Quads, pick per mesh shape.</div><div><br></div><div><b>Coordinate systems</b>: Generated/Normal/Object/UV (most common for painted textures).</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Apply a Texture
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div>In the material, add&nbsp;<b>Image Texture → Open an image → connect Color → Base Color</b>&nbsp;(Principled).</div><div><br></div><div>Ensure the model has valid UVs; preview in Material Preview and tweak scale/rotation in UV Editor.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Guided Prop: Stylized Treasure Chest
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Model the chest&nbsp;</b>(simple SubD-friendly form, hinges/lock detail, clean topology).</div><div><br></div><div><b>UV unwrap</b>: A → U → Unwrap; fix stretching; arrange islands cleanly.</div><div><br></div><div><b>Wood material</b>: Base brown; Roughness ~0.6, Metallic 0.</div><div><br></div><div><b>Apply textures</b>: Image Texture → Base Color; add roughness/normal maps if available.</div><div><br></div><div><b>Multiple materials</b>: separate wood vs. metal fittings; assign by faces; contrast Roughness/Metallic for readability.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Variations, Mixing & Masks
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Mix Shader&nbsp;</b>different looks; drive Factor with textures for wear/dirt zones.</div><div><br></div><div>Make&nbsp;<b>material variations&nbsp;</b>(color/roughness tweaks) to avoid repetition; build a mini library.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Tips & Tricks
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Check UVs</b>: watch for stretching; keep island scale consistent; pack efficiently.</div><div><br></div><div><b>Dielectric vs. Metal</b>: Metallic=0 for wood/plastic/ceramic/skin; 1 for metals.</div><div><br></div><div><b>Glass&nbsp;</b>needs&nbsp;<b>Transmission&nbsp;</b>and a sensible IOR; keep Roughness near 0 for clarity.</div><div><br></div><div><b>Library mindset</b>: make reusable presets; vary roughness more than color to add realism without noise.</div>
+                                </div>
+                        
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Homework</h2>
+                        <div class="section-content">
+                            Repeat all three&nbsp;<strong data-start="5915" data-end="5928">Exercises</strong>: 5 materials documented; one textured SubD prop; a compact library with 2–3 variations per base.&nbsp;
+                        </div>
+            
+                    </div>
+                </section>
+            
+
+        <section class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Resources & References</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <div class="resource-title">Resource Title</div>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <div class="resource-description">
+                                Resource description goes here. You can add links and other information.
+                            </div>
+                            <div class="resource-links">
+                                <div class="resource-link">
+                                    <a href="#">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Resource Link
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <div class="footer-description">Your path to 3D Mastery</div>
+            
+            <div class="copyright">
+                &copy; 2025 Web Page Generator. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

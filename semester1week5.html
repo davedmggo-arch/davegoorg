@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5: Shape Language & Object Detailing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Navigation</div>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            
+                <div class="nav-section">
+                    <h3>Semester</h3>
+                    <ul>
+            
+                        <li><a href="semester1.html">Semester 1: 3D Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Project</h3>
+                    <ul>
+            
+                        <li><a href="semester1project0.html">Project 0: Grease Pencil Fundamentals</a></li>
+                    
+                        <li><a href="semester1project1.html">Project 1: 3D Fundamentals</a></li>
+                    
+                        <li><a href="semester1project2.html">Project 2: 3D Environment Fundamentals</a></li>
+                    
+                    </ul>
+                </div>
+            
+                <div class="nav-section">
+                    <h3>Week</h3>
+                    <ul>
+            
+                        <li><a href="semester1week1.html">Week 1: Digital Art Fundamentals & Grease Pencil Basics</a></li>
+                    
+                        <li><a href="semester1week2.html">Week 2: Grease Pencil Tools & Technical Drawing</a></li>
+                    
+                        <li><a href="semester1week3.html">Week 3: Animation Interface & Project Completion</a></li>
+                    
+                        <li><a href="semester1week4.html">Week 4: 3D Space Fundamentals & Table Composition</a></li>
+                    
+                        <li><a href="semester1week5.html">Week 5: Shape Language & Object Detailing</a></li>
+                    
+                        <li><a href="semester1week6.html">Week 6: Character Design & Basic Materials</a></li>
+                    
+                        <li><a href="semester1week7.html">Week 7: Environment Design & Project Completion</a></li>
+                    
+                        <li><a href="semester1week8.html">Week 8: Subdivision Surfaces, Edge Flow & Supporting Loops</a></li>
+                    
+                        <li><a href="semester1week9.html">Week 9: Material Fundamentals</a></li>
+                    
+                        <li><a href="semester1week10.html">Week 10: Modular Design Principles, Snap-to-Grid & Tile Systems</a></li>
+                    
+                        <li><a href="semester1week11.html">Week 11: Environment Assembly, Advanced Lighting & Multi-Camera Composition</a></li>
+                    
+                        <li><a href="semester1week12.html">Week 12: Technical Review, Artistic Refinement & Final Submission</a></li>
+                    
+                    </ul>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 5: Shape Language & Object Detailing</h1>
+                    <p>Students deepen their 3D skills by applying shape language (circles, squares, triangles) to the table scene and learning core Edit Mode detailing tools (extrude, inset, bevel, loop cut). They use proportional editing and precise transforms to add ergonomic curves and functional details to the chair, plate, cup, and vase, while protecting silhouette readability and purpose.</p>
+                </div>
+            </div>
+        </section>
+
+        
+                <div class="navigation-links">
+                    <div class="container">
+                        <div class="nav-links-container">
+                            
+                <div class="nav-link-item back-link">
+                    <a href="semester1week4.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Week 4
+                    </a>
+                </div>
+            
+                <div class="nav-link-item forward-link">
+                    <a href="semester1week6.html" class="nav-link">
+                        Week 6
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+        <div class="navigation-links-placeholder"></div>
+
+        <section id="weekly-progress" class="weekly-progress-section">
+            <div class="container">
+                <h2 class="section-title">Weekly Progress</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <div>
+                            <div class="progress-title">Course Progress</div>
+                            <div class="progress-subtitle">Track your weekly progress throughout the semester</div>
+                        </div>
+                        <div class="progress-percentage">0%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <div class="week-progress" id="week-progress">
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week1.html'">
+                        <div class="week-number">1</div>
+                        <div class="week-name">Week 1</div>
+                        <div class="week-date">Aug 31</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week2.html'">
+                        <div class="week-number">2</div>
+                        <div class="week-name">Week 2</div>
+                        <div class="week-date">Sep 7</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week3.html'">
+                        <div class="week-number">3</div>
+                        <div class="week-name">Week 3</div>
+                        <div class="week-date">Sep 14</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week4.html'">
+                        <div class="week-number">4</div>
+                        <div class="week-name">Week 4</div>
+                        <div class="week-date">Sep 21</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week5.html'">
+                        <div class="week-number">5</div>
+                        <div class="week-name">Week 5</div>
+                        <div class="week-date">Sep 28</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week6.html'">
+                        <div class="week-number">6</div>
+                        <div class="week-name">Week 6</div>
+                        <div class="week-date">Oct 5</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week7.html'">
+                        <div class="week-number">7</div>
+                        <div class="week-name">Week 7</div>
+                        <div class="week-date">Oct 12</div>
+                    </div>
+                </div>
+            
+                    <div class="week-item break-week">
+                        <div class="break-text">Break Week</div>
+                    </div>
+                
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week8.html'">
+                        <div class="week-number">8</div>
+                        <div class="week-name">Week 8</div>
+                        <div class="week-date">Oct 26</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week9.html'">
+                        <div class="week-number">9</div>
+                        <div class="week-name">Week 9</div>
+                        <div class="week-date">Nov 2</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week10.html'">
+                        <div class="week-number">10</div>
+                        <div class="week-name">Week 10</div>
+                        <div class="week-date">Nov 9</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week11.html'">
+                        <div class="week-number">11</div>
+                        <div class="week-name">Week 11</div>
+                        <div class="week-date">Nov 16</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link " onclick="window.location.href='semester1week12.html'">
+                        <div class="week-number">12</div>
+                        <div class="week-name">Week 12</div>
+                        <div class="week-date">Nov 23</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">In-Class Topics</h2>
+                        <div class="section-content">
+                            <ul><li>Shape-language theory and object “personality” (friendly/circular, stable/square, dynamic/triangular).</li><li>Edit Mode detailing tools: E Extrude, I Inset, Ctrl+B Bevel, Ctrl+R Loop Cut.</li><li>Proportional Editing (falloffs, radius control) and advanced transforms/snapping.</li><li>Maintaining function + silhouette while adding detail; read from multiple angles.</li></ul>
+                        </div>
+            
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Key Concepts & Tools</h2>
+                        <div class="section-content">
+                            <p>Section content goes here.</p>
+                        </div>
+            
+                        <div class="concepts-grid">
+                    
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Shape-Language Warm-Up
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Label your intent per object:</b></div><div><ul><li>Table → square = stability; Chair → square + cylinders = stability/comfort; Plate → circle = friendly; Cup → cylinder + (optional) triangular handle = functional/dynamic; Vase → curves + subtle triangles = elegant/dynamic.</li></ul></div><div><br></div><div><b>Mark where details will reinforce the shape</b>&nbsp;(e.g., strong square table edge; soft circular plate rim; dynamic triangular cues in handle or vase contour).</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Edit Mode Detailing Pass
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div>Tools we’ll use:&nbsp;<b>E</b>&nbsp;(Extrude),&nbsp;<b>I</b>&nbsp;(Inset),&nbsp;<b>Ctrl+B</b>&nbsp;(Bevel),&nbsp;<b>Ctrl+R</b>&nbsp;(Loop Cut).</div><div><br></div><div><b>Table&nbsp;</b>(stable / square emphasis)</div><div><ul><li>Tab → Edit Mode; select tabletop top face → I to create a border; select border edges →<b>&nbsp;Ctrl+B</b>&nbsp;(bevel) for a refined chamfer.</li><li>Add&nbsp;<b>Ctrl+R</b>&nbsp;loop cuts in legs to support extra form where needed.</li></ul></div><div><br></div><div>Chair (comfortable / stable)</div><div><ul><li>Add loop cuts to seat and backrest (<b>Ctrl+R</b>); soften edges with&nbsp;<b>Ctrl+B</b>; extrude small features (armrest stubs or braces) with E.</li></ul></div><div><br></div><div>Plate (friendly / circular)</div><div><ul><li>Select top face →&nbsp;<b>I</b>&nbsp;to form an inset;&nbsp;<b>E</b>&nbsp;a subtle lip upward;&nbsp;<b>Ctrl+B</b>&nbsp;for a soft rim. Keep it functional (no extreme walls).</li></ul></div><div><br></div><div><b>Cup&nbsp;</b>(functional / cylindrical + dynamic option)</div><div><ul><li>Add<b>&nbsp;Ctrl+R</b>&nbsp;loops to control the body; enable proportional editing (see next section) for gentle taper; extrude a handle from an edge loop (or build a separate thin cylinder/torus and join).</li></ul></div><div><br></div><div><b>Vase&nbsp;</b>(elegant / curve-dominant)</div><div><ul><li>Add multiple&nbsp;<b>Ctrl+R</b>&nbsp;loops for shape control; use inset/extrude for shallow decorative bands; keep edge flow clean.</li></ul></div><div><br></div><div><b>Detailing rules of thumb</b>: add geometry only where needed; keep edge flow logical; bevel to soften; test from multiple angles; protect the silhouette.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Proportional Editing & Advanced Transforms
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Proportional Editing setup</b>:&nbsp;<b>O&nbsp;</b>to toggle; try&nbsp;<b>Smooth/Sphere/Root/Sharp/Linear</b>; wheel to resize influence.</div><div><br></div><div>Advanced transforms:</div><div><ul><li><b>G/R/S</b>&nbsp;+<b>&nbsp;X/Y/Z</b>; press axis twice for local; numeric entry for precision (e.g., G X 0.05);&nbsp;<b>Ctrl&nbsp;</b>for snapping.</li></ul></div><div><br></div><div>Apply to each object (organic but functional):</div><div><ul><li><b>Chair ergonomics</b>: curve backrest; slight seat depression; tweak angles for posture.</li><li><b>Plate curvature</b>: subtle rim curve and central depression, still stackable/usable.</li><li><b>Cup handle</b>: ergonomic arc and secure junctions to cup body.</li><li><b>Vase elegance</b>: sphere falloff for narrow neck/wide base; add delicate ridges.</li><li><b>Table refinement</b>: gentle leg taper (proportional edit) while keeping the table stable.</li></ul></div><div><br></div><div><b>Principles check</b>: details must support function, suit purpose, and look correct from multiple angles.</div>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Silhouette Proof & Cleanup
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li>Orbit to front/side/top; toggle Ortho; check for&nbsp;<b>tangent merges</b>; ensure the “personality” reads clearly after detailing.</li><li>Confirm function is intact; avoid over-detailing that muddies reads; keep the strongest contour lines supported by your geometry choices.</li></ul>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Tips & Tricks
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li>Add geometry<b>&nbsp;only where needed</b>; keep edge flow clean; bevel to soften; test details from multiple angles; protect the silhouette.</li><li>As you enhance, keep asking: “Does this support&nbsp;<b>function&nbsp;</b>and the object’s intended&nbsp;<b>personality</b>?”</li></ul>
+                                </div>
+                        
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Homework</h2>
+                        <div class="section-content">
+                            <b>Detailed Table Scene</b>: Professional-level details across all objects; techniques chosen per object’s needs; aesthetic and functional.
+                        </div>
+            
+                    </div>
+                </section>
+            
+
+        <section class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Resources & References</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <div class="resource-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="resource-title-group">
+                                <div class="resource-title">Resource Title</div>
+                            </div>
+                        </div>
+                        <div class="resource-content">
+                            <div class="resource-description">
+                                Resource description goes here. You can add links and other information.
+                            </div>
+                            <div class="resource-links">
+                                <div class="resource-link">
+                                    <a href="#">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Resource Link
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <div class="footer-description">Your path to 3D Mastery</div>
+            
+            <div class="copyright">
+                &copy; 2025 Web Page Generator. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
