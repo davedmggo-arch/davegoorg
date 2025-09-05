@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Creating Your First Props</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>Web Page Generator</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Navigation</div>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav"></div>
+    </div>
+
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 2: Creating Your First Props</h1>
+                    <p>This week, you'll dive into the exciting world of 3D modeling by creating your first thematic props. You'll learn how to work in Edit mode, use essential modeling tools like extrusion and beveling, and understand why good topology matters. By the end of the week, you'll have created 2-3 props that not only look good but also serve a narrative purpose in your chosen theme, taking your first big step from simple shapes to meaningful 3D objects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION LINKS PLACEHOLDER -->
+        
+            <div class="navigation-links">
+                <div class="container">
+                    <div class="nav-links-container">
+                        
+                <div class="nav-link-item back-link">
+                    <a href="semester3week1.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Week 1
+                    </a>
+                </div>
+            
+                <div class="nav-link-item forward-link">
+                    <a href="semester3week3.html" class="nav-link">
+                        Week 3
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            
+                    </div>
+                </div>
+            </div>
+        
+
+        <section id="weekly-progress" class="weekly-progress-section">
+            <div class="container">
+                <h2 class="section-title">Weekly Progress</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <div>
+                            <div class="progress-title">Course Progress</div>
+                            <div class="progress-subtitle">Track your weekly progress throughout the semester</div>
+                        </div>
+                        <div class="progress-percentage">0%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                
+            <div class="week-progress" id="week-progress">
+                
+                <div class="week-item">
+                    <div class="week-link" href="semester3week1.html">
+                        <div class="week-number">1</div>
+                        <div class="week-name">Week 1</div>
+                        <div class="week-date">Aug 31</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week2.html">
+                        <div class="week-number">2</div>
+                        <div class="week-name">Week 2</div>
+                        <div class="week-date">Sep 7</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week3.html">
+                        <div class="week-number">3</div>
+                        <div class="week-name">Week 3</div>
+                        <div class="week-date">Sep 14</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week4.html">
+                        <div class="week-number">4</div>
+                        <div class="week-name">Week 4</div>
+                        <div class="week-date">Sep 21</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week5.html">
+                        <div class="week-number">5</div>
+                        <div class="week-name">Week 5</div>
+                        <div class="week-date">Sep 28</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week6.html">
+                        <div class="week-number">6</div>
+                        <div class="week-name">Week 6</div>
+                        <div class="week-date">Oct 5</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week7.html">
+                        <div class="week-number">7</div>
+                        <div class="week-name">Week 7</div>
+                        <div class="week-date">Oct 12</div>
+                    </div>
+                </div>
+            
+                    <div class="week-item break-week">
+                        <div class="break-text">Break Week</div>
+                    </div>
+                
+                <div class="week-item">
+                    <div class="week-link" href="semester3week8.html">
+                        <div class="week-number">8</div>
+                        <div class="week-name">Week 8</div>
+                        <div class="week-date">Oct 26</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week9.html">
+                        <div class="week-number">9</div>
+                        <div class="week-name">Week 9</div>
+                        <div class="week-date">Nov 2</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week10.html">
+                        <div class="week-number">10</div>
+                        <div class="week-name">Week 10</div>
+                        <div class="week-date">Nov 9</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week11.html">
+                        <div class="week-number">11</div>
+                        <div class="week-name">Week 11</div>
+                        <div class="week-date">Nov 16</div>
+                    </div>
+                </div>
+            
+                <div class="week-item">
+                    <div class="week-link" href="semester3week12.html">
+                        <div class="week-number">12</div>
+                        <div class="week-name">Week 12</div>
+                        <div class="week-date">Nov 23</div>
+                    </div>
+                </div>
+            
+            </div>
+        
+            </div>
+        </section>
+
+        
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">What You'll Learn</h2>
+                        <div class="section-content">
+                            <div><ul><li>How to work with <b>Edit</b> <b>mode</b> and different selection methods</li><li>Techniques for <b>extruding</b>, <b>beveling</b>, and <b>subdividing</b> your models</li><li>The basics of <b>edge</b> <b>flow</b> and why good topology matters</li><li>How to use <b>Boolean</b> operations to combine or cut shapes</li><li>Applying <b>reference</b> <b>materials</b> to make your props more realistic</li><li>Introduction to powerful tools like <b>Subdivision</b> <b>Surface</b> and <b>Mirror</b> <b>modifiers</b></li></ul></div>
+                        </div>
+            
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Key Concepts & Tools</h2>
+                        <div class="section-content">
+                            <br>
+                        </div>
+            <div class="concepts-grid">
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Edit Mode Operations
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li><b>Tab</b>: Switch between Edit and Object mode</li><li><b>1, 2, 3</b>: Switch between selecting Vertices, Edges, and Faces</li><li><b>Ctrl + Tab:</b> Quick menu for selecting different modes</li><li><b>Alt + Click</b>: Select an entire edge or face loop</li><li><b>Shift + Alt + Click</b>: Add or remove loops from your selection</li><li><b>Ctrl + L</b>: Select all connected parts of your model</li><li><b>L</b>: Select parts connected to where your cursor is</li><li><b>Ctrl + I</b>: Invert your selection (select everything you haven't selected)</li><li><b>H</b>: Hide selected parts (great for focusing on specific areas)</li><li><b>Alt + H</b>: Unhide everything you've hidden</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Modeling Tools
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li><b>E</b>: Extrude (pull new geometry from existing faces)</li><li><b>Ctrl + R</b>: Add edge loops (cuts across your model)</li><li><b>Ctrl + B</b>: Bevel edges (round off sharp corners)</li><li><b>I</b>: Inset faces (create inset faces within existing ones)</li><li><b>K</b>: Knife tool (make custom cuts)</li><li><b>F</b>: Fill faces or bridge edges</li><li><b>Ctrl + F</b>: Special face operations menu</li><li><b>V</b>: Rip vertices (split them apart)</li><li><b>Y</b>: Split edges</li><li><b>P</b>: Separate selected parts into new objects</li><li><b>M</b>: Merge vertices, edges, or faces together</li></ul>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Advanced Selection Techniques
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li><b>Ctrl + +</b>: Expand your selection</li><li><b>Ctrl + -</b>: Shrink your selection</li><li><b>Shift + G</b>: Select similar elements</li><li><b>Ctrl + Left Mouse</b>: Select the shortest path between two points</li><li><b>Ctrl + Shift + Left Mouse</b>: Select an entire area</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Modifier System
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li><b>Ctrl + A</b>: Apply transformations or modifiers</li><li><b>M</b>: Add a modifier</li><li><b>Ctrl + 1, 2, 3</b>: Add subdivision surface modifier</li><li><b>Ctrl + 0</b>: Disable subdivision modifier</li><li><b>Alt + M</b>: Add mirror modifier</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Boolean Operations
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li><b>Ctrl + Shift + B</b>: Add boolean modifier</li><li><b>Difference</b>: Cut one shape out of another</li><li><b>Union</b>: Merge two shapes together</li><li><b>Intersection</b>: Keep only where shapes overlap</li><li>Cleaning up after boolean operations (they can create messy geometry)</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Edge Flow and Topology
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <ul><li>Understanding&nbsp;<b>edge loops</b>&nbsp;and how they help with deformation</li><li>Maintaining&nbsp;<b>quad-based topology</b>&nbsp;(four-sided polygons)</li><li>Avoiding&nbsp;<b>triangles</b>&nbsp;and&nbsp;<b>n-gons</b>&nbsp;in areas that will bend or deform</li><li>Creating&nbsp;<b>edge flow&nbsp;</b>that supports the form and function of your model</li></ul>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Tips and Tricks
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li><b>See Your Edge Flow Clearly</b>: Enable edge loop visualization in viewport overlays (<b>Ctrl+Alt+Q</b>) to see how your edges flow across your model. This helps you spot topology issues before they become problems.</li><li><b>Use the Mirror Modifier for Symmetry</b>: Always use the mirror modifier for symmetrical objects. Make sure your object's origin is in the center (<b>Ctrl+Alt+Shift+C</b>) before applying the modifier for perfect symmetry.</li><li><b>Work Smart with Subdivision Surface</b>: Add a subdivision surface modifier early but keep it at level 1 while modeling. Use support loops (<b>Ctrl+R near edges</b>) to maintain your shape's integrity when you add more subdivisions.</li></ul></div>
+                                </div>
+                        </div></div>
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Homework</h2>
+                        <div class="section-content">
+                            <div><ul><li><b>Create Your Thematic Props</b>: Build 2-3 props based on your chosen theme and reference materials. Focus on clean topology and proper edge flow. Submit both wireframe and solid views so we can see your modeling technique.</li><li><b>Experiment with Modifiers</b>: Apply at least 3 different modifiers to your props (Subdivision Surface, Mirror, Bevel). Document how each modifier affects your model and explain why you chose each one.</li><li><b>Analyze Your Topology</b>: Submit screenshots highlighting the edge flow on your models with annotations explaining your topology decisions. Why did you place edges where you did?</li></ul></div>
+                        </div>
+            
+                    </div>
+                </section>
+            
+
+        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i>
+                <span>Web Page Generator</span>
+            </div>
+            <div class="footer-description">
+                Create custom HTML pages based on the semester template
+            </div>
+            <div class="social-links"></div>
+            <div class="copyright">
+                &copy; 2025 Web Page Generator. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
