@@ -1,0 +1,439 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5: Sculpting a Character</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Navigation</div>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            
+                    <div class="nav-section">
+                        <h3>Semester</h3>
+                        <ul>
+                
+                            <li>
+                                <a href="semester1.html">Semester 1: 3D Fundamentals</a>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                
+                    <div class="nav-section">
+                        <h3>Project</h3>
+                        <ul>
+                
+                            <li>
+                                <a href="semester1project0.html">Project 0: Grease Pencil Fundamentals</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1project1.html">Project 1: 3D Fundamentals</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1project2.html">Project 2: 3D Environment Fundamentals</a>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                
+                    <div class="nav-section">
+                        <h3>Week</h3>
+                        <ul>
+                
+                            <li>
+                                <a href="semester1week1.html">Week 1: Digital Art Fundamentals &amp; Grease Pencil Basics</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week2.html">Week 2: Grease Pencil Tools &amp; Technical Drawing</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week3.html">Week 3: Animation Interface &amp; Project Completion</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week4.html">Week 4: 3D Space Fundamentals &amp; Table Composition</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week5.html">Week 5: Shape Language &amp; Object Detailing</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week6.html">Week 6: Character Design &amp; Basic Materials</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week7.html">Week 7: Environment Design &amp; Project Completion</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week8.html">Week 8: Subdivision Surfaces, Edge Flow &amp; Supporting Loops</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week9.html">Week 9: Material Fundamentals</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week10.html">Week 10: Modular Design Principles, Snap-to-Grid &amp; Tile Systems</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week11.html">Week 11: Environment Assembly, Advanced Lighting &amp; Multi-Camera Composition</a>
+                            </li>
+                        
+                            <li>
+                                <a href="semester1week12.html">Week 12: Technical Review, Artistic Refinement &amp; Final Submission</a>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Week 5: Sculpting a Character</h1>
+                    <p>In this lesson, you’ll learn how to block out a character with primitives and then refine it using Blender 4.5’s most essential sculpting tools, focusing on forms before details. You’ll explore brushes, resolution management, and control tools like masking and symmetry to build a strong sculpting workflow from start to finish.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION LINKS PLACEHOLDER -->
+        
+            <div class="navigation-links">
+                <div class="container">
+                    <div class="nav-links-container">
+                        
+                <div class="nav-link-item back-link">
+                    <a href="semester3project2.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Project 2
+                    </a>
+                </div>
+            
+                <div class="nav-link-item forward-link">
+                    <a href="semester3week6.html" class="nav-link">
+                        Week 6
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            
+                    </div>
+                </div>
+            </div>
+        
+
+        <section id="weekly-progress" class="weekly-progress-section">
+            <div class="container">
+                <h2 class="section-title">Weekly Progress</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <div>
+                            <div class="progress-title">Course Progress</div>
+                            <div class="progress-subtitle">Track your weekly progress throughout the semester</div>
+                        </div>
+                        <div class="progress-percentage">42%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill" style="width: 42%;"></div>
+                    </div>
+                </div>
+                
+                
+            <div class="week-progress" id="week-progress">
+                
+                <div class="week-item">
+            <a href="semester3week1.html" class="week-link">
+                <div class="week-number">1</div>
+                <div class="week-name">Week 1</div>
+                <div class="week-date">Aug 30</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week2.html" class="week-link">
+                <div class="week-number">2</div>
+                <div class="week-name">Week 2</div>
+                <div class="week-date">Sep 6</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week3.html" class="week-link">
+                <div class="week-number">3</div>
+                <div class="week-name">Week 3</div>
+                <div class="week-date">Sep 13</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week4.html" class="week-link">
+                <div class="week-number">4</div>
+                <div class="week-name">Week 4</div>
+                <div class="week-date">Sep 20</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week5.html" class="week-link">
+                <div class="week-number">5</div>
+                <div class="week-name">Week 5</div>
+                <div class="week-date">Sep 27</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week6.html" class="week-link">
+                <div class="week-number">6</div>
+                <div class="week-name">Week 6</div>
+                <div class="week-date">Oct 4</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week7.html" class="week-link">
+                <div class="week-number">7</div>
+                <div class="week-name">Week 7</div>
+                <div class="week-date">Oct 11</div>
+            </a>
+        </div>
+            
+                <div class="week-item break-week">
+                <a class="week-link">
+                    <div class="break-text">Break Week</div>
+                </a>
+            </div>
+            
+                <div class="week-item">
+            <a href="semester3week8.html" class="week-link">
+                <div class="week-number">8</div>
+                <div class="week-name">Week 8</div>
+                <div class="week-date">Oct 18</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week9.html" class="week-link">
+                <div class="week-number">9</div>
+                <div class="week-name">Week 9</div>
+                <div class="week-date">Oct 25</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week10.html" class="week-link">
+                <div class="week-number">10</div>
+                <div class="week-name">Week 10</div>
+                <div class="week-date">Nov 1</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week11.html" class="week-link">
+                <div class="week-number">11</div>
+                <div class="week-name">Week 11</div>
+                <div class="week-date">Nov 8</div>
+            </a>
+        </div>
+            
+                <div class="week-item">
+            <a href="semester3week12.html" class="week-link">
+                <div class="week-number">12</div>
+                <div class="week-name">Week 12</div>
+                <div class="week-date">Nov 15</div>
+            </a>
+        </div>
+            
+            </div>
+        
+            </div>
+        </section>
+
+        
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">In-Class Topics:</h2>
+                        <div class="section-content">
+                            <ul><li><b>Block out a character in an A-pose</b> using primitives, the mirror modifier, and subdivision surface to establish clean, sculptable base forms.</li><li><b>Apply and manage voxel remeshing</b> to unify geometry and control polygon density for different stages of sculpting.</li><li><b>Navigate Sculpt Mode efficiently</b> using key UI panels, brush settings, and shortcuts for symmetry, brush control, and viewport shading.</li><li><b>Shape primary forms with core brushes</b> such as Grab, Draw, Clay Strips, Smooth, Flatten, and Fill to establish silhouette and proportion.</li><li><b>Refine secondary forms with detail brushes</b> such as Crease, Pinch, Inflate, and Scrape to enhance anatomy, folds, and medium features.</li><li><b>Apply industry design principles</b> such as the 60/30/10 rule, silhouette readability, and asymmetry to create visually strong and believable characters.</li></ul>
+                        </div>
+            
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Key Concepts &amp; Tools:</h2>
+                        <div class="section-content">
+                            <br>
+                        </div>
+            <div class="concepts-grid">
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Choosing the A-Pose
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <p data-start="608" data-end="910">For this class, use the A-pose. The arms are angled slightly down, which keeps the shoulders relaxed and natural for sculpting. It also prepares the model for future deformation without extreme stretching in the joints. The A-pose is the most common starting stance for sculpting in modern pipelines.</p>
+<h3 data-start="912" data-end="939"></h3>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Building the Blockout
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li>Add primitives using Shift + A such as spheres for heads, cubes for torsos, and cylinders for limbs.</li><li>Arrange parts using Move, Rotate, and Scale until the proportions feel balanced.</li><li>Join parts into one object with Ctrl + J.</li><li>Add a Mirror Modifier in the Modifier Properties so both sides of the sculpt remain identical.</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Subdivision Surface for Softer Forms
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div>Add a Subdivision Surface modifier to your primitives before sculpting.</div><div>Set viewport levels to 2 or 3 for smooth base geometry.</div><div>Apply the modifier before switching into Sculpt Mode.</div><div>Subdivision creates a clay-like starting shape that responds more naturally to brushes.</div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Tips for the Blockout phase:
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><ul><li>Always think about silhouette first. Check the model from multiple views to see if the character reads clearly.</li><li>Use as few primitives as possible in the blockout. Focus on the torso, limbs, and head before small details.</li><li>Start with low subdivision levels. Too much resolution too early encourages chasing detail before proportions are correct.</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Remeshing for a Sculptable Base
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Why Remesh Early</b></div><div>Blockouts often contain separate pieces and stretched geometry. Remesh rebuilds the surface into evenly distributed polygons that sculpt brushes can work on without distortion.</div><div><br></div><div><b>How to Use Remesh</b></div><div><ul><li>Switch to Sculpt Mode.</li><li>Open the Remesh menu in the top header or the right Properties panel.</li><li>Set a voxel size between 0.01 and 0.02 meters for a human-sized character. This keeps the base around 20k to 40k polygons, which is good for primary sculpting.</li><li>Use Ctrl + R to remesh and rebuild topology.</li><li>Later, decrease voxel size to 0.005 to 0.008 meters for finer secondary forms such as facial features.</li></ul></div><div><br></div><div><b>Tips:</b></div><div><ul><li>Start sculpting only after remeshing. This ensures clean, predictable strokes.</li><li>Keep your voxel size larger at the beginning. Only remesh down when you are confident the proportions are correct.</li><li>Do not rush into fine detail until you have a stable and readable primary form.</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Entering Sculpt Mode
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Sculpt Mode Setup</b></div><div><ul><li>Switch the object to Sculpt Mode from the top-left dropdown.</li><li>Enable X symmetry in the Symmetry panel so edits mirror across the model.</li><li>Change viewport shading to MatCap to better see form and volume.</li><li>Open the Brush Settings toolbar to adjust radius, strength, and falloff.</li></ul></div><div><br></div><div><b>Key Shortcuts Before Brushes</b></div><div><ul><li>F adjusts brush radius.</li><li>Shift + F adjusts brush strength.</li><li>Ctrl inverts a brush.</li><li>Shift smooths while sculpting.</li></ul></div><div><br></div><div><b>Tips:</b></div><div><ul><li>Set up your scene before sculpting. Correct symmetry, shading, and brush size shortcuts will save time.</li><li>Work zoomed out in early stages to focus on shape, not detail.</li><li>Remember that sculpting is additive. You will refine in passes, not all at once.</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Primary Form Sculpting
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Essential Brushes</b></div><div><ul><li>Grab for moving large forms. (G)</li><li>Draw for building up shapes.(V)</li><li>Clay Strips for laying down volume. (C)</li><li>Smooth for blending surfaces. (S)</li></ul></div><div><br></div><div><b>Workflow Advice</b></div><div>Work on the 60 percent big forms first. Establish torso, limbs, and head proportions before moving to details. Use large brush sizes at this stage to encourage broad edits instead of fine work.</div><div><br></div><div><b>Tips:</b></div><div><ul><li>Check the silhouette often. A strong outline matters more than surface details.</li><li>Avoid zooming in too early. If it does not read from a distance, details will not fix it.</li><li>Spend the most time here. A strong foundation makes the rest of the sculpt easier.</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Secondary Form Sculpting
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div>Core Brushes</div><div><ul><li>Crease to define folds and edges.</li><li>Pinch to tighten ridges and sharpen features.</li><li>Inflate and Deflate to push or reduce local volume.</li><li>Scrape and Peak to refine planes and highlight anatomy.</li></ul></div><div><br></div><div>Workflow Advice</div><div>At this stage work on medium forms such as muscle groups, clothing folds, and facial features. Reduce brush size and strength for more control. Refine transitions between primary shapes without losing the larger silhouette.</div><div><br></div><div>Tips:</div><div><ul><li>Use masking to protect areas while working on specific regions.</li><li>Refine proportions before locking in details.</li><li>Introduce asymmetry once secondary forms are in place for more realism.</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Visual Development Strategy
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>60 / 30 / 10 Rule</b></div><div><ul><li>60 percent of sculpt should be large forms such as torso, limbs, and head.</li><li>30 percent should be medium forms such as anatomy, folds, and secondary shapes.</li><li>10 percent should be fine detail such as wrinkles, scars, and pores.</li></ul></div><div><br></div><div><b>Lighting and Materials</b></div><div><ul><li>Use different MatCaps and rotate lighting angles to check how forms read.</li><li>Work with rim lighting or high contrast shaders to test silhouette clarity.</li></ul></div><div><br></div><div><b>Tips:</b></div><div><ul><li>Detail with intent. Wrinkles and surface marks should tell a story about the character.</li><li>Strong design is more important than surface noise.</li><li>Avoid over detailing early. Simplicity at the right stage reads stronger than scattered detail.</li></ul></div>
+                                </div>
+                        </div>
+                            <div class="concept-card">
+                                <div class="concept-card-header">
+                                    <div class="concept-card-title">
+                                        Wrap-Up and Polishing
+                                    </div>
+                                </div>
+                                <div class="concept-card-content">
+                                    <div><b>Final Pass</b></div><div><ul><li>Review silhouette from multiple views.</li><li>Evaluate proportions against reference images.</li><li>Add subtle asymmetry to finalize realism.</li></ul></div><div><br></div><div><b>Industry Tips:</b></div><div><ul><li>A sculpt that reads clearly at a distance is stronger than one packed with unnecessary micro detail.</li><li>Keep iteration flexible. Do not hesitate to remesh and simplify if proportions drift.</li><li>Always step away and check the sculpt with fresh eyes before calling it finished.</li></ul></div>
+                                </div>
+                        </div></div>
+                    </div>
+                </section>
+            
+                <section class="content-section">
+                    <div class="container">
+                        <h2 class="section-title">Blender Shortcuts List</h2>
+                        <div class="section-content">
+                            <div><b>General</b></div><div><ul><li><b>Shift + A</b> add primitive</li><li><b>Ctrl + J</b> join meshes</li><li><b>Tab </b>switch modes</li><li><b>Ctrl + R</b> remesh</li><li><b>Shift + R</b> adjust voxel size</li></ul></div><div><br></div><div><b>Sculpt Mode</b></div><div><ul><li><b>F </b>brush radius</li><li><b>Shift + F</b> brush strength</li><li><b>Ctrl </b>invert brush</li><li><b>Shift</b> smooth</li></ul></div><div><br></div><div><b>Important Brushes</b></div><div><ul><li><b>G </b>grab</li><li>V<b> </b>draw</li><li><b>C </b>clay strips</li><li><b>I </b>inflate and deflate</li><li><b>P</b> pinch</li><li><b>S </b>smooth</li><li><b>M</b> mask</li><li><b>Alt + M</b> clear mask</li><li>Crease brush from toolbar</li><li>Scrape and Peak from toolbar</li></ul></div>
+                        </div>
+            
+                    </div>
+                </section>
+            
+
+        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i>
+                <span>3D Development Class</span>
+            </div>
+            <div class="footer-description">Your path to 3D Mastery</div>
+            
+            <div class="copyright">
+                © 2025 Web Page Generator. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body></html>
