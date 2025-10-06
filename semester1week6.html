@@ -167,10 +167,10 @@
                             <div class="progress-title">Course Progress</div>
                             <div class="progress-subtitle">Track your weekly progress throughout the semester</div>
                         </div>
-                        <div class="progress-percentage">42%</div>
+                        <div class="progress-percentage">50%</div>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" id="progress-fill" style="width: 42%;"></div>
+                        <div class="progress-fill" id="progress-fill" style="width: 50%;"></div>
                     </div>
                 </div>
                 
@@ -311,7 +311,11 @@
                                 <div class="concept-card-content">
                                     What it does:<br>Smooths and subdivides the mesh, turning low-poly models into high-poly looking objects.<br><br>Examples of Use:<br>Rounding out a cube into a vase or bowl.<br>Softening furniture edges (chairs, tables).<br>Organic forms like helmets, armor, or character parts.<br><br>Key Features to Know:<br>Levels (Viewport vs. Render): Control mesh density in real-time vs. final render.<br>Edge Crease (Shift+E): Protect edges from smoothing, keeping them sharp.<br>Loop Cuts (Ctrl+R): Add geometry to sharpen or support forms.<br>Apply Last: Keep it at the end of your modifier stack for predictable results.<br><br>Concept: Start simple → let Subdivision add the complexity.
                                 </div>
-                        </div>
+                        
+                                    <div class="concept-card-media">
+                                        <video src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/Videos/Week6/Slide1.mp4" controls=""></video>
+                                    </div>
+                                </div>
                             <div class="concept-card">
                                 <div class="concept-card-header">
                                     <div class="concept-card-title">
@@ -321,7 +325,11 @@
                                 <div class="concept-card-content">
                                     <div>What it does:</div><div>Duplicates geometry across an axis to create perfect symmetry.</div><div><br></div><div>Examples of Use:</div><div>Modeling weapons (swords, axes) by only building half.</div><div>Creating vehicles or furniture with symmetrical designs.</div><div>Character modeling (faces, bodies, clothing).</div><div><br></div><div>Key Features to Know:</div><div>Axis Selection (X, Y, Z): Decide which direction to mirror.</div><div>Clipping: Ensures vertices along the center merge properly.</div><div>Mirror Object: Choose another object (like an Empty) to control where and how the mirror occurs.</div><div>Origin Alignment: The pivot/origin dictates the mirror’s “mirror line.”</div><div><br></div><div>Concept: Model half → Blender does the rest.</div>
                                 </div>
-                        </div>
+                        
+                                    <div class="concept-card-media">
+                                        <video src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/Videos/Week6/Slide2.mp4" controls=""></video>
+                                    </div>
+                                </div>
                             <div class="concept-card">
                                 <div class="concept-card-header">
                                     <div class="concept-card-title">
@@ -329,9 +337,13 @@
                                     </div>
                                 </div>
                                 <div class="concept-card-content">
-                                    <div>What it does:</div><div>Adds thickness to flat surfaces.</div><div><br></div><div>Examples of Use:</div><div>Turning a flat plane into a wall or shield.</div><div>Giving clothing, armor, or paper some realistic thickness.</div><div>Making architectural pieces like window frames or panels feel solid.</div><div><br></div><div>Key Features to Know:</div><div>Thickness: Controls how much depth is added.</div><div>Offset: Adjusts whether thickness expands inward, outward, or both.</div><div>Even Thickness: Maintains consistent wall depth even on curved surfaces.</div><div>Rim Only: Option to solidify only the edges.</div><div><br></div><div>Concept: Nothing in the real world is paper-thin. Solidify gives surfaces mass.</div>
+                                    <div>What it does:</div><div>Adds thickness to flat surfaces.</div><div><br></div><div>Examples of Use:</div><div>Turning a flat plane into a wall or shield.</div><div>Giving clothing, armor, or paper some realistic thickness.</div><div>Making architectural pieces like window frames or panels feel solid.</div><div><br></div><div>Key Features to Know:</div><div>Thickness: Controls how much depth is added.</div><div>Offset: Adjusts whether thickness expands inward, outward, or both.</div><div>Even Thickness: Maintains consistent wall depth even on curved surfaces.</div><div>Rim Only: Option to solidify only the edges.</div><div><br></div><div>Concept: Nothing in the real world is paper-thin — Solidify gives surfaces mass.</div>
                                 </div>
-                        </div>
+                        
+                                    <div class="concept-card-media">
+                                        <video src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/Videos/Week6/Slide3.mp4" controls=""></video>
+                                    </div>
+                                </div>
                             <div class="concept-card">
                                 <div class="concept-card-header">
                                     <div class="concept-card-title">
@@ -341,7 +353,11 @@
                                 <div class="concept-card-content">
                                     <div>What it does:</div><div>Duplicates an object in a pattern, creating rows, grids, or radial arrangements.</div><div><br></div><div>Examples of Use:</div><div>Creating fences, railings, tiles, or windows.</div><div>Making staircases or patterned props.</div><div>Building radial objects like wheels, gears, or decorative trim.</div><div><br></div><div>Key Features to Know:</div><div>Count: How many duplicates are created.</div><div>Relative/Constant Offset: Control the distance between duplicates.</div><div>Use Object Offset: Assign an Empty to rotate or curve the duplicates.</div><div>Merge &amp; First/Last: Merge vertices between arrays to create seamless meshes.</div><div><br></div><div>Concept: Build one → repeat many.</div>
                                 </div>
-                        </div>
+                        
+                                    <div class="concept-card-media">
+                                        <video src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/Videos/Week6/Slide4.mp4" controls=""></video>
+                                    </div>
+                                </div>
                             <div class="concept-card">
                                 <div class="concept-card-header">
                                     <div class="concept-card-title">
@@ -351,7 +367,11 @@
                                 <div class="concept-card-content">
                                     <div><b>Bevel Modifier</b></div><div><ul><li>What it does: Adds rounded edges for realism.</li><li>Examples: Table corners, phone edges, armor trim.</li></ul></div><div>Features:</div><div><ul><li>Width: Controls bevel size.</li><li>Segments: More segments = smoother bevel.</li><li>Limit Method: Only bevel certain edges (angle, weight, or sharp edges).</li><li>Concept: Real-world objects are never razor sharp.</li></ul></div><div><br></div><div><b>Edge Split Modifier</b></div><div><ul><li>What it does: Splits geometry to sharpen shading.</li><li>Examples: Hard mechanical edges, props with 90° angles.</li><li>Features:</li><li>Edge Angle vs. Sharp Edges: Automatically splits based on angles or user-marked sharp edges.</li><li>Concept: Cleans up “melted” shading artifacts on hard edges.</li></ul></div>
                                 </div>
-                        </div>
+                        
+                                    <div class="concept-card-media">
+                                        <video src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/Videos/Week6/Slide5.mp4" controls=""></video>
+                                    </div>
+                                </div>
                             <div class="concept-card">
                                 <div class="concept-card-header">
                                     <div class="concept-card-title">
@@ -361,7 +381,11 @@
                                 <div class="concept-card-content">
                                     <div><b>What Materials Are</b></div><div><ul><li>Materials tell the render engine how light interacts with an object.</li><li>In Blender, the Principled BSDF Shader follows the PBR (Physically Based Rendering) standard.</li><li>This means the same settings (color, roughness, metallic) work across Blender, Unreal, Unity, Maya, and Substance Painter.</li></ul></div><div><br></div><div><b>Why Start Simple</b></div><div><ul><li>At this stage, we only focus on Base Color, Roughness, and Metallic.</li><li>Advanced texture maps (for wear, dirt, scratches) will come later.</li><li>By keeping it simple now, you’ll understand the fundamentals before adding complexity.</li></ul></div><div><br></div><div><b>Core Material Settings</b></div><div><ul><li>Base Color: The surface’s main color. Avoid pure black/white for realism.</li><li>Roughness: Controls shininess (low = glossy, high = matte).</li><li>Metallic: Makes surfaces behave like true metals, reflecting their environment.</li><li>Specular: Controls highlight intensity (default usually fine).</li></ul></div><div><br></div><div><b>Examples:</b></div><div><ul><li>Wood: Warm color, high roughness, no metallic.</li><li>Plastic: Bright color, medium roughness, slight specular.</li><li>Metal: Grey base, high metallic, low roughness.</li><li>Concept: Keep materials simple → we’ll layer complexity with textures later.</li></ul></div>
                                 </div>
-                        </div></div>
+                        
+                                    <div class="concept-card-media">
+                                        <video src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/Videos/Week6/Slide6.mp4" controls=""></video>
+                                    </div>
+                                </div></div>
                     </div>
                 </section>
             
@@ -369,7 +393,7 @@
                     <div class="container">
                         <h2 class="section-title">Blender Shortcuts List</h2>
                         <div class="section-content">
-                            <div><b>Subdivision Surface Modifier</b></div><div><ul><li>Ctrl+1 → Ctrl+5: Adds a Subdivision Surface modifier with that many subdivision levels.</li><li>Ctrl+R: Loop Cut (adds edge loops to control smoothing).</li><li>Shift+E: Edge Crease (hold and drag to control crease strength).</li><li>Tab: Switch between Object Mode / Edit Mode to see effects on geometry.</li></ul></div><div><br></div><div><b>Mirror Modifier</b></div><div><ul><li>Shift+S → Cursor to World Origin: Ensures geometry aligns with mirror axis.</li><li>Ctrl+A → Apply → Location/Rotation/Scale: Ensures the mirror behaves predictably.</li><li>Shift+Ctrl+Alt+C (or right-click menu → Set Origin): Adjust object origin for proper mirroring.</li></ul></div><div><br></div><div><b>General Modifier Workflow</b></div><div><ul><li>Ctrl+A: Apply transforms before adding modifiers (scale especially).</li><li>Ctrl+A (in Modifiers panel): Apply the modifier permanently.</li><li>Ctrl+Z: Undo (saves you when a modifier “explodes” your mesh).</li></ul><div><br></div></div><div><b>Materials &amp; Shading</b></div><div><ul><li>Z → Material Preview (LookDev): Quickly see materials with lighting.</li><li>Z → Rendered: See final material/render result.</li><li>Shift+A (in Shader Editor): Add new nodes (we keep it simple now, but this is crucial later).</li><li>Ctrl+T (with Node Wrangler enabled): Automatically adds Texture Coordinate + Mapping nodes (helpful when we move into textures).</li></ul></div>
+                            <div><b>Subdivision Surface Modifier</b></div><div><ul><li>Ctrl+1 → Ctrl+5: Adds a Subdivision Surface modifier with that many subdivision levels.</li><li>Ctrl+R: Loop Cut (adds edge loops to control smoothing).</li><li>Shift+E: Edge Crease (hold and drag to control crease strength).</li><li>Tab: Switch between Object Mode / Edit Mode to see effects on geometry.</li></ul></div><div><br></div><div><b>Mirror Modifier</b></div><div><ul><li>Shift+S → Cursor to World Origin: Ensures geometry aligns with mirror axis.</li><li>Ctrl+A → Apply → Location/Rotation/Scale: Ensures the mirror behaves predictably.</li><li>Shift+Ctrl+Alt+C (or right-click menu → Set Origin): Adjust object origin for proper mirroring.</li></ul></div><div><br></div><div><b>General Modifier Workflow</b></div><div><ul><li>Ctrl+A: Apply transforms before adding modifiers (scale especially).</li><li>Ctrl+A (in Modifiers panel): Apply the modifier permanently.</li><li>Ctrl+Z: Undo (saves you when a modifier “explodes” your mesh).</li></ul><div><br></div></div><div><b>Materials &amp; Shading</b></div><div><ul><li>Z → Material Preview (LookDev): Quickly see materials with lighting.</li><li>Z → Rendered: See final material/render result.</li><li>Shift+A (in Shader Editor): Add new nodes (we keep it simple now, but this is crucial later).</li><li>Ctrl+T (with Node Wrangler enabled): Automatically adds Texture Coordinate + Mapping nodes (helpful when students move into textures).</li></ul></div>
                         </div>
             
                     </div>
