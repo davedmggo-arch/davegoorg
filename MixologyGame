@@ -1,0 +1,364 @@
+import React, { useState, useEffect, useMemo } from 'react';
+import { GlassWater, RotateCcw, CheckCircle2, XCircle, ChevronRight, ChevronLeft, BookOpen, Trophy } from 'lucide-react';
+
+const DRINK_DATA = [
+  {
+    name: "Bakunawa’s Bite",
+    ingredients: [
+      { item: "Bombay Gin", amount: "1.5 oz", type: "alcohol" },
+      { item: "Melon Liqueur", amount: "1.5 oz", type: "alcohol" },
+      { item: "Pineapple Juice", amount: "1.5 oz", type: "mixer" },
+      { item: "Mango Juice", amount: "1.5 oz", type: "mixer" },
+      { item: "Lime Juice", amount: "0.25 oz", type: "mixer" },
+      { item: "Pineapple", amount: "Garnish", type: "garnish" }
+    ]
+  },
+  {
+    name: "Buko Breeze",
+    ingredients: [
+      { item: "Bacardi Rum", amount: "1 oz", type: "alcohol" },
+      { item: "Malibu Rum", amount: "0.5 oz", type: "alcohol" },
+      { item: "Ube Syrup", amount: "1 oz", type: "mixer" },
+      { item: "Sprite", amount: "To Top", type: "mixer" },
+      { item: "Cucumber", amount: "Garnish", type: "garnish" }
+    ]
+  },
+  {
+    name: "Gua-pop",
+    ingredients: [
+      { item: "Skyy Vodka", amount: "1.5 oz", type: "alcohol" },
+      { item: "Peach Schnapps", amount: "0.5 oz", type: "alcohol" },
+      { item: "Guava Juice", amount: "1.5 oz", type: "mixer" },
+      { item: "Lime Juice", amount: "0.25 oz", type: "mixer" },
+      { item: "Mango Popping Boba", amount: "Garnish", type: "garnish" },
+      { item: "Pineapple", amount: "Garnish", type: "garnish" }
+    ]
+  },
+  {
+    name: "Kanlaon Drift",
+    ingredients: [
+      { item: "Capt. Morgan Spiced Rum", amount: "2 oz", type: "alcohol" },
+      { item: "Muscavado Syrup", amount: "0.25 oz", type: "mixer" },
+      { item: "Orange Bitters", amount: "1 Dash", type: "finish" },
+      { item: "Angostura Bitters", amount: "1 Dash", type: "finish" },
+      { item: "Smoked woodchips", amount: "Finish", type: "finish" }
+    ]
+  },
+  {
+    name: "Maki-mosa",
+    ingredients: [
+      { item: "Casalotta Brut", amount: "2.5 oz", type: "alcohol" },
+      { item: "Pineapple Juice", amount: "1.5 oz", type: "mixer" },
+      { item: "Mango Juice", amount: "1.5 oz", type: "mixer" },
+      { item: "Grenadine", amount: "0.25 oz", type: "mixer" },
+      { item: "Maraschino Cherry", amount: "Garnish", type: "garnish" }
+    ]
+  },
+  {
+    name: "Mango Floaties",
+    ingredients: [
+      { item: "Bacardi Rum", amount: "1.5 oz", type: "alcohol" },
+      { item: "Mango Condensed Syrup", amount: "2 oz", type: "mixer" },
+      { item: "Evaporated Milk", amount: "0.5 oz", type: "mixer" },
+      { item: "Graham Powder", amount: "Topping", type: "finish" },
+      { item: "Graham Cracker", amount: "Garnish", type: "garnish" }
+    ]
+  },
+  {
+    name: "Milo-tini",
+    ingredients: [
+      { item: "Skyy Vodka", amount: "1.5 oz", type: "alcohol" },
+      { item: "Kahlua", amount: "1 oz", type: "alcohol" },
+      { item: "Baileys", amount: "1 oz", type: "alcohol" },
+      { item: "Milo Powder", amount: "3 tbsp", type: "mixer" },
+      { item: "Espresso Bean", amount: "Garnish", type: "garnish" }
+    ]
+  },
+  {
+    name: "Pasko Spice",
+    ingredients: [
+      { item: "Skrewball Whiskey", amount: "1.5 oz", type: "alcohol" },
+      { item: "Frangelico", amount: "1 oz", type: "alcohol" },
+      { item: "Evaporated Milk", amount: "0.5 oz", type: "mixer" },
+      { item: "Cinnamon Sugar Rim", amount: "Finish", type: "finish" }
+    ]
+  },
+  {
+    name: "Sampaguita Sour",
+    ingredients: [
+      { item: "Jameson Whiskey", amount: "1.5 oz", type: "alcohol" },
+      { item: "Calamansi Syrup", amount: "1.5 oz", type: "mixer" },
+      { item: "Egg White", amount: "1 oz", type: "mixer" },
+      { item: "Angostura Bitters", amount: "3 Dashes", type: "finish" }
+    ]
+  },
+  {
+    name: "Sangria (Red)",
+    ingredients: [
+      { item: "Cabernet Sauvignon", amount: "4 oz", type: "alcohol" },
+      { item: "Triple Sec", amount: "1 oz", type: "alcohol" },
+      { item: "Calamansi Syrup", amount: "2 oz", type: "mixer" },
+      { item: "Ginger Ale", amount: "To Top", type: "mixer" },
+      { item: "Pineapple", amount: "Garnish", type: "garnish" },
+      { item: "Calamansi", amount: "Garnish", type: "garnish" }
+    ]
+  },
+  {
+    name: "Sangria (White)",
+    ingredients: [
+      { item: "Sauvignon Blanc", amount: "4 oz", type: "alcohol" },
+      { item: "Peach Schnapps", amount: "0.5 oz", type: "alcohol" },
+      { item: "Soho", amount: "0.25 oz", type: "alcohol" },
+      { item: "Calamansi Syrup", amount: "2 oz", type: "mixer" },
+      { item: "Sprite", amount: "To Top", type: "mixer" },
+      { item: "Calamansi", amount: "Garnish", type: "garnish" }
+    ]
+  },
+  {
+    name: "Siligarita",
+    ingredients: [
+      { item: "Jose Cuervo Tequila", amount: "1.5 oz", type: "alcohol" },
+      { item: "Triple Sec", amount: "1 oz", type: "alcohol" },
+      { item: "Spicy Calamansi Syrup", amount: "1.5 oz", type: "mixer" },
+      { item: "Calamansi", amount: "Garnish", type: "garnish" }
+    ]
+  }
+];
+
+const App = () => {
+  const [view, setView] = useState('menu'); // menu, study, quiz
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [quizState, setQuizState] = useState({
+    score: 0,
+    questionsAnswered: 0,
+    currentQuestion: null,
+    feedback: null
+  });
+
+  // Helper to get random volumes for distractors
+  const getAllVolumes = useMemo(() => {
+    const volumes = new Set();
+    DRINK_DATA.forEach(d => d.ingredients.forEach(i => volumes.add(i.amount)));
+    return Array.from(volumes);
+  }, []);
+
+  const generateQuestion = () => {
+    const drink = DRINK_DATA[Math.floor(Math.random() * DRINK_DATA.length)];
+    const ingredient = drink.ingredients[Math.floor(Math.random() * (drink.ingredients.length - 1))]; // Avoid just garnish
+    
+    // Generate 4 options
+    let options = [ingredient.amount];
+    while (options.length < 4) {
+      const randomVol = getAllVolumes[Math.floor(Math.random() * getAllVolumes.length)];
+      if (!options.includes(randomVol)) options.push(randomVol);
+    }
+    
+    setQuizState(prev => ({
+      ...prev,
+      currentQuestion: {
+        drinkName: drink.name,
+        ingredientName: ingredient.item,
+        correctAnswer: ingredient.amount,
+        options: options.sort(() => Math.random() - 0.5)
+      },
+      feedback: null
+    }));
+  };
+
+  const handleQuizAnswer = (answer) => {
+    if (quizState.feedback) return;
+
+    const isCorrect = answer === quizState.currentQuestion.correctAnswer;
+    setQuizState(prev => ({
+      ...prev,
+      score: isCorrect ? prev.score + 1 : prev.score,
+      questionsAnswered: prev.questionsAnswered + 1,
+      feedback: isCorrect ? 'correct' : 'wrong'
+    }));
+
+    setTimeout(() => {
+      generateQuestion();
+    }, 1500);
+  };
+
+  const resetQuiz = () => {
+    setQuizState({
+      score: 0,
+      questionsAnswered: 0,
+      currentQuestion: null,
+      feedback: null
+    });
+    generateQuestion();
+  };
+
+  const renderMenu = () => (
+    <div className="flex flex-col items-center justify-center space-y-6 animate-in fade-in duration-500">
+      <div className="text-center space-y-2">
+        <div className="bg-amber-100 p-4 rounded-full inline-block mb-4">
+          <GlassWater className="w-12 h-12 text-amber-600" />
+        </div>
+        <h1 className="text-4xl font-bold text-slate-800">Mixology Master</h1>
+        <p className="text-slate-500 max-w-xs mx-auto">Master the Filipino-inspired cocktail menu and perfect your pours.</p>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 w-full max-w-sm">
+        <button 
+          onClick={() => { setView('study'); setCurrentIndex(0); setIsFlipped(false); }}
+          className="group flex items-center justify-between p-6 bg-white border-2 border-slate-100 rounded-2xl hover:border-amber-400 hover:shadow-lg transition-all text-left"
+        >
+          <div>
+            <h3 className="font-bold text-xl text-slate-800">Study Cards</h3>
+            <p className="text-sm text-slate-500">Review full recipes</p>
+          </div>
+          <BookOpen className="w-6 h-6 text-amber-500 group-hover:scale-110 transition-transform" />
+        </button>
+
+        <button 
+          onClick={() => { setView('quiz'); resetQuiz(); }}
+          className="group flex items-center justify-between p-6 bg-white border-2 border-slate-100 rounded-2xl hover:border-emerald-400 hover:shadow-lg transition-all text-left"
+        >
+          <div>
+            <h3 className="font-bold text-xl text-slate-800">Volume Quiz</h3>
+            <p className="text-sm text-slate-500">Test your measurements</p>
+          </div>
+          <Trophy className="w-6 h-6 text-emerald-500 group-hover:scale-110 transition-transform" />
+        </button>
+      </div>
+    </div>
+  );
+
+  const renderStudy = () => {
+    const drink = DRINK_DATA[currentIndex];
+    return (
+      <div className="flex flex-col items-center space-y-8 w-full max-w-md animate-in slide-in-from-bottom-4 duration-500">
+        <div className="w-full flex justify-between items-center mb-4">
+          <button onClick={() => setView('menu')} className="text-slate-500 hover:text-slate-800 flex items-center gap-1">
+            <ChevronLeft size={20} /> Back
+          </button>
+          <span className="text-sm font-medium text-slate-400">Card {currentIndex + 1} of {DRINK_DATA.length}</span>
+        </div>
+
+        <div 
+          onClick={() => setIsFlipped(!isFlipped)}
+          className={`relative w-full aspect-[3/4] cursor-pointer transition-all duration-500 preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}
+        >
+          {/* Front */}
+          <div className="absolute inset-0 bg-white shadow-xl rounded-3xl border border-slate-100 backface-hidden flex flex-col items-center justify-center p-8 text-center">
+            <h2 className="text-3xl font-black text-slate-800 mb-4">{drink.name}</h2>
+            <p className="text-amber-500 font-medium tracking-widest uppercase text-xs">Tap to reveal recipe</p>
+          </div>
+
+          {/* Back */}
+          <div className="absolute inset-0 bg-slate-900 shadow-xl rounded-3xl backface-hidden rotate-y-180 flex flex-col p-6 text-white overflow-y-auto">
+            <h3 className="text-xl font-bold mb-4 border-b border-slate-700 pb-2">{drink.name}</h3>
+            <div className="space-y-4">
+              {['alcohol', 'mixer', 'finish', 'garnish'].map(type => {
+                const items = drink.ingredients.filter(i => i.type === type);
+                if (items.length === 0) return null;
+                return (
+                  <div key={type}>
+                    <h4 className="text-[10px] uppercase tracking-wider text-slate-400 mb-1 font-bold">{type}</h4>
+                    {items.map((ing, idx) => (
+                      <div key={idx} className="flex justify-between text-sm py-1 border-b border-slate-800/50">
+                        <span className="text-slate-200">{ing.item}</span>
+                        <span className="font-mono text-amber-400">{ing.amount}</span>
+                      </div>
+                    ))}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-4 w-full">
+          <button 
+            disabled={currentIndex === 0}
+            onClick={() => { setCurrentIndex(c => c - 1); setIsFlipped(false); }}
+            className="flex-1 py-4 bg-slate-100 rounded-xl font-bold text-slate-600 disabled:opacity-30 hover:bg-slate-200 transition-colors"
+          >
+            Previous
+          </button>
+          <button 
+            disabled={currentIndex === DRINK_DATA.length - 1}
+            onClick={() => { setCurrentIndex(c => c + 1); setIsFlipped(false); }}
+            className="flex-1 py-4 bg-slate-800 rounded-xl font-bold text-white disabled:opacity-30 hover:bg-slate-700 transition-colors"
+          >
+            Next Drink
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  const renderQuiz = () => {
+    if (!quizState.currentQuestion) return null;
+    const { drinkName, ingredientName, options } = quizState.currentQuestion;
+
+    return (
+      <div className="w-full max-w-md space-y-8 animate-in zoom-in-95 duration-300">
+        <div className="flex justify-between items-center">
+           <button onClick={() => setView('menu')} className="text-slate-500 hover:text-slate-800 flex items-center gap-1">
+            <ChevronLeft size={20} /> Exit
+          </button>
+          <div className="text-right">
+            <p className="text-xs text-slate-400 font-bold uppercase">Accuracy</p>
+            <p className="text-xl font-black text-slate-800">
+              {quizState.questionsAnswered === 0 ? 0 : Math.round((quizState.score / quizState.questionsAnswered) * 100)}%
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl text-center">
+          <h2 className="text-slate-400 uppercase tracking-widest text-xs font-bold mb-2">{drinkName}</h2>
+          <h3 className="text-2xl font-bold text-slate-800 mb-6">How much <span className="text-amber-600">{ingredientName}</span> is required?</h3>
+          
+          <div className="grid grid-cols-2 gap-3">
+            {options.map((option, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleQuizAnswer(option)}
+                className={`p-4 rounded-xl border-2 font-bold transition-all ${
+                  quizState.feedback === 'correct' && option === quizState.currentQuestion.correctAnswer
+                    ? 'bg-emerald-50 border-emerald-500 text-emerald-700 scale-95'
+                    : quizState.feedback === 'wrong' && option === quizState.currentQuestion.correctAnswer
+                    ? 'bg-emerald-50 border-emerald-500 text-emerald-700'
+                    : 'bg-white border-slate-100 hover:border-slate-300 text-slate-700'
+                }`}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {quizState.feedback && (
+          <div className={`flex items-center justify-center gap-2 animate-in slide-in-from-top-2 ${quizState.feedback === 'correct' ? 'text-emerald-600' : 'text-rose-600'}`}>
+            {quizState.feedback === 'correct' ? (
+              <><CheckCircle2 /> Perfect!</>
+            ) : (
+              <><XCircle /> Not quite...</>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-50 font-sans p-6 md:p-12 flex justify-center">
+      <style>{`
+        .preserve-3d { transform-style: preserve-3d; }
+        .backface-hidden { backface-visibility: hidden; }
+        .rotate-y-180 { transform: rotateY(180deg); }
+      `}</style>
+      
+      {view === 'menu' && renderMenu()}
+      {view === 'study' && renderStudy()}
+      {view === 'quiz' && renderQuiz()}
+    </div>
+  );
+};
+
+export default App;
