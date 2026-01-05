@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1semester1week8 - 3D Integration Semester 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Montserrat', sans-serif; }
+        :root {
+            --color-primary: #3b82f6;
+            --color-bg: #0a0a1a;
+            --color-text: #ffffff;
+            --color-secondary: #9ca3af;
+            --color-card: #1a1a2e;
+            --radius: 8px;
+        }
+        body { background: var(--color-bg); color: var(--color-text); font-size: 16px; }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
+        /* Content Links */
+        .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+        .content-area a:hover { opacity: 0.8; }
+        /* Lists */
+        .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
+        .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
+        .content-area li { margin: 0.5em 0; line-height: 1.6; }
+        .content-area ul ul { list-style-type: circle; margin: 0.5em 0; }
+        .content-area ul ul ul { list-style-type: square; }
+        /* Card content */
+        .card-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+        .card-content ul { list-style-type: disc; padding-left: 1.25em; margin: 0.5em 0; }
+        .card-content ol { list-style-type: decimal; padding-left: 1.25em; margin: 0.5em 0; }
+        .card-content li { margin: 0.25em 0; line-height: 1.5; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background: rgba(10,10,26,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                
+                <span class="text-xl font-bold">3D Integration Semester 1</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="1semester1.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Home</a><a href="courses.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Courses</a><a href="resources.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Resources</a><a href="links.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Links</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-20" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/Website_BG_001.png') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#3b82f6" stroke-width="0.3"/>
+                </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#grid)"/>
+        </svg>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Week 8: Interior Design: Detail & Lighting</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto">You will perform "set dressing" to make your space feel inhabited and use node-based procedural shaders to create materials without external images.</p>
+            <a href="#courses" class="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0036aa 100%); border-radius: var(--radius);">Start Learning</a>
+        </div>
+    </section>
+
+    
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Learning Outcomes</h2>
+            <div class="content-area prose prose-invert max-w-none text-lg leading-relaxed opacity-90 mb-8"><ul>
+    <li>Create complex surface appearances using procedural shader nodes to simulate materials like wood, marble, and tile.</li>
+    <li>Implement advanced interior lighting techniques, including area lights for windows and point lights for practical fixtures.</li>
+    <li>Utilize multiple camera setups and depth of field to showcase environment details and guide viewer focus.</li>
+</ul></div>
+            
+        </div>
+    </section>
+    
+
+    
+    <section id="courses" class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Key Concepts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="1. Variations & Set Dressing" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">1. Variations & Set Dressing</h3>
+                        <div class="text-sm opacity-70"><p>Now that the room layout is blocked, you will add the secondary details that transform a "grey box" into a lived-in, believable space.</p>
+<ul>
+    <li><strong>Decorative Elements:</strong> Add architectural details like moldings, baseboards, and window frames, as well as props like books, plants, or rugs to break up flat surfaces.</li>
+    <li><strong>Asset Variation:</strong> Instead of repeating the exact same object, create slight variations in scale and rotation. This prevents a "copy-pasted" look and makes the room feel natural.</li>
+    <li><strong>Secondary Detail:</strong> Focus on the "small stuff" that tells a story, such as a coffee mug on a desk or a stack of papers.</li>
+</ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="2. Procedural Materials" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">2. Procedural Materials</h3>
+                        <div class="text-sm opacity-70"><p>In this phase, you will move beyond external image textures and learn to build materials mathematically inside Blender’s Shader Editor.</p>
+<ul>
+    <li><strong>Node-Based Shading:</strong> You will combine nodes like "Noise Texture" or "Voronoi" with "ColorRamps" to create infinite variations of wood grain, marble, or stone.</li>
+    <li><strong>The Power of Math:</strong> Procedural materials are resolution-independent, meaning they never look pixelated no matter how close the camera gets.</li>
+    <li><strong>Customization:</strong> Because these are based on parameters, you can change a floor from light oak to dark walnut instantly by adjusting a single slider.</li>
+</ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="3. Advanced Interior Lighting" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">3. Advanced Interior Lighting</h3>
+                        <div class="text-sm opacity-70"><p>Lighting an interior requires a different approach than character lighting. You must simulate how light enters a space and bounces off surfaces.</p>
+<ul>
+    <li><strong>Area Lights as Windows:</strong> Use large, rectangular Area lights placed outside window frames to simulate soft, directional daylight.</li>
+    <li><strong>Practical Lighting:</strong> Use Point and Spot lights for "real-world" sources in the scene, such as desk lamps, ceiling fixtures, or candles.</li>
+    <li><strong>Global Illumination:</strong> Pay attention to how light "bounces" off the floor to illuminate the ceiling. The color of your floor will subtly tint the entire room.</li>
+</ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="4. Multiple Cameras & Shots" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">4. Multiple Cameras & Shots</h3>
+                        <div class="text-sm opacity-70"><p>To fully showcase your environment design, you will set up at least two distinct camera "shots."</p>
+<ul>
+    <li><strong>The Wide Shot:</strong> Establishes the overall composition, architecture, and layout of the entire room.</li>
+    <li><strong>The Detail (Macro) Shot:</strong> A close-up shot focusing on a specific area, like a decorated desk or a shelf, to showcase your procedural materials and depth of field.</li>
+    <li><strong>Depth of Field:</strong> Use camera settings to blur the background or foreground, drawing the viewer’s eye toward your primary focal point.</li>
+</ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="5. Essential Shortcuts & Tools" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">5. Essential Shortcuts & Tools</h3>
+                        <div class="text-sm opacity-70"><ul>
+    <li><strong>Shader Editor Toggle:</strong> Press <strong>Shift + F3</strong> to quickly switch your workspace to the node editor.</li>
+    <li><strong>Node Wrangler (Auto-Mapping):</strong> Press <strong>Ctrl + T</strong> with a node selected to automatically add mapping and coordinate nodes.</li>
+    <li><strong>Render Border:</strong> Press <strong>Ctrl + B</strong> in the viewport to draw a box. Blender will only render that small section, which is much faster when tweaking materials.</li>
+    <li><strong>Add Camera:</strong> Press <strong>Shift + A > Camera</strong> to add additional viewpoints to your scene.</li>
+    <li><strong>Switch Active Camera:</strong> Select a camera and press <strong>Ctrl + Numpad 0</strong> to set it as the primary view.</li>
+</ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="6. Week 8 Assignment" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">6. Week 8 Assignment</h3>
+                        <div class="text-sm opacity-70"><ul>
+    <li><strong>The Task:</strong> Render a set of images showcasing lighting and composition.</li>
+    <li><strong>Step 1:</strong> Add secondary details (set dressing) to your blocked-out room.</li>
+    <li><strong>Step 2:</strong> Create at least two procedural materials (e.g., floor and walls) using the Shader Editor.</li>
+    <li><strong>Step 3:</strong> Set up interior lighting that establishes a specific mood (e.g., afternoon sun or night-time lamp light).</li>
+    <li><strong>Submit:</strong> Two high-quality renders: one Wide Shot and one Detail Shot.</li>
+</ul></div>
+                    </div></div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="py-16 px-6" style="background: rgba(255,255,255,0.02);">
+        <div class="max-w-5xl mx-auto">
+            
+                <div class="mb-12 last:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-center">1. Universal Interface & Navigation</h3>
+                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">These are the most important shortcuts you learned in Week 1. They allow you to move through 3D space and manage your files.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Rotate View</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Middle Mouse Button (MMB)</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Pan View (Slide)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + MMB</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Zoom In/Out</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Scroll Wheel</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Focus on Selected Object</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Numpad . (Period)</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Toggle X-Ray Mode (Essential for seeing through meshes or selecting back-facing vertices)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + Z</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Search Menu (If you forget a tool name, find it here)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F3</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Sidebar Toggle (Shows transform data and "Camera to View" options)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">N</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Toolbar Toggle</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">T</kbd>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="mb-12 last:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-center">2. General Object Manipulation</h3>
+                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">Used in Object Mode to manage the "containers" of your geometry.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Add Object/Light/Camera</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + A</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Delete</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">X or Delete</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Grab/Move</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">G</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Rotate: R Rotates the object. Pressing R twice (R+R) enters Trackball Rotation, allowing for free-form rotation in all directions, excellent for posing a character's head.</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">R</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Scale</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">S</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Constraint: After pressing G, R, or S, press X, Y, or Z to lock the movement to that specific axis.</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">X, Y, or Z</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">You can type numbers for perfect precision. For example, G + Z + 2.4 moves an object exactly 2.4 meters up. The standard height for the walls in your Interior Design project.</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Numerical Input</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Duplicate (Independent)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + D</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Duplicate (Linked Instance)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + D</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Hide Object</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">H</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Unhide All</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + H</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Apply Transformations (Critical before Unwrapping or Rigging to reset scale to 1.0)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + A</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Join Objects</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + J</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">New Collection</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">M</kbd>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="mb-12 last:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-center">3. Modeling & Edit Mode</h3>
+                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">The core toolkit for Project 1 (Table) and Project 3 (Interior).</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Switch Mode (Toggle between Object and Edit Mode)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Tab </kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Selection Modes</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">1 (Vertex), 2 (Edge), 3 (Face)</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Extrude: Press E, then an axis key (like Z), then a number (like 0.75) to create a leg of an exact length.</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">E </kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Inset</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">I</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Bevel</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + B</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Loop Cut While the tool is active (yellow line visible), scroll your Mouse Wheel to add multiple even cuts simultaneously. </span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + R</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Fill Face/Edge</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Bridge Edge Loops (Found in Edge menu)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + E</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Knife Tool (Allows you to draw custom edges directly onto a face. Use this when a standard Loop Cut won't fit the geometry)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">K</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Merge Vertices (Combines selected vertices into one. "Merge at Center" is a lifesaver for cleaning up messy geometry or closing the top of a character's head)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">M</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Rip Region (Tears a vertex or edge away from its neighbors)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">V</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Select Loop (Selects an entire ring of edges or faces. This is the fastest way to select a table leg or a character's neck.)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + Left Click</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Select Linked ( Hover your mouse over an object and press L to select everything connected to it)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">L</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Invert Selection (Selects everything except what you currently have highlighted)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + I</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Grow/Shrink Selection (Expands or contracts your selection to neighboring faces)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + Numpad + or -</kbd>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="mb-12 last:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-center">4. Sculpting Tools</h3>
+                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">Learned during Project 2 and Project 4 for organic character work.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Enter Sculpt Mode > Select Sculpt Mode</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + Tab</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Adjust Brush Size</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Adjust Brush Strength</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + F</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Smooth (Universal): Hold while using any brush </span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift </kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Invert Brush (Push vs. Pull) Hold while sculpting</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl </kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Masking (Draw a mask to protect geometry)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">M </kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Clear Mask</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + M</kbd>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="mb-12 last:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-center">5. UV Unwrapping & Texturing</h3>
+                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">From our Weeks 2, 3, and 11 refinement phases.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Unwrap Menu (In Edit Mode)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">U</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Mark Seam > Mark Seam</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + E</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Clear Seam > Clear Seam</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + E</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Shader Editor Toggle</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + F3</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Texture Paint Mode > Texture Paint</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + Tab</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Sample Color (While in Paint Mode)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">S</kbd>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="mb-12 last:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-center">6. Rigging & Animation</h3>
+                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">The technical workflow from Weeks 5 and 6.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Enter Pose Mode (With an Armature/Rig selected)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + Tab</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Insert Keyframe (While hovering over the 3D view or a property)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">I</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Play/Pause Timeline</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Spacebar</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Reset Pose</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + G (Reset Position), Alt + R (Reset Rotation)</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Automatic Weighting > With Automatic Weights (After selecting mesh then rig)</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + P</kbd>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="mb-12 last:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-center">7. Lighting & Rendering</h3>
+                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">Final presentation shortcuts used in Weeks 3, 8, and 12.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Camera View</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Numpad 0</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Render Still Image</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F12</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Render Animation</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + F12</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">View Last Render</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F11</kbd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
+                            <span class="opacity-80">Walk Navigation</span>
+                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + ~</kbd>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </section>
+    
+
+    
+    <section class="py-12 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            <a href="1semester1week7.html" class="px-6 py-3 rounded-lg border border-white/20 hover:bg-white/5 transition" style="border-radius: var(--radius);">← Week 7</a>
+            <a href="1semester1project4.html" class="px-6 py-3 rounded-lg text-white transition hover:scale-105" style="background: var(--color-primary); border-radius: var(--radius);">Project 4 →</a>
+        </div>
+    </section>
+    
+
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                
+                <span class="text-sm opacity-60">© 2025 Dave Go 3D Integration. All rights reserved.</span>
+            </div>
+            <nav class="flex items-center gap-6">
+                <a href="1semester1.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Home</a><a href="courses.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Courses</a><a href="resources.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Resources</a><a href="links.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Links</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

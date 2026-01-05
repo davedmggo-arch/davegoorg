@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1semester1project1 - 3D Integration Semester 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Montserrat', sans-serif; }
+        :root {
+            --color-primary: #3b82f6;
+            --color-bg: #0a0a1a;
+            --color-text: #ffffff;
+            --color-secondary: #9ca3af;
+            --color-card: #1a1a2e;
+            --radius: 8px;
+        }
+        body { background: var(--color-bg); color: var(--color-text); font-size: 16px; }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
+        /* Content Links */
+        .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+        .content-area a:hover { opacity: 0.8; }
+        /* Lists */
+        .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
+        .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
+        .content-area li { margin: 0.5em 0; line-height: 1.6; }
+        .content-area ul ul { list-style-type: circle; margin: 0.5em 0; }
+        .content-area ul ul ul { list-style-type: square; }
+        /* Card content */
+        .card-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+        .card-content ul { list-style-type: disc; padding-left: 1.25em; margin: 0.5em 0; }
+        .card-content ol { list-style-type: decimal; padding-left: 1.25em; margin: 0.5em 0; }
+        .card-content li { margin: 0.25em 0; line-height: 1.5; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background: rgba(10,10,26,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                
+                <span class="text-xl font-bold">3D Integration Semester 1</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="1semester1.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Home</a><a href="courses.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Courses</a><a href="resources.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Resources</a><a href="links.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Links</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-20" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/Website_BG_001.png') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#3b82f6" stroke-width="0.3"/>
+                </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#grid)"/>
+        </svg>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Project 1: Table & Props (Weeks 1-3)</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto">You will guide a high-quality table and three distinct props through the entire production pipeline, including modeling, UV unwrapping, and cinematic rendering.</p>
+            <a href="#courses" class="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0036aa 100%); border-radius: var(--radius);">Start Learning!!</a>
+        </div>
+    </section>
+
+    
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Project Brief</h2>
+            <div class="content-area prose prose-invert max-w-none text-lg leading-relaxed opacity-90 mb-8"><p><strong>Goal:</strong> You will create a high-quality 3D scene featuring a cleanly modeled table and three distinct props—a lamp base, a bookend, and a decorative item. You will guide these objects through the entire production pipeline: modeling, UV unwrapping, material application, and final cinematic rendering.</p>
+
+<p><strong>Deliverables:</strong></p>
+<ul>
+    <li>1 Blender File: <em>FirstName_LastName_ANI106_Project_001_v001.blend</em></li>
+    <li>3 JPEGs: <em>FirstName_LastName_ANI106_Project_001_v001_001-003.jpg</em></li>
+</ul>
+
+<p><strong>Marking Rubric (Total: 100 Points):</strong></p>
+<ul>
+    <li><strong>Modeling & Topology (25 pts):</strong> Use of primary tools (Extrude, Bevel, Loop Cut) and maintenance of clean, quad-based topology.</li>
+    <li><strong>UVs & Materials (25 pts):</strong> Quality of UV unwrapping (seam placement) and effective use of the Principled BSDF shader for realism.</li>
+    <li><strong>Lighting & Composition (25 pts):</strong> Successful implementation of 3-point lighting and Rule-of-Thirds framing.</li>
+    <li><strong>Organization & Technical (25 pts):</strong> Proper naming conventions, applied scales, and efficient mesh management in the Outliner.</li>
+</ul></div>
+            
+        </div>
+    </section>
+    
+
+    
+    <section id="courses" class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Weekly Breakdown</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="1semester1week1.html" class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Week 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">Week 1</h3>
+                        <div class="text-sm opacity-70">You will demystify the Blender interface and master primary mesh editing tools to begin the structural "blocking" of your table model.</div>
+                    </div></a><a href="1semester1week1.html" class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="Week 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">Week 2</h3>
+                        <div class="text-sm opacity-70">You will populate your scene with three distinct props while learning to "flatten" 3D objects through UV unwrapping to prepare them for textures.</div>
+                    </div></a><a href="1semester1week1.html" class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="Week 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">Week 3</h3>
+                        <div class="text-sm opacity-70">You will act as a cinematographer, implementing professional 3-point lighting and rule-of-thirds composition to render a high-quality portfolio piece.</div>
+                    </div></a>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+    
+    <section class="py-12 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            <a href="1semester1.html" class="px-6 py-3 rounded-lg border border-white/20 hover:bg-white/5 transition" style="border-radius: var(--radius);">← Semester 1 Home</a>
+            <a href="1semester1week1.html" class="px-6 py-3 rounded-lg text-white transition hover:scale-105" style="background: var(--color-primary); border-radius: var(--radius);">Week 1 →</a>
+        </div>
+    </section>
+    
+
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                
+                <span class="text-sm opacity-60">© 2025 Dave Go 3D Integration. All rights reserved.</span>
+            </div>
+            <nav class="flex items-center gap-6">
+                <a href="1semester1.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Home</a><a href="courses.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Courses</a><a href="resources.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Resources</a><a href="links.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Links</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
