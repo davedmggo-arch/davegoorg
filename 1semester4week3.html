@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1semester4week3 - 3D Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Montserrat', sans-serif; }
+        :root {
+            --color-primary: #3b82f6;
+            --color-bg: #0a0a1a;
+            --color-text: #ffffff;
+            --color-secondary: #9ca3af;
+            --color-card: #1a1a2e;
+            --radius: 8px;
+        }
+        body { background: var(--color-bg); color: var(--color-text); font-size: 16px; }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
+        /* Content Links */
+        .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+        .content-area a:hover { opacity: 0.8; }
+        /* Lists */
+        .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
+        .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
+        .content-area li { margin: 0.5em 0; line-height: 1.6; }
+        .content-area ul ul { list-style-type: circle; margin: 0.5em 0; }
+        .content-area ul ul ul { list-style-type: square; }
+        /* Card content */
+        .card-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+        .card-content ul { list-style-type: disc; padding-left: 1.25em; margin: 0.5em 0; }
+        .card-content ol { list-style-type: decimal; padding-left: 1.25em; margin: 0.5em 0; }
+        .card-content li { margin: 0.25em 0; line-height: 1.5; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background: rgba(10,10,26,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                
+                <span class="text-xl font-bold">3D Studio</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Home</a><a href="#courses" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Courses</a><a href="#resources" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Resources</a><a href="#about" class="text-sm opacity-80 hover:opacity-100 transition-opacity">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-20" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#3b82f6" stroke-width="0.3"/>
+                </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#grid)"/>
+        </svg>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Week 3: Finalization and Lighting</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto">This is the final week of Project 1. We are moving from asset creation to the "Director’s Cut" phase. Your goal is to use lighting, atmosphere, and small-scale details to unify your modular tile. We will ensure your target location and boundaries adhere to core design principles while maintaining technical efficiency.</p>
+            <a href="#courses" class="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0036aa 100%); border-radius: var(--radius);">Start Learning!!</a>
+        </div>
+    </section>
+
+    
+
+    
+    <section id="courses" class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Key Concepts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="1. Finalizing Small-Scale Details" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">1. Finalizing Small-Scale Details</h3>
+                        <div class="text-sm opacity-70"><p>To make a tile feel lived-in, you must add <span class="term">Tertiary Details</span>. These are tiny objects that break up the procedural textures of your ground plane and assets.</p>
+
+    <ul>
+        <li><strong>Scattered Debris:</strong> Add tiny pebbles, fallen twigs, or clusters of leaves. Use <strong>Alt + D</strong> to instance these so they do not bloat your file size.</li>
+        <li><strong>Visual Variety:</strong> Rotate and scale these small items randomly. Even using the same rock five times can look unique if the orientation is different every time.</li>
+        <li><strong>Theme Specifics:</strong> 
+            <ul>
+                <li><strong>Forest:</strong> Add small mushrooms or patches of clover near the base of trees.</li>
+                <li><strong>Shoreline:</strong> Add small clumps of dried seaweed or tiny shell fragments.</li>
+                <li><strong>Mountain:</strong> Add sharp "scree" (piles of small broken rocks) at the base of your large cliffs.</li>
+            </ul>
+        </li>
+    </ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="2. Dynamic Lighting and Atmosphere" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">2. Dynamic Lighting and Atmosphere</h3>
+                        <div class="text-sm opacity-70"><p>In Blender 4.5, we use the <strong>Exposure and Temperature</strong> controls to establish the mood. This is where your "Funpack" references become vital for matching real-world colors.</p>
+
+    
+
+    <ul>
+        <li><strong>Color Temperature:</strong> Set your lights to Kelvin values. 3000K to 4000K creates a warm sunset or sunrise, while 7000K to 9000K creates a cool, overcast, or high-altitude mountain light.</li>
+        <li><strong>Shadow Contrast:</strong> Use your <strong>Target Location</strong> as the area of highest contrast. Shadows should be deepest where you want the viewer to look last, while your focal point should be kissed by the brightest light.</li>
+        <li><strong>Volumetric Lighting:</strong> Add a large cube over your scene with a <strong>Principled Volume</strong> shader. Set the density very low (0.01) to create "God Rays" in the Forest or "Sea Mist" on the Shoreline.</li>
+    </ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="3. Utilizing the Skybox" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">3. Utilizing the Skybox</h3>
+                        <div class="text-sm opacity-70"><p>A skybox provides the ambient light for your scene and establishes the horizon. You can use the built-in <strong>Sky Texture</strong> node in the World properties or import an HDRI.</p>
+
+    
+
+    <ul>
+        <li><strong>Sky Texture (Nishita):</strong> This is the most efficient method for 2026 workflows. It allows you to change the sun position and air dust levels dynamically.</li>
+        <li><strong>Horizon Line:</strong> Ensure your <strong>Non-Accessible Location</strong> assets (the boundaries) hide the seam where the ground plane meets the skybox. This maintains the illusion of a vast world.</li>
+    </ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="4. Design Principles in Practice" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">4. Design Principles in Practice</h3>
+                        <div class="text-sm opacity-70"><p>Before rendering, audit your tile using these two principles:</p>
+    <ul>
+        <li><strong>The Target Location (Focal Point):</strong> This area must use the <strong>Rule of Thirds</strong>. It should have the most unique silhouette and the most detailed procedural materials.</li>
+        <li><strong>The Non-Accessible Location (Framing):</strong> These boundary objects should "bracket" your shot, acting as a natural frame that pushes the viewer’s eye back toward the road and the target.</li>
+    </ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="5. Mixing and Matching Mastery" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">5. Mixing and Matching Mastery</h3>
+                        <div class="text-sm opacity-70"><p>Demonstrate your efficiency by reusing assets across themes to fill gaps:</p>
+    <ul>
+        <li><strong>The Snow Trick:</strong> Take a "Log" from your forest kit, apply a white-capped mountain material to the top faces, and place it in a high-altitude mountain scene as a fallen alpine cedar.</li>
+        <li><strong>The Erosion Mix:</strong> Take a sharp "Mountain Peak," scale it down, and bury it halfway in the sand of a "Shoreline" to act as an eroded sea stack.</li>
+    </ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="6. Final Deliverables and Naming" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">6. Final Deliverables and Naming</h3>
+                        <div class="text-sm opacity-70"><p>Ensure your final Blender file is purged of unused data to keep the file size small. Use <strong>File > Clean Up > Recursive Unused Data</strong> before saving.</p>
+
+    <div class="deliverable">
+        1 Blender File: FirstName_LastName_ANI406_Project_001_v001.blend
+    </div>
+    
+    <div class="deliverable">
+        3 JPEGs (3 distinct camera angles):<br>
+        FirstName_LastName_ANI406_Project_001_v001_001.jpg<br>
+        FirstName_LastName_ANI406_Project_001_v001_002.jpg<br>
+        FirstName_LastName_ANI406_Project_001_v001_003.jpg
+    </div></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Blender Shortcuts for Week 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">Blender Shortcuts for Week 3</h3>
+                        <div class="text-sm opacity-70"><ul>
+        <li><span class="shortcut">Numpad 0</span>: Lock view to camera.</li>
+        <li><span class="shortcut">F12</span>: Render a high-quality JPEG.</li>
+        <li><span class="shortcut">Ctrl + B</span>: Create a render border in the viewport to focus on lighting specific areas.</li>
+        <li><span class="shortcut">G + G</span>: Edge slide. Useful for moving vertices on your assets without breaking the shape.</li>
+    </ul>
+
+    <div class="instructor-note">
+        <strong>Final Submission Check:</strong> Do your three images show different narrative parts of your tile? Is your naming convention exact? Have you utilized the procedural materials to their full extent? Good luck.
+    </div></div>
+                    </div></div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+    
+
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                
+                <span class="text-sm opacity-60">© 2024 3D Studio. All rights reserved.</span>
+            </div>
+            <nav class="flex items-center gap-6">
+                <a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Privacy</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Terms</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

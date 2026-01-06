@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1semester4 - 3D Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Montserrat', sans-serif; }
+        :root {
+            --color-primary: #3b82f6;
+            --color-bg: #0a0a1a;
+            --color-text: #ffffff;
+            --color-secondary: #9ca3af;
+            --color-card: #1a1a2e;
+            --radius: 8px;
+        }
+        body { background: var(--color-bg); color: var(--color-text); font-size: 16px; }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
+        /* Content Links */
+        .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+        .content-area a:hover { opacity: 0.8; }
+        /* Lists */
+        .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
+        .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
+        .content-area li { margin: 0.5em 0; line-height: 1.6; }
+        .content-area ul ul { list-style-type: circle; margin: 0.5em 0; }
+        .content-area ul ul ul { list-style-type: square; }
+        /* Card content */
+        .card-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+        .card-content ul { list-style-type: disc; padding-left: 1.25em; margin: 0.5em 0; }
+        .card-content ol { list-style-type: decimal; padding-left: 1.25em; margin: 0.5em 0; }
+        .card-content li { margin: 0.25em 0; line-height: 1.5; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background: rgba(10,10,26,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                
+                <span class="text-xl font-bold">3D Studio</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Home</a><a href="#courses" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Courses</a><a href="#resources" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Resources</a><a href="#about" class="text-sm opacity-80 hover:opacity-100 transition-opacity">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-20" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#3b82f6" stroke-width="0.3"/>
+                </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#grid)"/>
+        </svg>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Semester 4: Exterior World Expansion</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto">Move beyond the "room" and into the "world." You will master modularity, technical optimization, and atmospheric storytelling.</p>
+            <a href="#courses" class="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0036aa 100%); border-radius: var(--radius);">Start Learning!!</a>
+        </div>
+    </section>
+
+    
+
+    
+    <section id="courses" class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Courses</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="1semester4project1.html" class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Project 1: Environmental Tiles and Procedural Systems (Weeks 1-3)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">Project 1: Environmental Tiles and Procedural Systems (Weeks 1-3)</h3>
+                        <div class="text-sm opacity-70">Designing modular tiles that function as "kit pieces" for a larger world. Environment Options: Forest, Shoreline, or Mountain scenery. The Technical Core: You will master weight painting as a data source and use the Blender 4.5 Vulkan backend for high fidelity real time feedback.</div>
+                    </div></a><a href="1semester4project2.html" class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="Project 2: The Narrative Inhabitant (Weeks 4-8)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">Project 2: The Narrative Inhabitant (Weeks 4-8)</h3>
+                        <div class="text-sm opacity-70">Focus: Creating an "Animation Ready" character that physically belongs in your Project 1 world. Constraints: Strictly under 5,000 polygons, no fur or hair, and a functional body rig. The Technical Core: We will utilize the new Blender 4.5 Retopology Overlays to ensure your mesh flow (topology) is industry standard.</div>
+                    </div></a><a href="1semester4project3.html" class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="Project 3: The Cinematic Horizon (Weeks 9-12)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">Project 3: The Cinematic Horizon (Weeks 9-12)</h3>
+                        <div class="text-sm opacity-70">Focus: Atmospheric storytelling and professional portfolio packaging. Goal: Use matte paintings and skyboxes to create an illusion of infinite scale. The Technical Core: Mastering Blender 4.5’s Exposure and Temperature controls to simulate realistic photography.</div>
+                    </div></a>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+    
+
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                
+                <span class="text-sm opacity-60">© 2024 3D Studio. All rights reserved.</span>
+            </div>
+            <nav class="flex items-center gap-6">
+                <a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Privacy</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Terms</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
