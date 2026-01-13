@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1semester4week2 - 3D Studio</title>
+    <title>1semester4week2 - 3D Integration Semester 4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -20,20 +20,17 @@
         .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
         kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
-        /* Content Links */
         .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
         .content-area a:hover { opacity: 0.8; }
-        /* Lists */
         .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
         .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
         .content-area li { margin: 0.5em 0; line-height: 1.6; }
-        .content-area ul ul { list-style-type: circle; margin: 0.5em 0; }
-        .content-area ul ul ul { list-style-type: square; }
-        /* Card content */
-        .card-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
-        .card-content ul { list-style-type: disc; padding-left: 1.25em; margin: 0.5em 0; }
-        .card-content ol { list-style-type: decimal; padding-left: 1.25em; margin: 0.5em 0; }
-        .card-content li { margin: 0.25em 0; line-height: 1.5; }
+        /* Dropdown styles */
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 0; min-width: 200px; background: rgba(10,10,26,0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 0.5rem; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .dropdown-content.show { display: block; animation: fadeIn 0.1s ease-out; }
+        .dropdown-item { display: block; padding: 0.5rem 1rem; color: #fff; text-decoration: none; border-radius: 4px; transition: background 0.2s; font-size: 0.9rem; }
+        .dropdown-item:hover { background: var(--color-primary); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="min-h-screen">
@@ -41,15 +38,33 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
                 
-                <span class="text-xl font-bold">3D Studio</span>
+                <span class="text-xl font-bold">3D Integration Semester 4</span>
             </a>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="#" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Home</a><a href="#courses" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Courses</a><a href="#resources" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Resources</a><a href="#about" class="text-sm opacity-80 hover:opacity-100 transition-opacity">About</a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">Home</a><a href="#courses" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">Courses</a><a href="#resources" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">Resources</a><a href="#about" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">About</a>
             </nav>
         </div>
     </header>
 
-    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-20" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
+    
+    <div class="fixed top-[70px] left-0 right-0 z-40 pointer-events-none px-6">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            
+                <a href="1semester4week1.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-black/40 backdrop-blur-sm hover:bg-black/60 transition text-sm font-medium" style="border-radius: 50px;">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    Week 1
+                </a>
+            
+            
+                <a href="1semester4week3.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full text-white transition hover:scale-105 shadow-lg text-sm font-medium" style="background: var(--color-primary); border-radius: 50px;">
+                    Week 3
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+        </div>
+    </div>
+    
+
+    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-24 pb-16" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
         <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
@@ -69,96 +84,118 @@
     
 
     
-    <section id="courses" class="py-12 px-6">
+    <section id="courses" class="py-16 px-6">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 text-center">Key Concepts</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="1. From Blocks to Assets: Refined Modeling" class="w-full h-full object-cover">
+                <div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <iframe src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%202/1_Merging.mp4" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">1. From Blocks to Assets: Refined Modeling</h3>
-                        <div class="text-sm opacity-70"><p>Replace your placeholder cubes and cylinders with actual geometry. Use your reference images to guide the specific forms of your chosen theme. We are adhering to a <span class="term">Modular Workflow</span>, meaning these objects should look good from multiple angles.</p>
+                        <h3 class="text-lg font-semibold mb-2">1 Data Unification: Merging Color and Weight</h3>
+                        <div class="text-sm opacity-70"><p>In traditional 3D workflows, artists often have to perform the same task twice. You might paint a <strong>Weight Map</strong> to tell the computer where to place grass and then switch to a different mode to paint a <strong>Color Attribute</strong> to tell the computer that the grass should be green. In modern visual development, we unify these into a single <strong>Source of Truth</strong>.</p>
 
-    <ul>
-        <li><strong>Theme-Specific Refinement:</strong>
-            <ul>
-                <li><strong>Forest:</strong> Transform cylinders into gnarly tree trunks. Use the <strong>Skin Modifier</strong> for quick branch generation or sculpt deep bark grooves into a low-poly base.</li>
-                <li><strong>Shoreline:</strong> Turn cubes into jagged cliff faces. Use the <strong>Scrape Brush</strong> in sculpt mode to create sharp, sheer edges where waves would have eroded the stone.</li>
-                <li><strong>Mountain:</strong> Refine peaks into faceted rock formations. Focus on large, sloping planes and sharp ridges using the <strong>Flatten Brush</strong>.</li>
-            </ul>
-        </li>
-        <li><strong>Low-Poly Sculpting:</strong> Keep your final assets under 5,000 polygons. If you sculpt high-detail cracks, use the <strong>Decimate Modifier</strong> or manual retopology to bring the count back down while keeping the silhouette.</li>
-    </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="2. Building Smart Materials" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">2. Building Smart Materials</h3>
-                        <div class="text-sm opacity-70"><p>A <span class="term">Smart Material</span> uses procedural nodes to determine where certain visual effects should appear based on the model's shape. This replaces the need for manual texture painting.</p>
+<p>This approach ensures that if you paint a specific area red, the computer automatically understands that this area should be physically flat and visually colored like dirt. We achieve this by using a simple <strong>Geometry Nodes</strong> bridge to move data between different systems.</p>
 
-    <h3>The "Wetness" and "Snow" Logic</h3>
-    <p>We can use the <strong>Texture Coordinate</strong> and <strong>Separate XYZ</strong> nodes to tell Blender to change the material based on height (Z-axis) or slope (Normal direction).</p>
-    <ul>
-        <li><strong>Shoreline (Wet Sand):</strong> Create a node setup that increases the "Roughness" (making it shinier) and darkens the "Base Color" at lower Z-coordinates where the water meets the land.</li>
-        <li><strong>Mountain (Snow Caps):</strong> Use a <strong>Geometry Node</strong> (Normal output) plugged into a <strong>ColorRamp</strong>. This allows you to place a white "snow" texture only on the flat, upward-facing surfaces of your rocks.</li>
-    </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="3. Procedural Detail with Noise and Musgrave" class="w-full h-full object-cover">
+<ul>
+    <li><strong>The Artistic Input:</strong> Paint your visual layout using <strong>Color Attributes</strong>. For example, use white to represent where you want detail and black for where you want the ground to stay plain.</li>
+    <li><strong>The Logic Bridge:</strong> Use a <strong>Named Attribute Node</strong> inside Geometry Nodes and select your color map.</li>
+    <li><strong>The Data Storage:</strong> Use a <strong>Store Named Attribute Node</strong>. Set this to <strong>Float</strong> and <strong>Point</strong>.</li>
+    <li><strong>The Connection:</strong> Connect the color data to this node and give it a generic example name like <i>ATTR_Logic_Map</i>.</li>
+    <li><strong>The Result:</strong> You can now call this single attribute name in both your <strong>Displacement Modifier</strong> and your <strong>Shader Editor</strong>. One map now controls both the physical height of the ground and the visual texture.</li>
+</ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <iframe src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%202/2_Procedural_Water.mp4" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">3. Procedural Detail with Noise and Musgrave</h3>
-                        <div class="text-sm opacity-70"><p>To avoid "tiling" (visible repetition), we use mathematical noise to vary our textures. This ensures that no two rocks or patches of dirt look exactly the same.</p>
+                        <h3 class="text-lg font-semibold mb-2">2 Procedural Water and Foam Logic</h3>
+                        <div class="text-sm opacity-70"><p>Before building the variations of the environment, you must establish the water system. Water in stylized environments needs interactive details, such as foam where the liquid meets the shore, to feel integrated into the world.</p>
 
-    <ul>
-        <li><strong>Noise Texture:</strong> Use this for general color variation and soft bumps in dirt or bark.</li>
-        <li><strong>Musgrave Texture:</strong> Use this for "organic weathering." It is excellent for creating the look of lichen on forest rocks or salt crust on shoreline cliffs.</li>
-        <li><strong>Bump Mapping:</strong> Always plug your noise textures into a <strong>Bump Node</strong> before connecting to the "Normal" input of your shader. This gives your low-poly models the illusion of high-frequency surface detail.</li>
-    </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="4. Environmental Interaction" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">4. Environmental Interaction</h3>
-                        <div class="text-sm opacity-70"><p>Your assets must feel like they are "part" of the ground, not floating on top of it. This is a core principle of believable visual development.</p>
+<h3>1. The Ocean Base</h3>
+<p>Start with a high-density plane and add an <strong>Ocean Modifier</strong>. To manually paint foam, you must <strong>Apply</strong> the modifier. This converts the mathematical waves into actual geometry (vertices) that can store your paint data. Use a generic naming convention for this object, such as <i>SM_Water_Primary</i>.</p>
 
-    <ul>
-        <li><strong>Intersections:</strong> When placing rocks or trees, slightly bury the base into your ground plane.</li>
-        <li><strong>Transition Shaders:</strong> Use a <strong>Noise Texture</strong> to create a "gradient" where the asset meets the dirt. This mimics the look of accumulated silt or fallen leaves gathered at the base of an object.</li>
-    </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="5. Asset Mixing and Matching Examples" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">5. Asset Mixing and Matching Examples</h3>
-                        <div class="text-sm opacity-70"><p>To maximize efficiency, practice using assets in ways they weren't originally intended:</p>
-    <ul>
-        <li><strong>Scale Shifting:</strong> Take a small "pebble" asset from your Shoreline kit, scale it up 100x, and rotate it to become a "Hero Cliff" for your Mountain scenery.</li>
-        <li><strong>Material Swapping:</strong> Take a "Log" asset from the Forest and apply your "Shoreline Rock" material to it. Suddenly, it becomes a piece of fossilized wood or a unique rock formation.</li>
-    </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Blender Shortcuts for Week 2" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">Blender Shortcuts for Week 2</h3>
-                        <div class="text-sm opacity-70"><ul>
-        <li><span class="shortcut">Ctrl + J</span>: Join objects together to simplify your scene.</li>
-        <li><span class="shortcut">Alt + D</span>: Linked Duplicate (Changes to the original will apply to the copies).</li>
-        <li><span class="shortcut">Ctrl + L</span>: Link Materials (Quickly apply one smart material to multiple objects).</li>
-        <li><span class="shortcut">/ (Slash)</span>: Local View. Hides everything except the selected object so you can focus on detailing.</li>
-        <li><span class="shortcut">Shift + W</span>: Use the "Warp" tool in Edit Mode to add organic curves to straight assets like planks or pipes.</li>
-    </ul>
+<h3>2. Painting Foam Attributes</h3>
+<p>Enter <strong>Vertex Paint</strong> mode and create a new attribute. Paint white streaks along the edges where the water would naturally hit the land. In the <strong>Shader Editor</strong>, use an <strong>Attribute Node</strong> to pull this data. This acts as a mask to mix your deep water material with a bright, opaque foam material.</p>
 
-    <div class="instructor-note">
-        <strong>Week 2 Deliverable Check:</strong> Your placeholders should now be replaced with finished assets. Your ground and objects should utilize procedural nodes for color and texture variation. Ensure you are maintaining your <strong>FirstName_LastName_ANI406_Project_001_v001.blend</strong> file versioning.
-    </div></div>
-                    </div></div>
+<h3>3. Raising Foam Geometry</h3>
+<p>To make the foam look thick and "chunky" rather than like a flat sticker, add a <strong>Displacement Modifier</strong> to the water plane.</p>
+<ul>
+    <li>Set the modifier input to <strong>Attribute</strong> instead of a texture.</li>
+    <li>Type in the example name of your foam attribute, such as <i>ATTR_Foam_Mask</i>.</li>
+    <li>The modifier will now physically lift the white painted areas above the base water level, creating volume that catches highlights and shadows.</li>
+</ul></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%202/Screenshot%202026-01-12%20074902_6.png" alt="3 Creating Tile Variations" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">3 Creating Tile Variations</h3>
+                        <div class="text-sm opacity-70"><p>With the master logic finished, you can generate the specific tiles needed for the IP development package. By duplicating the setup and simply repainting the attributes, you can create new environments in seconds.</p>
+
+<h3>1. The Path Tile</h3>
+<p>This tile establishes the scale of the forest. You paint a linear attribute through the center. Because of the logic established in section 2.1, the ground will automatically dip to form a smooth dirt trail while the displacement pushes the surrounding grass areas upward.</p>
+
+<h3>2. The Target Tile</h3>
+<p>A <strong>Target</strong> is a point of interest, such as an ancient ruin or a hero tree. Duplicate your path tile and use a naming convention like <i>SM_Tile_Target_A</i>. Clear the linear paint and create a circular focal point in the middle. The procedural assets will automatically move to the perimeter, framing the center of the tile.</p>
+
+<h3>3. The Non-Interactive Tile</h3>
+<p>This tile serves as a boundary to tell the player they cannot pass. Duplicate the tile again and name it something like <i>SM_Tile_NonInteractive_01</i>. Bring in the water logic from section 2.2. Paint the ground attribute so the water material is dominant, and use the foam displacement to make the river look deep and impassable.</p></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <iframe src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%202/3_Procedural_Rocks.mp4" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">4 Procedural Rocks: Fractured Stone and Moss</h3>
+                        <div class="text-sm opacity-70"><p>Rocks serve as the skeletal structure of an environment. In visual development, we want them to appear heavy, angular, and naturally integrated into the terrain. By using procedural modifiers, we can create complex geological shapes from very simple starting points.</p>
+
+<h3>1. Generating the Base Geometry</h3>
+<p>Start by adding a <strong>Cube</strong> to the scene. Add a <strong>Subdivision Surface</strong> modifier set to at least level 3. This creates a rounded "quad-sphere" which provides a much more even distribution of vertices than a standard UV sphere, preventing texture stretching at the top and bottom of the rock.</p>
+
+<h3>2. Fracturing with Voronoi Displacement</h3>
+<p>To give the rock its sharp, stony character, add a <strong>Displacement Modifier</strong>. Create a new texture and set the type to <strong>Voronoi</strong>. Inside the texture settings, change the <i>Distance Metric</i> to <strong>Distance Squared</strong>. This creates sharp, angular cracks and flat planes that mimic fractured granite or limestone. Adjust the strength of the modifier to control how aggressive the rock features appear.</p>
+
+<h3>3. Painting Moss and Surface Detail</h3>
+<p>Before painting moss, you must <strong>Apply</strong> the Subdivision Surface modifier. This converts the virtual surface into real vertices, providing the necessary density for high-quality painting. Use a <strong>Color Attribute</strong> to paint the top-facing surfaces where moss would naturally grow. In the <strong>Shader Editor</strong>, use an <strong>Attribute Node</strong> to blend a stone material with a moss material based on this paint.</p></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%202/Screenshot%202026-01-12%20074902_10.png" alt="5 Simple Stylized Shrubs" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">5 Simple Stylized Shrubs</h3>
+                        <div class="text-sm opacity-70"><p>Shrubs provide the softness and fullness needed to break up the hard edges of the ground and rocks. The goal is to create "puffy" clusters that read well from a distance, which is essential for defining the visual language of a new IP.</p>
+
+<h3>1. The Leaf Cluster Base</h3>
+<p>Start with a <strong>Cube</strong> and add a <strong>Subdivision Surface</strong> modifier. This creates a soft, rounded clump that serves as the volume for a cluster of leaves. This method is much more efficient for computer memory than modeling individual leaves.</p>
+
+<h3>2. Displacing for Volume</h3>
+<p>Add a <strong>Displacement Modifier</strong> set to <strong>Clouds</strong>. Keep the scale of the clouds large to create broad, lumpy shapes that mimic the silhouette of a dense bush. Once you are satisfied with the general silhouette, <strong>Apply</strong> the subdivision modifier to finalize the geometry for painting.</p>
+
+<h3>3. Stylized Color Grading</h3>
+<p>Create a <strong>Color Attribute</strong> and paint darker tones at the bottom of the shrub and lighter, warmer greens at the top. This simulates "ambient occlusion" and sunlight directly on the model, ensuring the asset looks high-quality regardless of the complex lighting in the final scene.</p></div>
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%202/Screenshot%202026-01-12%20074902_4.png" alt="6 Asset Assembly: Variance and Composition" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">6 Asset Assembly: Variance and Composition</h3>
+                        <div class="text-sm opacity-70"><p>The final step is to populate the <strong>Path</strong>, <strong>Target</strong>, and <strong>Non-Interactive</strong> tiles. To make an environment look professional, you must avoid the "grid look" where objects appear repeated or artificial.</p>
+
+<ul>
+    <li><strong>Variance in Scale:</strong> Never leave assets at their default size. Create at least three variations of every rock and shrub: small, medium, and large. A cluster of three different-sized rocks looks like a natural formation, whereas three identical rocks look like a digital error.</li>
+    <li><strong>Random Rotation:</strong> Rotate every asset randomly on the vertical Z-axis. Because our displacement modifiers are procedural, spinning a rock 90 degrees reveals a completely different set of fractures, allowing you to reuse the same model dozens of times without the viewer noticing.</li>
+    <li><strong>Compositional Framing:</strong> Place assets with purpose. On the <strong>Path</strong> tile, use shrubs to guide the eye forward. On the <strong>Target</strong> tile, use large rocks to "frame" the central object. On the <strong>Non-Interactive</strong> tile, place assets densely to create a visual wall that signals the area is blocked.</li>
+    <li><strong>Organization:</strong> Ensure all assets follow a consistent naming convention. For example, use <i>SM_Rock_A</i> for meshes and <i>COL_Props</i> for your outliner collections. This allows for a clean production pipeline and easy hand-offs to other departments.</li>
+</ul></div>
+                    </div></div><a href="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%202/Dave_Go_ANI106_Project_01_v04_Week2.blend" class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Reference Blender File" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 card-content">
+                        <h3 class="text-lg font-semibold mb-2">Reference Blender File</h3>
+                        <div class="text-sm opacity-70">Here's my working Blender file for this week!!</div>
+                    </div></a>
             </div>
         </div>
     </section>
@@ -166,18 +203,41 @@
 
     
 
-    
-
-    <footer class="py-12 px-6 border-t border-white/10">
+    <footer class="py-12 px-6 border-t border-white/10 mt-12 bg-black/20">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-3">
                 
-                <span class="text-sm opacity-60">© 2024 3D Studio. All rights reserved.</span>
+                <span class="text-sm opacity-60">© 2024 Dave Go. All rights reserved.</span>
             </div>
             <nav class="flex items-center gap-6">
                 <a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Privacy</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Terms</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Contact</a>
             </nav>
         </div>
     </footer>
+
+    <script>
+        // Dropdown Logic
+        function toggleDropdown(id, event) {
+            event.stopPropagation();
+            // Close all others
+            document.querySelectorAll('.dropdown-content').forEach(d => {
+                if(d.id !== id) d.classList.remove('show');
+            });
+            document.getElementById(id).classList.toggle('show');
+        }
+        
+        // Click outside to close
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-content') && !event.target.matches('button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
