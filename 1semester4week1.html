@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1semester4week1 - 3D Studio</title>
+    <title>1semester4week1 - 3D Integration Semester 4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -20,20 +20,17 @@
         .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
         kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
-        /* Content Links */
         .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
         .content-area a:hover { opacity: 0.8; }
-        /* Lists */
         .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
         .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
         .content-area li { margin: 0.5em 0; line-height: 1.6; }
-        .content-area ul ul { list-style-type: circle; margin: 0.5em 0; }
-        .content-area ul ul ul { list-style-type: square; }
-        /* Card content */
-        .card-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
-        .card-content ul { list-style-type: disc; padding-left: 1.25em; margin: 0.5em 0; }
-        .card-content ol { list-style-type: decimal; padding-left: 1.25em; margin: 0.5em 0; }
-        .card-content li { margin: 0.25em 0; line-height: 1.5; }
+        /* Dropdown styles */
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 0; min-width: 200px; background: rgba(10,10,26,0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 0.5rem; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .dropdown-content.show { display: block; animation: fadeIn 0.1s ease-out; }
+        .dropdown-item { display: block; padding: 0.5rem 1rem; color: #fff; text-decoration: none; border-radius: 4px; transition: background 0.2s; font-size: 0.9rem; }
+        .dropdown-item:hover { background: var(--color-primary); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="min-h-screen">
@@ -41,15 +38,33 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
                 
-                <span class="text-xl font-bold">3D Studio</span>
+                <span class="text-xl font-bold">3D Integration Semester 4</span>
             </a>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="#" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Home</a><a href="#courses" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Courses</a><a href="#resources" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Resources</a><a href="#about" class="text-sm opacity-80 hover:opacity-100 transition-opacity">About</a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">Home</a><a href="#courses" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">Courses</a><a href="#resources" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">Resources</a><a href="#about" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">About</a>
             </nav>
         </div>
     </header>
 
-    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-20" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
+    
+    <div class="fixed top-[70px] left-0 right-0 z-40 pointer-events-none px-6">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            
+                <a href="1semester4project1.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-black/40 backdrop-blur-sm hover:bg-black/60 transition text-sm font-medium" style="border-radius: 50px;">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    Project 1
+                </a>
+            
+            
+                <a href="1semester4week2.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full text-white transition hover:scale-105 shadow-lg text-sm font-medium" style="background: var(--color-primary); border-radius: 50px;">
+                    Week 2
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+        </div>
+    </div>
+    
+
+    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-24 pb-16" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
         <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
@@ -69,12 +84,12 @@
     
 
     
-    <section id="courses" class="py-12 px-6">
+    <section id="courses" class="py-16 px-6">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 text-center">Key Concepts</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
+                <div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
                         <iframe src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%201/1_Terrain_Geo.mp4" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="p-6 card-content">
@@ -91,8 +106,8 @@
             </ul>
         </li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
                         <iframe src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%201/2_Procedural_Paths.mp4" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="p-6 card-content">
@@ -106,8 +121,8 @@
         <li>Under the <strong>Vertex Groups</strong> tab in Object Data Properties, rename this group to "Path_Data".</li>
         <li>Ensure your brush has a soft falloff to allow for natural blending between the path and the surrounding terrain.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
                         <iframe src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%201/3_Material_Nodes.mp4" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="p-6 card-content">
@@ -120,9 +135,9 @@
         <li><strong>The Mix:</strong> Plug a dark, grainy shader (Road) into the bottom input and a textured shader (Grass/Sand/Snow) into the top input.</li>
         <li><strong>Refinement:</strong> Add a <strong>ColorRamp</strong> between the Attribute node and the Mix Shader to tighten the edges of your path or add "noise" to the transition.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="4. Spatial Blocking: Target and Non-Accessible Locations" class="w-full h-full object-cover">
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/406/Week%202/Screenshot%202026-01-12%20074902_6.png" alt="4. Spatial Blocking: Target and Non-Accessible Locations" class="w-full h-full object-cover transition duration-500 hover:scale-110">
                     </div>
                     <div class="p-6 card-content">
                         <h3 class="text-lg font-semibold mb-2">4. Spatial Blocking: Target and Non-Accessible Locations</h3>
@@ -139,9 +154,9 @@
         <li>These objects serve as "Visual Blockers" to keep the viewer contained within the tile.</li>
         <li>Place these at the edges of the tile. In a Forest, these are "Wall" shapes for dense trees. In a Mountain, these are sheer vertical wedges.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="5. Visual Hierarchy in Blocking" class="w-full h-full object-cover">
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="5. Visual Hierarchy in Blocking" class="w-full h-full object-cover transition duration-500 hover:scale-110">
                     </div>
                     <div class="p-6 card-content">
                         <h3 class="text-lg font-semibold mb-2">5. Visual Hierarchy in Blocking</h3>
@@ -151,9 +166,9 @@
         <li><strong>Medium:</strong> Secondary clusters around the target (e.g., smaller rocks or crates).</li>
         <li><strong>Small:</strong> This will be handled in Week 2, but keep space for them in your layout.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Blender Shortcuts for Week 1 Expansion" class="w-full h-full object-cover">
+                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Blender Shortcuts for Week 1 Expansion" class="w-full h-full object-cover transition duration-500 hover:scale-110">
                     </div>
                     <div class="p-6 card-content">
                         <h3 class="text-lg font-semibold mb-2">Blender Shortcuts for Week 1 Expansion</h3>
@@ -176,18 +191,41 @@
 
     
 
-    
-
-    <footer class="py-12 px-6 border-t border-white/10">
+    <footer class="py-12 px-6 border-t border-white/10 mt-12 bg-black/20">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-3">
                 
-                <span class="text-sm opacity-60">© 2024 3D Studio. All rights reserved.</span>
+                <span class="text-sm opacity-60">© 2024 Dave Go. All rights reserved.</span>
             </div>
             <nav class="flex items-center gap-6">
                 <a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Privacy</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Terms</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Contact</a>
             </nav>
         </div>
     </footer>
+
+    <script>
+        // Dropdown Logic
+        function toggleDropdown(id, event) {
+            event.stopPropagation();
+            // Close all others
+            document.querySelectorAll('.dropdown-content').forEach(d => {
+                if(d.id !== id) d.classList.remove('show');
+            });
+            document.getElementById(id).classList.toggle('show');
+        }
+        
+        // Click outside to close
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-content') && !event.target.matches('button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
