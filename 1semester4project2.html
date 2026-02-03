@@ -75,7 +75,7 @@
             <rect width="100" height="100" fill="url(#grid)"/>
         </svg>
         <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
-            <h1 class="text-5xl font-bold mb-6 leading-tight">Project 2: The Narrative Inhabitant (Weeks 4-8)</h1>
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Project 2: Stylistic Dualism — Graphic vs. Realistic</h1>
             <p class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto"><p>Having established the world, we now create the life that lives within it. This project focuses on <strong>Character Expansion</strong>, moving from high-concept sculpting to technical execution and rigging.<br><br></p></p>
             <a href="#courses" class="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0036aa 100%); border-radius: var(--radius);">Start Learning!!</a>
         </div>
@@ -85,29 +85,46 @@
     <section class="py-16 px-6">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-8">Project Brief: Character Expansion</h2>
-            <div class="content-area prose prose-invert max-w-none text-lg leading-relaxed opacity-90 mb-10"><p>Students will design and model a character that fits the theme established in Project 1. The goal is to produce an "animation-ready" model. This means clean topology, logical joint placement, and a functional skeletal rig. You will also produce professional technical specifications and turnaround sheets.</p>
+            <div class="content-area prose prose-invert max-w-none text-lg leading-relaxed opacity-90 mb-10"><p>This project challenges you to take a single 2D character concept and translate it into two distinct 3D artistic directions. You will explore the "Style Spectrum" by creating one version of your character that is <b>highly graphic</b> (prioritizing 2D silhouette) and another that is <b>more realistic</b> (prioritizing believable anatomy). By the end of this project, you will have a deep understanding of how to manipulate form to achieve specific industry looks.</p>
 
-    <h3>Design Constraints</h3>
+    <hr>
+
+    <h2>Part 1: The Modeling Phase</h2>
+    <p>In this phase, we build the digital clay. The goal is to establish the silhouette and primary volumes of the character in a standard <b>A-Pose</b> to ensure they are ready for future rigging and animation.</p>
+
     <ul>
-        <li><span class="constraint">Polygon Limit:</span> Maximum 5,000 polygons for the final optimized mesh.</li>
-        <li><span class="constraint">Stylization:</span> No fur or hair elements; focus on form, silhouette, and volume.</li>
-        <li><span class="constraint">Technical:</span> Must include a basic body rig (no facial rigging required).</li>
+        <li><b>Reference Integration</b>: Drag and drop your 2D concept into the Blender viewport. Align your front and side views to the center of the world space and scale them appropriately.</li>
+        <li><b>Constructive Block-out</b>: Using the "Lego" strategy, block out the head, neck, and torso using primitive spheres. In later sessions, you will add the arms and legs in a standard A-pose.</li>
+        
+        <li><b>The Style Branch</b>: Once your rough base mesh is complete, you will duplicate it. One mesh will be pushed toward <b>Graphic Stylization</b> (clean planes, bold shapes), while the other will be pushed toward <b>Believable Realism</b> (anatomical landmarks, soft transitions).</li>
+        <li><b>Accessories and Hair</b>: After the body is blocked, you will sculpt hair and basic accessories. Hair should be treated as a "solid volume" rather than individual strands to maintain stylistic control.</li>
+        <li><b>Clothing</b>: You will add clothing to both models. Remember that clothing should follow the style of the character—graphic clothing will have sharper, simplified folds, while realistic clothing will show more natural tension and weight.</li>
     </ul>
 
-    <h3>Deliverables</h3>
+    <hr>
+
+    <h2>Part 2: Retopology, Shaders, and Rendering</h2>
+    <p>Once the modeling is finalized, we transition into the technical phase to prepare the characters for a professional presentation.</p>
+
     <ul>
-        <li><strong>Character Model:</strong> Optimized mesh with animation-ready topology.</li>
-        <li><strong>Turnaround Sheets:</strong> Front, Side, Back, and 3/4 views.</li>
-        <li><strong>Technical Specs:</strong> Documentation detailing model requirements and component breakdown.</li>
-        <li><strong>Posed Renders:</strong> The character posed within the Project 1 environment.</li>
+        <li><b>Retopology</b>: You will create a clean, "low-poly" mesh over your high-density sculpts. This process ensures the geometry flows correctly around joints (like shoulders and knees) for clean deformation during animation.</li>
+        
+        <li><b>Shaders and Color</b>: Using the Shader Editor, you will apply color to your models. You may use a "Flat/Toon" shader for the graphic version and a more complex "PBR" (Physically Based Rendering) shader for the realistic version to emphasize the differences in style.</li>
+        <li><b>Lighting</b>: You will set up a professional three-point lighting rig for each character. Lighting should be used to accentuate the planar changes in the graphic model and the subtle surface details of the realistic model.</li>
+        <li><b>Final Rendering</b>: You will generate high-quality images of both characters from multiple angles to showcase your stylistic range.</li>
     </ul>
 
-    <h3>Best Practices</h3>
+    <hr>
+
+    <h2>Deliverables and Submission</h2>
+    <p>At the end of the project, you are required to submit a professional package that demonstrates your mastery of both the artistic and technical workflows.</p>
+
     <ul>
-        <li><strong>Silhouette Check:</strong> Toggle X-Ray or Flat Shading frequently to ensure the character's pose and form are readable at a glance.</li>
-        <li><strong>Anatomical Landmarks:</strong> Ensure bones are placed exactly at the pivot points of joints to prevent mesh "collapsing."</li>
-        <li><strong>Weight Painting:</strong> Use smooth gradients in weight painting to allow for organic bending at the elbows and knees.</li>
-    </ul></div>
+        <li><b>The Renders</b>: High-resolution images of both the Graphic and Realistic characters (Front, Side, and 3/4 views).</li>
+        <li><b>The Blender File</b>: A clean, organized .blend file containing both final models, your reference images, and your lighting setup.</li>
+    </ul>
+
+    <p><i>Note: Throughout this project, keep your layers and collections organized. A professional animator's best friend is a clean file!</i></p></div>
             
         </div>
     </section>
