@@ -25,6 +25,24 @@
         .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
         .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
         .content-area li { margin: 0.5em 0; line-height: 1.6; }
+		.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        .card-hover:hover .card-title { color: var(--color-primary); } /* <-- ADD THIS LINE */
+        kbd { background: rgba(255,255,255,0.1); ... }
+		/* Global Typography */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text);
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+        h1 { font-weight: 800; margin-bottom: 0.5em; }
+        h2 { font-weight: 800; margin-bottom: 0.75em; }
+        h3 { font-weight: 700; margin-bottom: 0.5em; }
+        
+        /* Content Area Spacing (for raw HTML inputs) */
+        .content-area h1 { font-size: 2.5rem; margin-top: 1.5em; }
+        .content-area h2 { font-size: 2rem; margin-top: 1.5em; }
+        .content-area h3 { font-size: 1.5rem; margin-top: 1.25em; }
+        .content-area h1:first-child, .content-area h2:first-child, .content-area h3:first-child { margin-top: 0; }
         /* Dropdown styles */
         .dropdown-content { display: none; position: absolute; top: 100%; left: 0; min-width: 200px; background: rgba(10,10,26,0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 0.5rem; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .dropdown-content.show { display: block; animation: fadeIn 0.1s ease-out; }
@@ -47,6 +65,22 @@
     </header>
 
     
+    <div class="fixed top-[70px] left-0 right-0 z-40 pointer-events-none px-6">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            
+                <a href="1semester4project2.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-black/40 backdrop-blur-sm hover:bg-black/60 transition text-sm font-medium" style="border-radius: 50px;">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    Project 2
+                </a>
+            
+            
+                <a href="1semester4week5.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full text-white transition hover:scale-105 shadow-lg text-sm font-medium" style="background: var(--color-primary); border-radius: 50px;">
+                    Week 5
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+        </div>
+    </div>
+    
 
     <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-24 pb-16" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
@@ -67,105 +101,100 @@
 
     
 
-    
-    <section id="courses" class="py-16 px-6">
+
+    <section id="courses" class="py-20 px-6 relative z-10">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">Featured Courses</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Featured Courses</h2>
+                <div class="w-20 h-1 rounded-full mx-auto" style="background: var(--color-primary); opacity: 0.8;"></div>
+            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Screenshot%202026-02-03%20092424.png" alt="1. Setting Up Your Blueprint" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900 relative">
+                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Screenshot%202026-02-03%20092424.png" alt="1. Setting Up Your Blueprint" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">1. Setting Up Your Blueprint</h3>
-                        <div class="text-sm opacity-70"><p>Before moving any clay, you must place your reference in the viewport to ensure your proportions match the concept art. This prevents your sculpt from drifting away from the intended design.</p>
+                    <div class="p-8 card-content flex flex-col flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">1. Setting Up Your Blueprint</h3>
+                        <div class="text-sm md:text-base opacity-70 leading-relaxed"><p>Before moving any clay, you must place your reference in the viewport to ensure your proportions match the concept art. This prevents your sculpt from drifting away from the intended design.</p>
     <ul>
         <li><b>Drag and Drop</b>: Open your File Explorer and drag your character reference image directly into Blender’s 3D Viewport.</li>
         <li><b>Orthographic Alignment</b>: Ensure you are in an orthographic view (<b>Numpad 1</b> for Front or <b>Numpad 3</b> for Side) before dropping the image. This ensures the reference is perfectly flat and not tilted in 3D space.</li>
         <li><b>Center and Scale</b>: Place the reference in the center of the world space (0,0,0). Scale it so the character lines up properly with the grid.</li>
         <li><b>Organization</b>: Name your reference in the Outliner (e.g., "Reference_Front") so you can toggle its visibility easily as you work.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Screenshot%202026-02-03%20092456.png" alt="2. Constructive Blocking (The Rough Base)" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div></div><div class="flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900 relative">
+                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Screenshot%202026-02-03%20092456.png" alt="2. Constructive Blocking (The Rough Base)" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">2. Constructive Blocking (The Rough Base)</h3>
-                        <div class="text-sm opacity-70"><p>We are building a "rough" foundation this week that will support both future styles. We are focusing strictly on the <b>head and neck</b> for this lesson, though you will block out the torso as a support volume.</p>
+                    <div class="p-8 card-content flex flex-col flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">2. Constructive Blocking (The Rough Base)</h3>
+                        <div class="text-sm md:text-base opacity-70 leading-relaxed"><p>We are building a "rough" foundation this week that will support both future styles. We are focusing strictly on the <b>head and neck</b> for this lesson, though you will block out the torso as a support volume.</p>
     <ul>
         <li><b>Sphere Primitives</b>: In Object Mode, use <b>Shift + A</b> to add spheres for the cranium and ovoid shapes for the torso.</li>
         <li><b>The Neck Bridge</b>: Add a cylinder or a squashed sphere to act as the neck, connecting the two larger masses.</li>
         <li><b>Joining the Volumes</b>: Select all your primitive shapes and press <b>Ctrl + J</b> to Join them into one object.</li>
         <li><b>Initial Remesh</b>: Enter Sculpt Mode. Press <b>R</b> to set your voxel size (keep it blocky for now) and press <b>Ctrl + R</b> to fuse the spheres into one continuous skin of clay.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Screenshot%202026-02-03%20092652.png" alt="3. Detailing the Base Mesh" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div></div><div class="flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900 relative">
+                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Screenshot%202026-02-03%20092652.png" alt="3. Detailing the Base Mesh" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">3. Detailing the Base Mesh</h3>
-                        <div class="text-sm opacity-70"><p>Your goal is to match the forms of your rough mesh with the forms of your 2D reference. If you have both a front and side view, use them to ensure the "depth" of the head matches the "width."</p>
+                    <div class="p-8 card-content flex flex-col flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">3. Detailing the Base Mesh</h3>
+                        <div class="text-sm md:text-base opacity-70 leading-relaxed"><p>Your goal is to match the forms of your rough mesh with the forms of your 2D reference. If you have both a front and side view, use them to ensure the "depth" of the head matches the "width."</p>
     <ul>
         <li><b>Silhouette Matching</b>: Use the <b>Grab Tool (G)</b> with a large brush size to push the mesh until it fits perfectly inside the lines of your 2D reference.</li>
         <li><b>Define Landmarks</b>: Use the <b>Draw Tool</b> to suggest where the brow, nose, and jawline sit based on the drawing.</li>
         <li><b>Warp Prevention</b>: If you stretch the neck or jaw significantly, the mesh will warp. Continually use <b>Ctrl + R</b> to remesh and keep the geometry healthy.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Screenshot%202026-02-03%20092800.png" alt="4. The Branching Strategy: Style Duplication" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div></div><div class="flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900 relative">
+                        <img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Screenshot%202026-02-03%20092800.png" alt="4. The Branching Strategy: Style Duplication" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">4. The Branching Strategy: Style Duplication</h3>
-                        <div class="text-sm opacity-70"><p>Once your rough base mesh matches the proportions of your reference, you will duplicate it to explore two different artistic directions.</p>
+                    <div class="p-8 card-content flex flex-col flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">4. The Branching Strategy: Style Duplication</h3>
+                        <div class="text-sm md:text-base opacity-70 leading-relaxed"><p>Once your rough base mesh matches the proportions of your reference, you will duplicate it to explore two different artistic directions.</p>
     <ul>
         <li><b>The Backup</b>: Duplicate your mesh (<b>Shift + D</b>) and hide it. This is your "safety net" in case you want to start over.</li>
         <li><b>Graphic Version</b>: This copy will be used for your highly stylized, 2D-focused version.</li>
         <li><b>Realistic Version</b>: This copy will be used to explore a version of the character with more believable anatomy.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="5. Pushing the Extremes" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div></div><div class="flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="5. Pushing the Extremes" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">5. Pushing the Extremes</h3>
-                        <div class="text-sm opacity-70"><p>You will now apply different artistic techniques to your duplicated meshes to see how style changes the "read" of the character.</p></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Style A: The Graphic Extreme" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    <div class="p-8 card-content flex flex-col flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">5. Pushing the Extremes</h3>
+                        <div class="text-sm md:text-base opacity-70 leading-relaxed"><p>You will now apply different artistic techniques to your duplicated meshes to see how style changes the "read" of the character.</p></div>
+                    </div></div><div class="flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Style A: The Graphic Extreme" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">Style A: The Graphic Extreme</h3>
-                        <div class="text-sm opacity-70"><p>This style focuses on the <b>silhouette</b> and <b>graphic appeal</b> far more than human anatomy. It is inspired by 2D animation where shapes are simplified and bold.</p>
+                    <div class="p-8 card-content flex flex-col flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Style A: The Graphic Extreme</h3>
+                        <div class="text-sm md:text-base opacity-70 leading-relaxed"><p>This style focuses on the <b>silhouette</b> and <b>graphic appeal</b> far more than human anatomy. It is inspired by 2D animation where shapes are simplified and bold.</p>
     <ul>
         <li><b>Tool Focus</b>: Use the <b>Flatten Tool</b> to create sharp, clean planes.</li>
         <li><b>Technique</b>: Simplify complex areas. Instead of sculpting a realistic ear, sculpt a graphic shape that represents an ear. Focus on "straight vs. curved" lines to make the silhouette more dynamic.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Style B: The Realistic Extreme" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div></div><div class="flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Style B: The Realistic Extreme" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">Style B: The Realistic Extreme</h3>
-                        <div class="text-sm opacity-70"><p>This style leans toward <b>believable anatomy</b>. It assumes the character has a real skeleton and muscle structure underneath the skin.</p>
+                    <div class="p-8 card-content flex flex-col flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Style B: The Realistic Extreme</h3>
+                        <div class="text-sm md:text-base opacity-70 leading-relaxed"><p>This style leans toward <b>believable anatomy</b>. It assumes the character has a real skeleton and muscle structure underneath the skin.</p>
     <ul>
         <li><b>Tool Focus</b>: Use the <b>Draw Tool</b> and <b>Smooth (Shift)</b>.</li>
         <li><b>Technique</b>: Add subtle anatomical landmarks. Instead of flat planes, look for the soft transitions of the cheekbones, the tension in the neck muscles, and the way the skin sits over the brow ridge.</li>
     </ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Deliverables" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div></div><div class="flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);">
+                    <div class="aspect-video overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Deliverables" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">Deliverables</h3>
-                        <div class="text-sm opacity-70"><p><b>Submit your Rough Base Mesh by the end of the week.</b> Your submission must show that your 3D block-out aligns perfectly with your 2D reference in orthographic views. Ensure you have used the Remesh tool so that your mesh is clean and ready for style-branching next week!</p></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="References" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">References</h3>
-                        <div class="text-sm opacity-70"><a href="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/ind-ajna-concept-art.png"><strong>Here</strong></a> is the reference image<br><br>
-<a href="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%205/Dave_Go_ANV406_Project_002_v002.blend"><strong>Here</strong></a> is the Blender file!</div>
+                    <div class="p-8 card-content flex flex-col flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Deliverables</h3>
+                        <div class="text-sm md:text-base opacity-70 leading-relaxed"><p><b>Submit your Rough Base Mesh by the end of the week.</b> Your submission must show that your 3D block-out aligns perfectly with your 2D reference in orthographic views. Ensure you have used the Remesh tool so that your mesh is clean and ready for style-branching next week!</p></div>
                     </div></div>
             </div>
         </div>
