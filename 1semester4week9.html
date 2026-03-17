@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1semester4week9 - 3D Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Montserrat', sans-serif; }
+        :root {
+            --color-primary: #3b82f6; --color-bg: #0a0a1a; --color-text: #ffffff; --color-secondary: #9ca3af; --color-card: #1a1a2e; --radius: 8px;
+        }
+        body { background: var(--color-bg); color: var(--color-text); font-size: 16px; }
+        
+        ul { list-style-type: disc !important; padding-left: 2em !important; margin: 0.5em 0 !important; }
+        ol { list-style-type: decimal !important; padding-left: 2em !important; margin: 0.5em 0 !important; }
+        li { display: list-item !important; margin: 0.2em 0; line-height: 1.6; }
+        b, strong { font-weight: bold; }
+        i, em { font-style: italic; }
+        u { text-decoration: underline; text-underline-offset: 2px; }
+        
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        .card-hover:hover .card-title { color: var(--color-primary); }
+        kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
+        .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+        .content-area a:hover { opacity: 0.8; }
+        h1, h2, h3, h4, h5, h6 { color: var(--color-text); line-height: 1.2; letter-spacing: -0.025em; }
+        h1 { font-weight: 800; margin-bottom: 0.5em; } h2 { font-weight: 800; margin-bottom: 0.75em; } h3 { font-weight: 700; margin-bottom: 0.5em; }
+        .content-area h1 { font-size: 2.5rem; margin-top: 1.5em; } .content-area h2 { font-size: 2rem; margin-top: 1.5em; } .content-area h3 { font-size: 1.5rem; margin-top: 1.25em; }
+        .content-area h1:first-child, .content-area h2:first-child, .content-area h3:first-child { margin-top: 0; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 0; min-width: 200px; background: rgba(10,10,26,0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 0.5rem; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .dropdown-content.show { display: block; animation: fadeIn 0.1s ease-out; }
+        .dropdown-item { display: block; padding: 0.5rem 1rem; color: #fff; text-decoration: none; border-radius: 4px; transition: background 0.2s; font-size: 0.9rem; }
+        .dropdown-item:hover { background: var(--color-primary); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .gallery-overlay-btn { opacity: 0; transition: opacity 0.3s; }
+        .card-img-wrap:hover .gallery-overlay-btn { opacity: 1; }
+
+        /* Lightbox Custom Scrollbar */
+        #lightbox-thumbnails::-webkit-scrollbar { height: 6px; }
+        #lightbox-thumbnails::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 3px; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background: rgba(10,10,26,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                
+                <span class="text-xl font-bold">3D Studio</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">Home</a><a href="#courses" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">Courses</a>
+                        <div class="relative group">
+                            <button onclick="toggleDropdown('dd-2', event)" class="flex items-center gap-1 text-sm font-medium opacity-80 hover:opacity-100 transition-opacity focus:outline-none">
+                                Resources <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div id="dd-2" class="dropdown-content">
+                                <a href="#models" class="dropdown-item">Models</a><a href="#textures" class="dropdown-item">Textures</a>
+                            </div>
+                        </div><a href="#about" class="text-sm opacity-80 hover:opacity-100 transition-opacity font-medium">About</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="fixed top-[70px] left-0 right-0 z-40 pointer-events-none px-6">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            <a href="1semester4week8.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-black/40 backdrop-blur-sm hover:bg-black/60 transition text-sm font-medium" style="border-radius: 50px;"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>Week 8</a>
+            <a href="1semester4week10.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full text-white transition hover:scale-105 shadow-lg text-sm font-medium" style="background: var(--color-primary); border-radius: 50px;">Week 10<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+    </div>
+
+    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-24 pb-16" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Week 9: Prop Logic</h1>
+            <div class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto"><p data-path-to-node="5">Now that you have selected your favorite block-out, it is time to turn those simple shapes into a believable piece of equipment. This week is about <b data-path-to-node="5" data-index-in-node="148">Mechanical Logic</b>, where you prove to the viewer that this prop could actually be worn and operated by Smyder.</p><h4 data-path-to-node="6"></h4></div>
+            <a href="#courses" class="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0036aa 100%); border-radius: var(--radius);">Start Learning</a>
+        </div>
+    </section>
+
+    
+
+
+    <section id="courses" class="py-20 px-6 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Lesson Details</h2>
+                <div class="w-20 h-1 rounded-full mx-auto" style="background: var(--color-primary); opacity: 0.8;"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div id="card-wrap-card-n5fy11v8d" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><a href="#" class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Refining the Mesh" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-8 flex flex-col flex-1"><h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Refining the Mesh</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><p data-path-to-node="7">You are moving from "big shapes" to "secondary details." Think about how the prop stays on Smyder’s body. If you are building the <b data-path-to-node="7" data-index-in-node="130">Sonic-Hiss Chestpiece</b>, you cannot just have a plate floating on his chest. You need to model the leather straps, the metal buckles, and the way the fabric of his coat might bunch up underneath the weight.</p><ul data-path-to-node="8"><li><p data-path-to-node="8,0,0"><b data-path-to-node="8,0,0" data-index-in-node="0">Beveling:</b> In the real world, no edge is perfectly sharp. Use the Bevel tool to slightly round your metal and plastic edges. This catches the light and makes the object feel "real" and heavy.</p></li><li><p data-path-to-node="8,1,0"><b data-path-to-node="8,1,0" data-index-in-node="0">Fasteners:</b> Add the "glue" that holds the machine together. This means modeling bolts, screws, rivets, or even messy duct tape if Smyder had to fix the prop in a hurry.</p></li></ul></div></div></a></div><div id="card-wrap-card-1cwu3x4v3" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><a href="#" class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="Functional Design" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-8 flex flex-col flex-1"><h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Functional Design</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><p data-path-to-node="10">Every part of your prop should have a "job." If there is a wire on your <b data-path-to-node="10" data-index-in-node="72">Static-Claw Gauntlet</b>, follow it with your eyes. Where does it start? Where does it end? Does it plug into a battery pack?</p><ul data-path-to-node="11"><li><p data-path-to-node="11,0,0"><b data-path-to-node="11,0,0" data-index-in-node="0">The Wearability Factor:</b> Look at where the prop touches the body. If it’s the <b data-path-to-node="11,0,0" data-index-in-node="77">Feline-Sight Visor</b>, add some padding or a soft liner on the inside of the headset. It makes the item feel more "lived-in" and comfortable for your character to wear all day while he hunts for tuna.</p></li><li><p data-path-to-node="11,1,0"><b data-path-to-node="11,1,0" data-index-in-node="0">Moving Parts:</b> If your prop has a speaker, model the mesh or the vibration coils inside. If it has claws, show the joints or hinges that would allow the fingers to curl.</p></li></ul></div></div></a></div><div id="card-wrap-card-ho11huis7" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><a href="#" class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="Clean Geometry" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-8 flex flex-col flex-1"><h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Clean Geometry</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><p data-path-to-node="13">Since you are working in 3D, your "topology" (the way your polygons are laid out) matters.</p><ul data-path-to-node="14"><li><p data-path-to-node="14,0,0">Avoid "N-Gons" (faces with more than four sides) on curved surfaces, as they will cause weird shadows when you get to the final render.</p></li><li><p data-path-to-node="14,1,0">Keep your mesh as simple as possible while still maintaining the detail you need. It is much easier to add a scratch to a clean surface than to a messy one.</p></li></ul></div></div></a></div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="py-12 px-6 border-t border-white/10 mt-12 bg-black/20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                
+                <span class="text-sm opacity-60">© 2024 3D Studio. All rights reserved.</span>
+            </div>
+            <nav class="flex items-center gap-6">
+                <a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Privacy</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Terms</a><a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center backdrop-blur-sm">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-4xl opacity-70 hover:opacity-100 focus:outline-none">&times;</button>
+        <div class="relative w-full max-w-6xl px-4 flex items-center justify-center">
+            <button onclick="prevLightboxImg(event)" id="lb-prev" class="absolute left-2 md:left-8 text-white text-4xl md:text-6xl opacity-70 hover:opacity-100 hidden focus:outline-none z-50">&#10094;</button>
+            <div class="flex flex-col items-center flex-1 max-w-[85vw]">
+                <img id="lightbox-img" src="" class="max-h-[65vh] max-w-full shadow-2xl object-contain transition-opacity duration-300" style="border-radius: var(--radius);">
+                <div id="lightbox-caption" class="text-white text-center mt-6 text-base md:text-lg max-w-3xl px-4 font-medium leading-relaxed"></div>
+                <div id="lightbox-counter" class="text-white/50 text-xs mt-2 font-mono"></div>
+                <div id="lightbox-thumbnails" class="flex flex-wrap justify-center gap-3 overflow-y-auto mt-6 max-w-full px-4 pb-4 z-50 max-h-[15vh]"></div>
+            </div>
+            <button onclick="nextLightboxImg(event)" id="lb-next" class="absolute right-2 md:right-8 text-white text-4xl md:text-6xl opacity-70 hover:opacity-100 hidden focus:outline-none z-50">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(id, event) {
+            event.stopPropagation();
+            document.querySelectorAll('.dropdown-content').forEach(d => { if(d.id !== id) d.classList.remove('show'); });
+            document.getElementById(id).classList.toggle('show');
+        }
+        
+        function toggleExpandSection(id, btn) {
+            var el = document.getElementById(id);
+            if(el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                btn.innerHTML = 'Collapse Section ▴';
+            } else {
+                el.classList.add('hidden');
+                btn.innerHTML = 'Expand Section ▾';
+            }
+        }
+        
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-content') && !event.target.matches('button') && !event.target.closest('.dropdown-content')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    if (dropdowns[i].classList.contains('show')) dropdowns[i].classList.remove('show');
+                }
+            }
+        }
+
+        // Lightbox Logic
+        let lbGallery = [];
+        let lbIndex = 0;
+        function openLightbox(dataStr, index) {
+            try {
+                lbGallery = JSON.parse(decodeURIComponent(dataStr));
+                lbIndex = index || 0;
+                document.getElementById('lightbox').classList.remove('hidden');
+                document.getElementById('lightbox').classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                updateLightbox();
+            } catch(e) { console.error('Error parsing gallery data', e); }
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.getElementById('lightbox').classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+        function updateLightbox() {
+            if(!lbGallery || lbGallery.length === 0) return;
+            const item = lbGallery[lbIndex];
+            const imgEl = document.getElementById('lightbox-img');
+            imgEl.style.opacity = '0';
+            setTimeout(() => {
+                imgEl.src = item.url;
+                document.getElementById('lightbox-caption').innerHTML = item.caption || '';
+                document.getElementById('lightbox-counter').innerText = lbGallery.length > 1 ? (lbIndex + 1) + ' / ' + lbGallery.length : '';
+                imgEl.style.opacity = '1';
+                
+                // Thumbnail Generation
+                const thumbs = document.getElementById('lightbox-thumbnails');
+                if (lbGallery.length > 1) {
+                    thumbs.innerHTML = lbGallery.map((gItem, i) => 
+                        '<img src="' + gItem.url + '" onclick="lbIndex=' + i + '; updateLightbox(); event.stopPropagation();" class="h-16 w-16 object-cover cursor-pointer border-2 transition-all ' + (i === lbIndex ? 'border-white opacity-100 scale-110 shadow-lg' : 'border-transparent opacity-40 hover:opacity-100') + ' rounded-md" style="min-width: 64px;">'
+                    ).join('');
+                } else {
+                    thumbs.innerHTML = '';
+                }
+
+            }, 150);
+            
+            document.getElementById('lb-prev').style.display = lbGallery.length > 1 ? 'block' : 'none';
+            document.getElementById('lb-next').style.display = lbGallery.length > 1 ? 'block' : 'none';
+        }
+        function prevLightboxImg(e) { if(e) e.stopPropagation(); lbIndex = (lbIndex - 1 + lbGallery.length) % lbGallery.length; updateLightbox(); }
+        function nextLightboxImg(e) { if(e) e.stopPropagation(); lbIndex = (lbIndex + 1) % lbGallery.length; updateLightbox(); }
+
+        // Keyboard navigation for Lightbox
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft' && lbGallery.length > 1) prevLightboxImg();
+                if (e.key === 'ArrowRight' && lbGallery.length > 1) nextLightboxImg();
+            }
+        });
+
+        
+    </script>
+</body>
+</html>
