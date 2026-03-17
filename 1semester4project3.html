@@ -5,32 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1semester4project3 - 3D Integration Semester 4</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { font-family: 'Montserrat', sans-serif; }
         :root {
-            --color-primary: #3b82f6;
-            --color-bg: #0a0a1a;
-            --color-text: #ffffff;
-            --color-secondary: #9ca3af;
-            --color-card: #1a1a2e;
-            --radius: 8px;
+            --color-primary: #3b82f6; --color-bg: #0a0a1a; --color-text: #ffffff; --color-secondary: #9ca3af; --color-card: #1a1a2e; --radius: 8px;
         }
         body { background: var(--color-bg); color: var(--color-text); font-size: 16px; }
+        
+        ul { list-style-type: disc !important; padding-left: 2em !important; margin: 0.5em 0 !important; }
+        ol { list-style-type: decimal !important; padding-left: 2em !important; margin: 0.5em 0 !important; }
+        li { display: list-item !important; margin: 0.2em 0; line-height: 1.6; }
+        b, strong { font-weight: bold; }
+        i, em { font-style: italic; }
+        u { text-decoration: underline; text-underline-offset: 2px; }
+        
         .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        .card-hover:hover .card-title { color: var(--color-primary); }
         kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
         .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
         .content-area a:hover { opacity: 0.8; }
-        .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
-        .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
-        .content-area li { margin: 0.5em 0; line-height: 1.6; }
-        /* Dropdown styles */
+        h1, h2, h3, h4, h5, h6 { color: var(--color-text); line-height: 1.2; letter-spacing: -0.025em; }
+        h1 { font-weight: 800; margin-bottom: 0.5em; } h2 { font-weight: 800; margin-bottom: 0.75em; } h3 { font-weight: 700; margin-bottom: 0.5em; }
+        .content-area h1 { font-size: 2.5rem; margin-top: 1.5em; } .content-area h2 { font-size: 2rem; margin-top: 1.5em; } .content-area h3 { font-size: 1.5rem; margin-top: 1.25em; }
+        .content-area h1:first-child, .content-area h2:first-child, .content-area h3:first-child { margin-top: 0; }
         .dropdown-content { display: none; position: absolute; top: 100%; left: 0; min-width: 200px; background: rgba(10,10,26,0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 0.5rem; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .dropdown-content.show { display: block; animation: fadeIn 0.1s ease-out; }
         .dropdown-item { display: block; padding: 0.5rem 1rem; color: #fff; text-decoration: none; border-radius: 4px; transition: background 0.2s; font-size: 0.9rem; }
         .dropdown-item:hover { background: var(--color-primary); }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .gallery-overlay-btn { opacity: 0; transition: opacity 0.3s; }
+        .card-img-wrap:hover .gallery-overlay-btn { opacity: 1; }
+
+        /* Lightbox Custom Scrollbar */
+        #lightbox-thumbnails::-webkit-scrollbar { height: 6px; }
+        #lightbox-thumbnails::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 3px; }
     </style>
 </head>
 <body class="min-h-screen">
@@ -47,20 +61,18 @@
     </header>
 
     
+    <div class="fixed top-[70px] left-0 right-0 z-40 pointer-events-none px-6">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            <a href="1semester4week6.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-black/40 backdrop-blur-sm hover:bg-black/60 transition text-sm font-medium" style="border-radius: 50px;"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>Week 6</a>
+            <a href="1semester4week8.html" class="pointer-events-auto flex items-center gap-2 px-5 py-2 rounded-full text-white transition hover:scale-105 shadow-lg text-sm font-medium" style="background: var(--color-primary); border-radius: 50px;">Week 8<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+    </div>
 
     <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-24 pb-16" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
-        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#3b82f6" stroke-width="0.3"/>
-                </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#grid)"/>
-        </svg>
         <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
-            <h1 class="text-5xl font-bold mb-6 leading-tight">Project 3: The Cinematic Horizon (Weeks 9-12)</h1>
-            <p class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto"><p>The semester culminates in an expansive exterior environment. This project focuses on <strong>Cinematic Composition</strong> and the integration of all previous semester elements into a unified, professional-grade visual narrative.<br><br></p></p>
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Project 3: Advanced Prop Design (Weeks 9-12)</h1>
+            <div class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto"><p>The semester culminates in an expansive exterior environment. This project focuses on <strong>Cinematic Composition</strong> and the integration of all previous semester elements into a unified, professional-grade visual narrative.<br><br></p></div>
             <a href="#courses" class="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0036aa 100%); border-radius: var(--radius);">Start Learning!!</a>
         </div>
     </section>
@@ -68,66 +80,88 @@
     
     <section class="py-16 px-6">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8">Project Brief: Beyond the Horizon</h2>
-            <div class="content-area prose prose-invert max-w-none text-lg leading-relaxed opacity-90 mb-10"><p>Students will create a vast exterior environment that houses their character and procedural assets. This project focuses on <strong>Cinematic Composition</strong>—the art of framing a scene to tell a story. You will learn to expand your world using sky boxes and matte paintings to create an illusion of infinite distance without sacrificing software performance.</p>
-
-    <h3>Core Requirements</h3>
-    <ul>
-        <li><span class="focus">Scale:</span> Establish clear foreground, midground, and background layers.</li>
-        <li><span class="focus">Atmosphere:</span> Utilize lighting temperature and exposure to set the narrative mood.</li>
-        <li><span class="focus">Integration:</span> Successfully place Project 2’s character and Project 1’s assets into a cohesive story beat.</li>
-    </ul>
-
-    <h3>Deliverables</h3>
-    <ul>
-        <li><strong>Exterior Environment:</strong> A fully integrated 3D scene with sky box and matte painting elements.</li>
-        <li><strong>Cinematic Renders:</strong> A series of high-quality shots showcasing different narrative angles.</li>
-        <li><strong>Shot Breakdown:</strong> Documentation explaining your composition choices (Rule of Thirds, Leading Lines).</li>
-        <li><strong>Portfolio Package:</strong> A professional presentation including an artist statement and process work.</li>
-    </ul>
-
-    <h3>Best Practices</h3>
-    <ul>
-        <li><strong>Depth of Field:</strong> Use subtle camera blur to separate your character from the background and focus viewer attention.</li>
-        <li><strong>Atmospheric Perspective:</strong> Use fog or volume scattering to make distant objects appear lighter and cooler in color.</li>
-        <li><strong>Visual Guidance:</strong> Use environment assets (like roads or fallen debris) as leading lines that point toward your focal point.</li>
-    </ul></div>
+            <h2 class="text-3xl font-bold mb-8">The Lore: Smyder and The Claws</h2>
+            
+            <div class="content-area max-w-none text-lg leading-relaxed opacity-90 mb-10"><p data-path-to-node="2">Smyder is a clever, energetic boy who has decided that Adventure Island would be much better if he were in charge. Dressed in a weathered captain's coat with deep pockets full of treats, he is never seen without his "band of cats." These are not ordinary pets; they are a coordinated unit of feline mischief-makers that follow his every command.</p><p data-path-to-node="2"><br></p><p data-path-to-node="3">Smyder doesn't want to hurt anyone, but he does want to make the island a bit more chaotic. He needs specialized gear to help him and his cats pull off their nefarious plans.</p></div>
             
         </div>
     </section>
-    
 
-    
-    <section id="courses" class="py-16 px-6">
+
+    <section id="courses" class="py-20 px-6 relative z-10">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">Featured Courses</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Project Details</h2>
+                <div class="w-20 h-1 rounded-full mx-auto" style="background: var(--color-primary); opacity: 0.8;"></div>
+            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a href="#" class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Blender Fundamentals" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div id="card-wrap-1" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="Prop Selection Summary" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-8 flex flex-col flex-1"><h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Prop Selection Summary</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><ul><li><b data-path-to-node="3,0,0" data-index-in-node="0" style="font-size: 0.875rem;">The Static-Claw Gauntlet (Hands):</b><span style="font-size: 0.875rem;"> A heavy leather glove with copper-tipped talons. It is designed to build a massive static charge to scramble Wi-Fi and make the islanders' clothing stick together.</span></li><li><b data-path-to-node="3,1,0" data-index-in-node="0" style="font-size: 0.875rem;">The Feline-Sight Visor (Eyes/Head):</b><span style="font-size: 0.875rem;"> A bulky, multi-lensed headset featuring metal cat ears. It allows Smyder to see through solid objects to locate hidden snacks and secret tuna stashes.</span></li><li><b data-path-to-node="3,2,0" data-index-in-node="0" style="font-size: 0.875rem;">The Sonic-Hiss Chestpiece (Body):</b><span style="font-size: 0.875rem;"> A mechanical plate with a brass cat-mouth speaker. It emits a low-frequency vibration that scares away dogs and causes ice cream to melt instantly.</span></li></ul></div></div></div>
+                <div class="p-4 border-t border-white/10 mt-auto" style="background: rgba(0,0,0,0.2);">
+                    <button onclick="toggleExpandSection('expand-1', this)" class="w-full py-2 text-sm font-bold opacity-80 hover:opacity-100 transition focus:outline-none">Expand Section ▾</button>
+                </div></div>
+                <div id="expand-1" class="hidden col-span-1 md:col-span-2 lg:col-span-3 w-full p-6 mt-2 mb-6 rounded-xl border border-white/10 shadow-inner" style="background: rgba(0,0,0,0.3); border-radius: var(--radius);">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div id="card-wrap-sub-zhphadtex" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="1. The Static-Claw Gauntlet (Hands)" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight">1. The Static-Claw Gauntlet (Hands)</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><p data-path-to-node="6">Smyder wears this heavy, leather-and-brass glove over his right hand. It is covered in copper wiring and ends in four sharp, metallic talons. By dragging the claws across the volcanic sand of the beach, Smyder can build up a massive static charge.</p><ul data-path-to-node="7"><li><p data-path-to-node="7,0,0"><b data-path-to-node="7,0,0" data-index-in-node="0">The Nefarious Purpose:</b> He uses the built-up electricity to cause every television on the island to show only static and to make the islanders' laundry stick together in giant, unwearable clumps.</p></li></ul></div></div></div></div><div id="card-wrap-sub-ajrcckj95" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="2. The Feline-Sight Visor (Eyes/Head)" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight">2. The Feline-Sight Visor (Eyes/Head)</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><p data-path-to-node="8">This is a bulky, wraparound headset with multiple glowing lenses. It looks like a combination of high-tech night vision and old-fashioned binoculars, accented with small metal "ears" on the top.</p><ul data-path-to-node="9"><li><p data-path-to-node="9,0,0"><b data-path-to-node="9,0,0" data-index-in-node="0">The Nefarious Purpose:</b> This visor allows Smyder to see through walls to find exactly where the islanders have hidden their secret stashes of gourmet tuna and fancy yarn. Once located, he sends his cats in to liberate the goods.</p></li></ul></div></div></div></div><div id="card-wrap-sub-j9bc73q8r" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="3. The Sonic-Hiss Chestpiece (Body)" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight">3. The Sonic-Hiss Chestpiece (Body)</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><p data-path-to-node="10">A medium-sized mechanical plate that Smyder straps over his chest. It features a large, brass speaker shaped like a roaring cat's mouth and several glowing canisters of compressed air on the sides.</p><ul data-path-to-node="11"><li><p data-path-to-node="11,0,0"><b data-path-to-node="11,0,0" data-index-in-node="0">The Nefarious Purpose:</b> When activated, it emits a low-frequency "mega-hiss" that doesn't hurt ears but causes every dog on the island to hide under the bed and every ice cream cone to melt instantly from the vibration.</p></li></ul></div></div></div></div>
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">Blender Fundamentals</h3>
-                        <div class="text-sm opacity-70">Master the basics of 3D modeling, texturing, and rendering.</div>
-                    </div></a><a href="#" class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="Character Design" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                </div><div id="card-wrap-2" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="Three-Week Timeline" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-8 flex flex-col flex-1"><h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Three-Week Timeline</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><b data-path-to-node="6,0,0" data-index-in-node="0" style="font-size: 0.875rem;">Week 1: Exploration.</b><span style="font-size: 0.875rem;"> We will create three distinct 3D block-outs focusing on silhouette and primary colors. By the end of the week, they select one version to develop further.</span><br><b data-path-to-node="6,1,0" data-index-in-node="0" style="font-size: 0.875rem;">Week 2: Technical Build.</b><span style="font-size: 0.875rem;"> We will refine their chosen block-out into a high-detail mesh. This stage focuses on mechanical logic, including bolts, straps, and seams that make the prop look wearable.</span><br><b data-path-to-node="6,2,0" data-index-in-node="0" style="font-size: 0.875rem;">Week 3: Texturing.</b><span style="font-size: 0.875rem;"> We will apply materials that tell a story. This includes adding scratches, salt-air rust, and "nefarious" grime to the prop before a final render is produced.</span></div></div></div>
+                <div class="p-4 border-t border-white/10 mt-auto" style="background: rgba(0,0,0,0.2);">
+                    <button onclick="toggleExpandSection('expand-2', this)" class="w-full py-2 text-sm font-bold opacity-80 hover:opacity-100 transition focus:outline-none">Expand Section ▾</button>
+                </div></div>
+                <div id="expand-2" class="hidden col-span-1 md:col-span-2 lg:col-span-3 w-full p-6 mt-2 mb-6 rounded-xl border border-white/10 shadow-inner" style="background: rgba(0,0,0,0.3); border-radius: var(--radius);">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div id="card-wrap-sub-a070iw2mt" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="<a href="1semester4week8.html">Week 7: The Multi-Draft Phase</a>" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight"><a href="1semester4week8.html">Week 7: The Multi-Draft Phase</a></h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><ul><li><b data-path-to-node="15,0,0" data-index-in-node="0" style="font-size: 0.875rem;">Focus:</b><span style="font-size: 0.875rem;"> 3D Block-outs and Color Theory.</span></li><li><b data-path-to-node="15,1,0" data-index-in-node="0" style="font-size: 0.875rem;">Lesson:</b><span style="font-size: 0.875rem;"> </span><i data-path-to-node="15,1,0" data-index-in-node="8" style="font-size: 0.875rem;">Silhouette and Primary Forms.</i><span style="font-size: 0.875rem;"> Students learn how to identify the "big shapes" of a prop and how those shapes communicate the item's purpose.</span></li><li><b data-path-to-node="15,2,0" data-index-in-node="0" style="font-size: 0.875rem;">Benchmark:</b><span style="font-size: 0.875rem;"> The </span><b data-path-to-node="15,2,0" data-index-in-node="15" style="font-size: 0.875rem;">Triple Block-out</b><span style="font-size: 0.875rem;">. Students must create three different rough versions of their chosen prop in 3D.</span></li><li><b data-path-to-node="15,3,0" data-index-in-node="0" style="font-size: 0.875rem;">Deliverable:</b><span style="font-size: 0.875rem;"> A single render or screenshot showing all three variations. Each model should have basic block-out geometry and primary colors applied to show the intended palette. By the end of the week, the student must select one of the three to move forward.</span></li></ul></div></div></div></div><div id="card-wrap-sub-sycaqfcet" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="<a href="1semester4week9.html">Week 2: The Structural Refinement</a>" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight"><a href="1semester4week9.html">Week 2: The Structural Refinement</a></h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><b data-path-to-node="17,0,0" data-index-in-node="0" style="font-size: 0.875rem;">Focus:</b><span style="font-size: 0.875rem;"> Detailing and Functional Design.</span><br><b data-path-to-node="17,1,0" data-index-in-node="0" style="font-size: 0.875rem;">Lesson:</b><span style="font-size: 0.875rem;"> </span><i data-path-to-node="17,1,0" data-index-in-node="8" style="font-size: 0.875rem;">Mechanical Logic.</i><span style="font-size: 0.875rem;"> How do the pieces fit together? Students will focus on secondary forms like straps, bolts, lenses, and wires.</span><br><b data-path-to-node="17,2,0" data-index-in-node="0" style="font-size: 0.875rem;">Benchmark:</b><span style="font-size: 0.875rem;"> The </span><b data-path-to-node="17,2,0" data-index-in-node="15" style="font-size: 0.875rem;">High-Detail Mesh</b><span style="font-size: 0.875rem;">. Students refine their chosen block-out into a final 3D model.</span><br><b data-path-to-node="17,3,0" data-index-in-node="0" style="font-size: 0.875rem;">Deliverable:</b><span style="font-size: 0.875rem;"> A wireframe and shaded render of the refined prop. The model should look "buildable," meaning it has clear joints, seams, and attachment points for a human wearer.</span></div></div></div></div><div id="card-wrap-sub-rp0sxhjgp" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="<a href="1semester4week10.html">Week 9: The Final Polish</a>" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight"><a href="1semester4week10.html">Week 9: The Final Polish</a></h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><ul><li><b data-path-to-node="19,0,0" data-index-in-node="0" style="font-size: 0.875rem;">Focus:</b><span style="font-size: 0.875rem;"> Surfaces and Storytelling Textures.</span></li><li><b data-path-to-node="19,1,0" data-index-in-node="0" style="font-size: 0.875rem;">Lesson:</b><span style="font-size: 0.875rem;"> </span><i data-path-to-node="19,1,0" data-index-in-node="8" style="font-size: 0.875rem;">Material Narrative.</i><span style="font-size: 0.875rem;"> Students learn how to add "character" to an object through wear and tear. Is the leather scuffed? Is the metal rusted from the island's salt air?</span></li><li><b data-path-to-node="19,2,0" data-index-in-node="0" style="font-size: 0.875rem;">Benchmark:</b><span style="font-size: 0.875rem;"> </span><b data-path-to-node="19,2,0" data-index-in-node="11" style="font-size: 0.875rem;">Final PBR Texturing and Presentation.</b></li><li><b data-path-to-node="19,3,0" data-index-in-node="0" style="font-size: 0.875rem;">Deliverable:</b><span style="font-size: 0.875rem;"> A final presentation image featuring the finished prop with full textures and lighting. They must also include a brief technical note explaining which part of the prop's design is specifically tailored to fit a human boy.</span></li></ul></div></div></div></div>
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">Character Design</h3>
-                        <div class="text-sm opacity-70">Create stunning characters with professional techniques.</div>
-                    </div></a><a href="#" class="block card-hover rounded-xl overflow-hidden shadow-xl" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden bg-gray-900">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="Environment Art" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                </div><div id="card-wrap-3" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="Project Marking Rubric" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-8 flex flex-col flex-1"><h3 class="text-xl md:text-2xl font-bold mb-3 card-title transition-colors duration-300 leading-tight">Project Marking Rubric</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><p data-path-to-node="2"><b data-path-to-node="2" data-index-in-node="0" style="font-size: 0.875rem;">Design and Concept (25 points)</b><br><span style="font-size: 0.875rem;">Successful completion of three distinct 3D block-outs in week 1. The designs must show a clear "nefarious" intent and fit the specific proportions of a human boy.</span><br><b data-path-to-node="3" data-index-in-node="0" style="font-size: 0.875rem;">Technical Execution (30 points)</b><br><span style="font-size: 0.875rem;">Refinement of the chosen prop with clean 3D geometry. The model should include functional details like straps, buttons, or lenses that explain how the object is worn and operated.</span><br><b data-path-to-node="4" data-index-in-node="0" style="font-size: 0.875rem;">Material Storytelling (25 points)</b><br><span style="font-size: 0.875rem;">Application of textures that show age and personality. Marks are awarded for adding realistic wear such as salt-air rust, scratches from cats, or scuffed surfaces.</span><br><b data-path-to-node="5" data-index-in-node="0" style="font-size: 0.875rem;">Final Delivery (20 points)</b><br><span style="font-size: 0.875rem;">A high-quality final render with professional lighting, along with the blender file.</span></p></div></div></div>
+                <div class="p-4 border-t border-white/10 mt-auto" style="background: rgba(0,0,0,0.2);">
+                    <button onclick="toggleExpandSection('expand-3', this)" class="w-full py-2 text-sm font-bold opacity-80 hover:opacity-100 transition focus:outline-none">Expand Section ▾</button>
+                </div></div>
+                <div id="expand-3" class="hidden col-span-1 md:col-span-2 lg:col-span-3 w-full p-6 mt-2 mb-6 rounded-xl border border-white/10 shadow-inner" style="background: rgba(0,0,0,0.3); border-radius: var(--radius);">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div id="card-wrap-sub-xrrh78aqe" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="1. Ideation and Block-outs (25 Points)" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight">1. Ideation and Block-outs (25 Points)</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><ul><li><span style="font-size: 0.875rem;">Did we produce three distinct 3D variations in Week 1?!</span></li><li><span style="font-size: 0.875rem;">Do the initial block-outs demonstrate a clear understanding of the prop’s intended purpose?</span></li><li><span style="font-size: 0.875rem;">Are the primary colors and shapes balanced and effective for a "nefarious" theme?</span></li></ul></div></div></div></div><div id="card-wrap-sub-bkkv6wzds" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="2. Modeling and Structural Logic (30 Points)" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight">2. Modeling and Structural Logic (30 Points)</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><ul><li><p data-path-to-node="13,0,0">Does the refined mesh show professional modeling techniques (clean geometry)?</p></li><li><p data-path-to-node="13,1,0">Are secondary details like fasteners, wires, or joints present and logically placed?</p></li><li><p data-path-to-node="13,2,0">Is the scale appropriate for a medium-sized wearable for a human boy?</p></li></ul></div></div></div></div><div id="card-wrap-sub-vqbv9utig" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="3. Material Storytelling (25 Points)" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight">3. Material Storytelling (25 Points)</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><ul><li><p data-path-to-node="15,0,0">Do the final textures show realistic wear and tear (e.g., scuffed leather or weathered metal)?</p></li><li><p data-path-to-node="15,1,0">Does the "material narrative" support the story of Adventure Island (e.g., salt-water corrosion)?</p></li><li><p data-path-to-node="15,2,0">Is the use of color and finish consistent with the character of Smyder?</p></li></ul></div></div></div></div><div id="card-wrap-sub-5raij8q0s" class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden shadow-lg border border-white/5" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video overflow-hidden bg-gray-900 relative shrink-0 card-img-wrap " >
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="4. Final Presentation and Technical Fit (20 Points)" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    
+                </div><div class="p-6 flex flex-col flex-1"><h3 class="text-lg font-bold mb-3 card-title transition-colors duration-300 leading-tight">4. Final Presentation and Technical Fit (20 Points)</h3><div class="text-sm md:text-base opacity-70 leading-relaxed"><ul><li><p data-path-to-node="17,0,0">Is the final render clear, well-lit, and professionally composed?</p></li><li><p data-path-to-node="17,1,0">Does we provide a brief explanation of how the prop is ergonomically designed for a human wearer?</p></li><li><p data-path-to-node="17,2,0">Is the final submission polished and free of major technical glitches?</p></li></ul></div></div></div></div>
                     </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">Environment Art</h3>
-                        <div class="text-sm opacity-70">Build immersive worlds and detailed environments.</div>
-                    </div></a>
+                </div>
             </div>
         </div>
     </section>
-    
 
     
 
@@ -143,29 +177,105 @@
         </div>
     </footer>
 
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center backdrop-blur-sm">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-4xl opacity-70 hover:opacity-100 focus:outline-none">&times;</button>
+        <div class="relative w-full max-w-6xl px-4 flex items-center justify-center">
+            <button onclick="prevLightboxImg(event)" id="lb-prev" class="absolute left-2 md:left-8 text-white text-4xl md:text-6xl opacity-70 hover:opacity-100 hidden focus:outline-none z-50">&#10094;</button>
+            <div class="flex flex-col items-center flex-1 max-w-[85vw]">
+                <img id="lightbox-img" src="" class="max-h-[65vh] max-w-full shadow-2xl object-contain transition-opacity duration-300" style="border-radius: var(--radius);">
+                <div id="lightbox-caption" class="text-white text-center mt-6 text-base md:text-lg max-w-3xl px-4 font-medium leading-relaxed"></div>
+                <div id="lightbox-counter" class="text-white/50 text-xs mt-2 font-mono"></div>
+                <div id="lightbox-thumbnails" class="flex flex-wrap justify-center gap-3 overflow-y-auto mt-6 max-w-full px-4 pb-4 z-50 max-h-[15vh]"></div>
+            </div>
+            <button onclick="nextLightboxImg(event)" id="lb-next" class="absolute right-2 md:right-8 text-white text-4xl md:text-6xl opacity-70 hover:opacity-100 hidden focus:outline-none z-50">&#10095;</button>
+        </div>
+    </div>
+
     <script>
-        // Dropdown Logic
         function toggleDropdown(id, event) {
             event.stopPropagation();
-            // Close all others
-            document.querySelectorAll('.dropdown-content').forEach(d => {
-                if(d.id !== id) d.classList.remove('show');
-            });
+            document.querySelectorAll('.dropdown-content').forEach(d => { if(d.id !== id) d.classList.remove('show'); });
             document.getElementById(id).classList.toggle('show');
         }
         
-        // Click outside to close
+        function toggleExpandSection(id, btn) {
+            var el = document.getElementById(id);
+            if(el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                btn.innerHTML = 'Collapse Section ▴';
+            } else {
+                el.classList.add('hidden');
+                btn.innerHTML = 'Expand Section ▾';
+            }
+        }
+        
         window.onclick = function(event) {
-            if (!event.target.matches('.dropdown-content') && !event.target.matches('button')) {
+            if (!event.target.matches('.dropdown-content') && !event.target.matches('button') && !event.target.closest('.dropdown-content')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");
                 for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
+                    if (dropdowns[i].classList.contains('show')) dropdowns[i].classList.remove('show');
                 }
             }
         }
+
+        // Lightbox Logic
+        let lbGallery = [];
+        let lbIndex = 0;
+        function openLightbox(dataStr, index) {
+            try {
+                lbGallery = JSON.parse(decodeURIComponent(dataStr));
+                lbIndex = index || 0;
+                document.getElementById('lightbox').classList.remove('hidden');
+                document.getElementById('lightbox').classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                updateLightbox();
+            } catch(e) { console.error('Error parsing gallery data', e); }
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.getElementById('lightbox').classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+        function updateLightbox() {
+            if(!lbGallery || lbGallery.length === 0) return;
+            const item = lbGallery[lbIndex];
+            const imgEl = document.getElementById('lightbox-img');
+            imgEl.style.opacity = '0';
+            setTimeout(() => {
+                imgEl.src = item.url;
+                document.getElementById('lightbox-caption').innerHTML = item.caption || '';
+                document.getElementById('lightbox-counter').innerText = lbGallery.length > 1 ? (lbIndex + 1) + ' / ' + lbGallery.length : '';
+                imgEl.style.opacity = '1';
+                
+                // Thumbnail Generation
+                const thumbs = document.getElementById('lightbox-thumbnails');
+                if (lbGallery.length > 1) {
+                    thumbs.innerHTML = lbGallery.map((gItem, i) => 
+                        '<img src="' + gItem.url + '" onclick="lbIndex=' + i + '; updateLightbox(); event.stopPropagation();" class="h-16 w-16 object-cover cursor-pointer border-2 transition-all ' + (i === lbIndex ? 'border-white opacity-100 scale-110 shadow-lg' : 'border-transparent opacity-40 hover:opacity-100') + ' rounded-md" style="min-width: 64px;">'
+                    ).join('');
+                } else {
+                    thumbs.innerHTML = '';
+                }
+
+            }, 150);
+            
+            document.getElementById('lb-prev').style.display = lbGallery.length > 1 ? 'block' : 'none';
+            document.getElementById('lb-next').style.display = lbGallery.length > 1 ? 'block' : 'none';
+        }
+        function prevLightboxImg(e) { if(e) e.stopPropagation(); lbIndex = (lbIndex - 1 + lbGallery.length) % lbGallery.length; updateLightbox(); }
+        function nextLightboxImg(e) { if(e) e.stopPropagation(); lbIndex = (lbIndex + 1) % lbGallery.length; updateLightbox(); }
+
+        // Keyboard navigation for Lightbox
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft' && lbGallery.length > 1) prevLightboxImg();
+                if (e.key === 'ArrowRight' && lbGallery.length > 1) nextLightboxImg();
+            }
+        });
+
+        
     </script>
 </body>
 </html>
