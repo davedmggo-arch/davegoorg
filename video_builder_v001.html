@@ -38,7 +38,7 @@
     <div class="evc-right-col">
         <div class="evc-ch-header"><h3 style="margin: 0; font-size: 16px; color: #fff;">Chapters</h3></div>
         <ul class="evc-ch-list">
-            
+            <li style="margin-bottom: 10px;"><button id="embed-ts-btn-0" class="evc-ts-btn" onclick="document.getElementById('embedVideo').currentTime = 1; document.getElementById('embedVideo').play();">00:01 : asd</button></li><li style="margin-bottom: 10px;"><button id="embed-ts-btn-1" class="evc-ts-btn" onclick="document.getElementById('embedVideo').currentTime = 10; document.getElementById('embedVideo').play();">00:10 : asd</button></li>
         </ul>
     </div>
 </div>
@@ -53,7 +53,7 @@
         const fsToggle = document.getElementById('embedFsToggle');
         
         const capsData = [];
-        const tsData = [];
+        const tsData = [{"time":1,"label":"asd","desc":"asd"},{"time":10,"label":"asd","desc":"asd"}];
         let capsOn = true;
         let activeIndex = -1;
 
