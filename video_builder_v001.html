@@ -1,0 +1,79 @@
+<style>
+    body { margin: 0; padding: 0; background: transparent; }
+    .evc-card { display: flex; align-items: stretch; background: #000; color: #fff; border-radius: 8px; overflow: hidden; width: 100%; max-width: 1000px; font-family: sans-serif; box-shadow: 0 4px 8px rgba(0,0,0,0.4); box-sizing: border-box; transition: all 0.3s ease; flex-direction: column; }
+    @media (min-width: 800px) { .evc-card { flex-direction: row; } }
+    .evc-card.theater-mode { position: fixed !important; top: 0; left: 0; width: 100vw !important; height: 100vh !important; max-width: none !important; border-radius: 0 !important; z-index: 9999; margin: 0 !important; }
+    .evc-card.theater-mode .evc-video { max-height: calc(100vh - 150px) !important; }
+    .evc-left-col { flex: 2; min-width: 300px; display: flex; flex-direction: column; }
+    .evc-video { width: 100%; display: block; background: #111; max-height: 50vh; object-fit: contain; flex-shrink: 0; }
+    .evc-controls { padding: 10px 15px; background: #222; display: flex; align-items: center; gap: 15px; border-bottom: 1px solid #333; min-height: 30px; }
+    .evc-btn-cc { background: transparent; color: white; border: 1px solid #555; font-weight: bold; padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+    .evc-caption { flex-grow: 1; text-align: center; font-size: 16px; min-height: 1.5em; color: #fff; text-shadow: 1px 1px 2px #000; }
+    .evc-btn-fs { background: transparent; color: #aaa; border: none; font-size: 20px; cursor: pointer; padding: 0 5px; }
+    .evc-btn-fs:hover { color: #fff; }
+    .evc-desc { padding: 15px; background: #1a1a1a; font-size: 15px; min-height: 80px; line-height: 1.5; flex-grow: 1; }
+    .evc-right-col { flex: 1; min-width: 250px; background: #222; display: flex; flex-direction: column; border-left: 1px solid #333; }
+    .evc-ch-header { padding: 15px; padding-bottom: 5px; }
+    .evc-ch-list { list-style: none; padding: 15px; padding-top: 0; margin: 0; overflow-y: auto; flex-grow: 1; height: 0; }
+</style>
+
+<div id="exportContainer" class="evc-card">
+    <div class="evc-left-col">
+        <video id="embedVideo" src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%204/2_Dynamic_Lighting_And_Atmosphere.mp4" controls preload="metadata" class="evc-video"></video>
+        <div class="evc-controls">
+            <button id="embedCapToggle" class="evc-btn-cc">CC</button>
+            <div id="embedCaption" class="evc-caption"></div>
+            <button id="embedFsToggle" class="evc-btn-fs" title="Browser Fullscreen">⛶</button>
+        </div>
+        <div id="embedDesc" class="evc-desc">Description will appear here.</div>
+    </div>
+    <div class="evc-right-col">
+        <div class="evc-ch-header"><h3 style="margin: 0; font-size: 16px;">Chapters</h3></div>
+        <ul class="evc-ch-list">
+            <li style="margin-bottom: 10px;"><button style="background: #333; color: #4da6ff; border: 1px solid #444; padding: 10px; width: 100%; text-align: left; border-radius: 4px; cursor: pointer; font-size: 14px; font-family: sans-serif; transition: background 0.2s;" onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'" onclick="document.getElementById('embedVideo').currentTime = 1; document.getElementById('embedVideo').play();">00:01 : test</button></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    (function() {
+        const container = document.getElementById('exportContainer');
+        const vid = document.getElementById('embedVideo');
+        const cap = document.getElementById('embedCaption');
+        const desc = document.getElementById('embedDesc');
+        const capToggle = document.getElementById('embedCapToggle');
+        const fsToggle = document.getElementById('embedFsToggle');
+        
+        const capsData = [{"start":1,"end":2,"text":"test"}];
+        const tsData = [{"time":1,"label":"test","desc":"test"}];
+        let capsOn = true;
+
+        capToggle.addEventListener('click', () => {
+            capsOn = !capsOn;
+            capToggle.style.color = capsOn ? "white" : "grey";
+            if (!capsOn) cap.innerText = '';
+        });
+
+        fsToggle.addEventListener('click', () => {
+            container.classList.toggle('theater-mode');
+        });
+
+        vid.addEventListener('timeupdate', () => {
+            const time = vid.currentTime;
+            
+            if (capsOn) {
+                const activeCap = capsData.find(c => time >= c.start && time <= c.end);
+                cap.innerText = activeCap ? activeCap.text : '';
+            }
+
+            if (tsData.length > 0) {
+                const currentChapter = [...tsData].reverse().find(ts => time >= ts.time);
+                if (currentChapter) {
+                    desc.innerText = currentChapter.desc || "No description provided for this chapter.";
+                } else {
+                    desc.innerText = tsData[0].desc || "No description provided.";
+                }
+            }
+        });
+    })();
+</script>
