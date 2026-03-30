@@ -1,552 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1semester1week10 - 3D Integration Semester 1</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>1semester4week10</title>
+    <script src="https://cdn.tailwindcss.com"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script><script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script><script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { font-family: 'Montserrat', sans-serif; }
-        :root {
-            --color-primary: #3b82f6;
-            --color-bg: #0a0a1a;
-            --color-text: #ffffff;
-            --color-secondary: #9ca3af;
-            --color-card: #1a1a2e;
-            --radius: 8px;
-        }
-        body { background: var(--color-bg); color: var(--color-text); font-size: 16px; }
-        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
-        kbd { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-family: monospace; font-weight: 600; min-width: 2rem; text-align: center; display: inline-block; }
-        /* Content Links */
-        .content-area a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
-        .content-area a:hover { opacity: 0.8; }
-        /* Lists */
-        .content-area ul { list-style-type: disc; padding-left: 1.5em; margin: 1em 0; }
-        .content-area ol { list-style-type: decimal; padding-left: 1.5em; margin: 1em 0; }
-        .content-area li { margin: 0.5em 0; line-height: 1.6; }
-        .content-area ul ul { list-style-type: circle; margin: 0.5em 0; }
-        .content-area ul ul ul { list-style-type: square; }
-        /* Card content */
-        .card-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
-        .card-content ul { list-style-type: disc; padding-left: 1.25em; margin: 0.5em 0; }
-        .card-content ol { list-style-type: decimal; padding-left: 1.25em; margin: 0.5em 0; }
-        .card-content li { margin: 0.25em 0; line-height: 1.5; }
+        :root { --color-primary: #3b82f6; --color-bg: #0a0a1a; --color-text: #ffffff; --color-card: #1a1a2e; --radius: 8px; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--color-bg); color: var(--color-text); font-size: 16px; }
+        ul{list-style:disc!important;padding-left:2em!important;margin:0.5em 0!important}ol{list-style:decimal!important;padding-left:2em!important;margin:0.5em 0!important}li{display:list-item!important;margin:0.2em 0}
+        .card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.4)} .card-hover:hover h3{color:var(--color-primary)}
+        kbd{background:rgba(255,255,255,0.1);padding:4px 10px;border-radius:6px;font-family:monospace;font-weight:600;}
+        .gallery-overlay-btn:hover{opacity:1} .dd-content{display:none;position:absolute;top:100%;left:0;background:rgba(10,10,26,0.95);padding:0.5rem;z-index:100;border-radius:var(--radius);} .dd-content.show{display:block;}
+        .focus-wrapper.expanded { grid-column: 1 / -1; } .expand-grid { grid-template-columns: 1fr; }
+        #lbc iframe { width: 100% !important; height: 100% !important; min-height: 50vh; border-radius: var(--radius); }
+        @media (min-width:768px){ .focus-wrapper.expanded > .card-container > a, .focus-wrapper.expanded > .card-container > div.block { flex-direction: row!important; gap: 2rem; } .focus-wrapper.expanded .card-media-wrap { width:50%!important; flex-shrink:0;} .expand-grid{grid-template-columns:1fr 1fr;} }
     </style>
 </head>
 <body class="min-h-screen">
-    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background: rgba(10,10,26,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                
-                <span class="text-xl font-bold">3D Integration Semester 1</span>
-            </a>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="1semester1.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Home</a><a href="courses.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Courses</a><a href="resources.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Resources</a><a href="links.html" class="text-sm opacity-80 hover:opacity-100 transition-opacity">Links</a>
-            </nav>
+    <header class="fixed top-0 w-full z-50 backdrop-blur-md bg-black/80 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3"><span class="text-xl font-bold">3D Tools Semester 1</span></a>
+            <nav class="hidden md:flex gap-6"><a href="#" class="font-medium hover:text-blue-400">Home</a><a href="#courses" class="font-medium hover:text-blue-400">Courses</a><div class="relative"><button onclick="document.getElementById('dd2').classList.toggle('show'); event.stopPropagation()" class="font-medium">Resources ▾</button><div id="dd2" class="dd-content w-48"><a href="#models" class="block px-4 py-2 hover:bg-white/10">Models</a><a href="#textures" class="block px-4 py-2 hover:bg-white/10">Textures</a></div></div><a href="#about" class="font-medium hover:text-blue-400">About</a></nav>
         </div>
     </header>
+    <div class="fixed top-20 w-full z-40 px-6 pointer-events-none"><div class="max-w-7xl mx-auto flex justify-between"><a href="1semester1week9.html" class="pointer-events-auto bg-black/60 px-5 py-2 rounded-full border border-white/10">Week 9</a></div></div>
 
-    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-20" style="background: linear-gradient(135deg, rgba(10,10,26,0.9) 0%, rgba(26,26,46,0.8) 100%), url('https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/Website_BG_001.png') center/cover no-repeat;">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
-        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#3b82f6" stroke-width="0.3"/>
-                </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#grid)"/>
-        </svg>
+    <section class="relative min-h-[60vh] flex text-center items-center justify-center pt-24 pb-16" style="background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover;">
+        <div class="absolute inset-0 bg-black/50"></div>
         <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
-            <h1 class="text-5xl font-bold mb-6 leading-tight">Week 10: Advanced Character: Retopology</h1>
-            <p class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto">You will convert your heavy sculpt into a "light" production mesh, ensuring the edge flow allows for perfect deformation at the joints.</p>
-            <a href="#courses" class="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-all hover:scale-105" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0036aa 100%); border-radius: var(--radius);">Start Learning</a>
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Week 10: Finishing Touches & Atmosphere</h1>
+            <div class="text-lg opacity-80 mb-8 max-w-2xl mx-auto">In our final lesson, we add the subtle details and lighting that transform a 3D model into a believable, lived-in story.</div>
+            <a href="#courses" class="inline-block px-8 py-4 font-bold rounded-lg transition-transform hover:scale-105" style="background:var(--color-primary);border-radius:var(--radius)">Start Learning</a>
         </div>
     </section>
 
     
-    <section class="py-12 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8">Learning Outcomes</h2>
-            <div class="content-area prose prose-invert max-w-none text-lg leading-relaxed opacity-90 mb-8"><ul>
-    <li>Convert a high-density full-body sculpt into a clean, low-poly mesh optimized for professional animation.</li>
-    <li>Implement the "Rule of Three" at major joints to ensure smooth mesh deformation during movement.</li>
-    <li>Design efficient edge flow around the eyes, mouth, and hands to support complex facial expressions and finger poses.</li>
-</ul></div>
-            
-        </div>
-    </section>
+
     
 
     
-    <section id="courses" class="py-12 px-6">
+    <section id="courses" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">Key Concepts</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="1. The Full-Body Retopology Workflow" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">1. The Full-Body Retopology Workflow</h3>
-                        <div class="text-sm opacity-70"><p>This week is the most technical phase of the project. You will use your high-poly body sculpt as a "live" template and draw a new, simplified mesh directly over its surface.</p>
-<ul>
-    <li><strong>Manual Edge Placement:</strong> Instead of using automated tools, you will manually place vertices to ensure the "edge flow" follows the natural contours and muscle lines of the body.</li>
-    <li><strong>Polygon Economy:</strong> Your goal is to use the fewest polygons possible while maintaining the character's silhouette. Focus density on the face and hands, while keeping larger, simpler polygons for the torso and legs.</li>
-    <li><strong>Symmetry:</strong> Use the Mirror Modifier to retopologize only one side of the body. Once finished, you will "Apply" the modifier to create a single, seamless object.</li>
-</ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400" alt="2. Edge Flow & Deformation" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">2. Edge Flow & Deformation</h3>
-                        <div class="text-sm opacity-70"><p>The "flow" of your edges determines how the character will look when they move. A mesh with poor topology will "collapse" or "pinch" when the character bends an arm or leg.</p>
-<ul>
-    <li><strong>Joint Loops:</strong> You must ensure there are concentric loops of polygons around major joints like the shoulders, elbows, and knees.</li>
-    <li><strong>The Rule of Three:</strong> To ensure smooth bending, always use at least three edge loops at every joint—one for the center of the bend and two "supporting" loops on either side.</li>
-    <li><strong>Facial Loops:</strong> Revisit the facial loops learned in Project 2. Ensure they circle the eyes and mouth in a way that allows for complex smiles, frowns, and blinks.</li>
-</ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="3. Maintaining Professional Standards" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">3. Maintaining Professional Standards</h3>
-                        <div class="text-sm opacity-70"><p>For an advanced character, the quality of your wireframe is just as important as the look of the sculpt.</p>
-<ul>
-    <li><strong>100% Quads:</strong> Every face on your model should be a four-sided polygon (quad). Avoid triangles and N-gons, as they cause ugly shadows and rendering errors.</li>
-    <li><strong>Uniform Face Size:</strong> Try to keep your polygon sizes relatively consistent across the body. This prevents issues when you move into the UV unwrapping and texturing phase next week.</li>
-    <li><strong>Snapping:</strong> Keep Face Snapping enabled so your new vertices stay perfectly glued to the surface of the high-poly sculpt.</li>
-</ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="4. Essential Shortcuts & Tools" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">4. Essential Shortcuts & Tools</h3>
-                        <div class="text-sm opacity-70"><ul>
-    <li><strong>Poly Build Tool:</strong> Found in the left-hand toolbar, this tool allows you to click and drag new faces into existence instantly.</li>
-    <li><strong>Fill Face (F):</strong> Select two edges and press F to bridge them with a new face.</li>
-    <li><strong>Loop Cut (Ctrl + R):</strong> Add extra resolution exactly where a joint needs more flexibility.</li>
-    <li><strong>Auto-Merge:</strong> Enable this in the top-right options to snap vertices together automatically when they get close to each other.</li>
-    <li><strong>X-Ray Mode (Alt + Z):</strong> Essential for seeing your high-poly sculpt "through" your new low-poly mesh as you work.</li>
-</ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="5. Best Practices for Technical Mesh Design" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">5. Best Practices for Technical Mesh Design</h3>
-                        <div class="text-sm opacity-70"><ul>
-    <li><strong>Check Your Normals:</strong> Frequently check that all your faces are pointing outward. If they face inward, the model will look "broken" during texturing.</li>
-    <li><strong>Isolate Areas:</strong> Use the <strong>H</strong> key to hide parts of your high-poly sculpt that are in the way (like hiding one leg while working on the inner thigh of the other).</li>
-    <li><strong>Relaxing Geometry:</strong> Use the Smooth tool in Edit Mode to even out the spacing of your vertices, which helps create a cleaner wireframe.</li>
-</ul></div>
-                    </div></div><div class="block card-hover rounded-xl overflow-hidden" style="background: var(--color-card); border-radius: var(--radius);">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="6. Week 10 Assignment" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 card-content">
-                        <h3 class="text-lg font-semibold mb-2">6. Week 10 Assignment</h3>
-                        <div class="text-sm opacity-70"><ul>
-    <li><strong>The Task:</strong> Submit the low-poly retopologized character.</li>
-    <li><strong>Step 1:</strong> Create a complete quad-based mesh over your high-poly full-body sculpt.</li>
-    <li><strong>Step 2:</strong> Ensure proper "Rule of Three" loops are present at the elbows, knees, and shoulders.</li>
-    <li><strong>Step 3:</strong> Finalize the facial edge loops to support future expressions.</li>
-    <li><strong>Submit:</strong> A screenshot of your character in "Wireframe Overlay" mode showing the front and back topology.</li>
-</ul></div>
-                    </div></div>
+            <h2 class="text-4xl font-extrabold text-center mb-16">Featured Courses</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start"><div id="fw-card-jiuc6la5x" class="focus-wrapper flex flex-col relative"><div class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden border border-white/5 relative" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video bg-gray-900 relative overflow-hidden card-media-wrap cursor-pointer" onclick="openLightbox('%5B%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071112.png%22%2C%22caption%22%3A%22Set%20dressing%20is%20the%20difference%20between%20an%20empty%20room...%20%22%2C%22type%22%3A%22image%22%7D%2C%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071137.png%22%2C%22type%22%3A%22image%22%2C%22caption%22%3A%22...%20and%20a%20lived%20in%20one!%22%7D%5D', 0); event.preventDefault();"><img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%2010/Screenshot%202026-03-30%20071112.png" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"><div class="absolute inset-0 bg-black/20 gallery-overlay-btn flex items-center justify-center opacity-0 transition-opacity"><div class="bg-black/60 px-3 py-1.5 rounded-full text-white text-xs font-bold">View Media</div></div></div><div class="p-8 flex-1"><h3 class="text-xl font-bold mb-3">Step 1: Set Dressing & Color Focus</h3><div class="opacity-70 text-sm"><p data-path-to-node="4">Set dressing involves adding "clutter" that makes a room feel inhabited. For this project, these objects should be very low-detail. Think beveled cubes or simple cylinders.</p><ul data-path-to-node="5"><li><p data-path-to-node="5,0,0"><span class="citation-367"></span></p><p data-path-to-node="5,0,1" id="p-rc_c538681843f0ea65-180"><span data-path-to-node="5,0,1,0"><b data-path-to-node="5,0,1,0" data-index-in-node="0"><span class="citation-367">The Minimalist Approach:</span></b><span class="citation-367"> Add items like books on the shelves, a notebook on the desk, or a few pens</span></span><span data-path-to-node="5,0,1,1"><span class="citation-367 citation-end-367"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="1"><!----></sup></source-footnote></span></span><span data-path-to-node="5,0,1,2">.</span></p></li><li><p data-path-to-node="5,0,1" id="p-rc_c538681843f0ea65-180"><span data-path-to-node="5,1,1,0" style="font-size: 0.875rem;"><b data-path-to-node="5,1,1,0" data-index-in-node="0"><span class="citation-366">Detail Level:</span></b><span class="citation-366"> These should be no more complex than a cube with a small </span><b data-path-to-node="5,1,1,0" data-index-in-node="71"><span class="citation-366">Bevel</span></b><span class="citation-366"> to catch the light</span></span><span data-path-to-node="5,1,1,1" style="font-size: 0.875rem;"><span class="citation-366 citation-end-366"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="2"></sup></source-footnote></span></span><span data-path-to-node="5,1,1,2" style="font-size: 0.875rem;">.</span></p></li><li><div _ngcontent-ng-c46611929="" class="source-inline-chip-container ng-star-inserted"><b data-path-to-node="5,2,0" data-index-in-node="0" style="font-size: 0.875rem;">Color as a Tool:</b><span style="font-size: 0.875rem;"> Use color to guide the eye. If your room is mostly neutral, a single bright red book or a colorful poster can create a </span><b data-path-to-node="5,2,0" data-index-in-node="136" style="font-size: 0.875rem;">Central Focus</b><span style="font-size: 0.875rem;"> for the viewer.</span></div></li><li><p data-path-to-node="5,3,0"><b data-path-to-node="5,3,0" data-index-in-node="0">Consistency Check:</b> Ensure all props from previous weeks are colored and maintain the mid-level detail we established in Week 2.</p></li></ul></div></div></div></div></div><div id="fw-card-s4iypepn4" class="focus-wrapper flex flex-col relative"><div class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden border border-white/5 relative" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video bg-gray-900 relative overflow-hidden card-media-wrap cursor-pointer" onclick="openLightbox('%5B%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071155.png%22%2C%22caption%22%3A%22Ensure%20that%20the%20character(s)%20that%20you%20plan%20in%20your%20room%20have%20enough%20space%20to%20act%2C%22%2C%22type%22%3A%22image%22%7D%2C%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071213.png%22%2C%22type%22%3A%22image%22%2C%22caption%22%3A%22and%20that%20doors%2C%20cabinets%2C%20mirrors%2C%20chairs%2C%20etc.%20can%20all%20be%20accessed%20in%20a%20logical%2C%20functional%20way.%22%7D%5D', 0); event.preventDefault();"><img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%2010/Screenshot%202026-03-30%20071155.png" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"><div class="absolute inset-0 bg-black/20 gallery-overlay-btn flex items-center justify-center opacity-0 transition-opacity"><div class="bg-black/60 px-3 py-1.5 rounded-full text-white text-xs font-bold">View Media</div></div></div><div class="p-8 flex-1"><h3 class="text-xl font-bold mb-3">Step 2: Acting Space & Movement</h3><div class="opacity-70 text-sm"><p data-path-to-node="7">Consider how a character would actually exist in this room. The arrangement of your set dressing should reflect their personality and physical limitations.</p><ul data-path-to-node="8"><li><p data-path-to-node="8,0,0"><b data-path-to-node="8,0,0" data-index-in-node="0">Functional Paths:</b> Ensure there is enough "Acting Space" for a character to walk from the door to the bed or sit at the desk.</p></li><li><p data-path-to-node="8,1,0"><b data-path-to-node="8,1,0" data-index-in-node="0">Limiting Movement:</b> Use your furniture to "corral" the character. For example, a cabinet placed near the bed might limit their movement, creating a cramped, cozy feel.</p></li></ul></div></div></div></div></div><div id="fw-card-e7p4y0z6g" class="focus-wrapper flex flex-col relative"><div class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden border border-white/5 relative" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video bg-gray-900 relative overflow-hidden card-media-wrap cursor-pointer" onclick="openLightbox('%5B%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071254.png%22%2C%22caption%22%3A%22Map%20out%20your%20lights%20so%20that%20the%20brightest%20object%2C%20or%20space%2C%20is%20illuminated%20with%20to%20have%20the%20most%20amount%20of%20contrast%2C%20%22%2C%22type%22%3A%22image%22%7D%2C%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071305.png%22%2C%22type%22%3A%22image%22%2C%22caption%22%3A%22and%20pair%20this%20with%20volumetric%20tools%20to%20enhance%20the%20atmosphere%20of%20your%20piece!%22%7D%5D', 0); event.preventDefault();"><img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%2010/Screenshot%202026-03-30%20071254.png" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"><div class="absolute inset-0 bg-black/20 gallery-overlay-btn flex items-center justify-center opacity-0 transition-opacity"><div class="bg-black/60 px-3 py-1.5 rounded-full text-white text-xs font-bold">View Media</div></div></div><div class="p-8 flex-1"><h3 class="text-xl font-bold mb-3">Environment Art</h3><div class="opacity-70 text-sm"><p data-path-to-node="10">Now we set the mood. We want two primary light sources and one "focal" source.</p><ul data-path-to-node="11"><li><p data-path-to-node="11,0,0"><b data-path-to-node="11,0,0" data-index-in-node="0">Main Illumination:</b> Use the <b data-path-to-node="11,0,0" data-index-in-node="27">Window</b> and the <b data-path-to-node="11,0,0" data-index-in-node="42">Ceiling Light</b> as your primary sources.</p></li><li><p data-path-to-node="11,1,0"><b data-path-to-node="11,1,0" data-index-in-node="0">The Focal Point:</b> Use the <b data-path-to-node="11,1,0" data-index-in-node="25">Computer Monitor</b> as a light source to draw the viewer's attention directly to your hero setup.</p></li><li><p data-path-to-node="11,1,0"><span data-path-to-node="11,2,1,0"><b data-path-to-node="11,2,1,0" data-index-in-node="0"><span class="citation-365">Volumetric God Rays:</span></b><span class="citation-365"> Use the </span><b data-path-to-node="11,2,1,0" data-index-in-node="29"><span class="citation-365">Principled Volume Material</span></b><span class="citation-365"> tool in the </span><b data-path-to-node="11,2,1,0" data-index-in-node="62"><span class="citation-365">Work Helpers</span></b><span class="citation-365"> script</span></span><span data-path-to-node="11,2,1,1"><span class="citation-365 citation-end-365"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="3"><!----></sup></source-footnote></span></span><span data-path-to-node="11,2,1,2">. </span><span data-path-to-node="11,2,1,3"><span class="citation-364"></span></span><span data-path-to-node="11,2,1,4"><span class="citation-364">This tool automatically converts a shape into a </span><b data-path-to-node="11,2,1,4" data-index-in-node="48"><span class="citation-364">Volumetric Field</span></b></span><span data-path-to-node="11,2,1,5"><span class="citation-364 citation-end-364"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="4"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="4"><!----></sup></source-footnote></span></span><span data-path-to-node="11,2,1,6">.</span></p></li><li><p data-path-to-node="11,1,0"><span data-path-to-node="11,2,1,6"><span data-path-to-node="11,3,1,0"><b data-path-to-node="11,3,1,0" data-index-in-node="0"><span class="citation-363">Atmospheric Perspective:</span></b><span class="citation-363"> When light passes through this volumetric field, it creates "god rays" and a sense of depth, making the air in the room feel tangible</span></span><span data-path-to-node="11,3,1,1"><span class="citation-363 citation-end-363"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="5"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="5"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="5"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="5"><!----></sup></source-footnote></span></span><span data-path-to-node="11,3,1,2">.</span></span></p></li></ul></div></div><div class="px-6 pb-6 mt-auto"><a href="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%2010/DG_Work_Helpers_002.txt" target="_blank" class="flex justify-center items-center gap-2 text-sm font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30 px-4 py-3 rounded">Download</a></div></div></div></div><div id="fw-c-1774868864557" class="focus-wrapper flex flex-col relative"><div class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden border border-white/5 relative" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video bg-gray-900 relative overflow-hidden card-media-wrap cursor-pointer" onclick="openLightbox('%5B%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071324.png%22%2C%22caption%22%3A%22Ensure%20that%20your%20render%20settings%20are%20now%20set%20to%20Cycles%2C%20with%20the%20Denoise%20function%20included.%20This%20helps%20with%20render%20times!%20%22%2C%22type%22%3A%22image%22%7D%2C%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071336.png%22%2C%22type%22%3A%22image%22%2C%22caption%22%3A%22Here%20is%20the%20difference%20between%20Eevee...%20%22%7D%2C%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071348.png%22%2C%22type%22%3A%22image%22%2C%22caption%22%3A%22...and%20Cycles!%22%7D%5D', 0); event.preventDefault();"><img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%2010/Screenshot%202026-03-30%20071324.png" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"><div class="absolute inset-0 bg-black/20 gallery-overlay-btn flex items-center justify-center opacity-0 transition-opacity"><div class="bg-black/60 px-3 py-1.5 rounded-full text-white text-xs font-bold">View Media</div></div></div><div class="p-8 flex-1"><h3 class="text-xl font-bold mb-3">Step 4: Rendering From Eevee to Cycles</h3><div class="opacity-70 text-sm"><p data-path-to-node="13">While <b data-path-to-node="13" data-index-in-node="6">Eevee</b> provides great real-time feedback, we will use <b data-path-to-node="13" data-index-in-node="59">Cycles</b> for our final submission to achieve maximum light accuracy and realistic reflections.</p><ul data-path-to-node="14"><li><p data-path-to-node="14,0,0"><b data-path-to-node="14,0,0" data-index-in-node="0">Switching Engines:</b> Go to the Render Properties tab and switch from Eevee to <b data-path-to-node="14,0,0" data-index-in-node="76">Cycles</b>.</p></li><li><p data-path-to-node="14,1,0"><span class="citation-362"></span></p><p data-path-to-node="14,1,1" id="p-rc_c538681843f0ea65-184"><span data-path-to-node="14,1,1,0"><b data-path-to-node="14,1,1,0" data-index-in-node="0"><span class="citation-362">Backface Culling:</span></b><span class="citation-362"> Ensure your interior walls are properly configured using the script's </span><b data-path-to-node="14,1,1,0" data-index-in-node="88"><span class="citation-362">Flip Normals &amp; Apply Mat</span></b><span class="citation-362"> tool so the camera can see into the room</span></span><span data-path-to-node="14,1,1,1"><span class="citation-362 citation-end-362"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="6"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="6"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="6"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="6"><!----></sup></source-footnote></span></span><span data-path-to-node="14,1,1,2">.</span></p></li><li><li><p data-path-to-node="14,2,0"><b data-path-to-node="14,2,0" data-index-in-node="0">Denoising &amp; Samples:</b> To keep render times low while maintaining quality, enable the <b data-path-to-node="14,2,0" data-index-in-node="84">Denoise</b> feature in the Render tab.</p></li><p data-path-to-node="14,1,1" id="p-rc_c538681843f0ea65-184"><span data-path-to-node="14,1,1,2"></span></p><li><p data-path-to-node="14,3,0"><b data-path-to-node="14,3,0" data-index-in-node="0">Render Limit:</b> Set your <b data-path-to-node="14,3,0" data-index-in-node="23">Max Samples</b> to <b data-path-to-node="14,3,0" data-index-in-node="38">40</b>. This is more than enough when combined with denoising to get a clean, professional result quickly.</p></li></li></ul></div></div></div></div></div><div id="fw-c-1774868888575" class="focus-wrapper flex flex-col relative"><div class="card-container flex flex-col h-full card-hover rounded-xl overflow-hidden border border-white/5 relative" style="background: var(--color-card); border-radius: var(--radius);"><div class="flex flex-col flex-1 block"><div class="aspect-video bg-gray-900 relative overflow-hidden card-media-wrap cursor-pointer" onclick="openLightbox('%5B%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071348.png%22%2C%22caption%22%3A%22%22%2C%22type%22%3A%22image%22%7D%2C%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071400.png%22%2C%22type%22%3A%22image%22%2C%22caption%22%3A%22%22%7D%2C%7B%22url%22%3A%22https%3A%2F%2Ffiledn.com%2Fl2sG939QiPx0rp2J0fA1ciJ%2F3DI_Winter_2026%2FImages%2F106%2FWeek%252010%2FScreenshot%25202026-03-30%2520071419.png%22%2C%22type%22%3A%22image%22%2C%22caption%22%3A%22%22%7D%5D', 0); event.preventDefault();"><img src="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%2010/Screenshot%202026-03-30%20071348.png" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"><div class="absolute inset-0 bg-black/20 gallery-overlay-btn flex items-center justify-center opacity-0 transition-opacity"><div class="bg-black/60 px-3 py-1.5 rounded-full text-white text-xs font-bold">View Media</div></div></div><div class="p-8 flex-1"><h3 class="text-xl font-bold mb-3">Submission Guidelines</h3><div class="opacity-70 text-sm"><span data-path-to-node="17,1">Your final project must be organized into clear collections</span><span data-path-to-node="17,2"><span class="citation-361 citation-end-361"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="7"><!----></sup></source-footnote></span></span><span data-path-to-node="17,3">. </span><span data-path-to-node="17,4"><span class="citation-360"></span></span><span data-path-to-node="17,5"><span class="citation-360">Ensure you run the </span><b data-path-to-node="17,5" data-index-in-node="19"><span class="citation-360">Setup Eevee &amp; Pack</span></b><span class="citation-360"> tool one last time to embed all your textures into the file</span></span><span data-path-to-node="17,6"><span class="citation-360 citation-end-360"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="8"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="8"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="8"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="8"><!----></sup></source-footnote></span></span><span data-path-to-node="17,7">.</span><div><span data-path-to-node="17,7"><h3 data-path-to-node="18"><b data-path-to-node="18" data-index-in-node="0">Final Submission Checklist</b></h3><ul data-path-to-node="19"><li><p data-path-to-node="19,0,0"><b data-path-to-node="19,0,0" data-index-in-node="0">Props:</b> All 8 props at mid-level detail, fully colored, with minimal set dressing added.</p></li><li><p data-path-to-node="19,1,0"><b data-path-to-node="19,1,0" data-index-in-node="0">Atmosphere:</b> Volumetric god rays active and lighting focused on the hero prop.</p></li><li><p data-path-to-node="19,2,0"><span class="citation-359"></span></p><p data-path-to-node="19,2,1" id="p-rc_c538681843f0ea65-186"><span data-path-to-node="19,2,1,0"><b data-path-to-node="19,2,1,0" data-index-in-node="0"><span class="citation-359">Organization:</span></b><span class="citation-359"> Clean collection hierarchy with all objects named correctly using the </span><code data-path-to-node="19,2,1,0" data-index-in-node="84"><span class="citation-359">SM_</span></code><span class="citation-359"> prefix</span></span><span data-path-to-node="19,2,1,1"><span class="citation-359 citation-end-359"><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="9"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="9"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="9"><!----></sup></source-footnote><source-footnote ng-version="0.0.0-PLACEHOLDER" _nghost-ng-c1245605952=""><sup _ngcontent-ng-c1245605952="" class="superscript" data-turn-source-index="9"><!----></sup></source-footnote></span></span><span data-path-to-node="19,2,1,2">.</span></p></li><li><p data-path-to-node="19,2,1" id="p-rc_c538681843f0ea65-186"><b data-path-to-node="19,3,0" data-index-in-node="0" style="font-size: 0.875rem;">Renders:</b><span style="font-size: 0.875rem;"> 3 final PNG images rendered in Cycles at 40 samples.</span></p></li></ul><div><br></div><div><h3 data-path-to-node="20"><b data-path-to-node="20" data-index-in-node="0">Naming Convention</b></h3><p data-path-to-node="21"><code data-path-to-node="21" data-index-in-node="0">firstname_lastname_Project_3-3_001.png</code>
+<code data-path-to-node="21" data-index-in-node="39">firstname_lastname_Project_3-3_002.png</code>
+<code data-path-to-node="21" data-index-in-node="78">firstname_lastname_Project_3-3_003.png</code></p></div></span></div></div></div><div class="px-6 pb-6 mt-auto"><a href="https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/3DI_Winter_2026/Images/106/Week%2010/Dave_Go_Project_3_v003.blend" target="_blank" class="flex justify-center items-center gap-2 text-sm font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30 px-4 py-3 rounded">Download</a></div></div></div></div></div>
+        </div>
+    </section>
+
+    
+
+    <footer class="py-12 px-6 border-t border-white/10 bg-black/20 mt-12"><div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center opacity-60 gap-4"><div>© 2024 3D Studio. All rights reserved.</div><nav class="flex gap-6"><a href="#" class="hover:text-white">Privacy</a><a href="#" class="hover:text-white">Terms</a><a href="#" class="hover:text-white">Contact</a></nav></div></footer>
+
+    <div id="lb" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center p-4 cursor-pointer">
+        <button class="absolute top-6 right-6 text-4xl z-50 hover:text-red-500 transition-colors cursor-pointer" onclick="closeLightbox()">&times;</button>
+        <div class="flex gap-4 items-center w-full justify-center pointer-events-none">
+            <button onclick="lbDir(-1); event.stopPropagation();" id="lpb" class="text-4xl hidden pointer-events-auto hover:text-blue-400">&#10094;</button>
+            <div class="flex flex-col items-center w-full max-w-[1200px] pointer-events-auto" onclick="event.stopPropagation()">
+                <div id="lbc" class="w-full flex justify-center items-center"></div>
+                <div id="lbt" class="mt-4 text-center text-lg font-medium text-white max-w-2xl bg-black/50 px-4 py-2 rounded-lg empty:hidden"></div>
+                <div id="lbts" class="flex gap-2 mt-4 overflow-x-auto pb-2"></div>
             </div>
+            <button onclick="lbDir(1); event.stopPropagation();" id="lnb" class="text-4xl hidden pointer-events-auto hover:text-blue-400">&#10095;</button>
         </div>
-    </section>
-    
+    </div>
 
-    
-    <section class="py-16 px-6" style="background: rgba(255,255,255,0.02);">
-        <div class="max-w-5xl mx-auto">
-            
-                <div class="mb-12 last:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-center">1. Universal Interface & Navigation</h3>
-                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">These are the most important shortcuts you learned in Week 1. They allow you to move through 3D space and manage your files.</p>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Rotate View</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Middle Mouse Button (MMB)</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Pan View (Slide)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + MMB</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Zoom In/Out</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Scroll Wheel</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Focus on Selected Object</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Numpad . (Period)</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Toggle X-Ray Mode (Essential for seeing through meshes or selecting back-facing vertices)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + Z</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Search Menu (If you forget a tool name, find it here)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F3</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Sidebar Toggle (Shows transform data and "Camera to View" options)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">N</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Toolbar Toggle</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">T</kbd>
-                        </div>
-                        
-                    </div>
-                </div>
-            
-                <div class="mb-12 last:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-center">2. General Object Manipulation</h3>
-                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">Used in Object Mode to manage the "containers" of your geometry.</p>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Add Object/Light/Camera</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + A</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Delete</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">X or Delete</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Grab/Move</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">G</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Rotate: R Rotates the object. Pressing R twice (R+R) enters Trackball Rotation, allowing for free-form rotation in all directions, excellent for posing a character's head.</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">R</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Scale</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">S</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Constraint: After pressing G, R, or S, press X, Y, or Z to lock the movement to that specific axis.</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">X, Y, or Z</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">You can type numbers for perfect precision. For example, G + Z + 2.4 moves an object exactly 2.4 meters up. The standard height for the walls in your Interior Design project.</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Numerical Input</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Duplicate (Independent)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + D</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Duplicate (Linked Instance)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + D</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Hide Object</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">H</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Unhide All</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + H</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Apply Transformations (Critical before Unwrapping or Rigging to reset scale to 1.0)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + A</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Join Objects</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + J</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">New Collection</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">M</kbd>
-                        </div>
-                        
-                    </div>
-                </div>
-            
-                <div class="mb-12 last:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-center">3. Modeling & Edit Mode</h3>
-                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">The core toolkit for Project 1 (Table) and Project 3 (Interior).</p>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Switch Mode (Toggle between Object and Edit Mode)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Tab </kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Selection Modes</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">1 (Vertex), 2 (Edge), 3 (Face)</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Extrude: Press E, then an axis key (like Z), then a number (like 0.75) to create a leg of an exact length.</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">E </kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Inset</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">I</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Bevel</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + B</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Loop Cut While the tool is active (yellow line visible), scroll your Mouse Wheel to add multiple even cuts simultaneously. </span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + R</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Fill Face/Edge</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Bridge Edge Loops (Found in Edge menu)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + E</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Knife Tool (Allows you to draw custom edges directly onto a face. Use this when a standard Loop Cut won't fit the geometry)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">K</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Merge Vertices (Combines selected vertices into one. "Merge at Center" is a lifesaver for cleaning up messy geometry or closing the top of a character's head)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">M</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Rip Region (Tears a vertex or edge away from its neighbors)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">V</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Select Loop (Selects an entire ring of edges or faces. This is the fastest way to select a table leg or a character's neck.)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + Left Click</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Select Linked ( Hover your mouse over an object and press L to select everything connected to it)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">L</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Invert Selection (Selects everything except what you currently have highlighted)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + I</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Grow/Shrink Selection (Expands or contracts your selection to neighboring faces)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + Numpad + or -</kbd>
-                        </div>
-                        
-                    </div>
-                </div>
-            
-                <div class="mb-12 last:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-center">4. Sculpting Tools</h3>
-                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">Learned during Project 2 and Project 4 for organic character work.</p>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Enter Sculpt Mode > Select Sculpt Mode</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + Tab</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Adjust Brush Size</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Adjust Brush Strength</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + F</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Smooth (Universal): Hold while using any brush </span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift </kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Invert Brush (Push vs. Pull) Hold while sculpting</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl </kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Masking (Draw a mask to protect geometry)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">M </kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Clear Mask</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + M</kbd>
-                        </div>
-                        
-                    </div>
-                </div>
-            
-                <div class="mb-12 last:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-center">5. UV Unwrapping & Texturing</h3>
-                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">From our Weeks 2, 3, and 11 refinement phases.</p>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Unwrap Menu (In Edit Mode)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">U</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Mark Seam > Mark Seam</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + E</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Clear Seam > Clear Seam</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + E</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Shader Editor Toggle</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + F3</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Texture Paint Mode > Texture Paint</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + Tab</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Sample Color (While in Paint Mode)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">S</kbd>
-                        </div>
-                        
-                    </div>
-                </div>
-            
-                <div class="mb-12 last:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-center">6. Rigging & Animation</h3>
-                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">The technical workflow from Weeks 5 and 6.</p>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Enter Pose Mode (With an Armature/Rig selected)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + Tab</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Insert Keyframe (While hovering over the 3D view or a property)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">I</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Play/Pause Timeline</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Spacebar</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Reset Pose</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Alt + G (Reset Position), Alt + R (Reset Rotation)</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Automatic Weighting > With Automatic Weights (After selecting mesh then rig)</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + P</kbd>
-                        </div>
-                        
-                    </div>
-                </div>
-            
-                <div class="mb-12 last:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-center">7. Lighting & Rendering</h3>
-                    <p class="text-center opacity-60 mb-8 max-w-xl mx-auto">Final presentation shortcuts used in Weeks 3, 8, and 12.</p>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Camera View</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Numpad 0</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Render Still Image</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F12</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Render Animation</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Ctrl + F12</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">View Last Render</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">F11</kbd>
-                        </div>
-                        
-                        <div class="flex items-center justify-between p-4 rounded-lg" style="background: var(--color-card); border-radius: var(--radius);">
-                            <span class="opacity-80">Walk Navigation</span>
-                            <kbd class="text-sm" style="color: var(--color-primary); border-color: var(--color-primary);">Shift + ~</kbd>
-                        </div>
-                        
-                    </div>
-                </div>
-            
-        </div>
-    </section>
-    
-
-    
-    <section class="py-12 px-6">
-        <div class="max-w-7xl mx-auto flex justify-between">
-            <a href="1semester1week9.html" class="px-6 py-3 rounded-lg border border-white/20 hover:bg-white/5 transition" style="border-radius: var(--radius);">← Week 9</a>
-            <a href="1semester1week11.html" class="px-6 py-3 rounded-lg text-white transition hover:scale-105" style="background: var(--color-primary); border-radius: var(--radius);">Week 11 →</a>
-        </div>
-    </section>
-    
-
-    <footer class="py-12 px-6 border-t border-white/10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                
-                <span class="text-sm opacity-60">© 2025 Dave Go 3D Integration. All rights reserved.</span>
-            </div>
-            <nav class="flex items-center gap-6">
-                <a href="1semester1.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Home</a><a href="courses.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Courses</a><a href="resources.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Resources</a><a href="links.html" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Links</a>
-            </nav>
-        </div>
-    </footer>
-</body>
-</html>
+    <script>
+        window.onclick=e=>{
+            if(!e.target.closest('.dd-content')&&!e.target.matches('button')){
+                document.querySelectorAll('.dd-content').forEach(d=>d.classList.remove('show'));
+            }
+            if(e.target.id === 'lb') { closeLightbox(); }
+        };
+        function closeLightbox() {
+            document.getElementById('lb').style.display = 'none';
+            document.getElementById('lbc').innerHTML = '';
+        }
+        function toggleExpand(id){
+            const w=document.getElementById('fw-'+id), e=document.getElementById('exp-'+id), b=w.querySelector('.expand-btn');
+            const sibs=Array.from(w.parentElement.children).filter(c=>c.classList.contains('focus-wrapper'));
+            if(e.classList.contains('hidden')) { sibs.forEach(s=>s.id!=='fw-'+id&&(s.style.display='none')); w.classList.add('expanded'); e.classList.remove('hidden'); b.innerText='Collapse Section ▴'; setTimeout(()=>w.scrollIntoView({behavior:'smooth'}),50); }
+            else { sibs.forEach(s=>s.style.display=''); w.classList.remove('expanded'); e.classList.add('hidden'); b.innerText='Expand Section ▾'; setTimeout(()=>w.scrollIntoView({behavior:'smooth', block: 'center'}),50); }
+        }
+        let lg=[], lidx=0;
+        function openLightbox(d, i){lg=JSON.parse(decodeURIComponent(d)); lidx=i||0; document.getElementById('lb').style.display='flex'; ulb();}
+        function lbDir(d){lidx=(lidx+d+lg.length)%lg.length; ulb();}
+        function ulb(){
+            const c=document.getElementById('lbc'), i=lg[lidx], isV=i.type==='video'||i.url.includes('youtube');
+            let embHtml = '';
+            if(i.type==='embed'){
+                embHtml = '<div class="w-full h-[60vh] flex items-center justify-center">' + (i.url.includes('<iframe') ? i.url : '<iframe src="' + i.url + '" class="w-full h-full" allowfullscreen></iframe>') + '</div>';
+            } else if (isV){
+                embHtml = '<iframe src="' + i.url.replace('watch?v=','embed/') + '" class="w-full aspect-video" allowfullscreen></iframe>';
+            } else {
+                embHtml = '<img src="' + i.url + '" class="max-h-[80vh] object-contain">';
+            }
+            c.innerHTML = embHtml;
+            document.getElementById('lbt').innerText=i.caption||'';
+            document.getElementById('lpb').style.display=lg.length>1?'block':'none'; document.getElementById('lnb').style.display=lg.length>1?'block':'none';
+            document.getElementById('lbts').innerHTML=lg.length>1?lg.map((g,j)=>'<img src="'+(g.type==='image'?g.url:'')+'" class="h-12 w-12 object-cover border-2 cursor-pointer '+(j===lidx?'border-white':'border-transparent')+' opacity-'+(j===lidx?'100':'40')+' bg-gray-800" onclick="lidx='+j+';ulb()">').join(''):'';
+        }
+        
+    </script>
+</body></html>
