@@ -25,7 +25,8 @@ import { render as renderReference, renderDetail as referenceDetail } from './vi
   import { mountRailSection as mountChecklistRail, toggle as toggleCheck, clearAll as clearChecklist } from './views/artistic-checklist.js';
   import { mountRail as mountDownloadsRail } from './views/downloads.js';
   import { mountRail as mountProjectAResearchRail } from './views/project-a-research.js';
-  import { mountRail as mountWeeklyGuideRail } from './views/weekly-guide.js';
+  import { mountRail as mountWeeklyGuideRail, fetchGuide, wireGuideLightbox } from './views/weekly-guide.js';
+  import { wireSection } from './views/rail-section.js';
   import { wireRailLightbox } from './core/rail-lightbox.js';
 import { esc, formatDate, pad } from './views/shared.js';
 
@@ -173,6 +174,115 @@ function teacherShell() {
   );
 }
 
+/* ---- Weekly guide rail updater ------------------------------------------- */
+
+function updateWeeklyGuideSection(guideData) {
+  if (typeof document === 'undefined') return;
+  const section = document.getElementById('wg-section');
+  if (!section) return;
+
+  if (!guideData) {
+    /* Empty shell: show section with no guide content. */
+    var title = 'Weekly Guide';
+    section.innerHTML =
+      '<button type="button" class="sc-rail__toggle" aria-expanded="false" aria-controls="wg-panel">' +
+        '<span class="sc-rail__title">' + title + '</span>' +
+        '<span class="sc-rail__chev" aria-hidden="true">&#8250;</span>' +
+      '</button>' +
+      '<div class="sc-rail__panel" id="wg-panel">' +
+        '<label class="sc-rail__sr" for="wg-search">Filter Weekly Guide</label>' +
+        '<input class="sc-rail__search" id="wg-search" type="search" placeholder="Filter weekly guide" aria-label="Filter Weekly Guide" autocomplete="off" />' +
+        '<nav class="sc-rail__nav" aria-label="Guide sections">' +
+          '<li class="sc-rail__empty">Open a lesson to see the weekly guide.</li>' +
+        '</nav>' +
+      '</div>';
+  } else {
+    /* Populated guide with accordion sections. */
+    var sec = guideData.sections || [];
+    var stepsHtml, hotkeysHtml, expectHtml, sectionBlock;
+    var stepsLi = function(step, idx) {
+      return '<li class="wg-step" data-step="' + idx + '">' + step + '</li>';
+    };
+    var hotkeyRow = function(h, sectionId) {
+      var imgHtml = '';
+      if (h.imageUrl && h.imageUrl.trim()) {
+        imgHtml =
+          '<div class="wg-thumb" data-lg-img="' + h.imageUrl + '" ' +
+            'data-lg-cap="' + (h.description || '') + '" tabindex="0" ' +
+            'aria-label="View image: ' + (h.description || '') + '">' +
+            '<div class="wg-thumb__frame">' +
+              '<img class="wg-thumb__img" src="' + h.imageUrl + '" alt="' + (h.description || '') + '" loading="lazy" />' +
+            '</div>' +
+            '<span class="wg-thumb__cap">' + (h.description || '') + '</span>' +
+          '</div>';
+      }
+      return (
+        '<div class="wg-hotkey sc-rail__row" data-hk-id="' + sectionId + '-' + (h.key || '') + '">' +
+          '<kbd class="wg-kbd">' + h.key + '</kbd>' +
+          '<span class="wg-hotkey__action">' + (h.action || '') + '</span>' +
+          (h.description ? '<span class="wg-hotkey__desc">' + h.description + '</span>' : '') +
+          imgHtml +
+        '</div>'
+      );
+    };
+    sectionBlock = function(s) {
+      stepsHtml = s.steps && s.steps.length ? '<ol class="wg-steps">' + s.steps.map(function(st, i) { return stepsLi(st, i); }).join('') + '</ol>' : '';
+      hotkeysHtml = s.hotkeys && s.hotkeys.length ? '<div class="wg-hotkeys">' + s.hotkeys.map(function(hk) { return hotkeyRow(hk, s.id); }).join('') + '</div>' : '';
+      expectHtml = s.expectations ? '<blockquote class="wg-expect">' + s.expectations + '</blockquote>' : '';
+      return (
+        '<details class="wg-section sc-rail__group" data-sec="' + s.id + '">' +
+          '<summary class="wg-section__summary">' + s.title + '</summary>' +
+          '<div class="wg-section__panel">' +
+            (s.description ? '<p class="wg-lead">' + s.description + '</p>' : '') +
+            stepsHtml + hotkeysHtml + expectHtml +
+          '</div>' +
+        '</details>'
+      );
+    };
+    var sectionsHtml = sec.map(function(s) { return sectionBlock(s); }).join('');
+    var nc = guideData.namingConventions || null;
+    var ncHtml = '';
+    if (nc) {
+      var prefixRows = nc.blenderPrefixes && nc.blenderPrefixes.length
+        ? nc.blenderPrefixes.map(function(p) {
+            return '<div class="wg-nc__row"><code class="wg-nc__code">' + p.prefix + '</code><span class="wg-nc__desc">' + p.meaning + '</span></div>';
+          }).join('')
+        : '';
+      ncHtml =
+        '<details class="wg-section wg-section--nc sc-rail__group" data-sec="naming-conventions">' +
+          '<summary class="wg-section__summary">Naming Conventions</summary>' +
+          '<div class="wg-section__panel">' +
+            '<div class="wg-nc">' +
+              (nc.renderExtension ? '<p class="wg-nc__rule"><strong>Render format:</strong> ' + nc.renderExtension + '</p>' : '') +
+              (nc.fileFormat ? '<p class="wg-nc__rule"><strong>File name:</strong> <code class="wg-nc__code">' + nc.fileFormat + '</code></p>' : '') +
+              (prefixRows ? '<div class="wg-nc__prefixes">' + prefixRows + '</div>' : '') +
+            '</div>' +
+          '</div>' +
+        '</details>';
+    }
+    section.innerHTML =
+      '<button type="button" class="sc-rail__toggle" aria-expanded="false" aria-controls="wg-panel">' +
+        '<span class="sc-rail__title">' + (guideData.title || 'Weekly Guide') + '</span>' +
+        '<span class="sc-rail__chev" aria-hidden="true">&#8250;</span>' +
+      '</button>' +
+      '<div class="sc-rail__panel" id="wg-panel">' +
+        '<label class="sc-rail__sr" for="wg-search">Filter Weekly Guide</label>' +
+        '<input class="sc-rail__search" id="wg-search" type="search" placeholder="Filter weekly guide" aria-label="Filter Weekly Guide" autocomplete="off" />' +
+        '<nav class="sc-rail__nav" aria-label="Guide sections">' +
+          (sectionsHtml || '<li class="sc-rail__empty">No guide for this week.</li>') +
+          ncHtml +
+          '<p class="sc-rail__nomatch" hidden>Nothing matches your filter.</p>' +
+        '</nav>' +
+      '</div>';
+  }
+
+  /* Re-wire rail-section interactions for the freshly injected DOM.
+     Clear the data-wired guard so wireSection does not skip on re-use. */
+  section.removeAttribute('data-wired');
+  wireSection(section, {});
+  wireGuideLightbox(section);
+}
+
 /* ---- Boot ---------------------------------------------------------------- */
 
 async function boot() {
@@ -273,6 +383,22 @@ async function boot() {
       if (Media && Media.attach) Media.attach();
     }
     window.addEventListener('route:change', highlightActive);
+
+    // Weekly Guide rail: fetch guide data when a lesson route activates.
+    window.addEventListener('route:change', async function () {
+      var path = Router.getPath();
+      if (!path || path.indexOf('/lessons/') !== 0) {
+        updateWeeklyGuideSection(null);
+        return;
+      }
+      var weekId = path.split('/')[2];
+      try {
+        var guide = await fetchGuide(weekId);
+        updateWeeklyGuideSection(guide);
+      } catch (e) {
+        updateWeeklyGuideSection(null);
+      }
+    });
 
     // Project A Research rail: mounted once at boot (static content,
     // no per-lesson update needed).
