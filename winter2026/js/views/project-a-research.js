@@ -142,8 +142,11 @@ function researchRow(r) {
 /* ---- Rail (Project A Research section) ---------------------------------- */
 
 /* Mount the Project A Research section ONCE into #shortcuts-rail.
-   The `researchList` parameter is kept for backward compatibility but is no
-   longer used; external link data is embedded in this module. */
+    The `researchList` parameter is kept for backward compatibility but is no
+    longer used; external link data is embedded in this module.
+
+    Route-scoped: the section is only visible when the current route path
+    matches /projects/a. On all other routes the section is hidden. */
 export function mountRail() {
   if (typeof document === 'undefined') return;
   var rail = document.getElementById('shortcuts-rail');
@@ -164,6 +167,29 @@ export function mountRail() {
   /* No onRow handler needed: links are native <a> elements with target="_blank". */
   var section = rail.querySelector('#pr-section');
   wireSection(section, {});
+
+  /* ---- Route scoping: only show on /projects/a --------------------------- */
+
+  function updateVisibility() {
+    /* Router is attached to window by app.js boot. */
+    var Router = (typeof window !== 'undefined' && window.Router) ? window.Router : null;
+    if (!section || !Router) return;
+    var path = Router.getPath();
+    var show = path === '/projects/a';
+    if (show) {
+      section.style.display = '';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+
+  /* Set initial visibility immediately. */
+  updateVisibility();
+
+  /* Re-evaluate on every route change. */
+  if (typeof window !== 'undefined' && window.addEventListener) {
+    window.addEventListener('route:change', updateVisibility);
+  }
 }
 
 export default { CATEGORIES, mountRail, EXTERNAL_LINKS };
