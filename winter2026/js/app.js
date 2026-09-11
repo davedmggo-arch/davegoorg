@@ -25,6 +25,7 @@ import { render as renderReference, renderDetail as referenceDetail } from './vi
   import { mountRailSection as mountChecklistRail, toggle as toggleCheck, clearAll as clearChecklist } from './views/artistic-checklist.js';
   import { mountRail as mountDownloadsRail } from './views/downloads.js';
   import { mountRail as mountProjectAResearchRail } from './views/project-a-research.js';
+  import { mountRail as mountWeeklyGuideRail } from './views/weekly-guide.js';
   import { wireRailLightbox } from './core/rail-lightbox.js';
 import { esc, formatDate, pad } from './views/shared.js';
 
@@ -287,6 +288,7 @@ async function boot() {
     mountChecklistRail(checklist);
     mountDownloadsRail(downloads);
     mountProjectAResearchRail(research);
+    mountWeeklyGuideRail(null);
     wireRailLightbox();
 
     // Sidebar toggle: show/hide the entire rail. Main content stays centered
