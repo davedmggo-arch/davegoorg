@@ -234,7 +234,7 @@ export function wireGuideLightbox(section) {
    Returns a promise resolving to the guide object or null. */
 export async function fetchGuide(weekId) {
   try {
-    const resp = await fetch('./data/weekly-guides.json');
+    const resp = await fetch('../../data/weekly-guides.json');
     if (!resp.ok) return null;
     const all = await resp.json();
     return all[weekId] || null;
