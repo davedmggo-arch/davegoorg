@@ -1,0 +1,315 @@
+/* ==========================================================================
+   css/lookup.css - Phase 2b student lookup views (glossary, research,
+   projects, reference).
+
+   Reuses the Phase 2a tokens (tokens.css) and base primitives (base.css):
+   .card, .chip, .btn, .grid, .muted, .empty, .sr-only, .md, .anim-rise.
+   Only NEW surface classes are defined here. Dark "midnight render" base,
+   warm amber accent, mobile-first, reduced-motion safe (the entrance animation
+   is already disabled in motion.css under prefers-reduced-motion).
+   ========================================================================== */
+
+/* ---- Shared lookup shell ------------------------------------------------- */
+.lookup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  padding-block: var(--sp-2);
+}
+.lookup > p.muted { max-width: 60ch; }
+
+/* ==========================================================================
+   GLOSSARY
+   ========================================================================== */
+.gl-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.gl-count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent-2);
+  white-space: nowrap;
+}
+
+/* Search field (no base .search exists, so define it here). */
+.search {
+  flex: 1 1 180px;
+  min-width: 0;
+  padding: var(--sp-3) var(--sp-4);
+  font: inherit;
+  font-size: var(--fs);
+  color: var(--ink);
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+.search::placeholder { color: var(--muted); }
+.search:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: var(--focus);
+}
+
+/* Category chips */
+.gl-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+.gl-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  font: inherit;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease),
+              border-color var(--t-fast) var(--ease),
+              background var(--t-fast) var(--ease);
+}
+.gl-chip:hover { color: var(--ink); border-color: var(--line-2); }
+.gl-chip:focus-visible { outline: none; box-shadow: var(--focus); }
+.gl-chip.is-on {
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-color: transparent;
+}
+.gl-chip__n {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  opacity: .8;
+}
+
+/* Result groups + rows */
+.gl-results { display: flex; flex-direction: column; gap: var(--sp-5); }
+.gl-group__h {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: var(--sp-3);
+}
+.gl-group__n {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color: var(--muted);
+  margin-inline-start: var(--sp-2);
+}
+.gl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.gl-row {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-2);
+  border-bottom: 1px solid var(--line);
+}
+.gl-row:nth-child(even) { background: rgba(255, 255, 255, 0.015); }
+.gl-row__term {
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  word-break: break-word;
+}
+.gl-row__term:hover { color: var(--accent); }
+.gl-row__term:focus-visible { outline: none; box-shadow: var(--focus); border-radius: var(--r-sm); }
+.gl-row__def {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  line-height: var(--lh);
+  overflow-wrap: anywhere;
+}
+.gl-empty { padding: var(--sp-5) 0; }
+.gl-more { margin: 0; text-align: center; }
+
+@media (max-width: 520px) {
+  .gl-row { grid-template-columns: 1fr; gap: var(--sp-1); }
+}
+
+/* ==========================================================================
+   RESEARCH / PROJECTS / REFERENCE cards
+   ========================================================================== */
+.rcard__top,
+.pcard__top,
+.xcard__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.rcard__title,
+.pcard__name,
+.xcard__title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.rcard__status { margin-top: var(--sp-2); }
+.rcard__tags,
+.xcard__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+}
+.rcard__sum {
+  margin-top: var(--sp-3);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  line-height: var(--lh);
+}
+.rcard__link,
+.pcard__link,
+.xcard__link { margin-top: var(--sp-4); }
+
+/* Projects: a stacked, single-column list (they are long-form). */
+.plist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+.pcard__meta {
+  margin-top: var(--sp-3);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+/* ==========================================================================
+   Detail views (shared across research / projects / reference / glossary)
+   ========================================================================== */
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  max-width: var(--measure);
+}
+.detail__kicker {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.detail__lead {
+  font-size: var(--fs-lg);
+  color: var(--ink);
+  line-height: var(--lh);
+}
+.detail__def {
+  font-size: var(--fs-lg);
+  color: var(--ink);
+  line-height: var(--lh);
+}
+.detail__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+.detail__facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+}
+.detail__facts > div { display: flex; flex-direction: column; gap: var(--sp-1); }
+.detail__facts dt {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--muted);
+}
+.detail__facts dd { margin: 0; color: var(--ink); font-weight: 500; }
+.detail__sec h2,
+.detail__meta h2,
+.detail__sources h2,
+.detail__links h2 {
+  font-size: var(--fs);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--sp-2);
+}
+.detail__sec ul,
+.detail__meta ul,
+.detail__sources ul,
+.detail__links ul {
+  margin: 0;
+  padding-inline-start: var(--sp-5);
+  color: var(--muted);
+  line-height: var(--lh);
+}
+.detail__extlink a {
+  color: var(--accent-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+.detail__extlink a:hover { text-decoration: underline; }
+.detail__body { color: var(--ink); line-height: var(--lh); }
+.detail__body p, .detail__def p { margin-block: var(--sp-3); }
+.detail__body h2, .detail__body h3 { color: var(--ink); margin-top: var(--sp-5); }
+.detail__body a { color: var(--accent-2); }
+.detail__back { margin-top: var(--sp-2); }
+
+/* ==========================================================================
+   Motion + responsive polish
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .gl-chip, .search, .gl-row, .card { transition: none; }
+}
+
+@media (min-width: 900px) {
+  /* Research / reference read best as a 2-up grid on wide screens. */
+  .grid--rcard, .grid--xcard { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==========================================================================
+   Phase 4: Reference sections (Blender-Related + Books)
+   ========================================================================== */
+.refsec__h {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: var(--sp-5);
+  margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--line);
+}
+.refsec__empty {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}
+.xcard__author {
+  margin-top: var(--sp-1);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+.xcard__title a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+.xcard__title a:hover { text-decoration: underline; }
+.xcard__note--body { margin-top: var(--sp-3); }
+.xcard__note--body p { margin: 0 0 var(--sp-2); }
+.xcard__note--body p:last-child { margin-bottom: 0; }
+.xcard__media { margin-top: var(--sp-3); }
+.xcard__media .media-grid { margin: 0; }

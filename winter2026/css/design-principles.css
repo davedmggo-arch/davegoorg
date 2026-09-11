@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Seneca 3D Integration - css/design-principles.css
+   Round 2.9 (102) - the student "Principles & Elements of Design" reference.
+
+   The separate #/design-principles PAGE was removed in round 2.9; the
+   reference is now fully INLINE in the persistent rail (the 3rd dropdown),
+   so this file only styles the inline rail rows. Each row shows the item's
+   full definition (`text`) plus its one-line environment note
+   (`environment`). The base row box (padding, min-height, hover, border,
+   radius, focus ring) comes from the shared `.sc-rail__row` rules in
+   shortcuts.css - only the two-line definition / note layout lives here.
+
+   Read-only reference: rows are <div>s (not buttons), so the pointer is
+   reset to the default cursor. All animation honours prefers-reduced-motion.
+   No emoji.
+   ========================================================================== */
+
+/* The inline design-principles row: a read-only reference, so default cursor.
+   The shared `.sc-rail__row` supplies the box + hover + focus ring. */
+.dp-rail__row {
+  display: block;
+  cursor: default;
+}
+
+.dp-rail__text {
+  display: block;
+}
+
+/* The item's definition (the `text` field reads "Name: definition..."). */
+.dp-rail__def {
+  display: block;
+  color: var(--ink);
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+}
+
+/* The one-line environment note (muted, slightly smaller). */
+.dp-rail__env {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  line-height: 1.35;
+}
+
+/* Reduced-motion: the inline rows are static text (no animation to disable),
+   kept here so the surface explicitly honours the preference. */
+@media (prefers-reduced-motion: reduce) {
+  .dp-rail__row { transition: none; }
+}

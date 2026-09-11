@@ -1,0 +1,100 @@
+[
+  {
+    "id": "dp-el-line",
+    "category": "elements",
+    "text": "Line: a mark with length and direction that guides the eye.",
+    "environment": "Edges, wires, and leading lines in a 3D scene create the visual paths the viewer follows.",
+    "order": 1
+  },
+  {
+    "id": "dp-el-shape",
+    "category": "elements",
+    "text": "Shape: a flat, two-dimensional area with a distinct boundary.",
+    "environment": "The flat faces and the silhouette of a form define its shape, the first thing the eye reads.",
+    "order": 2
+  },
+  {
+    "id": "dp-el-form",
+    "category": "elements",
+    "text": "Form: the three-dimensional mass that gives weight and volume.",
+    "environment": "Blockout and massing build the form first; it carries the read before any surface is added.",
+    "order": 3
+  },
+  {
+    "id": "dp-el-value",
+    "category": "elements",
+    "text": "Value: the light-to-dark scale that carries the read before colour.",
+    "environment": "Lighting and shadow set the value structure that makes a scene readable at a glance.",
+    "order": 4
+  },
+  {
+    "id": "dp-el-colour",
+    "category": "elements",
+    "text": "Colour: hue, saturation, and intensity used to separate, unify, or signal.",
+    "environment": "The palette and accent hues steer attention and set the mood of the space.",
+    "order": 5
+  },
+  {
+    "id": "dp-el-texture",
+    "category": "elements",
+    "text": "Texture: surface quality that signals material, age, and wear.",
+    "environment": "Materials and surface detail sell the physicality of an environment.",
+    "order": 6
+  },
+  {
+    "id": "dp-el-space",
+    "category": "elements",
+    "text": "Space: the area between and around forms, read through depth cues.",
+    "environment": "Overlap, scale falloff, and atmospheric perspective create the sense of depth in a 3D scene.",
+    "order": 7
+  },
+  {
+    "id": "dp-pr-balance",
+    "category": "principles",
+    "text": "Balance: the distribution of visual weight so the frame feels intentional.",
+    "environment": "Asymmetric versus symmetric massing and prop placement keep a composition feeling deliberate.",
+    "order": 8
+  },
+  {
+    "id": "dp-pr-contrast",
+    "category": "principles",
+    "text": "Contrast: the juxtaposition of opposites that creates tension and emphasis.",
+    "environment": "Value, colour, scale, and texture contrast create the focal points that draw the eye.",
+    "order": 9
+  },
+  {
+    "id": "dp-pr-emphasis",
+    "category": "principles",
+    "text": "Emphasis: the single point where the eye lands first and longest.",
+    "environment": "A hero element, a pool of light, or a colour accent anchors the scene's focal point.",
+    "order": 10
+  },
+  {
+    "id": "dp-pr-rhythm",
+    "category": "principles",
+    "text": "Rhythm: the repeated, patterned movement that leads the eye through the frame.",
+    "environment": "Repeating arches, columns, or props create a visual beat the eye travels along.",
+    "order": 11
+  },
+  {
+    "id": "dp-pr-repetition",
+    "category": "principles",
+    "text": "Repetition: recurring shapes, colours, or motifs that create unity.",
+    "environment": "Reusing a small set of forms and colours ties a whole environment together.",
+    "order": 12
+  },
+  {
+    "id": "dp-pr-scale",
+    "category": "principles",
+    "text": "Scale and Proportion: the relative size of parts to each other and to a body reference.",
+    "environment": "Sizing a room against a mannequin and props against one another makes scale believable.",
+    "order": 13
+  },
+  {
+    "id": "dp-pr-unity",
+    "category": "principles",
+    "text": "Unity: the sense that all the parts belong to one coherent whole.",
+    "environment": "A shared palette, light direction, and material family unify the scene into a single place.",
+    "order": 14
+  }
+]

@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Seneca 3D Integration - css/fieldsets.css
+   R2-2: the collapsible primitive for the long-scroll teacher Course page.
+   Styles native <details>/<summary> disclosures (see js/admin/fieldsets.js).
+   Reuses the design tokens from tokens.css. The chevron is CSS-drawn (no
+   emoji) and its rotation is disabled under prefers-reduced-motion.
+   ========================================================================== */
+
+/* ---- Section stack (the column of collapsibles on the Course page) ------- */
+.fieldset-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+/* ---- Base disclosure ------------------------------------------------------ */
+.fieldset {
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--bg-2);
+  overflow: hidden;
+}
+.fieldset + .fieldset,
+.fieldset-stack > .field--peritem {
+  /* spacing handled by the stack gap; keep individual blocks tidy */
+  margin: 0;
+}
+
+/* The toggle: a full-width, focusable, keyboard-operable disclosure button.
+   Native <summary> already exposes the correct ARIA / screen-reader state, so
+   we only style it (list-style removed to drop the UA triangle). */
+.fieldset__sum {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  padding: var(--sp-3) var(--sp-4);
+  cursor: pointer;
+  list-style: none;
+  font-weight: 650;
+  font-size: 1.02rem;
+  color: var(--ink);
+  background: transparent;
+  user-select: none;
+  transition: background var(--t-fast) var(--ease);
+}
+.fieldset__sum::-webkit-details-marker {
+  display: none;
+}
+.fieldset__sum:hover {
+  background: color-mix(in srgb, var(--ink) 5%, transparent);
+}
+.fieldset__sum:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: var(--r);
+}
+
+.fieldset__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* CSS-drawn chevron (no emoji). Down when closed, up when open. */
+.fieldset__sum::after {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform var(--t-fast) var(--ease);
+}
+.fieldset[open] > .fieldset__sum::after {
+  transform: rotate(225deg);
+}
+
+/* ---- Body ----------------------------------------------------------------- */
+.fieldset__body {
+  padding: 0 var(--sp-4) var(--sp-4);
+  border-top: 1px solid var(--line);
+  margin-top: -1px; /* overlap the summary's bottom so the rule sits between */
+}
+/* The body already contains .field blocks; give a little top breathing room. */
+.fieldset__body > .field:first-child {
+  margin-top: var(--sp-3);
+}
+
+/* ---- Per-item disclosures (Projects / Weeks rows) ------------------------- */
+.field--peritem {
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--bg-2);
+  padding: var(--sp-3) var(--sp-4);
+}
+.field--peritem .field__labelrow {
+  margin-bottom: var(--sp-3);
+}
+.alist--peritem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+/* A single project / week row: a compact disclosure. */
+.fs--item {
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.fs--item .fieldset__sum {
+  padding: var(--sp-2) var(--sp-3);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.fs--item .fieldset__body {
+  padding: 0 var(--sp-3) var(--sp-3);
+}
+
+/* Remove row inside an open item. */
+.alist__foot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--sp-2);
+}
+.alist__foot .alist__rm {
+  font-size: 0.85rem;
+  padding: var(--sp-1) var(--sp-2);
+}
+
+/* Empty list (no rows yet). */
+.alist__empty {
+  padding: var(--sp-2) var(--sp-3);
+  color: var(--ink);
+  opacity: 0.6;
+  font-style: italic;
+  border: 1px dashed var(--line);
+  border-radius: var(--r);
+}
+
+/* ==========================================================================
+   Reduced motion: kill the only transition (the chevron rotation).
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .fieldset__sum,
+  .fieldset__sum::after {
+    transition: none !important;
+  }
+}

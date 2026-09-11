@@ -1,0 +1,1609 @@
+{
+  "wk-01": {
+    "title": "Week 01: Foundations in Blender",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Creating & Editing Basic Shapes",
+        "description": "Add primitive meshes and edit them in Edit Mode to build simple geometry. Every Blender scene starts with shapes.",
+        "steps": [
+          "Press Shift+A to open the Add menu in the 3D Viewport",
+          "Select Mesh, then choose Cube, Sphere, Cylinder, or Plane",
+          "Enter Edit Mode with Tab to select faces, edges, or vertices",
+          "Extrude faces with E, then click to confirm the direction and length",
+          "Use Ctrl+R to add loop cuts for extra geometry detail",
+          "Press I to inset selected faces for clean, flush paneling",
+          "Return to Object Mode with Tab to place and scale the shape"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A", "action": "Open the Add menu to insert new objects", "imageUrl": "", "description": "The single most-used shortcut in Blender"},
+          {"key": "Tab", "action": "Toggle between Object Mode and Edit Mode", "imageUrl": "", "description": "Required before editing individual mesh elements"},
+          {"key": "E", "action": "Extrude the selected geometry", "imageUrl": "", "description": "Pulls new faces outward from selected elements"},
+          {"key": "Ctrl+R", "action": "Add a loop cut", "imageUrl": "", "description": "Inserts an edge loop for extra topology"},
+          {"key": "I", "action": "Inset selected faces", "imageUrl": "", "description": "Creates smaller, parallel faces inside the selection"}
+        ],
+        "expectations": "The teacher expects a scene with at least two distinct primitive shapes, each edited in Edit Mode to show extrusions and loop cuts. Geometry should be clean without overlapping or non-manifold edges."
+      },
+      {
+        "id": "materials",
+        "title": "Creating Basic Materials",
+        "description": "Assign colour, roughness, and metalness to surfaces using the Shader Editor and Material Properties panel.",
+        "steps": [
+          "Open the Shader Editor workspace or use the Material Properties tab",
+          "Click New under the Material section to create a material slot",
+          "Set the Base Colour picker to a visible, contrasting colour",
+          "Adjust Roughness (0 = mirror, 1 = fully matte) and Metallic (0 = dielectric, 1 = metal)",
+          "Enter Edit Mode, select faces, then click Assign in the material slot",
+          "Switch Viewport Shading to Material Preview (Z key) to see the result live"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle Viewport Shading modes", "imageUrl": "", "description": "Use Material Preview to see colour and roughness"},
+          {"key": "N", "action": "Toggle the side panel (Material tab on right)", "imageUrl": "", "description": "Quickly access material settings without switching workspace"}
+        ],
+        "expectations": "Each shape should carry at least one named material with a clearly chosen colour. The teacher checks for intentional roughness and metallic values, not just defaults. Material Preview mode must be demonstrated during the lesson."
+      },
+      {
+        "id": "lighting",
+        "title": "Lighting Your Scene",
+        "description": "Add and position lights so your shapes are readable, dimensional, and visually interesting.",
+        "steps": [
+          "Press Shift+A > Light > Area Light or Sun Light",
+          "Position the light above and slightly in front of your geometry",
+          "Open Light Properties and set Colour to a warm or cool tone",
+          "Adjust Power (Watts) so highlights are visible but not blown out",
+          "Add a second fill light on the opposite side at lower power for depth",
+          "Toggle World Properties to set a subtle background or HDRI"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A", "action": "Add a new light object", "imageUrl": "", "description": "Opens the same Add menu used for meshes"}
+        ],
+        "expectations": "The teacher looks for a key/fill two-light setup with deliberate colour choices. Shadows should read clearly. Overexposed or flat lighting will be flagged."
+      },
+      {
+        "id": "framing",
+        "title": "Framing & Camera Setup",
+        "description": "Place a camera to compose a deliberate shot rather than relying on the default viewport view.",
+        "steps": [
+          "Shift+A > Camera to add a camera object to the scene",
+          "Move and rotate the camera to frame your shapes nicely",
+          "Press Ctrl+Alt+Numpad 0 to make your camera the active camera",
+          "Press Numpad 0 to view through the camera",
+          "Press Numpad . to frame the selection in the current view",
+          "In Camera Properties, enable Camera Border to check safe framing"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "View through the active camera", "imageUrl": "", "description": "Essential for checking your final composition"},
+          {"key": "Numpad .", "action": "Frame the selection", "imageUrl": "", "description": "Quickly recenters the viewport on selected objects"},
+          {"key": "Ctrl+Alt+Numpad 0", "action": "Assign selected camera as active", "imageUrl": "", "description": "Required step before rendering"}
+        ],
+        "expectations": "The teacher expects a deliberate camera angle that shows the shapes clearly. The camera border should be used to verify framing. Composition should avoid extreme cropping or awkward dead space."
+      },
+      {
+        "id": "rendering",
+        "title": "Rendering Your Scene",
+        "description": "Produce a final still image using the active camera and save it to disk.",
+        "steps": [
+          "Ensure a camera is assigned as active (Ctrl+Alt+Numpad 0)",
+          "Open Render Properties and confirm the engine (Eevee or Cycles)",
+          "Set output resolution (1920x1080 is a good starting point)",
+          "Press F12 to render the still image",
+          "In the Image Editor that opens, click Image > Save As",
+          "Name the file with your name and week number, save as PNG or JPEG"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render the current frame", "imageUrl": "", "description": "Produces a high-quality still from the active camera"},
+          {"key": "Ctrl+F12", "action": "Render an animation sequence", "imageUrl": "", "description": "Not needed for Week 01, but good to know"}
+        ],
+        "expectations": "A clean, readable render is expected. The teacher checks that lighting, materials, and framing all appear correctly in the final image. The file must be saved and submitted."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "The essential keyboard shortcuts every Seneca 3D student should memorise in Week 01.",
+        "steps": [
+          "Memorise the top three: Shift+A, Tab, and G/R/S (grab, rotate, scale)",
+          "Use Z to cycle shading modes for checking your work",
+          "Press / (Numpad Slash) to isolate the selection in Local View",
+          "Press Alt+A to unhide everything if objects go missing",
+          "Practice these until they feel automatic before Week 02"
+        ],
+        "hotkeys": [
+          {"key": "G / R / S", "action": "Grab (move), Rotate, Scale", "imageUrl": "", "description": "The three fundamental transform tools"},
+          {"key": "Shift+D", "action": "Duplicate selected object", "imageUrl": "", "description": "Faster than Shift+D from the Add menu"},
+          {"key": "Alt+A", "action": "Unhide all objects", "imageUrl": "", "description": "Recovers hidden geometry quickly"},
+          {"key": "/", "action": "Toggle Local View", "imageUrl": "", "description": "Isolates the selection for focused editing"}
+        ],
+        "expectations": "The teacher expects students to use shortcuts naturally during the lesson, not mouse-click everything. Slow, deliberate mouse navigation will be noted as an area for improvement."
+      }
+    ]
+  },
+  "wk-02": {
+    "title": "Week 02: Blockout, Scale & Shape Hierarchy",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Blocking the Environment",
+        "description": "Block one environment in three variations using only large, medium, and small volumes. No detail, no textures. The mannequin file drops in as the scale anchor.",
+        "steps": [
+          "Pick a theme and its three location types from the lesson brief",
+          "Drop the mannequin or a 1.7-meter stand-in as the scale reference",
+          "Block large volumes: walls, floor, the big shapes of the space",
+          "Block medium volumes: desks, columns, plinths, shelves",
+          "Place one small object at the focal point to give the eye a landing spot",
+          "Test scale by moving the anchor closer, farther, and to the center",
+          "Cut one competitor that steals the eye from the focal point",
+          "Save as a-environment_wk2-a1.blend with clean collections"
+        ],
+        "hotkeys": [
+          {"key": "Shift+D", "action": "Duplicate to block repeating elements", "imageUrl": "", "description": "Fast way to add columns, shelves, or repeated props"},
+          {"key": "S", "action": "Scale selected objects", "imageUrl": "", "description": "Resize walls, props, or the anchor to test proportions"},
+          {"key": "M", "action": "Move selected items to a collection", "imageUrl": "", "description": "Keep large, medium, and small volumes organized"},
+          {"key": "Ctrl+A", "action": "Apply transforms", "imageUrl": "", "description": "Lock in scale and rotation before moving on"}
+        ],
+        "expectations": "The teacher expects three variations of one environment, each with a scale anchor, a named focal point, a clear hierarchy of large-medium-small volumes, and one competitor cut."
+      },
+      {
+        "id": "materials",
+        "title": "Material Placeholders for Blockout",
+        "description": "Assign simple colours to block volumes so the value contrast at the focal point reads during the study stage. No textures yet.",
+        "steps": [
+          "Create three material slots: one for the focal point, one for the background, one for the midground",
+          "Set base colour to establish value contrast: brightest or darkest on the focal point",
+          "Leave roughness at the default for now; textures arrive next week",
+          "Switch to Material Preview (Z) to verify the value read"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle to Material Preview", "imageUrl": "", "description": "Verify value contrast without rendering"},
+          {"key": "N", "action": "Open side panel for material assignment", "imageUrl": "", "description": "Quick access to the Material Properties tab"}
+        ],
+        "expectations": "Materials should be simple colour placeholders that establish value contrast. The teacher checks that the focal point is the strongest value in each variation."
+      },
+      {
+        "id": "lighting",
+        "title": "Designing for Light",
+        "description": "This week we do not light the scene yet, but we shape geometry so next week's light lands on purpose. Think about which surfaces will catch or throw cast shadows.",
+        "steps": [
+          "Review the Starter Scene light rig and note where the key light will sit",
+          "Shape edges and planes that will catch cast shadows when the key arrives",
+          "Keep surfaces simple; the light will carve the detail next week",
+          "If a surface feels too flat, add a subtle bevel or depth break now"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A > Light", "action": "Temporarily add a test light", "imageUrl": "", "description": "Preview how the blockout will react to a key light"}
+        ],
+        "expectations": "The teacher looks for blockout geometry that is designed to react to light. Surfaces that are all flat or all detailed will be flagged. The blockout should be a stage ready for light."
+      },
+      {
+        "id": "framing",
+        "title": "Camera for the Blockout Check",
+        "description": "Place a camera to check whether the eye path in each variation leads clearly to the focal point.",
+        "steps": [
+          "Add a camera and frame it to show the focal point in each variation",
+          "Use Numpad 0 to view through the camera and check composition",
+          "Verify the focal point sits in a strong position within the frame",
+          "Use Numpad . to reframe if the focal point is cut off"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "View through the active camera", "imageUrl": "", "description": "Check how the blockout reads from the camera angle"},
+          {"key": "Ctrl+Alt+Numpad 0", "action": "Set active camera", "imageUrl": "", "description": "Assign the camera before checking the frame"}
+        ],
+        "expectations": "The teacher expects each variation to be checked from a camera angle that shows the eye path clearly. The focal point should be legible and well-placed in the frame."
+      },
+      {
+        "id": "rendering",
+        "title": "Blockout Check Render",
+        "description": "Quick renders to verify the blockout reads before Checkpoint A1.",
+        "steps": [
+          "Press F12 for a quick EEVEE render of each variation",
+          "Check that the focal point reads in all three variations",
+          "Save the file with clean collections and no orphans",
+          "Submit by Wednesday for Checkpoint A1 review"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render current frame", "imageUrl": "", "description": "Quick check of how each variation reads"}
+        ],
+        "expectations": "A blockout render that shows three distinct variations, each with a readable focal point and clear scale. Rough is fine; the decisions must be clear."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Essential shortcuts for blocking environments efficiently.",
+        "steps": [
+          "Use G/R/S to position and scale block volumes quickly",
+          "Press Shift+D to duplicate repeating elements like shelves or columns",
+          "Use M to sort objects into large, medium, and small collections",
+          "Press Ctrl+A to apply transforms before moving to the next variation",
+          "Practice these until the blockout feels fast, not fussy"
+        ],
+        "hotkeys": [
+          {"key": "G / R / S", "action": "Grab, Rotate, Scale", "imageUrl": "", "description": "Position block volumes without the transform gizmo"},
+          {"key": "Shift+D", "action": "Duplicate selected object", "imageUrl": "", "description": "Fast repetition for columns, shelves, props"},
+          {"key": "M", "action": "Move to collection", "imageUrl": "", "description": "Organize by volume size"},
+          {"key": "Ctrl+A", "action": "Apply all transforms", "imageUrl": "", "description": "Lock in position before continuing"},
+          {"key": "/", "action": "Toggle Local View", "imageUrl": "", "description": "Isolate a variation for focused blocking"}
+        ],
+        "expectations": "The teacher expects students to navigate the blockout workflow with shortcuts, not mouse clicks. File organization using collections will be noted."
+      }
+    ]
+  },
+  "wk-03": {
+    "title": "Week 03: Lighting, Materials & Skyboxes",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Reviewing the Blockout",
+        "description": "The blockout is already set. This week we review it under light, material, and sky to confirm the shapes carve correctly.",
+        "steps": [
+          "Open the A1 blockout file from Week 02",
+          "Confirm the focal point is still legible in each variation",
+          "If a shape reads flat under light, note it for the details week",
+          "Do not model new geometry this week; the blockout is locked"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading modes", "imageUrl": "", "description": "Check solid vs material preview vs rendered"}
+        ],
+        "expectations": "The teacher expects the blockout to survive the lighting pass. If a shape reads flat, it is noted for Week 04. No new geometry is added this week."
+      },
+      {
+        "id": "materials",
+        "title": "Principled BSDF Materials & Colour Palette",
+        "description": "Set base colour and roughness on surfaces using the three-layer palette: Central colour, Secondary colour, and Accent colour.",
+        "steps": [
+          "Open the Principled BSDF in the Shader Editor",
+          "Set the Central colour on the majority of surfaces to establish mood",
+          "Set the Secondary colour on midground elements to separate depth",
+          "Set the Accent colour on the focal point to draw the eye",
+          "Adjust roughness: high for worn surfaces, low for clean ones",
+          "Check in Material Preview (Z) that the palette reads"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle to Material Preview", "imageUrl": "", "description": "Verify palette read without full render"},
+          {"key": "N", "action": "Open side panel", "imageUrl": "", "description": "Access Principled BSDF sliders quickly"}
+        ],
+        "expectations": "Each variation should carry a coherent three-layer palette. The teacher checks that Central, Secondary, and Accent colours agree with the theme and serve the focal point."
+      },
+      {
+        "id": "lighting",
+        "title": "The Three-Lamp Rig",
+        "description": "Place a key light, a fill light, and a rim light to carve the blockout shapes and make the focal point read.",
+        "steps": [
+          "Place the key light aimed at the focal point, at an angle to cast shape shadows",
+          "Place the fill light on the opposite side at lower intensity",
+          "Place the rim light behind and above to separate the subject from the background",
+          "Check that shadows fall with depth, not flatly",
+          "Move the key, not the camera, if the focal point disappears"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A > Light", "action": "Add a lamp", "imageUrl": "", "description": "Insert key, fill, or rim lights"},
+          {"key": "G / R / S", "action": "Position and aim lights", "imageUrl": "", "description": "Adjust light placement without the gizmo"}
+        ],
+        "expectations": "A deliberate three-lamp rig with the key light carving the focal point. The teacher checks for shadow depth, not just brightness. Flat or overexposed lighting will be flagged."
+      },
+      {
+        "id": "framing",
+        "title": "Camera & Composition Check",
+        "description": "Frame the lit variation to confirm the read holds from the camera angle.",
+        "steps": [
+          "View through the camera (Numpad 0) and check the focal point",
+          "Verify the lighting read works through the lens",
+          "Adjust the camera position if the focal point is cropped or lost",
+          "Enable Camera Border in Camera Properties to check safe framing"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check the final read from the camera"},
+          {"key": "Numpad .", "action": "Frame selection", "imageUrl": "", "description": "Recenter on the focal point"}
+        ],
+        "expectations": "The teacher expects the focal point to read clearly through the camera lens. The composition should show depth created by the three-lamp rig."
+      },
+      {
+        "id": "rendering",
+        "title": "Render & Check the Read",
+        "description": "Render one fully set-up variation to confirm the read before Checkpoint A1.",
+        "steps": [
+          "Render with EEVEE for speed or Cycles for quality",
+          "Check that the focal point reads, the material agrees with the light, and the sky agrees with the scene",
+          "If one thing is wrong, adjust it and re-render",
+          "Save as a-environment_wk3-a1.blend"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce the checkpoint render"}
+        ],
+        "expectations": "One fully set-up variation that reads as a place, not shapes in a gray void. The teacher checks lighting, materials, and skybox coherence."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Essential shortcuts for lighting and material workflow.",
+        "steps": [
+          "Use Shift+A to add lights quickly",
+          "Use G/R/S to position and aim lamps without the gizmo",
+          "Press Z to cycle shading modes and check the material read",
+          "Press F12 for quick renders during setup",
+          "Press N to open the side panel for light and material properties"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A", "action": "Add menu", "imageUrl": "", "description": "Insert lights and other objects"},
+          {"key": "Z", "action": "Cycle shading modes", "imageUrl": "", "description": "Toggle between solid, material preview, and rendered"},
+          {"key": "N", "action": "Toggle side panel", "imageUrl": "", "description": "Quick access to properties"},
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Check the final read"}
+        ],
+        "expectations": "The teacher expects students to iterate quickly using shading modes and render checks. Slow workflow will be noted."
+      }
+    ]
+  },
+  "wk-04": {
+    "title": "Week 04: Details, Variations & Lighting Impressions",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Adding Quick Details",
+        "description": "Add three small details to the Project A winner where the eye needs something to lock onto. Small edges, not big props.",
+        "steps": [
+          "Identify three flat surfaces in the winner that need an edge to lock onto",
+          "Model a ledge on a flat wall, a seam on a flat floor, or depth in a flat corner",
+          "Think about what props belong to the chosen timeframe",
+          "Render after each detail to confirm it earns its spot",
+          "Keep details small; a bevel or bump often does more work than a new prop"
+        ],
+        "hotkeys": [
+          {"key": "E", "action": "Extrude to add detail geometry", "imageUrl": "", "description": "Pull new faces for ledges, seams, or depth breaks"},
+          {"key": "Ctrl+B", "action": "Bevel selected edges", "imageUrl": "", "description": "Add subtle edge detail quickly"},
+          {"key": "I", "action": "Inset faces", "imageUrl": "", "description": "Create flush paneling or surface breaks"}
+        ],
+        "expectations": "Three details added that land where the eye is already looking. The teacher checks that each detail does work, not just decoration."
+      },
+      {
+        "id": "materials",
+        "title": "Material Consistency Check",
+        "description": "Verify that the material palette still holds after details are added. No new materials are needed unless a detail demands one.",
+        "steps": [
+          "Check that new details carry the existing material palette",
+          "If a detail needs a different roughness, adjust the Principled BSDF",
+          "Confirm the Central/Secondary/Accent colour system is intact"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Material Preview", "imageUrl": "", "description": "Quick check of material read"}
+        ],
+        "expectations": "The teacher expects the material palette to remain coherent. New details should not introduce palette chaos."
+      },
+      {
+        "id": "lighting",
+        "title": "Lighting Impressions: Angling for Shape",
+        "description": "Move the key light to graze surfaces, check shadows, and confirm objects earn their shape through light angles, not brightness.",
+        "steps": [
+          "Move the key light until it grazes a surface and casts a shape shadow",
+          "Adjust the fill to lift one corner the key left dark",
+          "Pull the rim until a form separates from the background",
+          "Render after each move to check the shape read",
+          "The key grazes, the fill lifts, the rim separates: three moves, three jobs"
+        ],
+        "hotkeys": [
+          {"key": "G / R", "action": "Position and rotate the key light", "imageUrl": "", "description": "Angle the light for grazing shadows"},
+          {"key": "N", "action": "Side panel for light power", "imageUrl": "", "description": "Adjust fill and rim intensity"}
+        ],
+        "expectations": "Lighting that shapes objects through angle, not just brightness. The teacher checks for grazing shadows, lifted corners, and rim separation."
+      },
+      {
+        "id": "framing",
+        "title": "Testing a Variation",
+        "description": "Shift the key light thirty degrees, move the camera, or shift the palette to test whether the focal point survives.",
+        "steps": [
+          "Shift the key light thirty degrees and render",
+          "Check whether the focal point stays strong or vanishes",
+          "If it survives, the hierarchy is real. If not, reinforce it",
+          "Save both the base and the variation with separate names"
+        ],
+        "hotkeys": [
+          {"key": "Shift+D", "action": "Duplicate the light to test a new angle", "imageUrl": "", "description": "Quick comparison of two light setups"},
+          {"key": "F12", "action": "Render the variation", "imageUrl": "", "description": "Check the survival of the focal point"}
+        ],
+        "expectations": "A variation that proves the hierarchy is real, not lucky. The teacher checks that the focal point survives the shifted setup."
+      },
+      {
+        "id": "rendering",
+        "title": "Render Both Passes",
+        "description": "Render the details pass and the variation pass to confirm both reads.",
+        "steps": [
+          "Render the details pass with EEVEE or Cycles",
+          "Render the variation pass",
+          "Compare the two: does the focal point hold in both?",
+          "Save as a-environment_wk4-details.blend and a-environment_wk4-variation.blend"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce both passes"}
+        ],
+        "expectations": "Two renders showing the scene before and after the variation. The teacher checks that the hierarchy survives the test."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for detail modeling and lighting iteration.",
+        "steps": [
+          "Use E to extrude detail geometry",
+          "Use Ctrl+B for quick bevels on edges",
+          "Use G/R to angle lights for grazing shadows",
+          "Use Shift+D to duplicate lights for comparison",
+          "Use F12 to render after every move"
+        ],
+        "hotkeys": [
+          {"key": "E", "action": "Extrude", "imageUrl": "", "description": "Add detail geometry"},
+          {"key": "Ctrl+B", "action": "Bevel", "imageUrl": "", "description": "Quick edge detail"},
+          {"key": "G / R", "action": "Position and rotate", "imageUrl": "", "description": "Angle lights"},
+          {"key": "Shift+D", "action": "Duplicate", "imageUrl": "", "description": "Compare light setups"}
+        ],
+        "expectations": "The teacher expects rapid iteration between detail placement, light angling, and render checks."
+      }
+    ]
+  },
+  "wk-05": {
+    "title": "Week 05: Project B Kickoff - The Funpack & Turnaround",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Blocking a Subject in Three Views",
+        "description": "Pick a character or prop and block its volumes from front, side, and back. The subject must hold together as a sculpture, not just a picture.",
+        "steps": [
+          "Write the one-sentence what it is about",
+          "Block volumes: head, mass, base using simple primitives",
+          "Build the front view, then turn it to check the side and back",
+          "Fix the volume, not the surface, if the side or back reads weak",
+          "Check the overall silhouette at each of the three views",
+          "Start one expression or variant",
+          "Save as b-subject_wk5-b1.blend"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A > Mesh", "action": "Add primitives for blocking", "imageUrl": "", "description": "Insert cubes, spheres, and cylinders for volumes"},
+          {"key": "Tab", "action": "Toggle Edit Mode", "imageUrl": "", "description": "Edit individual mesh volumes"},
+          {"key": "S", "action": "Scale volumes", "imageUrl": "", "description": "Resize head, mass, and base proportions"},
+          {"key": "/", "action": "Toggle Local View", "imageUrl": "", "description": "Isolate the subject for focused blocking"},
+          {"key": "Ctrl+Numpad 1/3/7", "action": "Snap to front, side, top views", "imageUrl": "", "description": "Check each view accurately"}
+        ],
+        "expectations": "A subject blocked into a three-view turnaround with a legible silhouette from every angle. The teacher checks that the side and back are built, not guessed."
+      },
+      {
+        "id": "materials",
+        "title": "Material Placeholders for the Subject",
+        "description": "Assign simple colours to the subject volumes so the silhouette reads in the viewport. No textures yet.",
+        "steps": [
+          "Create one material slot for the subject",
+          "Set a base colour that contrasts with the background",
+          "Set a moderate roughness so the viewport read is clear",
+          "Switch to Material Preview to confirm the silhouette"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Material Preview", "imageUrl": "", "description": "Check silhouette read"}
+        ],
+        "expectations": "A simple material that makes the subject legible in the viewport. The teacher checks contrast against the background."
+      },
+      {
+        "id": "lighting",
+        "title": "Basic Subject Lighting",
+        "description": "Set a simple three-lamp rig on the subject so the volumes read clearly for the turnaround.",
+        "steps": [
+          "Place a key light to illuminate the front volume",
+          "Place a fill light on the opposite side",
+          "Place a rim light behind to separate from the background",
+          "Check that all three views read clearly under the rig"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A > Light", "action": "Add lamps", "imageUrl": "", "description": "Insert the three-lamp rig"}
+        ],
+        "expectations": "A lighting rig that makes the subject volumes readable from all three views. The teacher checks for clear separation of head, mass, and base."
+      },
+      {
+        "id": "framing",
+        "title": "Three-View Camera Setup",
+        "description": "Set up the camera to frame the subject for the three-view sheet: front, side, and back.",
+        "steps": [
+          "Frame the front view with the camera centered on the subject",
+          "Check the side and back views through the camera or viewport snaps",
+          "Verify the silhouette reads as one shape in each view",
+          "Use Numpad 1, 3, 7 to snap between views"
+        ],
+        "hotkeys": [
+          {"key": "Ctrl+Numpad 1/3/7", "action": "Snap to front/side/top", "imageUrl": "", "description": "Check views accurately"},
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check the turnaround frame"}
+        ],
+        "expectations": "Three camera views showing the subject as a legible sculpture. The teacher checks silhouette clarity at each angle."
+      },
+      {
+        "id": "rendering",
+        "title": "Turnaround Render",
+        "description": "Render the three-view sheet and the started variant for Checkpoint B1.",
+        "steps": [
+          "Render the front, side, and back views",
+          "Render the one started expression or variant",
+          "Check that the silhouette holds across all views",
+          "Save the file cleanly for B1 on Wednesday"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce turnaround renders"}
+        ],
+        "expectations": "A three-view sheet showing the subject from every angle, plus one started variant. The teacher checks volume decisions, not surface polish."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for subject blocking and three-view workflow.",
+        "steps": [
+          "Use Shift+A to add primitive volumes",
+          "Use Tab to toggle Edit Mode for volume shaping",
+          "Use Ctrl+Numpad 1/3/7 to snap between views",
+          "Use / to isolate the subject in Local View",
+          "Use Ctrl+A to apply transforms on each volume"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A", "action": "Add primitives", "imageUrl": "", "description": "Block volumes quickly"},
+          {"key": "Tab", "action": "Edit Mode", "imageUrl": "", "description": "Shape individual volumes"},
+          {"key": "Ctrl+Numpad 1/3/7", "action": "Snap to views", "imageUrl": "", "description": "Front, side, top accuracy"},
+          {"key": "/", "action": "Local View", "imageUrl": "", "description": "Isolate the subject"},
+          {"key": "Ctrl+A", "action": "Apply transforms", "imageUrl": "", "description": "Lock in volume decisions"}
+        ],
+        "expectations": "The teacher expects efficient use of view snapping and local view during the blockout workflow."
+      }
+    ]
+  },
+  "wk-06": {
+    "title": "Week 06: Expression, Variants & Silhouette Check",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Building Expressions on the Volume",
+        "description": "Give the B1 subject a chosen expression and two or three variants. Build the face on the volume, not on top of it.",
+        "steps": [
+          "Re-read the one-sentence what it is about",
+          "Build the chosen expression that serves the beat",
+          "Make two or three real variants, not nudges of the first",
+          "Each variant must be a choice we could have shipped",
+          "Build on the existing volume; if the face feels pasted on, fix the volume underneath"
+        ],
+        "hotkeys": [
+          {"key": "Tab", "action": "Edit Mode", "imageUrl": "", "description": "Shape the face on the volume"},
+          {"key": "E", "action": "Extrude for expression detail", "imageUrl": "", "description": "Pull new geometry for mouth or eye shapes"},
+          {"key": "G / R / S", "action": "Position, rotate, scale facial features", "imageUrl": "", "description": "Adjust expression without adding geometry"}
+        ],
+        "expectations": "A chosen expression plus two or three real variants, each serving the one-sentence about. The teacher checks that the face is built on the volume."
+      },
+      {
+        "id": "materials",
+        "title": "Material Consistency Across Variants",
+        "description": "Ensure the material read holds across all expression variants.",
+        "steps": [
+          "Check that each variant reads with the same material palette",
+          "If the expression changes the volume shape, verify the material still agrees",
+          "No new materials needed unless a variant demands it"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Material Preview", "imageUrl": "", "description": "Quick check across variants"}
+        ],
+        "expectations": "The teacher checks that all variants carry a consistent material read. Inconsistency will be flagged."
+      },
+      {
+        "id": "lighting",
+        "title": "Lighting the Face",
+        "description": "Verify the three-lamp rig still reads the face correctly across all variants.",
+        "steps": [
+          "Check the key light on each expression variant",
+          "Adjust the fill if a variant creates new shadows that hide the face",
+          "Check the rim still separates the subject from the background"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Adjust light properties quickly"}
+        ],
+        "expectations": "Lighting that reads every variant clearly. The teacher checks for shadow depth on the face without overexposure."
+      },
+      {
+        "id": "framing",
+        "title": "Silhouette Check",
+        "description": "Turn each variant to the side, squint, and read the outer shape. The face must not change what the subject is.",
+        "steps": [
+          "Turn each variant to the side view",
+          "Squint and read the outer shape as one shape",
+          "If the face changed the subject, pull the face back until the silhouette carries again",
+          "Label each variant in the file"
+        ],
+        "hotkeys": [
+          {"key": "Ctrl+Numpad 3", "action": "Side view", "imageUrl": "", "description": "Check silhouette from the side"},
+          {"key": "Z > B", "action": "Wireframe overlay", "imageUrl": "", "description": "Check silhouette against the wireframe"}
+        ],
+        "expectations": "A silhouette check passed on every variant. The teacher checks that the outer shape still reads as the subject, not the face."
+      },
+      {
+        "id": "rendering",
+        "title": "Render the Expression Sheet",
+        "description": "Render each variant for Checkpoint B2.",
+        "steps": [
+          "Render the chosen expression and all variants",
+          "Check each render for silhouette legibility",
+          "Save the one-sentence why this one for each variant",
+          "Save as b-subject_wk6-b2.blend"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce expression renders"}
+        ],
+        "expectations": "An expression sheet with a chosen face and two or three real variants. The teacher checks decision quality, not polish."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for expression and variant workflow.",
+        "steps": [
+          "Use Tab to enter Edit Mode for face shaping",
+          "Use E to extrude expression detail",
+          "Use Ctrl+Numpad 3 to check the side silhouette",
+          "Use Shift+D to duplicate a variant and modify it",
+          "Use Z to cycle shading modes and check the read"
+        ],
+        "hotkeys": [
+          {"key": "Tab", "action": "Edit Mode", "imageUrl": "", "description": "Shape expressions"},
+          {"key": "E", "action": "Extrude", "imageUrl": "", "description": "Add facial detail"},
+          {"key": "Ctrl+Numpad 3", "action": "Side view", "imageUrl": "", "description": "Silhouette check"},
+          {"key": "Shift+D", "action": "Duplicate variant", "imageUrl": "", "description": "Start a new variant"}
+        ],
+        "expectations": "The teacher expects efficient variant creation and silhouette checking using shortcuts."
+      }
+    ]
+  },
+  "wk-07": {
+    "title": "Week 07: Materials & Day/Night Heroes",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Subject Geometry Review",
+        "description": "The subject geometry is locked. This week we verify it reads under genuinely different light.",
+        "steps": [
+          "Open the B2 subject file",
+          "Verify the chosen expression and silhouette hold",
+          "No new geometry this week; the focus is material and light",
+          "If a surface reads flat under the new light, note it for polish week"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading modes", "imageUrl": "", "description": "Verify geometry read"}
+        ],
+        "expectations": "The subject geometry is locked. The teacher checks that it survives the material and light changes without needing new geometry."
+      },
+      {
+        "id": "materials",
+        "title": "Principled BSDF Material Direction",
+        "description": "Set base colour and roughness to serve the one-sentence about. One or two directions, not five.",
+        "steps": [
+          "Re-read the one-sentence what it is about",
+          "In the Principled BSDF, set base colour and roughness to serve the sentence",
+          "If the sentence says lived-in, use rough, tarnished materials",
+          "If it says new, use smooth, clean materials",
+          "Test the material direction against both day and night lights"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Access Principled BSDF sliders"},
+          {"key": "Z", "action": "Material Preview", "imageUrl": "", "description": "Quick material check"}
+        ],
+        "expectations": "A material direction that serves the one-sentence about. The teacher checks for intentional roughness and base colour choices."
+      },
+      {
+        "id": "lighting",
+        "title": "Day/Night Hero Pair",
+        "description": "Render two heroes: a warm wide day hero and a cool tight night hero. The night hero is the proof of portability.",
+        "steps": [
+          "Set the day hero: warm key, soft fill, gentle rim",
+          "Render the day hero and check the 1-2-3 read",
+          "Set the night hero: cool key, tight fill, strong rim",
+          "Render the night hero and check the focal part under the rim",
+          "If the focal part vanishes at night, the material is doing the silhouette job; fix it"
+        ],
+        "hotkeys": [
+          {"key": "Shift+D", "action": "Duplicate the light setup", "imageUrl": "", "description": "Quick switch between day and night rigs"},
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Adjust colour temperature and power"}
+        ],
+        "expectations": "Two genuinely different hero renders. The teacher checks that the subject reads as the same subject in both day and night."
+      },
+      {
+        "id": "framing",
+        "title": "Camera Framing for Heroes",
+        "description": "Frame each hero to show the subject clearly against the background.",
+        "steps": [
+          "Frame the day hero to show the subject in its home light",
+          "Frame the night hero to show the subject under the rim",
+          "Use Numpad 0 to verify the read through the camera",
+          "Check that the subject separates from the background in both"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check hero framing"},
+          {"key": "Numpad .", "action": "Frame selection", "imageUrl": "", "description": "Recenter on the subject"}
+        ],
+        "expectations": "Hero framing that shows the subject clearly in both day and night. The teacher checks separation from the background."
+      },
+      {
+        "id": "rendering",
+        "title": "Final Hero Renders",
+        "description": "Render the day and night heroes with Cycles or clean EEVEE.",
+        "steps": [
+          "Set the render engine to Cycles for quality or EEVEE for speed",
+          "Render the day hero at full resolution",
+          "Render the night hero at full resolution",
+          "Check both renders for the 1-2-3 read and rim separation",
+          "Save as b-subject_wk7-heroes.blend with day and night labeled"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce final hero renders"}
+        ],
+        "expectations": "Two hero renders that prove the subject is portable. The teacher checks that the subject reads the same in both."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for material and hero render workflow.",
+        "steps": [
+          "Use N to open the side panel for material and light settings",
+          "Use Shift+D to duplicate light rigs for day/night comparison",
+          "Use Z to cycle shading modes during material setup",
+          "Use F12 for quick render checks",
+          "Use G/R/S to fine-tune light placement"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Quick property access"},
+          {"key": "Shift+D", "action": "Duplicate", "imageUrl": "", "description": "Copy light rigs"},
+          {"key": "Z", "action": "Cycle shading", "imageUrl": "", "description": "Check material read"},
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Check hero passes"}
+        ],
+        "expectations": "The teacher expects efficient iteration between material setup, lighting changes, and render checks."
+      }
+    ]
+  },
+  "wk-08": {
+    "title": "Week 08: Self-Directed Review & Polish",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Reviewing All Projects",
+        "description": "No new geometry this week. Open all project files and review shapes, silhouettes, and volume decisions.",
+        "steps": [
+          "Open the Project A environment file and check the blockout shapes",
+          "Open the Project B subject file and check the volume and expression",
+          "If a shape reads weak, note it for the polish pass",
+          "No new modeling; the focus is review and cleanup"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading modes", "imageUrl": "", "description": "Review shapes in solid and wireframe"}
+        ],
+        "expectations": "A honest review of all projects. The teacher checks that the student identifies weak shapes and plans for them."
+      },
+      {
+        "id": "materials",
+        "title": "Material Cleanup",
+        "description": "Review all material slots and remove unused ones. Check that each project carries a consistent palette.",
+        "steps": [
+          "Remove unused materials from all project files",
+          "Check that the palette is consistent across each project",
+          "Label materials clearly if they are not already"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Access material list"}
+        ],
+        "expectations": "Clean material slots with no unused entries. The teacher checks for file hygiene."
+      },
+      {
+        "id": "lighting",
+        "title": "Lighting Review",
+        "description": "Check that all lighting rigs are clean and intentional. Remove any test lights.",
+        "steps": [
+          "Review all lights in each project file",
+          "Remove test lights and keep only the intentional rig",
+          "Label the key, fill, and rim lights if they are not already"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Check light list"}
+        ],
+        "expectations": "Clean lighting rigs with labeled lights. The teacher checks for intentionality, not just brightness."
+      },
+      {
+        "id": "framing",
+        "title": "Camera Review",
+        "description": "Check all camera angles and confirm the focal point reads in each.",
+        "steps": [
+          "Review each camera angle in both projects",
+          "Confirm the focal point reads through the camera",
+          "Fix any framing that crops the focal point"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Review framing"}
+        ],
+        "expectations": "Clean camera framing across all projects. The teacher checks that the focal point survives every angle."
+      },
+      {
+        "id": "rendering",
+        "title": "Final Review Renders",
+        "description": "Render both projects one more time to confirm the reads.",
+        "steps": [
+          "Render the environment hero",
+          "Render the subject day and night heroes",
+          "Check all renders for legibility",
+          "Save all files cleanly"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce review renders"}
+        ],
+        "expectations": "Clean renders showing both projects are ready for the next phase. The teacher checks file hygiene and read clarity."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for review and cleanup workflow.",
+        "steps": [
+          "Use Z to cycle shading modes during review",
+          "Use N to access property panels quickly",
+          "Use Numpad 0 to check camera framing",
+          "Use F12 to produce review renders"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading", "imageUrl": "", "description": "Review modes"},
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Property access"},
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check framing"}
+        ],
+        "expectations": "The teacher expects efficient review workflow using shading modes and camera checks."
+      }
+    ]
+  },
+  "wk-09": {
+    "title": "Week 09: Project C Kickoff - Character & Scene",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Blocking a Character in Environment",
+        "description": "Pick a character and place them in a simple environment. The character must feel like they belong, not pasted in.",
+        "steps": [
+          "Write the one-sentence what it is about",
+          "Block the character volumes: head, mass, base",
+          "Block the environment with three planes: floor, wall, ceiling",
+          "Place the character in the environment and check the relationship",
+          "If the character feels pasted, move the environment or the character until they agree",
+          "Save as c-character-scene_wk9-c1.blend"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A > Mesh", "action": "Add primitives", "imageUrl": "", "description": "Block character and environment volumes"},
+          {"key": "G / R / S", "action": "Position and scale", "imageUrl": "", "description": "Adjust character and environment placement"},
+          {"key": "/", "action": "Local View", "imageUrl": "", "description": "Isolate the character or environment"}
+        ],
+        "expectations": "A character placed in an environment that feels like a relationship, not a paste job. The teacher checks the connection between character and space."
+      },
+      {
+        "id": "materials",
+        "title": "Simple Materials for Both",
+        "description": "Assign simple materials to the character and environment that agree with each other.",
+        "steps": [
+          "Set a base colour for the character that contrasts with the environment",
+          "Set a base colour for the environment that supports the character",
+          "Adjust roughness on both so the viewport read is clear",
+          "Check in Material Preview that the relationship holds"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Material Preview", "imageUrl": "", "description": "Check material read"}
+        ],
+        "expectations": "Materials that establish a clear character-environment relationship. The teacher checks contrast and coherence."
+      },
+      {
+        "id": "lighting",
+        "title": "Integrated Lighting",
+        "description": "Set a lighting rig that serves both the character and the environment.",
+        "steps": [
+          "Place the key light to illuminate both character and environment",
+          "Place the fill to lift shadows in the environment without flattening the character",
+          "Place the rim to separate the character from the environment",
+          "Check that the light unifies the scene"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A > Light", "action": "Add lamps", "imageUrl": "", "description": "Insert integrated lights"}
+        ],
+        "expectations": "Lighting that unifies character and environment. The teacher checks for scene cohesion, not just individual reads."
+      },
+      {
+        "id": "framing",
+        "title": "Camera Framing the Relationship",
+        "description": "Frame the shot to show the character in their environment.",
+        "steps": [
+          "Frame the shot to include both the character and the environment",
+          "Check that the character is the focal point but the environment supports it",
+          "Use Numpad 0 to verify the read through the camera"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check relationship framing"},
+          {"key": "Numpad .", "action": "Frame selection", "imageUrl": "", "description": "Recenter on the character"}
+        ],
+        "expectations": "A framing that shows the character-environment relationship. The teacher checks that the character is the focal point."
+      },
+      {
+        "id": "rendering",
+        "title": "Checkpoint C1 Render",
+        "description": "Render the character in environment for Checkpoint C1.",
+        "steps": [
+          "Render the scene with EEVEE or Cycles",
+          "Check that the character reads as the focal point",
+          "Save as c-character-scene_wk9-c1.blend"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce C1 render"}
+        ],
+        "expectations": "A render showing the character placed in their environment. The teacher checks the relationship, not polish."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for character-environment blocking.",
+        "steps": [
+          "Use Shift+A to add volumes",
+          "Use G/R/S to position and scale",
+          "Use / to isolate character or environment",
+          "Use Numpad 0 to check framing",
+          "Use Ctrl+A to apply transforms"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A", "action": "Add primitives", "imageUrl": "", "description": "Block volumes"},
+          {"key": "G / R / S", "action": "Transform", "imageUrl": "", "description": "Position and scale"},
+          {"key": "/", "action": "Local View", "imageUrl": "", "description": "Isolate elements"},
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check framing"}
+        ],
+        "expectations": "The teacher expects efficient blocking workflow using shortcuts."
+      }
+    ]
+  },
+  "wk-10": {
+    "title": "Week 10: Camera Angles & Story Beats",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Reviewing the Relationship",
+        "description": "The character-environment relationship is set. This week we test it from multiple angles.",
+        "steps": [
+          "Open the C1 file",
+          "Verify the character and environment read together",
+          "No new geometry; the focus is camera and story",
+          "If a shape reads weak from a new angle, note it for polish"
+        ],
+        "hotkeys": [
+          {"key": "Ctrl+Numpad 1/3/7", "action": "Snap to views", "imageUrl": "", "description": "Check the relationship from multiple angles"}
+        ],
+        "expectations": "The teacher checks that the relationship survives multiple camera angles."
+      },
+      {
+        "id": "materials",
+        "title": "Material Read Under Camera Changes",
+        "description": "Verify the materials still hold when the camera angle changes.",
+        "steps": [
+          "Check the material read from each new camera angle",
+          "If the character blends into the environment from one angle, note it",
+          "No new materials needed"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Material Preview", "imageUrl": "", "description": "Quick check"}
+        ],
+        "expectations": "Materials that hold across camera angles. The teacher checks for consistency."
+      },
+      {
+        "id": "lighting",
+        "title": "Lighting for Each Angle",
+        "description": "Adjust the lighting rig for each camera angle to maintain the read.",
+        "steps": [
+          "Move the key light for each new angle to maintain the read",
+          "Check the fill and rim for each angle",
+          "Save the lighting setup per angle"
+        ],
+        "hotkeys": [
+          {"key": "G / R", "action": "Position lights", "imageUrl": "", "description": "Adjust per angle"}
+        ],
+        "expectations": "Lighting that supports each camera angle. The teacher checks for intentional light placement."
+      },
+      {
+        "id": "framing",
+        "title": "Three Story Angles",
+        "description": "Set up three camera angles that tell a story beat: wide, medium, close.",
+        "steps": [
+          "Set the wide shot to establish the environment and place the character",
+          "Set the medium shot to show the character in the environment",
+          "Set the close shot to focus on the character's expression",
+          "Check that each angle serves the one-sentence about",
+          "Label each camera in the file"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check each angle"},
+          {"key": "Shift+D", "action": "Duplicate camera", "imageUrl": "", "description": "Start a new angle"}
+        ],
+        "expectations": "Three camera angles that tell a story beat. The teacher checks that each angle serves the narrative."
+      },
+      {
+        "id": "rendering",
+        "title": "Render the Story Sheet",
+        "description": "Render all three angles for Checkpoint C2.",
+        "steps": [
+          "Render the wide, medium, and close shots",
+          "Check that the story beat reads across all three",
+          "Save as c-character-scene_wk10-c2.blend"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce story renders"}
+        ],
+        "expectations": "A three-angle story sheet. The teacher checks narrative coherence, not polish."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for multi-angle camera workflow.",
+        "steps": [
+          "Use Shift+D to duplicate cameras for new angles",
+          "Use Numpad 0 to check each camera",
+          "Use G/R/S to position cameras",
+          "Use F12 to render each angle"
+        ],
+        "hotkeys": [
+          {"key": "Shift+D", "action": "Duplicate camera", "imageUrl": "", "description": "Start new angles"},
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check angles"},
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce renders"}
+        ],
+        "expectations": "The teacher expects efficient multi-angle workflow using camera duplication and checks."
+      }
+    ]
+  },
+  "wk-11": {
+    "title": "Week 11: Polish Pass & Details",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Adding Polish Details",
+        "description": "Add small details where the eye needs something to lock onto. Details on the volume, not on top of it.",
+        "steps": [
+          "Review the character and environment for flat surfaces",
+          "Add a ledge, seam, or depth break where the eye needs to lock on",
+          "Keep details small and intentional",
+          "Render after each detail to confirm it does work"
+        ],
+        "hotkeys": [
+          {"key": "E", "action": "Extrude", "imageUrl": "", "description": "Add detail geometry"},
+          {"key": "Ctrl+B", "action": "Bevel", "imageUrl": "", "description": "Add edge detail"}
+        ],
+        "expectations": "Details that do work, not decoration. The teacher checks that each detail lands where the eye is already looking."
+      },
+      {
+        "id": "materials",
+        "title": "Material Polish",
+        "description": "Refine the materials with subtle roughness and colour adjustments.",
+        "steps": [
+          "Adjust roughness on surfaces that read too flat or too noisy",
+          "Check the palette consistency across the scene",
+          "Add subtle variation where needed"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Access material settings"}
+        ],
+        "expectations": "Refined materials that serve the scene. The teacher checks for intentional roughness and colour choices."
+      },
+      {
+        "id": "lighting",
+        "title": "Lighting Polish",
+        "description": "Fine-tune the lighting rig for the final read.",
+        "steps": [
+          "Adjust the key light to graze surfaces for shape shadows",
+          "Lift the fill to reveal detail without flattening",
+          "Check the rim separation across all angles"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Adjust light properties"}
+        ],
+        "expectations": "Polished lighting that supports all three camera angles. The teacher checks for intentionality."
+      },
+      {
+        "id": "framing",
+        "title": "Camera Polish",
+        "description": "Fine-tune the camera framing for each angle.",
+        "steps": [
+          "Check the wide shot for proper environment framing",
+          "Check the medium shot for character-environment balance",
+          "Check the close shot for expression clarity",
+          "Adjust as needed"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check framing"}
+        ],
+        "expectations": "Clean framing across all angles. The teacher checks for proper balance."
+      },
+      {
+        "id": "rendering",
+        "title": "Polished Renders",
+        "description": "Render all three angles with polished details.",
+        "steps": [
+          "Render the wide, medium, and close shots with Cycles or clean EEVEE",
+          "Check all renders for the final read",
+          "Save as c-character-scene_wk11-polish.blend"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce polished renders"}
+        ],
+        "expectations": "Polished renders showing the final character-environment scene. The teacher checks detail quality and lighting."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for polish workflow.",
+        "steps": [
+          "Use E and Ctrl+B to add details",
+          "Use N to access material and light settings",
+          "Use Numpad 0 to check framing",
+          "Use F12 to render polished passes"
+        ],
+        "hotkeys": [
+          {"key": "E", "action": "Extrude", "imageUrl": "", "description": "Add details"},
+          {"key": "Ctrl+B", "action": "Bevel", "imageUrl": "", "description": "Edge detail"},
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Settings access"},
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Polished renders"}
+        ],
+        "expectations": "The teacher expects efficient polish workflow using detail and render shortcuts."
+      }
+    ]
+  },
+  "wk-12": {
+    "title": "Week 12: Final Assembly & Hero Renders",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Final Shape Review",
+        "description": "Do one final shape review across all projects. No new modeling; just confirm everything reads.",
+        "steps": [
+          "Open Project A, B, and C files",
+          "Check all shapes and silhouettes one final time",
+          "If something reads weak, note it but do not model new geometry"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading modes", "imageUrl": "", "description": "Final shape review"}
+        ],
+        "expectations": "A final confirmation that all shapes read correctly. The teacher checks for readiness."
+      },
+      {
+        "id": "materials",
+        "title": "Final Material Review",
+        "description": "Do one final material review. Remove unused slots and confirm palettes.",
+        "steps": [
+          "Remove any unused materials from all files",
+          "Check that each project has a clean material list",
+          "Label materials clearly"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Access material list"}
+        ],
+        "expectations": "Clean material lists across all files. The teacher checks for file hygiene."
+      },
+      {
+        "id": "lighting",
+        "title": "Final Lighting Review",
+        "description": "Confirm all lighting rigs are clean and labeled.",
+        "steps": [
+          "Review all lights in all project files",
+          "Remove test lights",
+          "Confirm key, fill, and rim are labeled"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Check light list"}
+        ],
+        "expectations": "Clean lighting rigs across all files. The teacher checks for intentionality."
+      },
+      {
+        "id": "framing",
+        "title": "Final Camera Review",
+        "description": "Confirm all camera angles are clean and the focal points read.",
+        "steps": [
+          "Review all camera angles in all files",
+          "Confirm the focal point reads in each",
+          "Fix any remaining framing issues"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Final camera check"}
+        ],
+        "expectations": "Clean camera framing across all files. The teacher checks for readiness."
+      },
+      {
+        "id": "rendering",
+        "title": "Final Hero Renders",
+        "description": "Render all hero images with Cycles at full quality.",
+        "steps": [
+          "Set Cycles render settings to high quality",
+          "Render all hero images: environment, subject day and night, character scene wide/medium/close",
+          "Check all renders for the final read",
+          "Save all files cleanly"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce final hero renders"}
+        ],
+        "expectations": "Final hero renders of all three projects. The teacher checks quality and readiness for delivery."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for final review and rendering.",
+        "steps": [
+          "Use Z to cycle shading modes for final review",
+          "Use N for property access",
+          "Use Numpad 0 for camera checks",
+          "Use F12 for final renders"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading", "imageUrl": "", "description": "Final review"},
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Property access"},
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Final renders"}
+        ],
+        "expectations": "The teacher expects efficient final review workflow."
+      }
+    ]
+  },
+  "wk-13": {
+    "title": "Week 13: Self-Directed Study & Portfolio Prep",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Self-Directed Shape Study",
+        "description": "Study one shape or silhouette that you find difficult. Practice it in isolation.",
+        "steps": [
+          "Pick one shape or silhouette that you struggled with during the term",
+          "Block it in isolation using simple primitives",
+          "Check it from multiple angles",
+          "Practice until it reads clearly"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A", "action": "Add primitives", "imageUrl": "", "description": "Block practice shapes"},
+          {"key": "Ctrl+Numpad 1/3/7", "action": "Snap to views", "imageUrl": "", "description": "Check from multiple angles"}
+        ],
+        "expectations": "A practiced shape that the student found difficult. The teacher checks for self-directed learning."
+      },
+      {
+        "id": "materials",
+        "title": "Self-Directed Material Study",
+        "description": "Practice one material type that you want to improve.",
+        "steps": [
+          "Pick one material type you want to study",
+          "Create a test sphere and apply the material",
+          "Adjust base colour and roughness to understand the behaviour",
+          "Test under different lighting"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Access material settings"},
+          {"key": "Z", "action": "Material Preview", "imageUrl": "", "description": "Quick check"}
+        ],
+        "expectations": "A practiced material study. The teacher checks for self-directed learning."
+      },
+      {
+        "id": "lighting",
+        "title": "Self-Directed Lighting Study",
+        "description": "Practice one lighting setup that you want to improve.",
+        "steps": [
+          "Pick one lighting scenario you want to study",
+          "Set up a simple scene and practice the rig",
+          "Experiment with key, fill, and rim positions",
+          "Render to check the results"
+        ],
+        "hotkeys": [
+          {"key": "Shift+A > Light", "action": "Add lamps", "imageUrl": "", "description": "Practice lighting rigs"},
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Check results"}
+        ],
+        "expectations": "A practiced lighting setup. The teacher checks for self-directed learning."
+      },
+      {
+        "id": "framing",
+        "title": "Self-Directed Framing Study",
+        "description": "Practice one camera angle or composition technique.",
+        "steps": [
+          "Pick one composition technique you want to study",
+          "Set up a simple scene and practice the framing",
+          "Check the read through the camera"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Check framing"}
+        ],
+        "expectations": "A practiced framing technique. The teacher checks for self-directed learning."
+      },
+      {
+        "id": "rendering",
+        "title": "Study Renders",
+        "description": "Render your practice studies for portfolio preparation.",
+        "steps": [
+          "Render all practice studies",
+          "Check the renders for quality",
+          "Save for portfolio use"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce study renders"}
+        ],
+        "expectations": "Practice renders ready for portfolio inclusion. The teacher checks for self-directed improvement."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for self-directed study.",
+        "steps": [
+          "Use Z to cycle shading modes during practice",
+          "Use N for property access",
+          "Use Numpad 0 for camera checks",
+          "Use F12 for render checks"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading", "imageUrl": "", "description": "Review modes"},
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Property access"},
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Render checks"}
+        ],
+        "expectations": "The teacher expects efficient self-directed study workflow."
+      }
+    ]
+  },
+  "wk-14": {
+    "title": "Week 14: Final Delivery & Crit",
+    "namingConventions": {
+      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files",
+      "blenderPrefixes": [
+        {"prefix": "COL_", "meaning": "Collections"},
+        {"prefix": "P_", "meaning": "Props (placed objects)"},
+        {"prefix": "C_", "meaning": "Characters"},
+        {"prefix": "ENV_", "meaning": "Environment elements"},
+        {"prefix": "CAM_", "meaning": "Camera objects"},
+        {"prefix": "LIT_", "meaning": "Light objects"},
+        {"prefix": "MAT_", "meaning": "Materials"}
+      ]
+    },
+    "sections": [
+      {
+        "id": "shapes",
+        "title": "Final Shape Confirmation",
+        "description": "Do one last shape review across all deliverable projects. Confirm silhouettes read clearly.",
+        "steps": [
+          "Open all deliverable project files",
+          "Check all shapes and silhouettes one final time",
+          "Confirm everything reads for the final delivery"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading modes", "imageUrl": "", "description": "Final shape confirmation"}
+        ],
+        "expectations": "Final confirmation that all shapes are ready for delivery. The teacher checks for completeness."
+      },
+      {
+        "id": "materials",
+        "title": "Final Material Confirmation",
+        "description": "Confirm all materials are clean and labeled.",
+        "steps": [
+          "Check all material slots one final time",
+          "Remove any remaining unused materials",
+          "Confirm all materials are labeled"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Final material check"}
+        ],
+        "expectations": "Clean material lists across all deliverables. The teacher checks for file readiness."
+      },
+      {
+        "id": "lighting",
+        "title": "Final Lighting Confirmation",
+        "description": "Confirm all lighting rigs are clean and intentional.",
+        "steps": [
+          "Review all lights one final time",
+          "Confirm key, fill, and rim are labeled and intentional",
+          "Remove any remaining test lights"
+        ],
+        "hotkeys": [
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Final light check"}
+        ],
+        "expectations": "Clean lighting rigs across all deliverables. The teacher checks for readiness."
+      },
+      {
+        "id": "framing",
+        "title": "Final Camera Confirmation",
+        "description": "Confirm all camera angles are clean and focal points read.",
+        "steps": [
+          "Review all camera angles one final time",
+          "Confirm focal points read clearly in each",
+          "Fix any remaining framing issues"
+        ],
+        "hotkeys": [
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Final camera confirmation"}
+        ],
+        "expectations": "Clean camera framing across all deliverables. The teacher checks for readiness."
+      },
+      {
+        "id": "rendering",
+        "title": "Final Delivery Renders",
+        "description": "Render all final deliverable images with Cycles at maximum quality.",
+        "steps": [
+          "Set Cycles to maximum quality settings",
+          "Render all deliverable images",
+          "Check all renders for final quality",
+          "Save all files cleanly with final naming conventions"
+        ],
+        "hotkeys": [
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce final delivery renders"}
+        ],
+        "expectations": "Final delivery renders of all projects at maximum quality. The teacher checks for portfolio readiness."
+      },
+      {
+        "id": "shortcuts",
+        "title": "Effective Shortcuts",
+        "description": "Shortcuts for final delivery workflow.",
+        "steps": [
+          "Use Z to cycle shading modes for final review",
+          "Use N for property access",
+          "Use Numpad 0 for camera checks",
+          "Use F12 for final renders"
+        ],
+        "hotkeys": [
+          {"key": "Z", "action": "Cycle shading", "imageUrl": "", "description": "Final review"},
+          {"key": "N", "action": "Side panel", "imageUrl": "", "description": "Property access"},
+          {"key": "Numpad 0", "action": "Camera view", "imageUrl": "", "description": "Final camera check"},
+          {"key": "F12", "action": "Render", "imageUrl": "", "description": "Final delivery renders"}
+        ],
+        "expectations": "The teacher expects efficient final delivery workflow."
+      }
+    ]
+  }
+}
+
+

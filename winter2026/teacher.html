@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="3D Integration in Visual Development - Seneca College. Teacher console (Phase 3): edit the course and its lessons, with save / import / export." />
+  <title>Seneca - Teacher console</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+  <link rel="stylesheet" href="css/views.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/fieldsets.css" />
+  <link rel="stylesheet" href="css/artistic-checklist.css" />
+  <link rel="stylesheet" href="css/design-principles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar__brand">
+        <span class="mark" aria-hidden="true">&#9670;</span>
+        <span class="topbar__title">3D Integration &middot; Teacher</span>
+      </div>
+      <span class="topbar__status" id="status">loading&hellip;</span>
+
+      <nav class="nav nav--top" aria-label="Primary">
+        <a href="#/admin" data-route="/admin">Dashboard</a>
+        <a href="#/admin/course" data-route="/admin/course">Course</a>
+        <a href="#/admin/lessons" data-route="/admin/lessons">Lessons</a>
+        <a href="#/admin/glossary" data-route="/admin/glossary">Glossary</a>
+        <a href="#/admin/projects" data-route="/admin/projects">Projects</a>
+        <a href="#/admin/research" data-route="/admin/research">Research</a>
+        <a href="#/admin/reference" data-route="/admin/reference">Reference</a>
+        <a href="#/admin/shortcuts" data-route="/admin/shortcuts">Shortcuts</a>
+        <a href="#/admin/artistic-checklist" data-route="/admin/artistic-checklist">Checklist</a>
+        <a href="#/admin/design-principles" data-route="/admin/design-principles">Principles</a>
+        <a href="index.html">Student app</a>
+      </nav>
+    </header>
+
+    <main class="app__main" id="view" aria-live="polite"></main>
+  </div>
+
+  <!-- file:// fallback bootstrap (sets window.__SENECA_DATA). -->
+  <script src="data/data.js"></script>
+
+  <!-- Admin entry (ES module). Sets window.__SENECA_BOOTED on load so the
+       classic guard below is a guaranteed no-op in every working path. -->
+  <script type="module" src="js/admin.js"></script>
+
+  <!-- file:// + browser guard (classic script, always runs). Some browsers
+       (notably Chrome) refuse to load ES modules under file://, so the module
+       above may never execute and #view stays empty. If it never booted, show an
+       actionable notice. No-op in every working path (Firefox file://, http://). -->
+  <script>
+    setTimeout(function () {
+      if (window.__SENECA_BOOTED) return;
+      var v = document.getElementById('view');
+      if (!v || v.innerHTML) return;
+      v.innerHTML =
+        '<div class="empty">' +
+          '<div class="empty__title">Core modules did not load</div>' +
+          '<p class="empty__hint">This build uses ES modules, and this browser blocks ' +
+          'module loads under <code>file://</code>. Run it over <code>http://</code> with ' +
+          'the bundled server (for example <code>node site/server.js</code>, then open ' +
+          '<code>http://localhost:8025/teacher.html</code>), or open it in a browser that ' +
+          'permits <code>file://</code> modules (e.g. Firefox).</p>' +
+        '</div>';
+    }, 500);
+  </script>
+</body>
+</html>

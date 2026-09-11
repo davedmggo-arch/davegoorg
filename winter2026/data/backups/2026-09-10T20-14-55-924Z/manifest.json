@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-09-10T20-14-55-924Z",
+  "files": [
+    {
+      "name": "artistic-checklist.json",
+      "sha256": "67647a7f173338bf57ae4a30d9e6ccf3dd05f9d0c669d6609618eb0444ed95a1",
+      "size": 3383
+    },
+    {
+      "name": "course.json",
+      "sha256": "4031aea58c1268a1d4912dd02cc6a4ea41da82b7f1aee7ac85dd2fcfe9b5aa37",
+      "size": 4765
+    },
+    {
+      "name": "design-principles.json",
+      "sha256": "49454a508e87ce0940b097bfebab798a8e7552b8912542169478ae286fd8186d",
+      "size": 3807
+    },
+    {
+      "name": "glossary.json",
+      "sha256": "166c62ce2b91886ffe0d6e97058851a76f23e73cf1e24451ece3dfc63cbafb5c",
+      "size": 421699
+    },
+    {
+      "name": "lessons.json",
+      "sha256": "0a57a126aa7cced84fc9bdcbf7b1ba8ce069737d300770210a776f3f98802ec0",
+      "size": 172912
+    },
+    {
+      "name": "progress.json",
+      "sha256": "cdf1c1986bf2e3c2eb3850033c57cc9248fabd0b33aa5ca9b4ea778d8bac0776",
+      "size": 2516
+    },
+    {
+      "name": "projects.json",
+      "sha256": "e05babe6123379dbc820ac01a9c0a438ce87ca3a430b22013f87278b28275c02",
+      "size": 92347
+    },
+    {
+      "name": "reference.json",
+      "sha256": "ea80a70cae9a85c59aa3b45fdd0806254792b81d91260f740e8073cfd5546186",
+      "size": 86868
+    },
+    {
+      "name": "research.json",
+      "sha256": "8e77c31844c1dd273205b7f39618d8c814dc21fea7bcd1f24e56ad2ab9be4004",
+      "size": 155446
+    },
+    {
+      "name": "shortcuts.json",
+      "sha256": "133ebaf076d1c493a6cbb23864beda9441f03a3f4072050081ae274a66961320",
+      "size": 4671
+    }
+  ]
+}
