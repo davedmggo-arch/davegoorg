@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="3D Integration in Visual Development - Seneca College, Fall 2026. Course dashboard and weekly lessons." />
+  <title>Seneca - 3D Integration (student)</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+  <link rel="stylesheet" href="css/views.css" />
+  <link rel="stylesheet" href="css/lookup.css" />
+  <link rel="stylesheet" href="css/shortcuts.css" />
+  <link rel="stylesheet" href="css/artistic-checklist.css" />
+  <link rel="stylesheet" href="css/design-principles.css" />
+  <link rel="stylesheet" href="css/rail-lightbox.css" />
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar__brand">
+        <span class="mark" aria-hidden="true">&#9670;</span>
+        <span class="topbar__title">3D Integration</span>
+      </div>
+      <span class="topbar__status" id="status">core loaded</span>
+
+      <nav class="nav nav--top" aria-label="Primary">
+        <a href="#/dashboard" data-route="/dashboard">Dashboard</a>
+        <select data-nav-select data-route="/lessons" aria-label="Lessons" id="nav-lessons-select">
+          <option value="" disabled selected>Lessons</option>
+        </select>
+        <select data-nav-select data-route="/projects" aria-label="Projects" id="nav-projects-select">
+          <option value="" disabled selected>Projects</option>
+        </select>
+        <a href="#/reference" data-route="/reference">Reference</a>
+        <a href="#/shortcuts" data-route="/shortcuts">Shortcuts</a>
+      </nav>
+    </header>
+
+    <main class="app__main" id="view" aria-live="polite"></main>
+
+    <!-- Persistent sidebar toggle (lives outside the rail so it never disappears). -->
+    <button type="button" class="sc-rail__expand" id="rail-expand-btn" aria-label="Toggle sidebar" title="Toggle sidebar">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+
+    <!-- Persistent on-hand Blender shortcuts rail (mounted once by app.js). -->
+    <aside id="shortcuts-rail" class="sc-rail" aria-label="Blender shortcuts">
+    </aside>
+
+    <nav class="nav nav--bottom" aria-label="Primary (mobile)">
+      <a href="#/dashboard" data-route="/dashboard">Dashboard</a>
+      <select data-nav-select data-route="/lessons" aria-label="Lessons" id="nav-lessons-select">
+        <option value="" disabled selected>Lessons</option>
+      </select>
+      <select data-nav-select data-route="/projects" aria-label="Projects" id="nav-projects-select">
+        <option value="" disabled selected>Projects</option>
+      </select>
+      <a href="#/reference" data-route="/reference">Reference</a>
+      <a href="#/shortcuts" data-route="/shortcuts">Shortcuts</a>
+    </nav>
+  </div>
+
+  <!-- file:// fallback bootstrap (sets window.__SENECA_DATA). Classic script
+       so it runs regardless of module support. -->
+  <script src="data/data.js"></script>
+
+  <!-- Module entry: registers views, wires actions + dashboard dropdowns, boots. -->
+  <script type="module" src="js/app.js"></script>
+
+  <!-- file:// + browser guard (classic script, always runs). Some browsers
+       (notably Chrome) refuse to load ES modules under file:// (CORS / null
+       origin), so the module above may never execute and #view stays empty.
+       If it never booted, replace the blank area with an actionable notice.
+       No-op in every working path (Firefox file://, any http:// server). -->
+  <script>
+    setTimeout(function () {
+      if (window.__SENECA_BOOTED) return;
+      var v = document.getElementById('view');
+      if (!v || v.innerHTML) return;
+      v.innerHTML =
+        '<div class="empty">' +
+          '<div class="empty__title">Core modules did not load</div>' +
+          '<p class="empty__hint">This build uses ES modules, and this browser blocks ' +
+          'module loads under <code>file://</code>. Run it over <code>http://</code> with any ' +
+           'static server (double-click <code>run-teaching-site.bat</code>, or ' +
+           '<code>node site/server.js --port 8025</code>, then open ' +
+           '<code>http://localhost:8025/</code>), or open it in a browser that permits ' +
+          '<code>file://</code> modules (e.g. Firefox).</p>' +
+        '</div>';
+    }, 500);
+  </script>
+</body>
+</html>
