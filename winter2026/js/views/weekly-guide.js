@@ -38,7 +38,7 @@ function hotkeyRow(h, sectionId) {
     );
   }
   return (
-    '<div class="wg-hotkey wg-rail__row" data-hk-id="' + esc(sectionId) + '-' + (h.key || '') + '">' +
+    '<div class="wg-hotkey sc-rail__row" data-hk-id="' + esc(sectionId) + '-' + (h.key || '') + '">' +
       '<kbd class="wg-kbd">' + esc(h.key) + '</kbd>' +
       '<span class="wg-hotkey__action">' + esc(h.action || '') + '</span>' +
       (h.description ? '<span class="wg-hotkey__desc">' + esc(h.description) + '</span>' : '') +
@@ -210,6 +210,24 @@ function removeLightbox() {
   if (existing && existing.remove) existing.remove();
 }
 
+/* Wire the lightbox click/keydown delegation for .wg-thumb elements
+   inside the given section. Call this after replacing section.innerHTML so
+   thumbnail lightboxes continue to work across route changes. */
+export function wireGuideLightbox(section) {
+  if (!section) return;
+  section.addEventListener('click', function (e) {
+    var thumb = e.target && e.target.closest ? e.target.closest('.wg-thumb') : null;
+    if (!thumb) return;
+    openLightbox(thumb.dataset.lgImg, thumb.dataset.lgCap || '');
+  });
+  section.addEventListener('keydown', function (e) {
+    var thumb = e.target && e.target.closest ? e.target.closest('.wg-thumb') : null;
+    if (!thumb || (e.key !== 'Enter' && e.key !== ' ')) return;
+    e.preventDefault();
+    openLightbox(thumb.dataset.lgImg, thumb.dataset.lgCap || '');
+  });
+}
+
 /* ---- Public API -------------------------------------------------------- */
 
 /* Fetch guide data for the given week id from weekly-guides.json.
@@ -225,4 +243,4 @@ export async function fetchGuide(weekId) {
   }
 }
 
-export default { mountRail, fetchGuide };
+export default { mountRail, fetchGuide, wireGuideLightbox };
