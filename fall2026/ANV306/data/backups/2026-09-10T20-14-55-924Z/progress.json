@@ -1,0 +1,128 @@
+{
+  "student": {
+    "name": "",
+    "id": ""
+  },
+  "xp": {
+    "total": 0,
+    "perCheckpoint": 250,
+    "perReflect": 25,
+    "perLessonRead": 10
+  },
+  "weeks": {
+    "wk-01": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "n/a",
+      "note": ""
+    },
+    "wk-02": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    },
+    "wk-03": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    },
+    "wk-04": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    },
+    "wk-05": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    },
+    "wk-06": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    },
+    "wk-07": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "n/a",
+      "note": ""
+    },
+    "wk-08": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "n/a",
+      "note": ""
+    },
+    "wk-09": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    },
+    "wk-10": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    },
+    "wk-11": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "n/a",
+      "note": ""
+    },
+    "wk-12": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    },
+    "wk-13": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "n/a",
+      "note": ""
+    },
+    "wk-14": {
+      "read": false,
+      "reflected": false,
+      "checkpointStatus": "pending",
+      "note": ""
+    }
+  },
+  "projects": {
+    "a": {
+      "status": "not-started",
+      "checkpointStatus": {
+        "A1": "pending",
+        "A2": "pending",
+        "Delivery A": "pending"
+      },
+      "delivered": false
+    },
+    "b": {
+      "status": "not-started",
+      "checkpointStatus": {
+        "B1": "pending",
+        "B2": "pending",
+        "Delivery B": "pending"
+      },
+      "delivered": false
+    },
+    "c": {
+      "status": "not-started",
+      "checkpointStatus": {
+        "C1": "pending",
+        "C2": "pending",
+        "Delivery C": "pending"
+      },
+      "delivered": false
+    }
+  },
+  "updatedAt": "2026-01-01T00:00:00.000Z"
+}

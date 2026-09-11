@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Seneca 3D Integration - css/rail-lightbox.css
+   Supplemental styles for the OPTIONAL rail image-lightbox trigger.
+
+   The lightbox overlay itself reuses the existing `.lb*` styles (views.css,
+   driven by core/media.js). This file only provides the small in-row trigger
+   affordance: a 28px thumbnail box anchored to the right edge of the rail
+   row it lives in, so it reads as a "view image" action without disturbing
+   the row's key / label / checkbox layout.
+
+   A rail row that carries a trigger gets the `.rail-lb` modifier (added by
+   the view only when the row actually has an `image` field); rows without a
+   trigger are byte-identical to before (no modifier, no padding change).
+   All animation honours prefers-reduced-motion. No emoji.
+   ========================================================================== */
+
+/* The row reserves right-hand room for the trigger and becomes the trigger's
+   positioning context. Scoped to `.rail-lb` so trigger-less rows are untouched. */
+.sc-rail__row.rail-lb { position: relative; padding-right: calc(30px + var(--sp-3)); }
+
+/* The trigger: a small thumbnail box anchored to the row's right edge. */
+.rail-lb-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--bg-2);
+  cursor: pointer;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  right: var(--sp-2);
+  transform: translateY(-50%);
+}
+
+.rail-lb-trigger:hover {
+  background: var(--bg-3);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-1);
+}
+
+.rail-lb-trigger:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-color: var(--accent);
+}
+
+/* The thumbnail image (or a placeholder glyph when there is no safe URL). */
+.rail-lb-thumb {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 2px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+
+/* Reduced-motion: the lightbox panel entry is instant (the panel is the
+   shared `.lb__panel` from views.css). */
+@media (prefers-reduced-motion: reduce) {
+  .lb__panel { animation: none !important; }
+  .rail-lb-trigger { transition: none; }
+}

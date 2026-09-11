@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Seneca 3D Integration - Design tokens
+   Pure-CSS custom properties. The default theme is a dark, game-like "midnight
+   render" base with a warm amber accent (reward) and a cool cyan secondary.
+   A light option is provided as an overridable custom-property set on [data-theme].
+   ========================================================================== */
+
+:root {
+  /* ---- Color: base surfaces (layered, not flat) ------------------------- */
+  --bg: #0b0d12;            /* near-black indigo page background */
+  --bg-2: #121622;          /* panel / card background            */
+  --bg-3: #1a2030;          /* raised / hover surface            */
+  --ink: #e8ecf6;           /* primary text                      */
+  --muted: #9aa4bd;         /* secondary / muted text            */
+  --line: #262d40;          /* hairlines / borders               */
+  --line-2: #333c55;        /* stronger border on hover          */
+
+  /* ---- Color: accent + semantic --------------------------------------- */
+  --accent: #f6b73c;        /* amber/gold - "House of Wisdom" warmth, reward */
+  --accent-ink: #1a1205;    /* text to sit ON the amber accent        */
+  --accent-2: #38bdf8;      /* cool cyan - 3D / tech secondary          */
+  --ok: #34d399;            /* success / passed                       */
+  --warn: #f6b73c;          /* warning (same family as accent)        */
+  --bad: #f87171;           /* error / failed                         */
+
+  /* ---- Glow (the signature) ------------------------------------------- */
+  --glow: rgba(246, 183, 60, 0.45);   /* amber bloom */
+  --glow-2: rgba(56, 189, 248, 0.35); /* cyan bloom  */
+
+  /* ---- Type ------------------------------------------------------------ */
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  /* fluid scale via clamp() */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: clamp(2.25rem, 5vw, 3.75rem);
+  --lh: 1.6;                /* generous leading for long-form prose */
+  --measure: 68ch;          /* max readable line length */
+
+  /* ---- Spacing (4px base scale) ---------------------------------------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --max-w: 72rem;           /* container max width */
+  --gutter: clamp(16px, 4vw, 40px); /* page side padding */
+
+  /* ---- Shape ------------------------------------------------------------ */
+  --r-sm: 8px;
+  --r: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  /* ---- Elevation / glow ------------------------------------------------ */
+  --shadow-1: 0 1px 2px rgba(0,0,0,.4), 0 2px 6px rgba(0,0,0,.28);
+  --shadow-2: 0 6px 16px rgba(0,0,0,.45), 0 2px 4px rgba(0,0,0,.3);
+  --shadow-3: 0 16px 40px rgba(0,0,0,.55), 0 4px 8px rgba(0,0,0,.35);
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --t-fast: 120ms;
+  --t-med: 240ms;
+  --t-slow: 480ms;
+  --ease: cubic-bezier(.22, 1, .36, 1);              /* out-quint, snappy  */
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);    /* reward pops        */
+
+  /* ---- Focus ring ------------------------------------------------------ */
+  --focus: 0 0 0 3px var(--glow);
+}
+
+/* ==========================================================================
+   Light option (optional). Apply with data-theme="light" on <html> or body.
+   Everything else (type, spacing, shape, motion) is inherited unchanged.
+   ========================================================================== */
+[data-theme='light'] {
+  --bg: #f6f7fb;
+  --bg-2: #ffffff;
+  --bg-3: #eef1f8;
+  --ink: #12141c;
+  --muted: #5b6275;
+  --line: #d9deea;
+  --line-2: #c2c9db;
+  --accent: #b9821a;         /* darker amber for contrast on light bg */
+  --accent-ink: #ffffff;
+  --accent-2: #0e7bb5;
+  --ok: #16876a;
+  --warn: #b9821a;
+  --bad: #c93f3f;
+  --glow: rgba(185, 130, 26, 0.30);
+  --glow-2: rgba(14, 123, 181, 0.22);
+  --shadow-1: 0 1px 2px rgba(20,24,40,.10), 0 2px 6px rgba(20,24,40,.08);
+  --shadow-2: 0 6px 16px rgba(20,24,40,.12), 0 2px 4px rgba(20,24,40,.08);
+  --shadow-3: 0 16px 40px rgba(20,24,40,.16), 0 4px 8px rgba(20,24,40,.10);
+  --focus: 0 0 0 3px var(--glow-2);
+}
+
+/* ==========================================================================
+   Reduced motion: collapse durations so JS/CSS can also key off the value.
+   The keyframes themselves are disabled in motion.css.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 0.01ms;
+    --t-med: 0.01ms;
+    --t-slow: 0.01ms;
+  }
+}
