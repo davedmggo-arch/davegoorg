@@ -243,6 +243,7 @@ export async function fetchGuide(weekId) {
         return all[weekId] || null;
       }
     } catch { /* fall through to the bootstrap below */ }
+  }
   // 2) file:// / fetch failure — fall back to the injected bootstrap.
   const boot = (typeof window !== 'undefined' && window.__SENECA_DATA) || null;
   if (boot && Object.prototype.hasOwnProperty.call(boot, 'weekly-guides')) {
