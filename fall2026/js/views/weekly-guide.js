@@ -233,14 +233,22 @@ export function wireGuideLightbox(section) {
 /* Fetch guide data for the given week id from weekly-guides.json.
    Returns a promise resolving to the guide object or null. */
 export async function fetchGuide(weekId) {
-  try {
-    const resp = await fetch('../../data/weekly-guides.json');
-    if (!resp.ok) return null;
-    const all = await resp.json();
-    return all[weekId] || null;
-  } catch {
-    return null;
+  // 1) fetch (http / static host) — relative to the document base so it works
+  //    in any subdirectory deployment (e.g. davego.org/fall2026/).
+  if (typeof fetch === 'function' && typeof location !== 'undefined' && location.protocol !== 'file:') {
+    try {
+      const resp = await fetch('./data/weekly-guides.json', { cache: 'no-store' });
+      if (resp.ok) {
+        const all = await resp.json();
+        return all[weekId] || null;
+      }
+    } catch { /* fall through to the bootstrap below */ }
+  // 2) file:// / fetch failure — fall back to the injected bootstrap.
+  const boot = (typeof window !== 'undefined' && window.__SENECA_DATA) || null;
+  if (boot && Object.prototype.hasOwnProperty.call(boot, 'weekly-guides')) {
+    return boot['weekly-guides'][weekId] || null;
   }
+  return null;
 }
 
 export default { mountRail, fetchGuide, wireGuideLightbox };
