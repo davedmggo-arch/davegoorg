@@ -8,8 +8,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -137,8 +136,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -256,8 +254,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -372,8 +369,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -487,8 +483,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -606,8 +601,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -718,8 +712,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -834,8 +827,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -939,8 +931,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -1052,8 +1043,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -1159,8 +1149,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -1266,8 +1255,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -1370,8 +1358,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [
@@ -1479,8 +1466,7 @@
         {"prefix": "00_world", "meaning": "World — top-level collection"},
         {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
         {"prefix": "20_light", "meaning": "Lighting"},
-        {"prefix": "30_cam", "meaning": "Camera"},
-        {"prefix": "40_props", "meaning": "Props"}
+        {"prefix": "30_cam", "meaning": "Camera"}
       ]
     },
     "sections": [

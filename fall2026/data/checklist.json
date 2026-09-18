@@ -24,7 +24,7 @@
     "id": "sub-collections",
     "category": "submission",
     "subCategory": "collections",
-    "text": "Blender Collections: the file should include the numbered top-level set - 00_world, 10_set, 20_light, 30_cam, 40_props (00_world first)",
+    "text": "Blender Collections: the file should include the numbered top-level set - 00_world, 10_set, 20_light, 30_cam (00_world first)",
     "order": 3
   },
   {
