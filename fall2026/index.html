@@ -67,6 +67,28 @@
        so it runs regardless of module support. -->
   <script src="data/data.js"></script>
 
+  <!-- Early error capture (classic script, runs before the module graph).
+        Records the first window error / unhandled rejection so the fallback
+        guard below can show the REAL cause instead of only a generic hint. -->
+  <script>
+    (function () {
+      window.__SENECA_FIRST_ERROR = null;
+      window.addEventListener('error', function (e) {
+        if (window.__SENECA_FIRST_ERROR) return;
+        var msg = (e && e.message) ? e.message : 'Unknown error';
+        var loc = '';
+        if (e && e.filename) { loc = e.filename.split('/').pop() + ':' + (e.lineno || 0) + ':' + (e.colno || 0); }
+        window.__SENECA_FIRST_ERROR = msg + (loc ? '  [' + loc + ']' : '');
+      }, true);
+      window.addEventListener('unhandledrejection', function (e) {
+        if (window.__SENECA_FIRST_ERROR) return;
+        var r = e && e.reason;
+        var msg = (r && r.message) ? r.message : String(r || 'Promise rejection');
+        window.__SENECA_FIRST_ERROR = msg;
+      });
+    })();
+  </script>
+
   <!-- Module entry: registers views, wires actions + dashboard dropdowns, boots. -->
   <script type="module" src="js/app.js"></script>
 
@@ -80,9 +102,18 @@
       if (window.__SENECA_BOOTED) return;
       var v = document.getElementById('view');
       if (!v || v.innerHTML) return;
+      function esc(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+      var firstErr = window.__SENECA_FIRST_ERROR;
       v.innerHTML =
         '<div class="empty">' +
           '<div class="empty__title">Core modules did not load</div>' +
+          (firstErr ?
+            '<p class="empty__hint"><strong>First error:</strong> <code>' + esc(firstErr) + '</code></p>' :
+            '') +
           '<p class="empty__hint">This build uses ES modules, and this browser blocks ' +
           'module loads under <code>file://</code>. Run it over <code>http://</code> with any ' +
            'static server (double-click <code>run-teaching-site.bat</code>, or ' +

@@ -147,18 +147,17 @@
     },
     "sections": [
       {
-        "id": "shapes",
+         "id": "shapes",
         "title": "Blocking the Environment",
-        "description": "Block one environment in three variations using only large, medium, and small volumes. No detail, no textures. The mannequin file drops in as the scale anchor.",
+        "description": "Block three environment blockouts using only large, medium, and small volumes. The three blockouts can all be different, but each one needs a purpose you can state in one sentence. No detail, no textures. The mannequin file drops in as the scale reference.",
         "steps": [
-          "Pick a theme and its three location types from the lesson brief",
-          "Drop the mannequin or a 1.7-meter stand-in as the scale reference",
-          "Block large volumes: walls, floor, the big shapes of the space",
-          "Block medium volumes: desks, columns, plinths, shelves",
-          "Place one small object at the focal point to give the eye a landing spot",
-          "Test scale by moving the anchor closer, farther, and to the center",
-          "Cut one competitor that steals the eye from the focal point",
-          "Save as a-environment_wk2-a1.blend with clean collections"
+          "Pick a theme from the lesson brief, then choose three of its designs as your three blockouts",
+          "Open the starter .blend as the template and drag the mannequin .fbx into each scene, placed in COL_P_Mannequin_A inside the 10_set collection",
+          "State the purpose of each blockout: what is the scene doing, what is the camera following, is there a change from start to end",
+          "Block the large first: rooms, objects of interest, exits, paths. Then the medium: tables, pillars, chairs",
+          "Test the scale of each blockout by moving the mannequin closer, farther, and to the center",
+          "Direct the audience in each blockout: place shapes strategically and consider windows, lamps, and vignettes",
+          "Save as a-environment_wk2-a1.blend with the three blockouts in clean collections and nothing orphaned"
         ],
         "hotkeys": [
           {"key": "Shift+D", "action": "Duplicate to block repeating elements", "imageUrl": "", "description": "Fast way to add columns, shelves, or repeated props"},
@@ -166,7 +165,7 @@
           {"key": "M", "action": "Move selected items to a collection", "imageUrl": "", "description": "Keep large, medium, and small volumes organized"},
           {"key": "Ctrl+A", "action": "Apply transforms", "imageUrl": "", "description": "Lock in scale and rotation before moving on"}
         ],
-        "expectations": "The teacher expects three variations of one environment, each with a scale anchor, a named focal point, a clear hierarchy of large-medium-small volumes, and one competitor cut."
+        "expectations": "The teacher expects three environment blockouts that can all be different, each with a purpose you can state in one sentence, a mannequin scale reference, a clear large-to-medium shape hierarchy, and the theme and feeling of each environment coming through at the final submission."
       },
       {
         "id": "materials",
@@ -182,7 +181,7 @@
           {"key": "Z", "action": "Cycle to Material Preview", "imageUrl": "", "description": "Verify value contrast without rendering"},
           {"key": "N", "action": "Open side panel for material assignment", "imageUrl": "", "description": "Quick access to the Material Properties tab"}
         ],
-        "expectations": "Materials should be simple colour placeholders that establish value contrast. The teacher checks that the focal point is the strongest value in each variation."
+        "expectations": "Materials should be simple colour placeholders that establish value contrast. The teacher checks that the focal point is the strongest value in each blockout."
       },
       {
         "id": "lighting",
@@ -202,9 +201,9 @@
       {
         "id": "framing",
         "title": "Camera for the Blockout Check",
-        "description": "Place a camera to check whether the eye path in each variation leads clearly to the focal point.",
+        "description": "Place a camera to check whether the eye path in each blockout leads clearly to the focal point.",
         "steps": [
-          "Add a camera and frame it to show the focal point in each variation",
+          "Add a camera and frame it to show the focal point in each blockout",
           "Use Numpad 0 to view through the camera and check composition",
           "Verify the focal point sits in a strong position within the frame",
           "Use Numpad . to reframe if the focal point is cut off"
@@ -213,22 +212,22 @@
           {"key": "Numpad 0", "action": "View through the active camera", "imageUrl": "", "description": "Check how the blockout reads from the camera angle"},
           {"key": "Ctrl+Alt+Numpad 0", "action": "Set active camera", "imageUrl": "", "description": "Assign the camera before checking the frame"}
         ],
-        "expectations": "The teacher expects each variation to be checked from a camera angle that shows the eye path clearly. The focal point should be legible and well-placed in the frame."
+        "expectations": "The teacher expects each blockout to be checked from a camera angle that shows the eye path clearly. The focal point should be legible and well-placed in the frame."
       },
       {
         "id": "rendering",
         "title": "Blockout Check Render",
         "description": "Quick renders to verify the blockout reads before Checkpoint A1.",
         "steps": [
-          "Press F12 for a quick EEVEE render of each variation",
-          "Check that the focal point reads in all three variations",
+          "Press F12 for a quick EEVEE render of each blockout",
+          "Check that the focal point reads in all three blockouts",
           "Save the file with clean collections and no orphans",
           "Submit by Wednesday for Checkpoint A1 review"
         ],
         "hotkeys": [
-          {"key": "F12", "action": "Render current frame", "imageUrl": "", "description": "Quick check of how each variation reads"}
+          {"key": "F12", "action": "Render current frame", "imageUrl": "", "description": "Quick check of how each blockout reads"}
         ],
-        "expectations": "A blockout render that shows three distinct variations, each with a readable focal point and clear scale. Rough is fine; the decisions must be clear."
+        "expectations": "A blockout render that shows the three blockouts, each with a readable focal point and clear scale. Rough is fine; the decisions must be clear."
       },
       {
         "id": "shortcuts",
@@ -238,7 +237,7 @@
           "Use G/R/S to position and scale block volumes quickly",
           "Press Shift+D to duplicate repeating elements like shelves or columns",
           "Use M to sort objects into large, medium, and small collections",
-          "Press Ctrl+A to apply transforms before moving to the next variation",
+          "Press Ctrl+A to apply transforms before moving to the next blockout",
           "Practice these until the blockout feels fast, not fussy"
         ],
         "hotkeys": [
@@ -246,7 +245,7 @@
           {"key": "Shift+D", "action": "Duplicate selected object", "imageUrl": "", "description": "Fast repetition for columns, shelves, props"},
           {"key": "M", "action": "Move to collection", "imageUrl": "", "description": "Organize by volume size"},
           {"key": "Ctrl+A", "action": "Apply all transforms", "imageUrl": "", "description": "Lock in position before continuing"},
-          {"key": "/", "action": "Toggle Local View", "imageUrl": "", "description": "Isolate a variation for focused blocking"}
+          {"key": "/", "action": "Toggle Local View", "imageUrl": "", "description": "Isolate a blockout for focused blocking"}
         ],
         "expectations": "The teacher expects students to navigate the blockout workflow with shortcuts, not mouse clicks. File organization using collections will be noted."
       }
@@ -274,7 +273,7 @@
         "description": "The blockout is already set. This week we review it under light, material, and sky to confirm the shapes carve correctly.",
         "steps": [
           "Open the A1 blockout file from Week 02",
-          "Confirm the focal point is still legible in each variation",
+          "Confirm the focal point is still legible in each blockout",
           "If a shape reads flat under light, note it for the details week",
           "Do not model new geometry this week; the blockout is locked"
         ],
@@ -299,7 +298,7 @@
           {"key": "Z", "action": "Cycle to Material Preview", "imageUrl": "", "description": "Verify palette read without full render"},
           {"key": "N", "action": "Open side panel", "imageUrl": "", "description": "Access Principled BSDF sliders quickly"}
         ],
-        "expectations": "Each variation should carry a coherent three-layer palette. The teacher checks that Central, Secondary, and Accent colours agree with the theme and serve the focal point."
+         "expectations": "Each blockout should carry a coherent three-layer palette. The teacher checks that Central, Secondary, and Accent colours agree with the theme and serve the focal point."
       },
       {
         "id": "lighting",
@@ -321,7 +320,7 @@
       {
         "id": "framing",
         "title": "Camera & Composition Check",
-        "description": "Frame the lit variation to confirm the read holds from the camera angle.",
+         "description": "Frame the lit blockout to confirm the read holds from the camera angle.",
         "steps": [
           "View through the camera (Numpad 0) and check the focal point",
           "Verify the lighting read works through the lens",
@@ -337,7 +336,7 @@
       {
         "id": "rendering",
         "title": "Render & Check the Read",
-        "description": "Render one fully set-up variation to confirm the read before Checkpoint A1.",
+         "description": "Render one fully set-up blockout to confirm the read before Checkpoint A1.",
         "steps": [
           "Render with EEVEE for speed or Cycles for quality",
           "Check that the focal point reads, the material agrees with the light, and the sky agrees with the scene",
@@ -347,7 +346,7 @@
         "hotkeys": [
           {"key": "F12", "action": "Render", "imageUrl": "", "description": "Produce the checkpoint render"}
         ],
-        "expectations": "One fully set-up variation that reads as a place, not shapes in a gray void. The teacher checks lighting, materials, and skybox coherence."
+         "expectations": "One fully set-up blockout that reads as a place, not shapes in a gray void. The teacher checks lighting, materials, and skybox coherence."
       },
       {
         "id": "shortcuts",

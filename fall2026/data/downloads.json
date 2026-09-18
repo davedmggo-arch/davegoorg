@@ -1,10 +1,10 @@
 [
   {
     "id": "mannequin",
-    "title": "Mannequin Blender File",
-    "description": "Temp link for the base mannequin model.",
-    "url": "#mannequin-temp",
-    "type": "blend"
+    "title": "Adult Mannequin (scale reference)",
+    "description": "FBX mannequin model used as the scale reference in the Week 02 blockouts.",
+    "url": "https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/fall2026/Week%202/Adult_Mannequin_v001.fbx",
+    "type": "fbx"
   },
   {
     "id": "skybox",
