@@ -10,14 +10,21 @@
     "id": "sub-naming",
     "category": "submission",
     "subCategory": "naming-convention",
-    "text": "File naming convention: Lastname_Firstname_ANV6_wk#_v###.filetype",
+    "text": "File naming convention: LastName_FirstName_ANV306_wk-##_v###.filetype",
     "order": 2
   },
   {
-    "id": "sub-prefixes",
+    "id": "sub-naming-png",
     "category": "submission",
-    "subCategory": "object-prefixes",
-    "text": "Blender prefixes: COL_ collections, P_ props, C_ characters, L_ lights, CAM_ cameras",
+    "subCategory": "naming-convention",
+    "text": "PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
+    "order": 2.5
+  },
+  {
+    "id": "sub-collections",
+    "category": "submission",
+    "subCategory": "collections",
+    "text": "Blender Collections: the file should include the numbered top-level set - 00_world, 10_set, 20_light, 30_cam, 40_props (00_world first)",
     "order": 3
   },
   {

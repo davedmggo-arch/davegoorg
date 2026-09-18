@@ -46,9 +46,22 @@ function minusH1(md) {
   return lines.slice(i).join('\n').replace(/\s+$/, '');
 }
 
-// Strip outer bold / code markers from a cell, keep inner markdown.
+// Strip a wrapping bold/italic pair or surrounding code ticks from a cell,
+// keeping inner markdown. The bold pair is stripped ONLY when it wraps the
+// WHOLE cell (matched leading + trailing markers). A leading ** that merely
+// opens a bold phrase mid-cell (e.g. "**Three blockouts**, each with...") is
+// preserved - the old /^\*+/ strip ate that opening pair and left a dangling
+// closing ** in the generated seeds (lesson-demark-leading-bold-strip).
 function deMark(cell) {
-  return String(cell).replace(/^\*+|\*+$/g, '').replace(/^`+|`+$/g, '').trim();
+  let s = String(cell);
+  let m = s.match(/^\*\*([\s\S]+)\*\*$/);
+  if (m) s = m[1];
+  if (s.length > 2 && s.startsWith('*') && s.endsWith('*')) {
+    m = s.match(/^\*([\s\S]+)\*$/);
+    if (m) s = m[1];
+  }
+  s = s.replace(/^`+|`+$/g, '').trim();
+  return s;
 }
 
 // ---- arc table (README) -> weeks / delivery ------------------------------
@@ -138,8 +151,9 @@ function checkpoints(briefMd, letter) {
 }
 
 // ---- world ---------------------------------------------------------------
-// Project A has a locked shared world; B/C are single-subject (no shared world).
-const WORLD = { a: 'The House of Wisdom, Baghdad', b: null, c: null };
+// Project A is "three environment blockouts, student's choice" (no locked
+// shared world); B/C are single-subject (no shared world).
+const WORLD = { a: "Student's chosen environment", b: null, c: null };
 
 // ---- build ---------------------------------------------------------------
 
