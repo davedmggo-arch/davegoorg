@@ -235,7 +235,7 @@ window.__SENECA_DATA = {
     "beats": {
       "retrievalHook": "Welcome back, everyone! Our goal today is to ensure that we are all on the same page. We will pick one object, model it, add materials, light it, place a camera, name everything properly, and render it. The assignment is a bonus assignment, so there is no pressure, just a fun chance to build early momentum.\n\nThis is the first real time our hands go on the tool, and the skills we practice today carry through every week. Keep this thought with you as we go: 3D does not replace the ideas we already have in 2D. It multiplies them.\n\nThe Blender Shortcuts reference page lives in the sidebar for any week we need it, and the Starter Scene we will use today has all the collections and naming conventions pre-set so we can focus on the work itself.",
       "oneNewConcept": "**3D multiplies what you already know in 2D.**\n\nIn this term, we aim to create effective ways to generate variations of designs rather than perfect final pieces. Studies are meant to be rough, and that is exactly what we expect from your upcoming projects. In Visual Development, your design decisions matter far more than your polish.\n\nIterations and variations of the same subject are the skill. Block it, try three directions, drop two, keep one, move on. A rough read beats a perfect one, because the eye lands on the look, not the UVs, and the art director never sees the UVs. The day-to-day work is finding the right look for the show, and that craft carries into any industry.\n\nThis term builds toward **modeling, lighting, and rendering.** Those three are the core of a visual developer's work, and they work the same way whether the job lives in games, film, advertising, or products. Get them solid and any position in any industry is reachable.\n\nThe semester carries three main projects. The exact specs may shift with how the term goes, but the shape stays fixed.\n\n- **3 environment blockouts**, three blockouts that can each be different, each with a clear purpose of its own\n- **3 variations of the same prop or character**, one subject, three reads\n- **a 4-panel sequence**, a small story told in four frames\n\n**Today's Demo**\n\nA starter scene opens with naming conventions that carry through the semester. The tool shows the naming structure that makes the Blender experience smoother. File organization is just as important as design skill. The starter scene has collections with names a person can read, a camera and a light rig that is already set up, and a render engine in a sensible place. The tool does the setup, so time goes to decisions, not to wiring.\n\n> **Aside (further reading):** *The Complete Guide to Blender Graphics, Volume 1* by Blain, the interface and viewport chapters. The recent edition sits closest to the current layout. It answers \"where is that\" moments without requiring a full read-through.",
-      "guidedMaking": "Today we will take one object and run the full pipeline on it: model it, add materials, light a room, place a camera, name everything properly, and render it. The deliverable stays small on purpose, but the experience is what matters.\n\n1. **Pick the subject.** Choose one: a treasure chest, a table, a chair, or a bottle. That single choice carries the whole pass, so pick the clearest idea and stay with it.\n2. **Set up a clean file.** Open the Starter Scene and *look* before touching anything. Name the collections: `00_world`, `10_set`, `20_light`, `30_cam`. Find the camera, find the lights, find where the work goes. If the naming is unclear, that is a useful thing to notice, not a problem.\n    - *Manual fallback:* no Starter Scene? Start from a fresh file and build the same structure by hand. Four collections: `00_world`, `10_set`, `20_light`, `30_cam`. Add one camera and a key/fill/rim from the lamp menu. Same result, a few more clicks. Both ways work.\n3. **Model it.** Build from simple shapes. Give it believable proportion, the size and mass of the thing being after. Add intent, not detail.\n4. **Add materials.** Put a base color and a roughness on the surfaces so the object reads as something made of something. A treasure chest reads wood and metal, a bottle reads glass, a chair reads whatever the commit lands on. The texture is not a final. It is a surface the light can read.\n5. **Light a room.** One key light and a soft fill, placed so the subject reads with shape. The test is whether the light gives the object a face, not whether the look is perfect.\n6. **Place a camera.** Frame the subject the way a person is framed: one clean composition, the object reading clearly.\n7. **Render a still image.** Render a single still image of your scene and save it as a .png file. Use our standard naming convention for every render this term: `Lastname_Firstname_ANV6_wk1_v001.png`. The format stays the same week to week, only the week number changes, so get the habit right now.\n8. **Save a clean file.** Name it like a person: `a-environment_wk1-setup.blend`, not `scene.blend` or `final_final2.blend`. Those names retire this term. Check the collections for orphan junk, close the file, reopen it, and verify it still makes sense.\n\nThe full pipeline on a simple subject is complete. Every week this term builds on it, and this week makes the rest legible.",
+      "guidedMaking": "Today we will take one object and run the full pipeline on it: model it, add materials, light a room, place a camera, name everything properly, and render it. The deliverable stays small on purpose, but the experience is what matters.\n\n1. **Pick the subject.** Choose one: a treasure chest, a table, a chair, or a bottle. That single choice carries the whole pass, so pick the clearest idea and stay with it.\n2. **Set up a clean file.** Open the Starter Scene and *look* before touching anything. Name the collections: `00_world`, `10_set`, `20_light`, `30_cam`. Find the camera, find the lights, find where the work goes. If the naming is unclear, that is a useful thing to notice, not a problem.\n    - *Manual fallback:* no Starter Scene? Start from a fresh file and build the same structure by hand. Four collections: `00_world`, `10_set`, `20_light`, `30_cam`. Add one camera and a key/fill/rim from the lamp menu. Same result, a few more clicks. Both ways work.\n3. **Model it.** Build from simple shapes. Give it believable proportion, the size and mass of the thing being after. Add intent, not detail.\n4. **Add materials.** Put a base color and a roughness on the surfaces so the object reads as something made of something. A treasure chest reads wood and metal, a bottle reads glass, a chair reads whatever the commit lands on. The texture is not a final. It is a surface the light can read.\n5. **Light a room.** One key light and a soft fill, placed so the subject reads with shape. The test is whether the light gives the object a face, not whether the look is perfect.\n6. **Place a camera.** Frame the subject the way a person is framed: one clean composition, the object reading clearly.\n7. **Render a still image.** Render a single still image of your scene and save it as a .png file. Use our standard naming convention for every render this term: `LastName_FirstName_ANV306_wk-01_v001.png`. The format stays the same week to week, only the week number changes, so get the habit right now.\n8. **Save a clean file.** Name it like a person: `a-environment_wk1-setup.blend`, not `scene.blend` or `final_final2.blend`. Those names retire this term. Check the collections for orphan junk, close the file, reopen it, and verify it still makes sense.\n\nThe full pipeline on a simple subject is complete. Every week this term builds on it, and this week makes the rest legible.",
       "check": "No project checkpoint this week. One question lands the check:\n\n**Can the file open, the work surface be found, and the file save cleanly, all on its own?**\n\nIf yes, the setup week lands. If it took nudging, that is exactly what the week is for. The file is the deliverable, and the file is clean.",
       "reflect": "Here is a recap of today's lesson:\n\n- **What we did:** we set up a clean file and ran the full pass, our object, the room lighting, the camera, clean naming, and a render.\n- **What we learned:** 3D makes a good idea fast, it does not make a weak idea good, so the grade is on the thinking.\n- **What we'd try next:** reopening the file from cold and finding the camera in under ten seconds, so the naming works for a stranger, not just for us.\n\n**Checklist, the things worth not forgetting:**\n\n- Big-picture changes beat perfect polish. The look is what gets judged, so the time spends there.\n- Rough is fine at the study stage. A rough read that is decidable beats a perfect one that is not.\n- This week's deliverable is the full pass: our object, a lit room, a camera, clean naming, and a render, all in a well-named file.\n- Before Week 2, give Project A's brief (the \"a\" project, at [#/projects/a](#/projects/a)) a quiet read, so the world is already in our head when the shaping starts.\n\nThat organization is not busywork. It is the thing that carries through the whole semester. The same clean file that opens today opens in Week 8 and still makes sense, and it is the reason the end-of-term work, the hero renders, the sequences, and the final delivery, is actually doable. A well-organized file makes the big work possible!",
       "revisit": "The first brick is laid.\n\nNext week is Week 2, the start of Project A. A theme is picked: Nordic Fjords and Forests from the 10th to 12th Century, East Asian Mountain Temples from the 8th to 10th Century, or Sahel Crossroads from the 13th to 15th Century. Each theme carries props, architecture, and clothing that belong to its era. The first real idea is **scale**, because a place that is the wrong size is not a place yet. Thumbnails arrive, even the messy ones. A location anchors to a human figure.\n\n**Project A's brief is already posted:** [read it now](#/projects/a). It is short, and it sets up the idea-shaping for Week 2. A quiet read before then is the best use of an afternoon.\n\n---\n\n*No question is a dumb one here. If a panel moved and it is not found, that is the tool, not us. Ask, and we sort it out. We showed up, and that is exactly how this term is meant to start. See you next week.*"
@@ -261,8 +261,8 @@ window.__SENECA_DATA = {
     "source": "lessons/semester-3/lessons/wk-02-a-blockout-scale-hierarchy.md",
     "beats": {
       "retrievalHook": "Happy Friday, everyone! This week we learn how to block out an environment: we find the purpose of the scene, we commit to a scale, and we build shapes that serve both. That is the first real design work of Project A, and it gives us a clear deliverable: three environment blockouts, each with a purpose we can state in one sentence!\n\nFor a fast challenge, imagine what sort of environment we would like to build, and hold the picture for a minute. It comes back when the themes land in a few minutes!",
-      "oneNewConcept": "**Blocking out an environment means finding its purpose, committing to a scale, and building shapes that serve both.**\n\nLast week we got back into the groove of modeling, texturing, lighting, and rendering. A lot of this semester focuses on those skills, and we will need to be comfortable switching between our different actions when it feels important, because the blockout is where all of them meet at once.\n\nThe blockout is where the environment actually starts, and the way it works is straightforward. We first find the purpose of the scene. We commit to a scale. And we build our shapes so that they complement the purpose and scale of that scene. We do this through reference, by understanding how a scene is meant to feel, and by placing our parts strategically so the audience gets a clear understanding of what is happening!\n\nThree concepts run through all of this, and we carry them into the entire class:\n\n- **Purpose:** what the scene is doing, and why it matters to the moment we are building. We decide it first, because everything else leans on it.\n- **Scale:** the size that reads. A scene gets a reference point, usually a person, and we build the space around it so the size is believable at a glance.\n- **Shape Hierarchy:** the order we build and place our shapes in, from the large volumes of the scene down to the medium objects, so the audience always knows what matters.\n\nAnd the deliverable: the three environment blockouts we create can all be different from one another, but the purpose of each one needs to be clear. When we hand in our submissions at the end of the class, we need to properly convey the theme and feeling we are trying to create with our environments!\n\n**Getting the file set up**\n\nTo start our scene, we will need to download our starter Blender file! [Lastname_Firstname_ANV306_wk-02_v001.blend](https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/fall2026/Week%202/Lastname_Firstname_ANV306_wk-02_v001.blend). I will not provide this very often, so please make sure we use this as a template for future Blender projects, for our convenience. This file has all of our working collections, a cube as a default room's walls, and a default light.\n\n**Purpose**\n\nWith purpose, we need to understand exactly what it is that our environment is doing. Scenes are filled with moments, and they are usually given those moments by the script. For this exercise, I would like us to choose the moment that makes our environment important. The purpose does not have to be a big dramatic event. It can simply be traversal, a character walking through a corridor, or two characters talking. As long as the environment serves the story beat and frames the focus as well as it can, it works. Three easy questions to ask about it:\n\n1. What is my scene doing?\n2. What is the camera going to be following?\n3. Is there a change in the beginning and the end of the scene?\n\nThis is an exercise, so let's keep our purpose simple! We will have lots of time to elevate our concepts in the future.\n\n**Scale**\n\nFor scale, I have a model of an adult male that I would like us to download. This gives our environment a reference point where the eyes can base the sense of depth around. It is located [here](https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/fall2026/Week%202/Adult_Mannequin_v001.fbx). Let's drag and drop our .fbx file into our scene, and place it in a collection named `COL_P_Mannequin_A` inside our `10_set` collection. We are going to build our environment around this! Let's create a box or a closed shape that our scene will be placed in.\n\n**Interior or exterior**\n\nI mean for this project to be an interior because it is easier that way. An interior is more contained, and we can control the scale and the light, which keeps the first real design week manageable. Feel free to create whatever you would like, though. If we do go exterior, our environment will still need boundaries somehow. In production, when it comes to exteriors, we usually map out our character's movement, and design for the scene to be framed around that. In an open location like a forest, we build enough of the location, far enough out, so it can blend in with a matte painting. That can get a little expansive if we do not create hills or framing elements to hide any seams!\n\n**Shape hierarchy**\n\nLet's begin by placing our large level details. That means entire rooms that the character might traverse, objects of interest, exits, and paths. After that, we design our medium scale objects, so tables, pillars, chairs, and the like. I personally usually design the large and medium objects in first, and then go in for the details afterwards. I also like to block out colours as we go. For the shapes themselves, we keep it to basic primitives. Most of the time, honestly, it's cubes haha, but go with whatever shape we feel will represent the object we are designing!\n\n**Designing for light**\n\nSome pointers when blocking out: we will need to be able to direct our audience exactly where they need to be. Lighting is important in blocking out, but depending on how far we all get, we might not have time to do that in this lesson, so we can leave that for next week, when we cover lighting and skyboxes. If we do have time today, make sure that we consider windows, lamps, and vignettes. Like I said about surrealism last week, it is good to go beyond what's real sometimes, in order to make things look MORE real.\n\n> **Aside (further reading):** *Framed Ink: Drawing and Composition for Visual Storytellers* by Marcos Mateu-Mestre, **Chapter 3, \"The Visual Message within a Still Composition.\"** A quick read is a composition we can take in at a glance, and that is exactly what the focal point is for. It is the single most useful chapter in that book for this project, and it is short.",
-      "guidedMaking": "We block three environments, and each one carries a clear purpose. One goal: **three blockouts that can all be different, but each one with a purpose we can state in one sentence, and the theme and feeling of each environment coming through clearly.**\n\n1. **Pick the theme, then three of its designs.** Choose one of these three theme starting points, and within it pick three of the designs that become our three blockouts. Each theme is a self-contained block: its world, then the designs that live inside it. The three blockouts can read differently from one another, but each one needs a purpose we can explain before we build it. Pick the theme we can see the clearest idea of, then the three designs we can commit to.\n    - **Theme 1: Nordic Fjords and Forests, 10th to 12th Century** (timber and stone): cold light, iron-tanged axes, wool cloaks, low timber framing with sod roofs\n        - the Longhouse Hearth: a timber longhouse interior built around a raised fire pit. Benches run along the long walls, and a rough stone shelf holds a carved rune stone as the focal point.\n        - the Coastal Fishing Hut: a small single-room hut at the water's edge. Nets and rope hang from the rafters, and dried cod hang by the door, which is the focal point.\n        - the Mountain Hermit Cell: a cramped stone cell cut into the rock. A thin bed, a birch shelf, and a worn psalter open on the shelf as the focal point.\n    - **Theme 2: East Asian Mountain Temples, 8th to 10th Century** (lacquered wood and paper): morning mist, bronze mirrors, incense burners, silk sutra scrolls, timber framing with tiled roofs\n        - the Kyoto Tea House Interior: a low wooden room with tatami flooring. Paper shoji screens sit on one wall, a low table sits at the center, and a single ceramic vessel on that table is the focal point.\n        - the Rice Terrace Rest House: an open-sided shelter at the edge of the rice terraces. A crate and a bench fill the room, the terracing is visible through the open side, and a weathered wooden bowl on the crate is the focal point.\n        - the Floating Market Stall: a covered stall set on a waterway. Woven baskets and hanging goods line the stall, and a carved jade pendant resting on a cloth is the focal point.\n    - **Theme 3: Sahel Crossroads, 13th to 15th Century** (rammed earth and carved wood): golden hour warmth, cowrie shells, leather-bound manuscripts, mud-brick walls with wooden toron beams\n        - the Granary Compound Interior: a walled courtyard of rammed-earth rooms. Carved wooden doors, woven mats on the floor, and a leather water skin on the mats as the focal point.\n        - the Cliffside Library: a stone reading room set into a cliff face. A low reading stone, a shelf of bound manuscripts, and a metal inkwell on the reading stone as the focal point.\n        - the Savanna Lookout: a raised thatched platform with a low wall. Woven patterns run on the walls, a wooden peg stands by the wall, and a curved bow on the peg as the focal point.\n2. **Set up each scene.** Open our starter .blend file as the template, drag the mannequin .fbx into the scene, and place it in a collection named `COL_P_Mannequin_A` inside the `10_set` collection. Then create the box or closed shape that the scene is placed in, and build the environment around it. A low-poly stand-in from the allow-list works just as well if we prefer.\n    - *Manual fallback:* no stand-in model? Model a rough figure. A box for the torso, a sphere for the head, two cylinders for the legs. The anatomy does not matter. The height does. Aim for about 1.7 to 1.8 meters and let the space react.\n3. **State the purpose, per blockout.** Answer the three questions for each one: what is the scene doing, what is the camera following, and is there a change from the beginning to the end? Keep it simple for this exercise, and write the answers down, because they are what we will defend at Checkpoint A1!\n4. **Block the large, then the medium, per blockout.** Entire rooms the character might traverse, objects of interest, exits, and paths first. Then tables, pillars, chairs, and the other medium objects. Keep everything to basic primitives, block out the colours, and hold the detail for later. Big shapes only this week!\n    - **Research links:** the reference material for each theme lives here, so pull it up while you pick: [Project A Research](https://filedn.com/start/ANV306/Project-A/Research).\n5. **Test the scale, per blockout.** Move the mannequin closer, farther, and to the center, and watch how the space reads against it. If it reads too big, bring the walls in. If it reads too small, do the opposite. The figure is the reference, and the environment is what adjusts.\n6. **Direct the audience, per blockout.** Decide where we want the eye to go in each blockout, and place our parts strategically to point it there. Consider windows, lamps, and vignettes as we go. Full lighting waits for next week.\n7. **Save a clean, named file.** `a-environment_wk2-a1.blend`, with the three blockouts in clean collections and nothing orphaned. This is the file for A1, so keep it organized now and it stays organized later.\n\nThe point of the three blockouts is that each one is its own decision, its own place with its own purpose. One might be tight and warm, one open and cold, one quiet and one loud. The spread is the point, and it is what makes the theme and feeling of our environments come through at the final submission!\n\n**The on-hand tool:** the starter scene keeps the collections and naming clean while we block, and its default light lets us check the value contrast as we go. If it is not there, build the collection structure by hand and hang a light on the focal point. The requirement does not change.",
+      "oneNewConcept": "**Blocking out an environment means finding its purpose, committing to a scale, and building shapes that serve both.**\n\nLast week we got back into the groove of modeling, texturing, lighting, and rendering. A lot of this semester focuses on those skills, and we will need to be comfortable switching between our different actions when it feels important, because the blockout is where all of them meet at once.\n\nThe blockout is where the environment actually starts, and the way it works is straightforward. We first find the purpose of the scene. We commit to a scale. And we build our shapes so that they complement the purpose and scale of that scene. We do this through reference, by understanding how a scene is meant to feel, and by placing our parts strategically so the audience gets a clear understanding of what is happening!\n\nThree concepts run through all of this, and we carry them into the entire class:\n\n- **Purpose:** what the scene is doing, and why it matters to the moment we are building. We decide it first, because everything else leans on it.\n- **Scale:** the size that reads. A scene gets a reference point, usually a person, and we build the space around it so the size is believable at a glance.\n- **Shape Hierarchy:** the order we build and place our shapes in, from the large volumes of the scene down to the medium objects, so the audience always knows what matters.\n\nAnd the deliverable: the three environment blockouts we create can all be different from one another, but the purpose of each one needs to be clear. When we hand in our submissions at the end of the class, we need to properly convey the theme and feeling we are trying to create with our environments!\n\n**Getting the file set up**\n\nTo start our scene, we will need to download our starter Blender file! [Lastname_Firstname_ANV306_wk-02_v001.blend](https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/fall2026/Week%202/Lastname_Firstname_ANV306_wk-02_v001.blend). I will not provide this very often, so please make sure we use this as a template for future Blender projects, for our convenience. This file has all of our working collections, a cube as a default room's walls, and a default light.\n\n**Purpose**\n\nWith purpose, we need to understand exactly what it is that our environment is doing. Scenes are filled with moments, and they are usually given those moments by the script. For this exercise, I would like us to choose the moment that makes our environment important. The purpose does not have to be a big dramatic event. It can simply be traversal, a character walking through a corridor, or two characters talking. As long as the environment serves the story beat and frames the focus as well as it can, it works. Three easy questions to ask about it:\n\n1. What is my scene doing?\n2. What is the camera going to be following?\n3. Is there a change in the beginning and the end of the scene?\n\nThis is an exercise, so let's keep our purpose simple! We will have lots of time to elevate our concepts in the future.\n\n**Scale**\n\nFor scale, I have a model of an adult male that I would like us to download. This gives our environment a reference point where the eyes can base the sense of depth around. It is located [here](https://filedn.com/l2sG939QiPx0rp2J0fA1ciJ/fall2026/Week%202/Adult_Mannequin_v001.fbx). Let's drag and drop our .fbx file into our scene, and place it in the `10_set` collection, naming the object `adult_mannequin`. We are going to build our environment around this! Let's create a box or a closed shape that our scene will be placed in.\n\n**Interior or exterior**\n\nI mean for this project to be an interior because it is easier that way. An interior is more contained, and we can control the scale and the light, which keeps the first real design week manageable. Feel free to create whatever you would like, though. If we do go exterior, our environment will still need boundaries somehow. In production, when it comes to exteriors, we usually map out our character's movement, and design for the scene to be framed around that. In an open location like a forest, we build enough of the location, far enough out, so it can blend in with a matte painting. That can get a little expansive if we do not create hills or framing elements to hide any seams!\n\n**Shape hierarchy**\n\nLet's begin by placing our large level details. That means entire rooms that the character might traverse, objects of interest, exits, and paths. After that, we design our medium scale objects, so tables, pillars, chairs, and the like. I personally usually design the large and medium objects in first, and then go in for the details afterwards. I also like to block out colours as we go. For the shapes themselves, we keep it to basic primitives. Most of the time, honestly, it's cubes haha, but go with whatever shape we feel will represent the object we are designing!\n\n**Designing for light**\n\nSome pointers when blocking out: we will need to be able to direct our audience exactly where they need to be. Lighting is important in blocking out, but depending on how far we all get, we might not have time to do that in this lesson, so we can leave that for next week, when we cover lighting and skyboxes. If we do have time today, make sure that we consider windows, lamps, and vignettes. Like I said about surrealism last week, it is good to go beyond what's real sometimes, in order to make things look MORE real.\n\n> **Aside (further reading):** *Framed Ink: Drawing and Composition for Visual Storytellers* by Marcos Mateu-Mestre, **Chapter 3, \"The Visual Message within a Still Composition.\"** A quick read is a composition we can take in at a glance, and that is exactly what the focal point is for. It is the single most useful chapter in that book for this project, and it is short.",
+      "guidedMaking": "We block three environments, and each one carries a clear purpose. One goal: **three blockouts that can all be different, but each one with a purpose we can state in one sentence, and the theme and feeling of each environment coming through clearly.**\n\n1. **Pick the theme, then three of its designs.** Choose one of these three theme starting points, and within it pick three of the designs that become our three blockouts. Each theme is a self-contained block: its world, then the designs that live inside it. The three blockouts can read differently from one another, but each one needs a purpose we can explain before we build it. Pick the theme we can see the clearest idea of, then the three designs we can commit to.\n    - **Theme 1: Nordic Fjords and Forests, 10th to 12th Century** (timber and stone): cold light, iron-tanged axes, wool cloaks, low timber framing with sod roofs\n        - the Longhouse Hearth: a timber longhouse interior built around a raised fire pit. Benches run along the long walls, and a rough stone shelf holds a carved rune stone as the focal point.\n        - the Coastal Fishing Hut: a small single-room hut at the water's edge. Nets and rope hang from the rafters, and dried cod hang by the door, which is the focal point.\n        - the Mountain Hermit Cell: a cramped stone cell cut into the rock. A thin bed, a birch shelf, and a worn psalter open on the shelf as the focal point.\n    - **Theme 2: East Asian Mountain Temples, 8th to 10th Century** (lacquered wood and paper): morning mist, bronze mirrors, incense burners, silk sutra scrolls, timber framing with tiled roofs\n        - the Kyoto Tea House Interior: a low wooden room with tatami flooring. Paper shoji screens sit on one wall, a low table sits at the center, and a single ceramic vessel on that table is the focal point.\n        - the Rice Terrace Rest House: an open-sided shelter at the edge of the rice terraces. A crate and a bench fill the room, the terracing is visible through the open side, and a weathered wooden bowl on the crate is the focal point.\n        - the Floating Market Stall: a covered stall set on a waterway. Woven baskets and hanging goods line the stall, and a carved jade pendant resting on a cloth is the focal point.\n    - **Theme 3: Sahel Crossroads, 13th to 15th Century** (rammed earth and carved wood): golden hour warmth, cowrie shells, leather-bound manuscripts, mud-brick walls with wooden toron beams\n        - the Granary Compound Interior: a walled courtyard of rammed-earth rooms. Carved wooden doors, woven mats on the floor, and a leather water skin on the mats as the focal point.\n        - the Cliffside Library: a stone reading room set into a cliff face. A low reading stone, a shelf of bound manuscripts, and a metal inkwell on the reading stone as the focal point.\n        - the Savanna Lookout: a raised thatched platform with a low wall. Woven patterns run on the walls, a wooden peg stands by the wall, and a curved bow on the peg as the focal point.\n2. **Set up each scene.** Open our starter .blend file as the template, drag the mannequin .fbx into the scene, and place it in the `10_set` collection, naming the object `adult_mannequin`. Then create the box or closed shape that the scene is placed in, and build the environment around it. A low-poly stand-in from the allow-list works just as well if we prefer.\n    - *Manual fallback:* no stand-in model? Model a rough figure. A box for the torso, a sphere for the head, two cylinders for the legs. The anatomy does not matter. The height does. Aim for about 1.7 to 1.8 meters and let the space react.\n3. **State the purpose, per blockout.** Answer the three questions for each one: what is the scene doing, what is the camera following, and is there a change from the beginning to the end? Keep it simple for this exercise, and write the answers down, because they are what we will defend at Checkpoint A1!\n4. **Block the large, then the medium, per blockout.** Entire rooms the character might traverse, objects of interest, exits, and paths first. Then tables, pillars, chairs, and the other medium objects. Keep everything to basic primitives, block out the colours, and hold the detail for later. Big shapes only this week!\n    - **Research links:** the reference material for each theme lives here, so pull it up as you block each one out: [Project A Research](https://filedn.com/start/ANV306/Project-A/Research).\n5. **Test the scale, per blockout.** Move the mannequin closer, farther, and to the center, and watch how the space reads against it. If it reads too big, bring the walls in. If it reads too small, do the opposite. The figure is the reference, and the environment is what adjusts.\n6. **Direct the audience, per blockout.** Decide where we want the eye to go in each blockout, and place our parts strategically to point it there. Consider windows, lamps, and vignettes as we go. Full lighting waits for next week.\n7. **Save a clean, named file.** `a-environment_wk2-a1.blend`, with the three blockouts in clean collections and nothing orphaned. This is the file for A1, so keep it organized now and it stays organized later.\n\nThe point of the three blockouts is that each one is its own decision, its own place with its own purpose. One might be tight and warm, one open and cold, one quiet and one loud. The spread is the point, and it is what makes the theme and feeling of our environments come through at the final submission!\n\n**The on-hand tool:** the starter scene keeps the collections and naming clean while we block, and its default light lets us check the value contrast as we go. If it is not there, build the collection structure by hand and hang a light on the focal point. The requirement does not change.",
       "check": "Bring blockouts that already have a sense of scale and a direction for the eye. They do not need to be pretty. They need to be decided, with a purpose we can state out loud for each one!\n\n**Pass question:** for each blockout, can we say in one sentence what the scene is doing?\n\n**Self-check before we show (answer these, then bring them):**\n\n1. What is the purpose of each of the three blockouts, in one sentence each?\n2. Does the scale read against the mannequin, and what would change if the figure were a meter shorter or taller?\n3. Where does the eye go in each blockout, and which of our shapes is doing the directing?\n\nIf all three answer, we are ready. If two answer, we work the third together in the next few minutes, and that work becomes the iteration evidence, not a penalty. That is the deal on every checkpoint this term.",
       "reflect": "Here is a recap of today's lesson:\n\n- **What we did:** we set up our starter scene with the mannequin as our scale reference, picked a theme and three designs, and blocked three environments from the large shapes down to the medium ones, each with a purpose we can state.\n- **What we learned:** blocking out an environment means finding the purpose of the scene, committing to a scale, and building shapes that serve both, done through reference and strategic placement.\n- **What we would try next:** adding the small details and a rough light to the blockout that is weakest, to see if the purpose comes through harder.\n\n**Checklist, the things worth not forgetting:**\n\n- The three blockouts can all be different, but the purpose of each one needs to be clear, and the theme and feeling need to come through at the final submission.\n- Purpose, scale, and shape hierarchy carry into the entire class, so the decisions we make today are the ones we defend later.\n- This week's deliverable is the blockout file: three environments, each with a mannequin scale reference, a stated purpose, and a clear direction for the eye, all in a well-named file.\n\nThat is our blockout week, and it is the first real design decision of Project A. Three environments that read at the right size, with a clear purpose and an eye going somewhere on purpose, are the thing every light, every material, and every camera in the term will stand on. Get them solid and the rest of the project builds on a foundation instead of a guess. That is the week that makes everything after it legible!",
       "revisit": "**Purpose**, **Scale**, and **Shape Hierarchy** do not stop at blockout. They carry straight into every object we model, every sequence we stage, and every shot we frame. They are the spine of the whole class.\n\nNext week we take these blocked places and make them read. Light arrives to carve the shapes we just built, the skybox gives the environment its atmosphere, and we get time for the lighting and windows we left on the table today. Bring the A1 file, because next week is built on it. That is the next door, and it is a good one.\n\n---\n\n*If a shape is not doing what we want, that is a placement question, not a you thing. Ask, and we sort it out. See you next week.*"
@@ -597,8 +597,8 @@ window.__SENECA_DATA = {
     "source": "lessons/semester-3/lessons/wk-14-c-final-delivery-crit.md",
     "beats": {
       "retrievalHook": "Welcome back for the final delivery! This week we push the sequence to a finished scene, and we crit it together as the close of the term. A finished scene is a decided scene, and the crit is where the decision is tested. Every edge is chosen, every cost is known, and the one thing the scene is not sure about is on purpose, not by accident. The render is the proof. The sentence is the decision!\n\nFor a fast challenge, look at the final scene and say the one-sentence defense out loud, in one line, without looking at the file. The rare text and the light that finds it. The djinn and the hour that makes it feel like a secret. That sentence is the project, and the render is the proof. If we can say the sentence, we are ready.\n\n3D multiplies what we already know in 2D.",
-      "oneNewConcept": "A finished scene is a decided scene, and the crit is where the decision is tested. The term has handed us the toolkit, and the grace week gave us the honesty, and now the final is the commitment. A finished scene is not a scene with no flaws, because a scene with no flaws is a scene with no decisions. A finished scene is a scene where every edge is chosen, every cost is known, and the one thing it is not sure about is on purpose.\n\nThe analogy is a letter and a draft. A draft is a set of words, and the words can be good, and that is fine. A letter is a set of words that are chosen, and the choosing is the letter, because a letter is a thing that is meant to say something. Our final scene is the letter, and the crit is where we find out if it is a letter or a draft.\n\nThe analogy breaks down here: a letter is read by one person, and our scene is crit by the whole room. That means the defense has to hold in public, and the one-sentence defense is where it starts.\n\n**The final delivery follows three moves:**\n\n- **Lock the decision.** The one thing the sequence was not sure about, from last week, is fixed if it is fixable, or left on purpose with a written reason. Every other decision, the scale, the hierarchy, the direction, the material, the motivation, the line, the turn, is locked. A final with a loose decision is a draft. A final with a locked decision is a letter.\n- **Do the final render.** The hero pass, Cycles if available, or a clean EEVEE pass, and the contact sheet. Save the file `c-scene_final.blend`, the renders `c-scene_final.png`, and the contact sheet `c-scene_final-contact.png`. The naming convention carries through: `Lastname_Firstname_ANV6_wk14_v001.png`.\n- **Write the one-sentence defense.** What is the scene about, in one line? Why this camera, why this line, why this turn, and why the one thing it is not sure about is on purpose. That sentence and that why are the artifact next to the render.\n\nThe crit is a conversation, not a judgment. The conversation starts with a clear state, not a finished render. The render is the proof. The sentence is the decision.\n\n**Today's Demo**\n\nWe walk through the final read: the contact sheet first, the quick read. Then the line, the direction, the point of reference. Then the light and mood turn, the when, what changes across the beats and how it moves the story. Then the one-sentence defense, and the honesty about the one thing it is not sure about. At each one, the same question: is this a decision or a guess?\n\n> **Aside (further reading):** *Framed Ink* by Mateu-Mestre, **Chapter 2, \"Drawing and Composing a Single Image (Basics),\"** and **Chapter 3, \"The Visual Message within a Still Composition,\"** together, as the final checklist. Worth a pass.",
-      "guidedMaking": "We take the grace-week sequence and finish it into the final, and prepare for the crit. One goal: **a decided scene we can defend, and a clear state we can say out loud.**\n\n1. **Lock the decision.** The one thing the sequence was not sure about, fix it if it is fixable, or leave it on purpose and write the reason. Every other decision, lock it.\n2. **Do the final render.** The hero pass, Cycles or a clean EEVEE pass, and the contact sheet. Save the file `c-scene_final.blend`, the renders `c-scene_final.png`, and the contact sheet `c-scene_final-contact.png`. Use the standard naming convention: `Lastname_Firstname_ANV6_wk14_v001.png`.\n3. **Write the one-sentence defense.** What is the scene about, in one line? Why this camera, why this line, why this turn, and why the one thing it is not sure about is on purpose.\n4. **Prepare the honesty.** The one thing the scene is not sure about, and the reason, fixed or left on purpose. Write it down, because the crit is where we say it.\n5. **Save everything clean.** The scene, the cameras, the line, the turn, the contact sheet, the one-sentence defense, the honesty, all in one file, named like a person, with the collections clean and nothing orphaned. This is the file the term is built on, and it is the one that leaves with us.\n\nThe on-hand tool is the final render, Cycles or a clean EEVEE pass, and the contact sheet, a 2D app or a compositor layout over the renders. The tool is the means. The honesty is the work!",
+      "oneNewConcept": "A finished scene is a decided scene, and the crit is where the decision is tested. The term has handed us the toolkit, and the grace week gave us the honesty, and now the final is the commitment. A finished scene is not a scene with no flaws, because a scene with no flaws is a scene with no decisions. A finished scene is a scene where every edge is chosen, every cost is known, and the one thing it is not sure about is on purpose.\n\nThe analogy is a letter and a draft. A draft is a set of words, and the words can be good, and that is fine. A letter is a set of words that are chosen, and the choosing is the letter, because a letter is a thing that is meant to say something. Our final scene is the letter, and the crit is where we find out if it is a letter or a draft.\n\nThe analogy breaks down here: a letter is read by one person, and our scene is crit by the whole room. That means the defense has to hold in public, and the one-sentence defense is where it starts.\n\n**The final delivery follows three moves:**\n\n- **Lock the decision.** The one thing the sequence was not sure about, from last week, is fixed if it is fixable, or left on purpose with a written reason. Every other decision, the scale, the hierarchy, the direction, the material, the motivation, the line, the turn, is locked. A final with a loose decision is a draft. A final with a locked decision is a letter.\n- **Do the final render.** The hero pass, Cycles if available, or a clean EEVEE pass, and the contact sheet. Save the file `c-scene_final.blend`, the renders `c-scene_final.png`, and the contact sheet `c-scene_final-contact.png`. The naming convention carries through: `LastName_FirstName_ANV306_wk-14_v001.png`.\n- **Write the one-sentence defense.** What is the scene about, in one line? Why this camera, why this line, why this turn, and why the one thing it is not sure about is on purpose. That sentence and that why are the artifact next to the render.\n\nThe crit is a conversation, not a judgment. The conversation starts with a clear state, not a finished render. The render is the proof. The sentence is the decision.\n\n**Today's Demo**\n\nWe walk through the final read: the contact sheet first, the quick read. Then the line, the direction, the point of reference. Then the light and mood turn, the when, what changes across the beats and how it moves the story. Then the one-sentence defense, and the honesty about the one thing it is not sure about. At each one, the same question: is this a decision or a guess?\n\n> **Aside (further reading):** *Framed Ink* by Mateu-Mestre, **Chapter 2, \"Drawing and Composing a Single Image (Basics),\"** and **Chapter 3, \"The Visual Message within a Still Composition,\"** together, as the final checklist. Worth a pass.",
+      "guidedMaking": "We take the grace-week sequence and finish it into the final, and prepare for the crit. One goal: **a decided scene we can defend, and a clear state we can say out loud.**\n\n1. **Lock the decision.** The one thing the sequence was not sure about, fix it if it is fixable, or leave it on purpose and write the reason. Every other decision, lock it.\n2. **Do the final render.** The hero pass, Cycles or a clean EEVEE pass, and the contact sheet. Save the file `c-scene_final.blend`, the renders `c-scene_final.png`, and the contact sheet `c-scene_final-contact.png`. Use the standard naming convention: `LastName_FirstName_ANV306_wk-14_v001.png`.\n3. **Write the one-sentence defense.** What is the scene about, in one line? Why this camera, why this line, why this turn, and why the one thing it is not sure about is on purpose.\n4. **Prepare the honesty.** The one thing the scene is not sure about, and the reason, fixed or left on purpose. Write it down, because the crit is where we say it.\n5. **Save everything clean.** The scene, the cameras, the line, the turn, the contact sheet, the one-sentence defense, the honesty, all in one file, named like a person, with the collections clean and nothing orphaned. This is the file the term is built on, and it is the one that leaves with us.\n\nThe on-hand tool is the final render, Cycles or a clean EEVEE pass, and the contact sheet, a 2D app or a compositor layout over the renders. The tool is the means. The honesty is the work!",
       "check": "This is the final delivery. We hand in the final render, the contact sheet, the source file, the one-sentence defense, and the honesty about the one thing it is not sure about. Then we crit, together, in the room, because the crit is the conversation the whole term has been building toward.\n\n**The delivery question:** is this a decided scene, with a beat we can name, a camera we can defend, a line that holds, a light and mood turn we can articulate out loud, and a one-sentence defense that says what it is about, or is it a nice render of a room with a subject in it?\n\n**Self-check before the crit (answer these, then bring them):**\n\n1. What is the one-sentence defense, and does the final actually show it?\n2. Why is the camera where it is, why does the line hold, what is the light and mood turn, and why is the one thing it is not sure about on purpose?\n3. If asked to defend the whole thing in one minute, can we? Not the render, the decisions.\n\nIf all three answer, we have a final we can defend with in front of the room. If two answer, we work the third in the crit, and that work becomes the iteration evidence, the last piece of it. If the render is good but the defense is weak, we will spend the crit building the thinking, because that is the half that carries us out of the term and into whatever is next.",
       "reflect": "Here is a recap of today's lesson:\n\n- **What we did:** we finished a decided scene, with a one-sentence defense and an honesty about the one thing it is not sure about.\n- **What we learned:** 3D makes a good idea fast, not a weak idea good, and the good idea is the 60, and the fast is the 40, and the term is the story of learning to keep them apart.\n- **What we'd try next:** doing the read on a project that is not ours, to see if the decision we can defend in our own work is one we can find in someone else's.\n\n**The things worth not forgetting:**\n\n- Score all four dimensions: design range, decision quality, execution and presentation, iteration evidence. Name the one that is weakest, and the one that is strongest, and the one we would push next.\n- The term is the conversation. The conversation is the 40, and the 60 is the thinking we built, and the thinking is the thing that leaves with us.\n- The tool makes the good idea fast, and the good idea is ours, and the fast is just the fast. Keep the two apart.\n\nThe final is a letter, not a draft. Get it decided, and the term closes on a finish instead of a hurry!",
       "revisit": "**Every idea in the term is back, one last time, doing its final work.** Scale, the first brick, the human figure as the truth. Hierarchy, the focal point, the line, the cut. Direction, the studies, the whole system, not the parameter. Material, the response, the day and the night. Motivation, the journalist, not the tourist. The line, the melody, the point of reference. The turn, the key that changes, the when. Seven moves, seven weeks, and now they are all in one scene.\n\nThere is no next week, and that is the point. The term is the conversation, and the conversation is the 40, and the 60 is the thinking we built. The thinking is the thing that leaves with us, and the tool is the thing we leave behind, because the tool makes the good idea fast, and the good idea is ours. Go make something good, and let the tool make it fast, and keep the two apart.\n\n---\n\n*No question is a dumb one here. If we cannot say the one-sentence defense, that is not a failure, that is the work, and finding it is the whole win of the final. Ask, and we find the decision together. The term is ours, and it is finished.*"
@@ -13724,36 +13724,28 @@ window.__SENECA_DATA = {
   "wk-01": {
     "title": "Week 01: Foundations in Blender",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -13961,36 +13953,28 @@ window.__SENECA_DATA = {
   "wk-02": {
     "title": "Week 02: Blockout, Scale & Shape Hierarchy",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -14001,7 +13985,7 @@ window.__SENECA_DATA = {
         "description": "Block three environment blockouts using only large, medium, and small volumes. The three blockouts can all be different, but each one needs a purpose you can state in one sentence. No detail, no textures. The mannequin file drops in as the scale reference.",
         "steps": [
           "Pick a theme from the lesson brief, then choose three of its designs as your three blockouts",
-          "Open the starter .blend as the template and drag the mannequin .fbx into each scene, placed in COL_P_Mannequin_A inside the 10_set collection",
+          "Open the starter .blend as the template and drag the mannequin .fbx into each scene, place it in the 10_set collection and name the object adult_mannequin",
           "State the purpose of each blockout: what is the scene doing, what is the camera following, is there a change from start to end",
           "Block the large first: rooms, objects of interest, exits, paths. Then the medium: tables, pillars, chairs",
           "Test the scale of each blockout by moving the mannequin closer, farther, and to the center",
@@ -14178,36 +14162,28 @@ window.__SENECA_DATA = {
   "wk-03": {
     "title": "Week 03: Lighting, Materials & Skyboxes",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -14377,36 +14353,28 @@ window.__SENECA_DATA = {
   "wk-04": {
     "title": "Week 04: Details, Variations & Lighting Impressions",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -14580,36 +14548,28 @@ window.__SENECA_DATA = {
   "wk-05": {
     "title": "Week 05: Project B Kickoff - The Funpack & Turnaround",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -14797,36 +14757,28 @@ window.__SENECA_DATA = {
   "wk-06": {
     "title": "Week 06: Expression, Variants & Silhouette Check",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -14992,36 +14944,28 @@ window.__SENECA_DATA = {
   "wk-07": {
     "title": "Week 07: Materials & Day/Night Heroes",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -15191,36 +15135,28 @@ window.__SENECA_DATA = {
   "wk-08": {
     "title": "Week 08: Self-Directed Review & Polish",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -15359,36 +15295,28 @@ window.__SENECA_DATA = {
   "wk-09": {
     "title": "Week 09: Project C Kickoff - Character & Scene",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -15555,36 +15483,28 @@ window.__SENECA_DATA = {
   "wk-10": {
     "title": "Week 10: Camera Angles & Story Beats",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -15730,36 +15650,28 @@ window.__SENECA_DATA = {
   "wk-11": {
     "title": "Week 11: Polish Pass & Details",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -15910,36 +15822,28 @@ window.__SENECA_DATA = {
   "wk-12": {
     "title": "Week 12: Final Assembly & Hero Renders",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -16077,36 +15981,28 @@ window.__SENECA_DATA = {
   "wk-13": {
     "title": "Week 13: Self-Directed Study & Portfolio Prep",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },
@@ -16264,36 +16160,28 @@ window.__SENECA_DATA = {
   "wk-14": {
     "title": "Week 14: Final Delivery & Crit",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
         {
-          "prefix": "COL_",
-          "meaning": "Collections"
+          "prefix": "00_world",
+          "meaning": "World — top-level collection"
         },
         {
-          "prefix": "P_",
-          "meaning": "Props (placed objects)"
+          "prefix": "10_set",
+          "meaning": "Set — architecture / environment build"
         },
         {
-          "prefix": "C_",
-          "meaning": "Characters"
+          "prefix": "20_light",
+          "meaning": "Lighting"
         },
         {
-          "prefix": "ENV_",
-          "meaning": "Environment elements"
+          "prefix": "30_cam",
+          "meaning": "Camera"
         },
         {
-          "prefix": "CAM_",
-          "meaning": "Camera objects"
-        },
-        {
-          "prefix": "LIT_",
-          "meaning": "Light objects"
-        },
-        {
-          "prefix": "MAT_",
-          "meaning": "Materials"
+          "prefix": "40_props",
+          "meaning": "Props"
         }
       ]
     },

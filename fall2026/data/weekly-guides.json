@@ -2,16 +2,14 @@
   "wk-01": {
     "title": "Week 01: Foundations in Blender",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -133,16 +131,14 @@
   "wk-02": {
     "title": "Week 02: Blockout, Scale & Shape Hierarchy",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -152,7 +148,7 @@
         "description": "Block three environment blockouts using only large, medium, and small volumes. The three blockouts can all be different, but each one needs a purpose you can state in one sentence. No detail, no textures. The mannequin file drops in as the scale reference.",
         "steps": [
           "Pick a theme from the lesson brief, then choose three of its designs as your three blockouts",
-          "Open the starter .blend as the template and drag the mannequin .fbx into each scene, placed in COL_P_Mannequin_A inside the 10_set collection",
+          "Open the starter .blend as the template and drag the mannequin .fbx into each scene, place it in the 10_set collection and name the object adult_mannequin",
           "State the purpose of each blockout: what is the scene doing, what is the camera following, is there a change from start to end",
           "Block the large first: rooms, objects of interest, exits, paths. Then the medium: tables, pillars, chairs",
           "Test the scale of each blockout by moving the mannequin closer, farther, and to the center",
@@ -254,16 +250,14 @@
   "wk-03": {
     "title": "Week 03: Lighting, Materials & Skyboxes",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -372,16 +366,14 @@
   "wk-04": {
     "title": "Week 04: Details, Variations & Lighting Impressions",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -489,16 +481,14 @@
   "wk-05": {
     "title": "Week 05: Project B Kickoff - The Funpack & Turnaround",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -610,16 +600,14 @@
   "wk-06": {
     "title": "Week 06: Expression, Variants & Silhouette Check",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -724,16 +712,14 @@
   "wk-07": {
     "title": "Week 07: Materials & Day/Night Heroes",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -842,16 +828,14 @@
   "wk-08": {
     "title": "Week 08: Self-Directed Review & Polish",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -949,16 +933,14 @@
   "wk-09": {
     "title": "Week 09: Project C Kickoff - Character & Scene",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -1064,16 +1046,14 @@
   "wk-10": {
     "title": "Week 10: Camera Angles & Story Beats",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -1173,16 +1153,14 @@
   "wk-11": {
     "title": "Week 11: Polish Pass & Details",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -1282,16 +1260,14 @@
   "wk-12": {
     "title": "Week 12: Final Assembly & Hero Renders",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -1388,16 +1364,14 @@
   "wk-13": {
     "title": "Week 13: Self-Directed Study & Portfolio Prep",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
@@ -1499,16 +1473,14 @@
   "wk-14": {
     "title": "Week 14: Final Delivery & Crit",
     "namingConventions": {
-      "fileFormat": "Lastname_Firstname_ANV6_wk#_v###.filetype",
-      "renderExtension": "All renders must be saved as .png files",
+      "fileFormat": "LastName_FirstName_ANV306_wk-##_v###.filetype",
+      "renderExtension": "All renders must be saved as .png files. PNG sequence naming: LastName_FirstName_ANV306_wk-##_v##_###.png",
       "blenderPrefixes": [
-        {"prefix": "COL_", "meaning": "Collections"},
-        {"prefix": "P_", "meaning": "Props (placed objects)"},
-        {"prefix": "C_", "meaning": "Characters"},
-        {"prefix": "ENV_", "meaning": "Environment elements"},
-        {"prefix": "CAM_", "meaning": "Camera objects"},
-        {"prefix": "LIT_", "meaning": "Light objects"},
-        {"prefix": "MAT_", "meaning": "Materials"}
+        {"prefix": "00_world", "meaning": "World — top-level collection"},
+        {"prefix": "10_set", "meaning": "Set — architecture / environment build"},
+        {"prefix": "20_light", "meaning": "Lighting"},
+        {"prefix": "30_cam", "meaning": "Camera"},
+        {"prefix": "40_props", "meaning": "Props"}
       ]
     },
     "sections": [
